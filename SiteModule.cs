@@ -6,7 +6,12 @@ namespace ThatExtraMile.be
     {
         public SiteModule()
         {
-            Get["/"] = parameters => "Hello world";
+            Get["/"] = parameters => View["MarkDown", new
+                {
+                    Title = "Hello world",
+                    Section = "Home",
+                    Html = "Hello world!"
+                }];
         }
     }
 }

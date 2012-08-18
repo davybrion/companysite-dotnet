@@ -1,0 +1,128 @@
+﻿﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+        
+        @if (!string.IsNullOrEmpty(Model.Title))
+        {
+            <title>That Extra Mile - @Model.Title</title>
+        }
+        else
+        {
+            <title>That Extra Mile</title>
+        }
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="Company website of That Extra Mile">
+		<meta name="viewport" content="width=980, maximum-scale=1.0"> 
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="/css/reset.css" media="screen, projection">
+		<link rel="stylesheet" href="/css/master.css" media="screen, projection">
+
+		<script src="/js/libs/modernizr.min.js"></script>
+
+		<!--[if IE]>
+			<link rel="stylesheet" href="css/ie.css"/>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="js/libs/nwmatcher-1.2.4.js"></script>
+			<script src="js/libs/selectivizr.js"></script>
+		<![endif]-->
+
+		<script type="text/javascript">
+		    var _gaq = _gaq || [];
+		    _gaq.push(['_setAccount', 'UA-24940518-1']);
+		    _gaq.push(['_trackPageview']);
+
+		    (function () {
+		        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		    })();
+		</script>
+	</head>
+
+	<body>
+
+		<div id="container">
+			<header role="banner" id="header">
+				<h1 id="logo"><a href="http://thatextramile.be">Logo</a></h1>
+			</header>
+
+			<div id="content-container" class="group">
+				<nav id="primary-nav" role="navigation">
+                    <ul>
+                        <li class="@(Model.Section == "Home" ? "active" : "")"><a href="/">home</a></li>
+                        <li class="@(Model.Section == "Consulting" ? "active" : "")"><a href="/consulting">consulting</a></li>
+                        <li class="@(Model.Section == "Training" ? "active" : "")"><a href="/training">training</a></li>
+                        <li class="@(Model.Section == "Reviews" ? "active" : "")"><a href="/reviews">reviews</a></li>
+                        <li class="@(Model.Section == "Contracting" ? "active" : "")"><a href="/contracting">contracting</a></li>
+                    </ul>
+				</nav>
+
+				<div id="content" role="main">
+					<article>
+						@RenderBody()
+					</article>
+				</div>
+			</div>
+
+			<footer id="footer" role="contentinfo">
+				<div class="inner group">
+					<section class="contact" id="contact_section">
+						<h1 class="title">
+							contact me
+						</h1>
+						<p>
+							<strong>DAVY BRION</strong><br/>
+							ANTWERPSESTRAAT 263/1<br/>
+							B-2640 MORTSEL<br/>
+		 					+32 498 92 44 37<br/>
+							<a href="mailto:davy.brion@thatextramile.be">davy.brion@thatextramile.be</a>
+						</p>
+						<p>
+							<a href="http://www.linkedin.com/in/davybrion"><img src="/images/icons/linkedin.png" alt="linkedin"></a>
+						</p>
+					</section>
+					
+					<section class="blog">
+						<hgroup class="title">
+							<h1>Blog</h1>
+							<h2>The Inquisitive Coder <a class="btn-rss" href="http://feeds.feedburner.com/davybrion"><img src="/images/icons/rss.png" alt="rss"></a></h2>
+						</hgroup>
+						<div class="blog-teaser-overview">
+                            <ul>
+                                TODO
+
+                                @*							<% recentFeedItems.forEach(function(item) { %>
+								<li><time class="date"><%= item.date.getDate() + '/' + (item.date.getMonth() + 1) %></time><a href="<%= item.url %>"><%= item.title %></a></li>
+							<% }); %>*@
+                            </ul>
+						</div>
+						
+						<a href="http://davybrion.com">take me to the blog</a>
+					</section>
+					
+					<div class="copyright">
+						&copy; 2012 <img src="/images/assets/logo-small.png">
+					</div>
+				</div>
+				
+			</footer>
+			
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>!window.jQuery && document.write(unescape('%3Cscript src="/js/libs/jquery-1.7.1.min.js"%3E%3C/script%3E'))</script>
+		<script src="/js/plugins.js"></script>
+		<script src="/js/master.js"></script>
+	</body>
+</html>

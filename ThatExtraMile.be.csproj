@@ -72,14 +72,44 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="static\css\ie.css" />
+    <Content Include="static\css\master.css" />
+    <Content Include="static\css\reset.css" />
+    <Content Include="static\images\assets\footer-shadow.png" />
+    <Content Include="static\images\assets\img-shadow-1.png" />
+    <Content Include="static\images\assets\img-shadow-2.png" />
+    <Content Include="static\images\assets\logo-small.png" />
+    <Content Include="static\images\assets\logo.png" />
+    <Content Include="static\images\assets\logo_mail_sig.png" />
+    <Content Include="static\images\assets\nav-back.png" />
+    <Content Include="static\images\icons\arrow-1-yellow-right.png" />
+    <Content Include="static\images\icons\linkedin.png" />
+    <Content Include="static\images\icons\rss.png" />
+    <Content Include="static\images\icons\twitter.png" />
+    <Content Include="static\images\patterns\stripe-diag-1-black.png" />
+    <Content Include="static\js\libs\jquery-1.7.1.min.js" />
+    <Content Include="static\js\libs\modernizr.min.js" />
+    <Content Include="static\js\libs\nwmatcher-1.2.4.js" />
+    <Content Include="static\js\libs\selectivizr.js" />
+    <Content Include="static\js\master.js" />
+    <Content Include="static\js\plugins.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BootStrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SiteModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="content\consulting.md" />
+    <Content Include="content\contracting.md" />
+    <Content Include="content\home.md" />
+    <Content Include="content\nhibernate_training.md" />
+    <Content Include="content\reviews.md" />
+    <Content Include="content\training.md" />
+    <Content Include="Views\_Layout.cshtml" />
+    <Content Include="Views\MarkDown.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

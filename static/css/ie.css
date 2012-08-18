@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/**
+ *
+ *	IE.css for  That Extra Mile
+ *	
+ *	@author 	Jelle Versele <jelle.versele@nivario.com>
+ *
+ *	wwww.nivario.com	
+ *
+**/
+
+/* selfclearing floats */
+.ie6 .group, .ie7 .group { zoom: 1; }
