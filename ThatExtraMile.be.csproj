@@ -96,7 +96,9 @@
     <Content Include="static\js\libs\selectivizr.js" />
     <Content Include="static\js\master.js" />
     <Content Include="static\js\plugins.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BootStrapper.cs" />
@@ -105,7 +107,9 @@
     <Compile Include="SiteModule.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="content\consulting.md" />
     <Content Include="content\contracting.md" />
     <Content Include="content\home.md" />
