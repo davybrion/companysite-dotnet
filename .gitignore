@@ -1,0 +1,12 @@
+packages
+bin
+obj
+*/bin
+*/obj
+*/*/bin
+*/*/obj
+*.suo
+*.user
+*/*.user
+*/*/*.user
+_ReSharper*
