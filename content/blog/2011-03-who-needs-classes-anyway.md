@@ -1,0 +1,73 @@
+I needed to do some client-side formatting of dates that i get back from an AJAX request in JSON format, and to my surprise, JavaScript nor jQuery has something built in for this. I briefly looked around for some jQuery plugins or JavaScript libraries but was quickly lost because there are so many of them and most of them do a lot more than the tiny bit that i need right now.  So i figured i'd be better off if i'd just quickly do it myself for now. Granted, i might be better off in the long run using a specific library for this but that's not really the point of this post, so bear with me for a second.  What i'd normally do in a situation like this is to think about what i need to solve and create a small class for that which takes care of the job for me.  In JavaScript however, there are no classes, just objects and prototypes.
+
+The thing is though: do i really need to think about what kind of class i'll need? Am i not better off thinking "what kind of functionality do i need to implement here?" or "what kind of behavior am i trying to implement?".  Does it really matter whether or not the physical packaging of that functionality is a class, an object, a module, or something else? Not really.  I just want to provide some behavior, while encapsulating some of the details of how that behavior is implemented.
+
+With a class, that's easy to do because we're all so used to doing that... just create a class with some public methods for the behavior you want to provide and whatever you want to keep private you just mark as private. There, done.  So how do you do that in JavaScript?  There are actually a bunch of ways to do this in JavaScript, and the code you'll see below is just one example. Some of you will read the code and think "oh ok, you're just emulating private methods here".  And while you'd be right in some way, it's a somewhat unfortunate way of thinking about the code because it means you mainly think in terms of classes and objects, whereas it might be more interesting to start thinking more in terms of 'functionality' which can come in many shapes or forms.
+
+Take a look at the code, which i'll discuss further below:
+
+<div>
+[javascript]
+var MyNameSpace = MyNameSpace || {};
+
+MyNameSpace.jsondateformatter = (function () {
+    var that = this;
+
+    var toDate = function (jsonDateString) {
+        var time = jsonDateString.replace(/\/Date\(([0-9]*)\)\//, '$1');
+        var date = new Date();
+        date.setTime(time);
+        return date;
+    };
+
+    var prefixWithZeroIfNecessary = function (number) {
+        return number &lt; 10 ? '0' + number : number;
+    };
+
+    var dayAsDoubleDigitDayString = function (date) {
+        return prefixWithZeroIfNecessary(date.getDate());
+    };
+
+    var monthAsDoubleDigitMonthString = function (date) {
+        // for some reason, the result of getMonth is zero-based
+        return prefixWithZeroIfNecessary(date.getMonth() + 1); 
+    };
+
+    var hourAsDoubleDigitHourString = function (date) {
+        return prefixWithZeroIfNecessary(date.getHours());
+    };
+
+    var minutesAsDoubleDigitMinuteString = function (date) {
+        return prefixWithZeroIfNecessary(date.getMinutes());
+    }
+
+    return {
+        toDate: function (jsonDateString) {
+            return that.toDate(jsonDateString);
+        },
+
+        toShortDateString: function (jsonDateString) {
+            var date = toDate(jsonDateString);
+            return dayAsDoubleDigitDayString(date) + '/' +
+                   monthAsDoubleDigitMonthString(date) + '/' +
+                   date.getFullYear();
+        },
+
+        toShortDateTimeString: function (jsonDateString) {
+            var date = toDate(jsonDateString);
+            return dayAsDoubleDigitDayString(date) + '/' +
+                   monthAsDoubleDigitMonthString(date) + '/' +
+                   date.getFullYear() + ' ' +
+                   hourAsDoubleDigitHourString(date) + ':' +
+                   minutesAsDoubleDigitMinuteString(date);
+        }
+    }
+})();
+[/javascript]
+</div>
+
+First, i create an object (if it doesn't already exist) to serve as a namespace.  Then i add a property called 'jsondateformatter' to that 'namespace object'.  So far this is pretty boring.  But the value that gets assigned to the jsondateformatter property is what's interesting here.  As you can see, i'm wrapping a function expression between 2 braces, and all the way at the bottom of the code i add the invoke operator, which is ().  That means that my function expression will be immediately evaluated (typically referred to as an immediate function), and the result of that will be assigned to the jsondateformatter property.  And what exactly is the return value of my immediate function?  It's an object which contains 3 properties: toDate, toShortDateString and toShortDateTimeString.  Each of those properties contains a function, and each of those functions refers to one or more variables that i created in the immediate function.
+
+And this is where it gets beautiful (at least, in my opinion and i have to admit i'm kinda weird that way): due to the power of <a href="http://en.wikipedia.org/wiki/Closure_(computer_science)">closures</a>, the values of the variables that i created in the immediate function remain accessible in the functions that have been assigned to the properties of the object that my immediate function returns.  Every function that i've created within the scope of the immediate function can <em>only</em> be accessed by the functions of the object that i return, and that's it. It's completely encapsulated and reusable.  And you don't need classes to do it.  You might think "yeah well ok, i guess that's cool but you're still using an object so it's not all too different!" and again, you'd be right in some way.  But the object i'm returning here is nothing more than some kind of holder of the 3 functions that i want to make available.  If i only needed to make one function available, i wouldn't return an object... i'd just return a specific function which closes over whatever i want to keep encapsulated.
+
+And that is one of the cool things about trying to think <em>in</em> the language you're working with: you learn new ways of doing essentially the same thing, though that which you thought was the 'thing' is just one of many representations of its essence.  Writing that last line made my head hurt, so i think i'll just stop here.

@@ -1,0 +1,20 @@
+Note: This post is part of a series. Be sure to read the introduction <a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-series/">here</a>.
+
+Now that you've learned everything there is to know about the Request/Response Service Layer (RRSL), i'd like to repeat the benefits of the RRSL that i stated in a <a href="http://davybrion.com/blog/2009/07/why-i-dislike-classic-or-typical-wcf-usage/">previous post</a>:
+
+<ul>
+	<li>Since we only have one service contract with one service operation, we don't need to spend time thinking about how to design and implement our service contracts and our operations.  After all, every operation that the service layer must support is a specific request type that can be added, together with its requesthandler.</li>
+	<li>We can keep our operations as fine-grained as we want (which increases reusability and overall flexibility), without having to pay the cost for chatty network communication by batching multiple requests per roundtrip as much as possible in a transparent manner.</li>
+	<li>The actual implementation of our service is very minimal.  It's just a small class which resolves the appropriate requesthandler through the IOC container, based on the type of the incoming request.  It then delegates to the requesthandler by passing the request to it, and it returns the response to the client.  We can simply add 'operations' by adding request types and requesthandlers to our assemblies... everything gets registered automatically when the application starts up</li>
+	<li>We avoid repetitive code for cross cutting concerns by putting it in a base requesthandler class that the other ones inherit from.  That kind of code now only occurs once, and we can plug in custom code at any point of the execution by simply using the <a href="http://en.wikipedia.org/wiki/Template_method_pattern">Template Method pattern</a>.
+        <li>The implementation of our requesthandlers doesn't contain any code that doesn't have to be there.  Each requesthandler simply implements the Handle method to handle the incoming request, and can do as it pleases to fulfill the request.  All dependencies are injected automatically by the IOC container.  It's usually nothing more than using the dependencies to execute the necessary business logic and then returning a response-derived object.</li>
+	<li>Since we only have one service, we only need one client proxy which never needs to be updated (technically, we have 2: one which is entirely asynch and mostly used in Silverlight clients, and one which is strictly synchronous and is mostly used by ASP.NET applications and Windows Services or command line tools.</li>
+	<li>This single client proxy implementation can make sure that underlying WCF resources are utilized as efficiently as possible and cleaned up properly throughout the client application(s).</li>
+	<li>The client proxy is easy to stub during unit tests which increases the testability of our client side code.</li>
+	<li>Very little configuration.  We only have to configure one client-side endpoint, and one server-side endpoint.  That's it.</li>
+	<li>All of this is very easy to put in some kind of reusable library.  Our applications simply reference the library, inherit from the base requesthandler types, make sure everything is registered properly upon application startup, add a couple of lines of XML and we can start the development of our service layer without any friction.</li>
+</ul>
+
+One of the goals of this series was to convince people that those benefits are indeed real.  I really wanted to prove each and every one of those listed benefits and i hope that i succeeded at that.  I also hope you realized how cleanly we can write our client code, as well as our actual service layer logic.  I definitely recommend that you consider this entire approach for your future applications.  While i won't claim that it is the best solution for every project, it's definitely one that can give you quite a few tremendous benefits.
+
+Since i really don't have much more to say about this entire topic, i'm just going to leave it at that :)

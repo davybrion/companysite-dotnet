@@ -1,0 +1,5 @@
+Fabio just made the <a href="http://nhforge.org/blogs/nhibernate/archive/2009/03/15/nhibernate-2-1-0-on-the-road.aspx">announcement</a>.  You can download the source or the binaries <a href="http://sourceforge.net/project/showfiles.php?group_id=73818&package_id=73969&release_id=668347">here</a>. 
+
+And don't let the alpha tag fool you... while we can never guarantee bug-free releases (who can?), 2.1 is very good already.  We currently have 2 projects at work which have been using the NHibernate trunk instead of the 2.0 release for about 2 months now with no NHibernate-related problems :) 
+
+Be sure to check the <a href="http://sourceforge.net/project/shownotes.php?group_id=73818&release_id=668347">release notes</a> to get an overview of new features, issues that were fixed, and some breaking changes.

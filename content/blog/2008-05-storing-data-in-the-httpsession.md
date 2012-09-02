@@ -1,0 +1,54 @@
+As we all know (i'd hope!), storing data in the HttpSession is pretty bad. HttpSessions remain in memory long after (depending on the configured timeout) the user has performed his/her last action on your site. Think about that for a second... everything you store in the HttpSession will remain in memory for a while even though it has no chance of being used again, since the user is already gone. If you don't have a large amount of concurrent users, this might not cause any noticeable problems. But you have to think about the multiplier effect. As your user base increases, so do your memory requirements. You'll need more memory to keep serving those users. But if you store a lot of data in the HttpSession, your wasted memory will increase along with your increased user base. While you're serving your active users, you're still holding a lot of data in memory from users who've left your site 5 or 10 minutes ago. Because that unneeded data is still referenced from HttpSessions that will never be used again, it prevents the garbage collector from releasing that memory. When your memory usage gets to the point where the operating system needs to start <a href="http://en.wikipedia.org/wiki/Paging">paging</a>, you'll notice dramatic slowdowns in your site's performance. 
+
+So you really want to limit the information you store in the HttpSession to that which pertains to the actual 'session' of the user.  Identification of the user, chosen language, stuff like that. But don't use the HttpSession to store data that is related to the current screen the user is in. This is unfortunately commonly done, but this can easily lead to the problems mentioned above. It's better to try to work as stateless as possible as this allows your application to scale to a large user base more easily. Don't store retrieved data in the HttpSession, just retrieve it again when it's needed. However, some kinds of data are very expensive to retrieve. In these cases, it might actually be better to store it in the HttpSession to avoid having to retrieve it excessively.  So how do you avoid that these stored pieces of data have a negative impact on the memory usage of your application?
+
+The <a href="http://www.amazon.com/Release-Production-Ready-Software-Pragmatic-Programmers/dp/0978739213/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1211066583&sr=8-1">Release It book</a> mentions a great trick for this.  I haven't used it yet in an application, but it definitely makes a lot of sense.  Instead of storing a reference to data in your HttpSession (and thus, preventing that data from being garbage collected until the HttpSession is garbage collected), you should use a 'soft reference'. A soft reference is kinda like a simple pointer to the data, but it does not prevent the data from being garbage collected.  The soft reference doesn't count as a real reference to the garbage collector, so when the collector needs to clear memory, the data you reference with a soft reference will be garbage collected (if it's not referenced anywhere else that is...). If that happens your application code has to deal with it.  In that case, you should retrieve the data again.  Will this cause you to retrieve the expensive piece of data more times than you would have to if you had stored it with a normal reference in the HttpSession? Possibly. You can't give a definitive answer to that question because it depends on how frequently the garbage collector needs to clear memory.  But you will most likely benefit from possibly still having that data in memory.  If it's still there, great! Use it. If it's no longer there, fetch it again.  You'll probably reduce the amount of times you need to retrieve it, but you'll also avoid keeping the data from being garbage collected when the server is low on memory.
+
+In .NET, you can use the <a href="http://msdn.microsoft.com/en-us/library/system.weakreference.aspx">WeakReference class</a> to obtain a 'soft reference'.  Lets demonstrate this approach with a quick-n-dirty example:
+
+When you want to store data in the HttpSession, instead of doing this:
+
+<code>
+
+<div style="font-family: Consolas; font-size: 10pt; color: black; background: white;">
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: #2b91af;">IEnumerable</span>&lt;<span style="color: #2b91af;">OrderView</span>&gt; outstandingOrders </p>
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; = orderManagementServiceProxy.GetOverviewOfAllOutstandingOrders();</p>
+<p style="margin: 0px;">&nbsp;</p>
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Session[<span style="color: #a31515;">"outstandingOrders"</span>] = outstandingOrders;</p>
+</div>
+
+</code>  
+
+You could do this:
+
+<code>
+
+<div style="font-family: Consolas; font-size: 10pt; color: black; background: white;">
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: #2b91af;">IEnumerable</span>&lt;<span style="color: #2b91af;">OrderView</span>&gt; outstandingOrders </p>
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; = orderManagementServiceProxy.GetOverviewOfAllOutstandingOrders();</p>
+<p style="margin: 0px;">&nbsp;</p>
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Session[<span style="color: #a31515;">"outstandingOrders"</span>] = <span style="color: blue;">new</span> <span style="color: #2b91af;">WeakReference</span>(outstandingOrders);</p>
+</div>
+
+</code>
+
+And when you'd need to retrieve that data in a later request, you could do this:
+
+<code>
+
+<div style="font-family: Consolas; font-size: 10pt; color: black; background: white;">
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: #2b91af;">WeakReference</span> reference = Session[<span style="color: #a31515;">"outstandingOrders"</span>] <span style="color: blue;">as</span> <span style="color: #2b91af;">WeakReference</span>;</p>
+<p style="margin: 0px;">&nbsp;</p>
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: blue;">if</span> (reference != <span style="color: blue;">null</span> &amp;&amp; reference.IsAlive)</p>
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; outstandingOrders = reference.Target <span style="color: blue;">as</span> <span style="color: #2b91af;">IEnumerable</span>&lt;<span style="color: #2b91af;">OrderView</span>&gt;;</p>
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: blue;">else</span></p>
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; outstandingOrders = orderManagementServiceProxy.GetOverviewOfAllOutstandingOrders();</p>
+<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
+</div>
+
+</code>
+
+Like i said, this is a quick-n-dirty example... normally you'd want to prevent direct access to the HttpSession and you'd probably write some kind of class that takes care of wrapping the reference in a WeakReference and unwrapping it from a WeakReference but this code is just to illustrate the approach.

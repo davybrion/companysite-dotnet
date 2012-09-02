@@ -1,0 +1,5 @@
+If you're running your tests multiple times throughout the day, it's in your best interest to keep those testruns as fast as possible.  We have a solution with 2 test projects.  The first testproject contains 2700 regular tests that don't use any external resources so they should be very fast.  The second testproject contains 1200 database tests (you do write tests for your queries, right?) which is a little bit slower, as is to be expected.
+
+The problem is that with Resharper's testrunner, running the database tests actually takes less time than running the 'fast' tests.  The 1200 database tests take 1m14 seconds to run.  The 2700 in memory tests take 1m20 seconds to run... so that's almost 3 minutes of waiting time whenever you run the entire testsuite.
+
+Just out of curiosity, i ran all of the tests with TestDriven.NET to see how much faster it would be... The 1200 database tests only took about 45 seconds, and the 2700 in memory tests only took 28 seconds to run.  Running the entire testsuite with TestDriven.NET actually takes less than half the time it takes with Resharper's testrunner... 

@@ -1,0 +1,34 @@
+<a href="http://weblogs.asp.net/bleroy">Bertrand Le Roy</a> left a few interesting comments on a <a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-executing-custom-queries/">previous post</a>.  Here's a 'transcript' of the comments (i'm only showing the parts that pertain to this particular topic):
+
+<blockquote>
+<strong>Bertrand Le Roy</strong>: Would it make sense for the query to implement IDisposable so that you can put it in a using block? I would be a little concerned about the query failing and never getting disposed of.
+<strong>Me</strong>: well, if a query fails the underlying SqlCommand object will eventually be garbage collected so i wouldn’t really worry about that. Failed queries shouldn’t happen frequently anyway IMO because they typically are the result of incorrect code.
+<strong>Bertrand Le Roy</strong>:Incorrect code happens. When it happens, you may exhaust your connection pool before that stuff gets collected.
+<strong>Me</strong>:code that causes failing queries should never even make it to your source code repository… you do write tests for queries, no? If you deploy code which causes frequently failing queries, then you have some fundamental problems in the way you create, test and deliver software.
+</blockquote>
+
+I wanted to expand on this since i think it's an important topic.  Simply put, i believe that failing queries in a production environment are simply inexcusable.
+
+First of all, every single query in your application <a href="http://davybrion.com/blog/2009/07/when-you-absolutely-need-to-use-a-real-database-in-tests/">should be tested properly with automated tests</a>.  Doing this consistently will avoid a lot of problems.  In fact, i can only think of 3 reasons why queries could still fail in production, even if you do write tests for each and every one of them:
+
+<ul>
+	<li>The query is composed dynamically, based on a set of conditions (for instance, a complex search screen with lots of filtering possibilities).</li>
+	<li>Queries that use a dynamic number of parameters (like with a WHERE yaddiyadda IN ({your parameters here}) clause) and the parameter list grows bigger than the maximum allowed by your database.</li>
+	<li>Some idiot modified parts of the database structure without redeploying an updated version of the application.</li>
+</ul>
+
+In case of dynamically composed queries, you obviously need some tests for each and every possible filter that can be added to the query.  Parameter values shouldn't cause problems either, unless you're adding their values straight into the SQL statement (which is terrible for a host of reasons).  Different filter combinations shouldn't cause issues either since you should have tests for those as well anyway.  In any case, this can only fail due to not testing each possible combination.
+
+The second option (dynamic list of parameters) is a bit more difficult.  In most cases, you truly don't expect the number of parameters to exceed the limit (which is 2100 on SQL Server 2005) because you typically use this approach when you have a fixed set of data.  I'd even go as far saying that using the IN clause with a parameter list that could very reasonably grow much larger over time (based on data in another table for instance) is negligent programming.  Simply put, you should only use this approach when you know that the list of parameters won't grow too large.  If the list of parameters can grow beyond the allowed limit, you simply need to come up with a different query.
+
+And then there's the last situation... and it's an oh-so-typical one unfortunately.  I've come across more than my fair share of people who think it's 'ok' to make changes directly into a production database without going through the proper deployment procedures.  This is simply just asking for problems.  Whenever a database change needs to be made, you should always make the change first in a development (and preferably an acceptance) environment, and at least run your entire test suite on the modified database.  If there are failing tests, then you will at least have the option to fix the code and run the testsuite again until everything is alright.  Only then should you upgrade both the application and the database in production.
+
+Proper testing practices and proper deployment procedures can virtually eliminate the possibility of having failed queries in production.  Having said all that, we all know that even the best of intentions and practices won't prevent all bugs from showing up in production.  I'll once again quote from Bertrand's comment:
+
+<blockquote>Incorrect code happens. When it happens, you may exhaust your connection pool before that stuff gets collected</blockquote>
+
+He does have a point there.  However, i personally don't think that you should keep this particular situation in mind whenever you need to execute a query in your code.  Like i said, i consider failed queries in production inexcusable and therefore, i do not think it's worth the effort of protecting yourself against a situation that shouldn't occur in every possible place where it _might_ occur.  
+
+For instance, in Bertrand's particular example of exhausting a connection pool, you could easily avoid this situation in one single part of the code by making use of a <a href="http://davybrion.com/blog/2009/07/protecting-your-application-from-remote-problems/">circuit breaker</a>.  As soon as you know that your application is having problems connecting to the database, why would you even bother to keep trying? It's much better to fail instantly when the database is known to be down instead of trying to connect over and over again.  You could easily use a circuit breaker (either at the service level like in the example i linked to, or at the lowest possible level by using a <a href="http://davybrion.com/blog/2008/09/extending-nhibernates-driverconnectionprovider/">custom DriverConnectionProvider</a> in NHibernate with circuit breaker logic at that level) to prevent such a problem from getting out of hand. 
+
+Now, don't get me wrong... i don't want to advocate improper usage of the disposal pattern or incorrect resource utilization in general, but i don't agree that we should litter our code with checks and precautions for things that shouldn't occur frequently anyway.  I do believe that protective countermeasures should be put in place, but only where they make sense.  I think this is somewhat similar to proper exception handling practices: don't put a try/catch/finally block in every piece of code, use it where you can deal with it... etc.

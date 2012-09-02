@@ -1,0 +1,1 @@
+Ok, so people are asking me why i'm not going to the <a href="http://www.microsoft.com/belux/techdays/about.aspx">TechDays</a> event.  The answer to that question is very simple: if i want questionable content with bad marketing, i'd just turn on the TV :p

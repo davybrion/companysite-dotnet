@@ -1,0 +1,40 @@
+Soon after i introduced <a href="http://davybrion.com/blog/2010/06/using-agathas-server-side-caching/">Agatha's server-side caching</a>, people started asking for client-side caching as well. There are indeed quite a few scenarios where it makes sense to cache the response of a service call on the client instead of merely doing it on the server.  After all, what kind of service call can be faster than one you <em>don't</em> have to make?  It's finally been added to the trunk, and it will be available in the upcoming 1.2 release.  So for those of you want to use it but are still on 1.1, you can safely upgrade to the current trunk.
+
+Usage of the client-side caching is practically identical to usage of the server-side caching feature, which means you have to use the EnableClientResponseCaching attribute on your request types where you want to use caching, and they have to implement the Equals and GetHashCode methods properly (read <a href="http://davybrion.com/blog/2010/06/using-agathas-server-side-caching/">this post</a> for more info on this).
+
+Here's a small example from the Sample that is included in the Agatha source code:
+
+<div>
+[csharp]
+    [EnableServiceResponseCaching(Minutes = 5)]
+    [EnableClientResponseCaching(Seconds = 30)]
+    public class ReverseStringRequest : Request
+    {
+        public string StringToReverse { get; set; }
+ 
+        public bool Equals(ReverseStringRequest other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return Equals(other.StringToReverse, StringToReverse);
+        }
+ 
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != typeof(ReverseStringRequest)) return false;
+            return Equals((ReverseStringRequest)obj);
+        }
+ 
+        public override int GetHashCode()
+        {
+            return (StringToReverse != null ? StringToReverse.GetHashCode() : 0);
+        }
+    }
+[/csharp]
+</div>
+
+In this case, both the EnableServiceResponseCaching and EnableClientResponseCaching attributes were used, which means that responses for this request will be cached for 5 minutes on the server, and for 30 seconds on the client.  You don't have to use both attributes simultaneously, you can use either one of them as well depending on where you want to cache the response.  You can also set a region (like you can with the server-side caching) so you can explicitely clean a certain region of the cache if you need to at some point.
+
+Everything happens transparently from your code.  If you make a service call with one request, and there is a cached response available for that request, the service call is <em>not</em> made and you'll get the cached response.  If you send a batch of requests, and there are cached responses available for any of those requests, the call that is sent to the service will <em>only</em> include the requests for which no cached response was available.

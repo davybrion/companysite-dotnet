@@ -1,0 +1,15 @@
+> The first time you do something, you just do it. The second time you do something similar, you wince at the duplication, but you do the duplicate thing anyway. The third time you do something similar, you refactor.
+
+That's a quote from Don Roberts, found in Martin Fowler's Refactoring book (page 58). That quote didn't really make me think twice at the time I read it, but it got stuck in my head later on when I heard it from someone who's always been very influential to me. When this person told me that this was one of his favorite rules, I was still in my "no way dude, all code needs to be as clean as it can be" phase. But it's really grown on me over the last few years. Now, just to avoid any confusion: this post is about *my interpretation* of 'Three Strikes And You Refactor', not about what may have been originally intended or what some people think of it now. 
+
+The most important thing I remember when learning about TDD was:
+
+1. Write a failing test
+
+2. Do the simplest thing that could possibly work to make the test pass.
+
+3. Refactor.
+
+With all the literature that's out there, as well as popular opinion on how important clean code is, it's tempting to go overboard with that 'refactor' step. It's tempting to go for the solution that is crispy clean. The solution that'll have your coworkers or peers go "ohhh, now *that* is nice". However, you really need to ask yourself the following question: "is it really worth it?". Wanting to make sure that every piece of code is perfect takes up a lot of time, and I've learned that it certainly isn't always worth it. Besides, it's quite easy to go off on a path of introducing new concepts and abstractions to your code that end up being totally unnecessary. If this increases complexity in parts that don't really matter, it ends up being a huge waste. Not only for the person who wrote it, but for every person who has to read it and comprehend it later on.
+
+'Three Strikes And You Refactor' is a helpful rule of thumb here. Try to keep things as simple as possible and don't be afraid of a *little* duplication here or there. Once you find yourself (or a teammate) doing the same thing for a third time, it's worth cleaning up because that third time very often means that it wouldn't be the last time either. This way, you only introduce concepts and abstractions that are really needed, and enables you to avoid adding unnecessary cruft to the code.

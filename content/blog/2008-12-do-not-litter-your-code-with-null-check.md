@@ -1,0 +1,23 @@
+Just read the following <a href="http://geekswithblogs.net/TechnicalDebtor/archive/2008/12/01/trycatch-performance.aspx">post</a> on the performance of try/catch and throwing exceptions.  In the author's small (and completely unrepresentative of real-world scenarios) performance tests, it showed that throwing exceptions is a quite costly operation.  
+
+Ah... if only it were that simple.  Throwing an exception is indeed a costly operation, compared to most other statements.  But let's get real... the performance 'hit' of throwing exceptions in real-world scenarios is completely negligible unless you're doing it in a tight loop or a piece of code that is being executed pretty much all of the time under heavy user load.  In practically every other case, you really won't feel the difference performance-wise.
+
+Anyways, because of the perceived performance hit, the author concludes the following:
+
+<blockquote>
+Code defensively rather than catching exceptions <strong>wherever possible</strong>.
+</blockquote>
+
+I'm not entirely sure what the author really means with this, after all there are probably plenty of developers who consider throwing exceptions when something is wrong instead of letting things blow up as 'coding defensively'.  But if he's talking about the 'defensive coding' variant which often entails returning error codes or null references to avoid exceptions, and then checking for those return values all over your consuming code, then i could not disagree more.  
+
+I'm probably biased because i once had to maintain a codebase where the authors (to this day i believe they were relics from a C++ museum... and no, i don't dislike C++ but 'typical' C++ programming in .NET is just not ideal) tried to hide exceptions from everyone who used their code because 'application developers don't understand exceptions anyway' (sidenote: can you imagine that? not only did they suck tremendously, they were so arrogant to think they were so much better than 'typical' developers).  So they had a few try/catch blocks in low-level pieces of their code, and when they caught an exception, they would just return a null reference or some kind of old school error code.  
+
+My first problem with this, is that it leads to code which is littered with null checks and the likes.  It hurts readability, and i'd even go as far as to say that it hurts maintainability because it really is easy to forget a null check if you're writing a piece of code where a certain reference really should never be null.  And you just know that the null checks will be missing in some places.  Which actually makes debugging harder than it needs to be.  Had the original exception not been caught and replaced with a faulty return value, then we would've gotten a valuable exception object with an informative stacktrace.  What does a missing null check give you? A NullReferenceException in a piece of code that makes you go: wtf? this reference should never be null!
+
+So then you need to start figuring out how the code was called, and why the reference could possibly be null.  This can take a lot of time and really hurts the efficiency of your debugging efforts.  Eventually you'll figure out the real problem, but odds are that it was hidden pretty deeply and you spent a lot more time searching for it than you should have.
+
+Another problem with null checks all over the place is that some developers don't really take the time to properly think about the real problem when they get a NullReferenceException.  I've actually seen quite a few developers just add a null check above the code where the NullReferenceException occurred.  Great, the exception no longer occurs! Hurray! We can go home now! Umm... how bout 'no you can't and you deserve an elbow to the face'?  The real bug might not cause an exception anymore, but now you probably have missing or faulty behavior... and no exception! Which is even more painful and takes even more time to debug.  That original exception with the stacktrace sure sounds appealing now, doesn't it?
+
+Btw, why is it that the kind of developers who avoid certain language features because of 'performance problems' (usually based on faulty information) are often very likely to make mistakes such as remote calls in loops, memory leaks due to lousy event handling schemes, or my personal favorite: writing a HighPerformanceTimer class which uses Windows API's because 'it times much more accurately' and then in the same class, walking down the stackframe at runtime to figure out where the <strong>HighPerformanceTimer</strong> instance was called from for 'easy logging purposes, dude'
+
+Well like i said, maybe i'm just biased...

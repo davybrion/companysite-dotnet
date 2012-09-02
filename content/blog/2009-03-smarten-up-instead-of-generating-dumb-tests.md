@@ -1,0 +1,11 @@
+Laila has a <a href="http://www.noctovis.net/blog/index.php/2009/03/05/test-driven-development-with-code-generation/">post</a> about a code generation process which generates tests:
+
+<blockquote>
+Since the generated code is fully data-driven (based on stored procedures), the datalayer and its test are ok. They don’t need much adjustment. The tests are testing the way they should, and they are passing, and thus verifying the generation went well.
+</blockquote>
+
+I have serious problems with this approach... what exactly is the benefit of these tests?  That is a shitload of tests that don't really add any value to your testsuite.  They take a long time to run, and when these tests fail, it's often not just a test here or there... it's usually a bunch of failed tests which can make it quite hard to get to the real problem.  After a while, a lot of people kinda tune out when these tests fail.  Which makes it easier for a real test failure to hide amongst the failures of the generated tests.
+
+If you really want to use code generation based on your database, at least do it in a smart way... first of all, your code generator is a piece of software.  That piece of software should be tested to make sure that it generates correct code.  Instead of generating useless tests, why not write tests to verify the behavior of your code generator in all circumstances, just like you would with your real code?  Once you have a code generator with its own testsuite, there is very little need to generate tests which will verify the correctness of the generated code.  After all, the tests of the generator already verify that this is indeed the case.
+
+Finally, your code is generated based on some kind of meta-data.  Instead of verifying the generated code you can add one more test which verifies that the current meta-data (your database structure) is still the same as the one that was used the last time the generator ran.  And that's all there is to it.  No more useless tests which only waste a tremendous amount of time (and effort, which is ironic because code generation is supposed to save you time, right?) and you still get the same coverage (unless you're doing all this for the code coverage stats, which is pretty much a useless stat anyway).

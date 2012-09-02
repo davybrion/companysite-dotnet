@@ -1,0 +1,132 @@
+<h2>Introduction</h2>
+
+Garbage Collection sure is great, isn't it? We don't have to keep track of all the memory we've allocated and we don't need to release that memory when it's no longer needed. Because that is after all what the Garbage Collector does for us, without us having to worry about it.  This is actually a widespread misconception among many .NET developers.  It's true that Garbage Collection makes memory management a lot easier, but we simply can't rely on it all the time. There are most certainly some things you must always keep in mind when it comes to memory management in .NET.
+
+<h2>Different Kinds Of Resources, Different Consequences</h2>
+
+In most pieces of code, you use variables. A lot of these variables are references to objects. When your variables go out of scope, they no longer exist.  When those variables are references to objects, only your reference is gone and the actual object that was referred to is still in memory somewhere. The Garbage Collector (GC) makes sure that orphaned objects (objects that no longer have a usable reference to them) are removed from memory. This is an automatic process within the .NET runtime.  Essentially, the GC periodically performs some checks on objects and if it comes to the conclusion that certain objects are no longer needed, it will remove them from memory.  This is a gross oversimplification of how it really works, but that is what it comes down to and that is also how most people think about the GC.
+
+The GC in .NET is very smart and will almost always do a better job of memory management than you will. But there is one huge downside to it: the GC runs periodically and you have no deterministic way of knowing when it will run.  Sure, you can instruct the GC to perform a collection but in most cases that will actually have a negative impact on the memory management of your application.  I won't go into the details here, but i will provide a follow-up post on this later on. For now, keep in mind that forcing a garbage collection to occur is really something you should avoid.
+
+So is it really a problem that you don't know for certain when the GC will run? It depends on which kind of objects that need to be removed from memory.  There are basically 2 kinds: managed and unmanaged resources. Managed resources are typical .NET types. Unmanaged resources (also referred to as Native Resources) are things that fall outside of the scope of the .NET managed environment.  These are usually things that are available within the Operating System, or that are available through lower-level development API's (such as the Win32 API for instance).  Unmanaged resources can't be cleaned up automatically by the .NET runtime, so if you use them directly, you are responsible for cleaning up after you've used them. Luckily, a lot of managed types are available that take care of the dirty details for you.  For instance, if you need to use a file in .NET, you'll typically use a FileStream instance or something else that easily makes the content of the file available to you, or that easily allows you to write content to a file.  The FileStream is a managed type, but it uses unmanaged resources to implement the functionality it offers.  
+
+Now think about this: you are using a managed type, so you shouldn't need to perform any cleanup, right?  However, if that managed type uses unmanaged resources then they still need to be cleaned up. And those unmanaged resources should be cleaned up as soon as possible because they can be quite expensive.  These types usually offer a way to clean up the unmanaged resources they use in a deterministic manner.  They usually implement the IDisposable interface, which exposes a Dispose method.  When you call the Dispose method, the unmanaged resources are cleaned up right then and there and then there's no need to wait for the garbage collector, which again, could be quite expensive when you (either directly or indirectly) have a bunch of unmanaged resources in memory that are waiting to be cleaned up.  
+
+<h2>Disposable Managed Resources</h2>
+I call types that implement the IDisposable interface Disposable Managed Resources. They are indeed managed types and thus they are guaranteed to be cleaned up when the GC comes around and notices that instances of these types are no longer needed.  However, if you merely trust on the GC to clean up instances of these types you are taking quite a risk. Any expensive resource it may hold might be cleaned up a lot later than it could have been.  Which can be very inefficient, and thus, quite costly.  
+
+If a type implements the IDisposable interface, it usually has a good reason for doing so (there are of course exceptions to the rule). It is essentially a way of telling consumers of the type that it offers a deterministic way of cleaning up the resources it consumes and i believe you should take advantage of that.  If you don't, you may end up with inefficient memory management, and that's when people start complaining that Garbage Collection is 'evil' or that it 'sucks'. In most cases, people who feel that way simply don't know how to use it properly.  The IDisposable interface and the Dispose Pattern (which we'll get to in a minute) allow you to avoid most of the issues that are generally attributed to the Garbage Collection in general.
+
+So how do we deal with this? First of all, if a type uses unmanaged resources, it should implement the IDisposable interface using the Dispose Pattern. Secondly, if any of your types use other types that implement IDisposable, it is your responsibility to make sure these types are properly disposed of.  You either dispose them when you no longer need them, or you must implement IDisposable and the Dispose Pattern yourself to make sure the Disposable Managed Resources you depend on are indeed properly disposed of.  If you need to implement IDisposable, your type effectively becomes a Disposable Managed Resource itself.  A lot of people think that this isn't necessary, but by not doing so they are breaking the contract that the IDisposable interface implies. If a type implements IDisposable then either that type or any other type it may use probably uses unmanaged resources somewhere and you want to see these get cleaned up as soon as possible.  Because of that, i believe it's best to implement IDisposable yourself if you're holding any reference to a type that also implements it.
+
+<h2>The Dispose Pattern</h2>
+
+Implementing the IDisposable interface can be as easy as merely providing a public Dispose method where you perform your cleanup.  That's really not a good way of doing it though, as it could lead to a bunch of other problems which might actually make the situation worse.  The best way to implement the IDisposable interface is to implement the Dispose Pattern, which looks like this:
+
+<div>
+[csharp]
+    public class MyDisposableClass : IDisposable
+    {
+        private bool disposed = false;
+ 
+        public void Dispose()
+        {
+            Dispose(true);
+            // prevent this object from being placed in the finalization queue if some
+            // derived class provides a finalizer
+            GC.SuppressFinalize(this);
+        }
+ 
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    // dispose all Disposable Managed Resources here
+                }
+ 
+                // dispose all Unmanaged Resources here
+ 
+                // set disposed to true to prevent the code above from being
+                // executed a second time
+                disposed = true;
+            }
+        }
+    }
+[/csharp]
+</div>
+
+If you don't need a finalizer it's best not to provide one (we'll discuss finalizers later on).  If you do need one, you would implement it like this:
+
+<div>
+[csharp]
+        public ~MyDisposableClass()
+        {
+            Dispose(false);
+        }
+[/csharp]
+</div>
+
+So what's so good about the Dispose pattern? Well, we make a clear distinction between what should happen when the object is disposed through the Dispose method, or when it's being cleaned up by the finalizer. When the clean up occurs through a call to Dispose, it calls the protected virtual Dispose method with the disposing parameter set to true. When this parameter is true, you should call the Dispose method of each Disposable Managed Resource you're holding a reference to. Outside of the if-statement, you should clean up each unmanaged resource you may be holding.
+
+If your class (or a derived class) implements a finalizer method, it should call the Dispose method with the disposing parameter set to false.  The reason for this is that the order in which objects are finalized is not specified. If you're not careful, you could accidentally call the Dispose method of a Disposable Managed Resource which may have already been finalized as well.  This would cause an exception and a finalizer method should never ever throw an exception because that could keep other objects from being finalized.
+
+If you can, try to put this pattern into a reusable base class and make your Disposable Managed Resource holding types inherit from this.  An example of this approach can be found <a href="http://davybrion.com/blog/2008/06/disposing-of-the-idisposable-implementation/">here</a>.
+
+<h2>Using Disposable Managed Resources</h2>
+
+In a lot of cases, you will use a Disposable Managed Resource within the scope of one method. In that case, you certainly don't need to implement IDisposable. There are two things to keep in mind though. If you receive the Disposable Managed Resource as a method parameter, you are not responsible for disposing it! Somebody else created it, let them take care of the disposal. Things will most likely go wrong if you dispose objects that have been giving to you by somebody else. So in this case, you would just use the object and not worry about it any further:
+
+<div>
+[csharp]
+        public void DoSomethingInteresting(MyDisposableClass disposableResource)
+        {
+            // ... some code could go here
+            disposableResource.DoWhateverItIsThatMakesYouSoSpecial();
+            // ... some code could go here
+ 
+            // we reach the end of the method and we haven't Disposed the
+            // Disposable Managed Resource because it wasn't our responsibility
+        }
+[/csharp]
+</div>
+
+However, if you create the object yourself, then you are responsible for getting rid of it properly. In that case, use a using block to make sure the object is disposed of even in case of unhandled exceptions:
+
+<div>
+[csharp]
+        public void DoSomethingInteresting()
+        {
+            // ... some code could go here
+            using (var myDisposableResource = new MyDisposableClass())
+            {
+                myDisposableResource.DoWhateverItIsThatMakesYouSoSpecial();
+            }
+            // ... some code could go here
+ 
+            // we reach the end of the method and we properly Disposed the
+            // Disposable Managed Resource because it was our responsibility
+        }
+[/csharp]
+</div>
+
+In case you don't know, the using-block guarantees that the Dispose method will be called when we leave the scope of the block.  It can get pretty tricky sometimes if you're passing the Disposable Managed Resources to other objects that will hold a reference to them which will remain in use after you've left the using block. In this scenario, it's possible that the object you've passed the Disposable Managed Resource to will try to invoke methods on the disposed instance. Also a situation you most certainly want to avoid because it will either cause unexpected behavior or even unhandled exceptions. The unhandled exceptions are easy to figure out, but the unexpected behavior might be difficult to debug.  The key in this scenario, is to figure out a way to not call Dispose on the resource until the other object is done with it.  Sometimes it might be enough to put your using block on a slightly higher level, other times you'll have to keep a reference to the resource yourself, which effectively means you've now become an owner of the Disposable Managed Resource.
+
+<h2>Owning Disposable Managed Resources</h2>
+
+If you need to hold a reference to a Disposable Managed Resource, you are either the owner of the object or at least someone who owns a stake in the lifetime of the object.  If you are the owner, and you do not pass the Disposable Managed Resource to any other object then the solution is easy: implement IDisposable.  If you do pass the Disposable Managed Resource to other objects, then it can get tricky. Will they only use it to perform some action or will they hold a reference to it?  If they hold a reference to it, it means that they too have a stake in the lifetime of the resource.  Depending on the implementation of the other types, they may or may not call the Dispose method of the instance you created. Which could cause unexpected behavior or exceptions in your code. Make sure you are prepared for that if you're passing these objects around. But you should definitely dispose of them in your own Dispose method.
+
+If you didn't create the Disposable Managed Resource, but you do need to hold a reference to it, then you've got some questions to answer. Does the type which provided you with the instance expect you to be solely responsible for the lifetime of the object? In case of factory classes or factory methods, the answer is usually 'yes'.  If you've been given the instance by something that will probably make use of that same instance, i think it's better not to dispose it.  Some people will probably disagree, but i don't think it's my responsibility to dispose objects that i didn't create, unless the instance was given to me by a factory class or a factory method.  I would expect that the real owner of the resource would dispose of it. Still, it's a difficult call to make.
+
+<h2>Finalizers</h2>
+
+Finally, i'd like to add a few words about Finalizers in .NET.  A finalizer is similar to a destructor in C++, in that it is the code that is run when your object is being removed from memory. The big difference is that you never know for sure when it will be run, which is why the IDisposable interface and the Dispose pattern was created. There are a lot of misconceptions going around about finalizers, so keep the following comments in mind. 
+
+First of all, finalizers only make sense when you have direct references to unmanaged resources. If you have unmanaged resources, implement IDisposable and provide a finalizer that calls the Dispose overload with the disposing parameter set to false. This should really be the only code inside your finalizer method. 
+
+Finalizers also come with a performance penalty. When finalizable objects are created, pointers to these objects are added to the finalization queue of the GC.  These finalizable objects are collected less frequently because the GC performs finalizations through its finalization queue. This finalization process is not executed as frequently as regular garbage collections because it's quite costly. So not only are finalizable objects cleaned up less frequently, it takes more processing power to do so.  So if you have a lot of finalizable instances, your code's performance can easily be impacted because of this.  
+
+<h2>Conclusion</h2>
+
+I hope i made it clear that there is a lot more to automatic memory management in .NET than simply relying on the GC to take care of all of the details for you. There is a lot more stuff that i didn't cover in this post (it's long enough already) but most .NET developers will probably get by pretty well with the advice given in this post.  It's not an easy subject to explain so i hope everything was clear :)

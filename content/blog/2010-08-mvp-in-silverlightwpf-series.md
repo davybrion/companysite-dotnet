@@ -1,0 +1,15 @@
+I recently <a href="http://davybrion.com/blog/2010/07/the-mvvm-pattern-is-highly-overrated/">criticized the MVVM pattern</a> which pretty much every Silverlight and WPF developer has probably used by now.  Reactions to that post were (as was to be expected) pretty varied.  Quite a few people agreed with my statements.  Others needed to see code to get a better idea of what i'm talking about.  Others flat-out considered it (and my opinions in general in some cases) to be nonsense.  Challenging the MSDN-recommended-way-of-development always seems to stir up emotions with a large group of .NET developers, but the fact of the matter is that it simply needs to be done if you think you've got a better alternative. Whether or not i'm actually right about it doesn't even matter.  The whole point is that you <em>should</em> be aware of alternatives and that the approach you choose to follow is the result of an informed decision.
+
+And that's why i decided to write this series instead of simply trying to back up my statements with a post that showed some code.  It's pretty hard to back up architectural preferences with a little bit of code in a blog post.  People will either complain that the example is too contrived, or that your example doesn't really illustrate the benefits of your architectural ideas and that it can be done much simpler.  With this series, and its accompanying sample project (which i'll link to in a future post in this series), i hope to convince at least a few of you that the MVP approach can indeed be a much better choice over MVVM.  I'm fully aware of the fact that plenty of 'typical' .NET developers will still criticize this series, the sample project and the approach that i'm advocating.  And that's ok, really.  We can all have our opinions and we can all develop our software the way we want to. And while i hope to 'convert' at least some of you, i'll already consider the whole thing a 'win' if i can just get a bunch of people to at least think about some of the things i'll talk about in this series.  
+
+These are the posts the series consists of:
+
+<ol>
+	<li><a href="http://davybrion.com/blog/2010/08/mvp-in-silverlightwpf-architectural-overview">Architectural Overview</a></li>
+	<li><a href="http://davybrion.com/blog/2010/08/mvp-in-silverlightwpf-some-infrastructure-bits/">Some Infrastructure Bits</a></li>
+	<li><a href="http://davybrion.com/blog/2010/08/mvp-in-silverlightwpf-the-sample/">The Sample</a></li>
+	<li><a href="http://davybrion.com/blog/2010/08/mvp-in-silverlightwpf-implementing-the-overview-usercontrol/">Implementing The Overview UserControl</a></li>
+	<li><a href="http://davybrion.com/blog/2010/08/mvp-in-silverlightwpf-implementing-the-details-usercontrol/">Implementing The Details UserControl</a></li>
+	<li><a href="http://davybrion.com/blog/2010/08/mvp-in-silverlightwpf-series-automated-tests/">Automated Tests</a></li>
+	<li><a href="http://davybrion.com/blog/2010/08/mvp-in-silverlightwpf-conclusions/">Conclusions</a></li>
+</ol>

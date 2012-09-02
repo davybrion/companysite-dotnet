@@ -1,0 +1,3 @@
+A former coworker of mine posted an <a href="http://kilfour.wordpress.com/2009/08/02/testing-tool-tour-quicknet-preview/">interesting preview to his new testing framework</a>, called QuickNet.  The example he used is pretty simple (a calculator), but the results are pretty interesting so be sure to check this out.
+
+I'm hoping he'll post some real world examples (or at least based a bit more on real word code) of QuickNet soon, and maybe even a brief comparison between QuickNet and something like Pex? :)

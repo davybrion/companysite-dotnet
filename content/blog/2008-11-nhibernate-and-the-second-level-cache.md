@@ -1,0 +1,3 @@
+As i had mentioned earlier, one of the NHibernate related posts i had on my TODO list was "Getting Up To Speed With NHibernate's Second Level Cache".
+
+Luckily, Gabriel Schenker beat me to it and wrote a fantastic <a href="http://blogs.hibernatingrhinos.com/nhibernate/archive/2008/11/09/first-and-second-level-caching-in-nhibernate.aspx">post about it</a>.  It is by far the best documentation on the 2nd level cache that you'll find for now, so be sure to check that out if you're looking into using some of NHibernate's more advanced caching features.

@@ -1,0 +1,9 @@
+Just read an interesting <a href="http://devlicio.us/blogs/tim_barcz/archive/2008/08/19/what-first-ci-or-unit-testing.aspx">post</a> by Tim Barcz. It's about a team struggling to adopt agile practices, and if given a chance to start over, what they should set up first: a CI build or a unit testing process.
+
+I don't understand why someone would even have to choose between them.  Setting up a regular CI build (with that i mean a simple compile + running all the tests) for a project should never take more than 10 minutes, tops. That is assuming that you already have a build server in place, obviously.  But with <a href="http://www.jetbrains.com/teamcity/index.html">Team City</a> being so incredibly easy to install and configure, that can no longer be an issue.
+
+So what does it take then? Drop in a simple, standard <a href="http://davybrion.com/blog/2008/07/basic-msbuild-script/">build script</a> which builds your project and runs the tests, add a build configuration and you're done.  Setting up a basic CI build should never take more work than that, unless you have some very specific needs, or the project structure is somewhat messy... as in: it doesn't compile if you don't have certain assemblies in folders that are either hardcoded or 'assumed' to be there... which should be avoided at all times :)
+
+Seriously though, long build scripts or requiring a lot of time to set up a new CI build are all signs that your CI process in general needs some refracturing (nope, not a typo).
+
+And in case you needed some motivation: even TFS 2008 allows you to set up a CI build in less than 5 minutes of work :)
