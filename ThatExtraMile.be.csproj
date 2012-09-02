@@ -105,7 +105,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlogPost.cs" />
-    <Compile Include="BlogPostMetadataParser.cs" />
     <Compile Include="BootStrapper.cs" />
     <Compile Include="ContentProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
