@@ -6,8 +6,7 @@ But what would you do if you had to implement a strategy to deal with this yours
 
 Implementing this for a web application built on Node.js and Express.js is incredibly easy (there's an ASP.NET MVC example later in this post btw). I took the [authorization example](https://github.com/visionmedia/express/blob/master/examples/auth/app.js) of Express.js and made just a few minor changes. First of all, I added the delayAuthenticationResponse function:
 
-<div>
-[javascript]
+<pre><code>
 function delayAuthenticationResponse(session, callback) {
   if (!session.attempts) {
     session.attempts = 1; 
@@ -17,15 +16,13 @@ function delayAuthenticationResponse(session, callback) {
 
   setTimeout(callback, session.attempts * 1000);
 }
-[/javascript]
-</div>
+</code></pre>
 
 This is the most important part of the implementation. Every time we get here, we increment the number of attempts for this user by one and store the number in the user's session. Side note: this is one of the few things you'd actually want to use a session for: **session-related data**. Then we schedule the callback to be executed after the number of attempts * 1000 milliseconds have passed. The important part to remember here is that Node's event loop is not blocked by this, so our ability to handle other requests is *not impaired in any way*. The only one who suffers here is the attacker. Note that in a real world implementation, you'd probably only want to start increasing the delay after 5 attempts or so, in order to not piss off users who're just having problems remembering their password.
 
 Then I changed the authenticate function so that it receives a session as the first parameter, and uses our delayAuthenticationResponse function whenever something goes wrong:
 
-<div>
-[javascript]
+<pre><code>
 function authenticate(session, name, pass, callback) {
   var user = users[name];
 
@@ -44,13 +41,11 @@ function authenticate(session, name, pass, callback) {
     callback(new Error('invalid password'));
   });
 }
-[/javascript]
-</div>
+</code></pre>
 
 After that, it's just a matter of changing the function that is assigned to the login route:
 
-<div>
-[javascript]
+<pre><code>
 app.post('/login', function(req, res){
   authenticate(req.session, req.body.username, req.body.password, function(err, user){
     if (user) {
@@ -66,15 +61,13 @@ app.post('/login', function(req, res){
     }
   });
 });
-[/javascript]
-</div>
+</code></pre>
 
 And there we go. This effectively makes it impossible to brute-force your way into this web application, and I'm sure you can agree it was rather easy to do so. Of course, this is only because Node.js is inherently non-blocking. In an environment where non-blocking is the exception rather than the rule, you have to keep a few more things into account when trying to implement this strategy.
 
 For instance, ASP.NET MVC is a typical blocking web framework. There's a certain number of threads that are waiting to handle requests, and once they receive a request, they process that request in its entirety. That means that if your code has to wait on something, the request handling thread is blocked and can't handle any other requests. So obviously, if you'd like to implement this strategy for dealing with repeated failed log-ins, you really want to avoid doing something like this: 
 
-<div>
-[csharp]
+<pre><code>
         [HttpPost]
         public ActionResult LogOn(LogOnModel model, string returnUrl)
         {
@@ -98,8 +91,7 @@ For instance, ASP.NET MVC is a typical blocking web framework. There's a certain
 
             return View(model);
         }
-[/csharp]
-</div>
+</code></pre>
 
 (note: this is a slightly modified LogOn method from the default AccountController when selecting 'internet application' in the MVC project wizard)
 
@@ -107,8 +99,7 @@ While this looks like it does the same as the Node/Express example, it certainly
 
 Luckily, you can use ASP.NET MVC's asynchronous controllers to provide an asynchronous implementation of an action without blocking the request handling thread:
 
-<div>
-[csharp]
+<pre><code>
         [HttpPost]
         public void LogOnAsync(LogOnModel model, string returnUrl)
         {
@@ -152,8 +143,7 @@ Luckily, you can use ASP.NET MVC's asynchronous controllers to provide an asynch
 
             return View(model);
         }
-[/csharp]
-</div>
+</code></pre>
 
 Your controller has to inherit from AsyncController instead of Controller to make this work. Of course, it's much more complicated and requires more ceremony compared to the Node/Express approach, but then again, ASP.NET MVC isn't optimized for this kind of usage whereas Node/Express definitely is.
 

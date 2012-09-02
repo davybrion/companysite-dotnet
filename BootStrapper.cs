@@ -1,4 +1,5 @@
-﻿using Nancy;
+﻿using System.Web.Hosting;
+using Nancy;
 using Nancy.Conventions;
 
 namespace ThatExtraMile.be
