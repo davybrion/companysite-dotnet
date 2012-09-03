@@ -2353,15 +2353,6 @@
     ]
   },
   {
-    "title": "I’m Not In It For The Money",
-    "link": "/2009/12/im-not-in-it-for-the-money/",
-    "date": "2009-12-14 19:56:08",
-    "disqusthreadid": "213627944",
-    "categories": [
-      "opinions"
-    ]
-  },
-  {
     "title": "Agatha’s Caching Layer Implementation: First Draft",
     "link": "/2009/12/agathas-caching-layer-implementation-first-draft/",
     "date": "2009-12-13 20:56:27",
@@ -3636,15 +3627,6 @@
     ]
   },
   {
-    "title": "What's Interesting About This Piece Of Code?",
-    "link": "/2011/04/whats-interesting-about-this-piece-of-code/",
-    "date": "2011-04-18 14:45:07",
-    "disqusthreadid": "282393815",
-    "categories": [
-      "javascript"
-    ]
-  },
-  {
     "title": "Recent Additions To My NHibernate Examples",
     "link": "/2011/05/recent-additions-to-my-nhibernate-examples/",
     "date": "2011-05-08 21:55:05",
@@ -3810,15 +3792,6 @@
     ]
   },
   {
-    "title": "The Benefits Of RTFM(s)",
-    "link": "/2011/08/the-benefits-of-rtfms/",
-    "date": "2011-08-28 22:36:45",
-    "disqusthreadid": "398396538",
-    "categories": [
-      "opinions"
-    ]
-  },
-  {
     "title": "Maintaining Bad Code Can Be A Great Experience",
     "link": "/2011/09/maintaining-bad-code-can-be-a-great-experience/",
     "date": "2011-09-04 21:51:16",
@@ -3916,15 +3889,6 @@
     ]
   },
   {
-    "title": "This Is Not How You Port Java Code To .NET",
-    "link": "/2011/11/this-is-not-how-you-port-java-code-to-net/",
-    "date": "2011-11-02 14:06:41",
-    "disqusthreadid": "459750733",
-    "categories": [
-      "whats-wrong-with-this-picture"
-    ]
-  },
-  {
     "title": "Faster Hardware? Not On Our Budget!",
     "link": "/2011/11/faster-hardware-not-on-our-budget/",
     "date": "2011-11-08 23:16:09",
@@ -3994,15 +3958,6 @@
     ]
   },
   {
-    "title": "Company Website Finally Online",
-    "link": "/2012/01/company-website-finally-online/",
-    "date": "2012-01-15 10:39:19",
-    "disqusthreadid": "539834122",
-    "categories": [
-      "off-topic"
-    ]
-  },
-  {
     "title": "Hosting A Node.js Site Through Apache",
     "link": "/2012/01/hosting-a-node-js-site-through-apache/",
     "date": "2012-01-15 15:23:09",
@@ -4038,15 +3993,6 @@
     "categories": [
       "nhibernate",
       "performance"
-    ]
-  },
-  {
-    "title": "NHibernate Training Course In Mechelen, Belgium - April 23/25",
-    "link": "/2012/02/nhibernate-training-course-in-mechelen-belgium-april-2325/",
-    "date": "2012-02-12 17:07:46",
-    "disqusthreadid": "573425036",
-    "categories": [
-      "nhibernate"
     ]
   },
   {

@@ -1,1 +1,0 @@
-<a href="http://davybrion.com/blog/wp-content/uploads/2011/11/porting_java.png"><img src="http://davybrion.com/blog/wp-content/uploads/2011/11/porting_java.png" alt="" title="porting_java" width="700" height="650" class="aligncenter size-full wp-image-3801" /></a>
