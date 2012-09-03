@@ -20,31 +20,12 @@
     ]
   },
   {
-    "title": "Easy and fast sorting of objects",
-    "link": "/2007/07/easy-and-fast-sorting-of-objects/",
-    "date": "2007-07-02 21:16:41",
-    "disqusthreadid": "213623483",
-    "categories": [
-      "software-development"
-    ]
-  },
-  {
     "title": "Implementing a Value Object",
     "link": "/2007/07/implementing-a-value-object/",
     "date": "2007-07-08 13:29:39",
     "disqusthreadid": "213623491",
     "categories": [
       "patterns",
-      "software-development"
-    ]
-  },
-  {
-    "title": "NHibernate Mapping Examples",
-    "link": "/2007/07/nhibernate-mapping-examples/",
-    "date": "2007-07-15 14:08:53",
-    "disqusthreadid": "213623500",
-    "categories": [
-      "nhibernate",
       "software-development"
     ]
   },
@@ -130,16 +111,6 @@
     ]
   },
   {
-    "title": "Thread-safe repositories",
-    "link": "/2008/03/thread-safe-repositories/",
-    "date": "2008-03-25 14:37:05",
-    "disqusthreadid": "213623798",
-    "categories": [
-      "multithreading",
-      "software-development"
-    ]
-  },
-  {
     "title": "Testing Exceptions",
     "link": "/2008/04/testing-exceptions/",
     "date": "2008-04-20 14:02:10",
@@ -155,15 +126,6 @@
     "disqusthreadid": "216747922",
     "categories": [
       "books"
-    ]
-  },
-  {
-    "title": "Stream.CopyTo method",
-    "link": "/2008/04/streamcopyto-method/",
-    "date": "2008-04-29 12:05:41",
-    "disqusthreadid": "215071688",
-    "categories": [
-      "software-development"
     ]
   },
   {
@@ -303,17 +265,6 @@
     ]
   },
   {
-    "title": "Adding Behavior With PostSharp",
-    "link": "/2008/05/adding-behavior-with-postsharp/",
-    "date": "2008-05-21 22:12:41",
-    "disqusthreadid": "213623879",
-    "categories": [
-      "aspect-oriented-programming",
-      "postsharp",
-      "software-development"
-    ]
-  },
-  {
     "title": "WCF Exception Handling with PostSharp",
     "link": "/2008/05/wcf-exception-handling-with-postsharp/",
     "date": "2008-05-23 11:37:55",
@@ -322,26 +273,6 @@
       "aspect-oriented-programming",
       "postsharp",
       "wcf"
-    ]
-  },
-  {
-    "title": "Creating Sanity Checks",
-    "link": "/2008/05/creating-sanity-checks/",
-    "date": "2008-05-24 09:30:59",
-    "disqusthreadid": "213623908",
-    "categories": [
-      "postsharp",
-      "software-development"
-    ]
-  },
-  {
-    "title": "NHibernate and virtual methods/properties",
-    "link": "/2008/05/nhibernate-and-virtual-methodsproperties/",
-    "date": "2008-05-24 15:54:44",
-    "disqusthreadid": "213623913",
-    "categories": [
-      "nhibernate",
-      "postsharp"
     ]
   },
   {

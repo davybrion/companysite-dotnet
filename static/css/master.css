@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 	body { font: 12px/1 Tahoma,Arial,sans-serif; background: #f5f5f5; color: #333; }
 
@@ -55,7 +55,8 @@
 					-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.07);
 					box-shadow: 0 1px 0 rgba(255,255,255,0.07);
 					padding: 5px 0 15px 25px;
-					margin-left: 5px; 
+					margin-left: 5px;
+				    line-height: 2em;
 				}
 	
 		#footer { 

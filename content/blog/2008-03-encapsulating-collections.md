@@ -2,49 +2,7 @@ When i have classes that need to expose collections, i always try to make sure t
 
 Small example:
 
-<div style="font-family:Courier New;font-size:10pt;color:black;background:white;">
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; <span style="color:blue;">public</span> <span style="color:blue;">class</span> <span style="color:#2b91af;">Member</span></p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; {</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">private</span> <span style="color:blue;">readonly</span> <span style="color:#2b91af;">List</span>&lt;<span style="color:#2b91af;">Member</span>&gt; _parents;</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">private</span> <span style="color:blue;">readonly</span> <span style="color:#2b91af;">List</span>&lt;<span style="color:#2b91af;">Member</span>&gt; _children;</p>
-<p style="margin:0;">&nbsp;</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">public</span> Member()</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; _parents = <span style="color:blue;">new</span> <span style="color:#2b91af;">List</span>&lt;<span style="color:#2b91af;">Member</span>&gt;();</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; _children = <span style="color:blue;">new</span> <span style="color:#2b91af;">List</span>&lt;<span style="color:#2b91af;">Member</span>&gt;();</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
-<p style="margin:0;">&nbsp;</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">public</span> <span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">Member</span>&gt; Children</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">get</span> { <span style="color:blue;">return</span> _children; }</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
-<p style="margin:0;">&nbsp;</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">public</span> <span style="color:#2b91af;">IEnumerable</span>&lt;<span style="color:#2b91af;">Member</span>&gt; Parents</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">get</span> { <span style="color:blue;">return</span> _parents; }</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
-<p style="margin:0;">&nbsp;</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">public</span> <span style="color:blue;">void</span> AddChild(<span style="color:#2b91af;">Member</span> child)</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; _children.Add(child);</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
-<p style="margin:0;">&nbsp;</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">public</span> <span style="color:blue;">void</span> RemoveChild(<span style="color:#2b91af;">Member</span> child)</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; _children.Remove(child);</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
-<p style="margin:0;">&nbsp;</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">public</span> <span style="color:blue;">void</span> AddParent(<span style="color:#2b91af;">Member</span> parent)</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; _parents.Add(parent);</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
-<p style="margin:0;">&nbsp;</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:blue;">public</span> <span style="color:blue;">void</span> RemoveParent(<span style="color:#2b91af;">Member</span> parent)</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; _parents.Remove(parent);</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
-<p style="margin:0;">&nbsp;&nbsp;&nbsp; }</p>
-</div>
+<script src="https://gist.github.com/3611768.js?file=s1.cs"></script>
 
 the Parents and Children collections are completely encapsulated, yet still highly usable to consumers:
 

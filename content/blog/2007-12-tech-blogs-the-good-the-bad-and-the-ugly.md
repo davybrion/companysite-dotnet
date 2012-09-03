@@ -1,6 +1,6 @@
-A <a href="http://benpittoors.wordpress.com/">coworker</a> of mine just started blogging and in his <a href="http://benpittoors.wordpress.com/2007/12/19/setting-a-one-hour-a-day-limit/">first post</a> he said something that made me think:
+A [coworker](http://benpittoors.wordpress.com/) of mine just started blogging and in his [first post](http://benpittoors.wordpress.com/2007/12/19/setting-a-one-hour-a-day-limit/) he said something that made me think:
 
-<blockquote>And I must admit, the thought of showing of my knowledge to the world through the same means - a blog - has crossed my mind more than once.</blockquote>
+> And I must admit, the thought of showing of my knowledge to the world through the same means - a blog - has crossed my mind more than once.
 
 And that probably captures the motivation behind the majority of all tech related blogs: showing off our knowledge. Showing people how smart and great we all are. Who doesn't like to come off smart to his/her peers? Of course, most of us will tell you that we're only interested in sharing or spreading knowledge. And there's definitely a lot of truth to that. But don't let us fool you... it surely isn't the only reason we're blogging about our technical adventures. The other reason is simply Intellectual Vanity. We think we have interesting stuff to say, or interesting content to share, so we do it. And we hope people like it and learn from it. And i'll bet most of us hope people will think we're good at what we do because of it. It makes us feel good when people say "i liked that stuff you wrote on subject X" or "those examples really helped me out, thx!".
 

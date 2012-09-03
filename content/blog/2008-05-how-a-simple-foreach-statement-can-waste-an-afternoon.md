@@ -2,22 +2,7 @@ We all like the foreach statement, right? It's easy to use. It looks good. It do
 
 I wrote the following code a while ago:
 
-<code>
-
-<div style="font-family: Consolas; font-size: 10pt; color: black; background: white;">
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: blue;">public</span> <span style="color: blue;">void</span> ProcessGroupsAndTheirMembers(<span style="color: #2b91af;">ActiveDirectoryConfiguration</span> adConfig)</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: #2b91af;">List</span>&lt;<span style="color: #2b91af;">GroupPrincipal</span>&gt; groupPrincipals = GetABunchOfGroupsFromActiveDirectory(adConfig);</p>
-<p style="margin: 0px;">&nbsp;</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: blue;">foreach</span> (<span style="color: blue;">var</span> groupPrincipal <span style="color: blue;">in</span> groupPrincipals)</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; HandleGroup(groupPrincipal);</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; DealWithMembers(groupPrincipal.Members);</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
-</div>
-
-</code>
+<script src="https://gist.github.com/3612472.js?file=s1.cs"></script>
 
 it's actually a simplified version of the code i wrote, but you get the idea.  It doesn't look so bad, right? It fetches a bunch of groups from an Active Directory store, then it processes the groups and the members of those groups.  It turns out there are actually a few problems with this code.  First of all, when you retrieve a GroupPrincipal, there's no way to make it fetch its Members collection in the same roundtrip (if i'm mistaken, please do correct me). So the Members property of the GroupPrincipal is a lazy-loaded collection. When you access it, it goes back to the Active Directory to fetch all the member Principals.  There's not really anything i can do about that, due to the limitations in how you can retrieve GroupPrincipals (again, unless i'm mistaken). 
 
@@ -33,25 +18,7 @@ But hey, we have garbage collection! It'll clean up the used memory! Yea it does
 
 The problem, of course, is with the foreach statement (duh, i already gave it away in the title). As you can see, we don't really do anything with the GroupPrincipal once we've processed it. Yet it's still kept in the groupPrincipals list, for the duration of the entire loop.  And we can't remove it from the list while we're in the foreach because then the underlying iterator will throw exceptions once we move to the next item. The trick was simply to replace the foreach with a do-while-loop (how old-school!) and to get rid of the GroupPrincipal once it was processed:
 
-<code>
-
-<div style="font-family: Consolas; font-size: 10pt; color: black; background: white;">
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: blue;">public</span> <span style="color: blue;">void</span> ProcessGroupsAndTheirMembers(<span style="color: #2b91af;">ActiveDirectoryConfiguration</span> adConfig)</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: #2b91af;">List</span>&lt;<span style="color: #2b91af;">GroupPrincipal</span>&gt; groupPrincipals = GetABunchOfGroupsFromActiveDirectory(adConfig);</p>
-<p style="margin: 0px;">&nbsp;</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: blue;">do</span></p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: #2b91af;">GroupPrincipal</span> groupPrincipal = groupPrincipals[0];</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; HandleGroup(groupPrincipal);</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; DealWithMembers(groupPrincipal.Members);</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; groupPrincipals.RemoveAt(0);</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; groupPrincipal.Dispose();</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; } <span style="color: blue;">while</span> (groupPrincipals.Count &gt; 0);</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
-</div>
-
-</code>
+<script src="https://gist.github.com/3612472.js?file=s2.cs"></script>
 
 When i ran this code, memory usage remained stable and cpu usage actually went down to 5%.  The time needed to process the groups went from 9 minutes to 5.  Still a lot, but as evidenced by the very low cpu usage, the code is constantly waiting for the data from Active Directory to cross the wire and then it quickly processes it, and then it waits for the next bunch of data.
 

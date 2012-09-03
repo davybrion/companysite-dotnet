@@ -1,4 +1,4 @@
-<em>Note: this was originally written on August 28, 2006</em>
+_Note: this was originally written on August 28, 2006_
 
 Programming languages have been the topic of endless discussions for years now, and a lot of people take these things very seriously. Well, a lot of developers take these things very seriously. Normal people don't care, and boy are they right. Some developers will stick with a certain language purely for syntactical reasons. And some will dislike a language because of its syntax even though the language itself might be extremely powerful. Other developers prefer languages which mainly provide improved productivity, even though the syntax might not be as elegant or even cool. And let's not forget the developers who choose a language based solely on how many jobs are available for that language.
 

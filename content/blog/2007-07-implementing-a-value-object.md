@@ -10,216 +10,26 @@ For this example, i'm going to create an Address class. An Address instance need
 
 This is how our first implementation of the Address class would look like:
 
-<div>
-[csharp]
-  public class Address
-  {
-    public Address(string street, string city, string region,
-      string postalCode, string country, string phoneNumber)
-    {
-      _street = StringValueOrEmptyString(street);
-      _city = StringValueOrEmptyString(city);
-      _region = StringValueOrEmptyString(region);
-      _postalCode = StringValueOrEmptyString(postalCode);
-      _country = StringValueOrEmptyString(country);
-      _phoneNumber = StringValueOrEmptyString(phoneNumber);
-    }
-
-    private string StringValueOrEmptyString(string value)
-    {
-      return (value != null ? value : string.Empty);
-    }
-
-    private string _street;
-
-    public string Street
-    {
-      get { return _street; }
-    }
-
-    private string _city;
-
-    public string City
-    {
-      get { return _city; }
-    }
-
-    private string _region;
-
-    public string Region
-    {
-      get { return _region; }
-    }
-
-    private string _postalCode;
-
-    public string PostalCode
-    {
-      get { return _postalCode; }
-    }
-
-    private string _country;
-
-    public string Country
-    {
-      get { return _country; }
-    }
-
-    private string _phoneNumber;
-
-    public string PhoneNumber
-    {
-      get { return _phoneNumber; }
-    }
-  }
-}
-[/csharp]
-</div>
+<script src="https://gist.github.com/3611056.js?file=s1.cs"></script>
 
 So now an Address instance's values can not be changed after object creation. By the way, in case you're wondering why i assign string.Empty instead of allowing null references to my fields: it's because i want to avoid checking for null every time i want to use my fields later on in my code. This is known as the <a href="http://en.wikipedia.org/wiki/Null_Object_pattern">Null Object Pattern</a>.
 
 Now we have to make sure that 2 Address instances holding the same data are actually recognized as equal objects.  First, we'll override the Equals method:
 
-<div>
-[csharp]
-    public override bool Equals(object obj)
-    {
-      Address address = obj as Address;
-
-      if (address != null)
-      {
-        return
-          _street.Equals(address.Street) &amp;amp;&amp;amp;
-          _city.Equals(address.City) &amp;amp;&amp;amp;
-          _region.Equals(address.Region) &amp;amp;&amp;amp;
-          _postalCode.Equals(address.PostalCode) &amp;amp;&amp;amp;
-          _country.Equals(address.Country) &amp;amp;&amp;amp;
-          _phoneNumber.Equals(address.PhoneNumber);
-      }
-
-      return base.Equals(obj);
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3611056.js?file=s2.cs"></script>
 
 Thanks to the Null Object Pattern, i don't need null checks when accessing my fields which is great because i really dislike null checks all over the place.  Anyway, back to the subject at hand: Equals will return true if the values of the instances are identical.
 
 If you override the Equals method, you really should override the GetHashCode() method as well:
 
-<div>
-[csharp]
-    public override int GetHashCode()
-    {
-      return _street.GetHashCode() ^
-           _city.GetHashCode() ^
-           _region.GetHashCode() ^
-           _postalCode.GetHashCode() ^
-           _country.GetHashCode() ^
-           _phoneNumber.GetHashCode();
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3611056.js?file=s3.cs"></script>
 
 Ok, our Address instances will behave properly when they are compared with the Equals method. A lot of developers prefer to use the == and != operators though, so we should make sure that these operators also compare the actual values instead of the default reference equality check.  For that, we'll simply overload the operators:
 
-<div>
-[csharp]
-    public static bool operator ==(Address address1,
-      Address address2)
-    {
-      if (!object.ReferenceEquals(address1, null) &amp;amp;&amp;amp;
-        object.ReferenceEquals(address2, null))
-      {
-        return false;
-      }
-
-      if (object.ReferenceEquals(address1, null) &amp;amp;&amp;amp;
-        !object.ReferenceEquals(address2, null))
-      {
-        return false;
-      }
-
-      return address1.Equals(address2);
-    }
-
-    public static bool operator !=(Address address1,
-      Address address2)
-    {
-      return !(address1 == address2);
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3611056.js?file=s4.cs"></script>
 
 In the == overload, we need to check if the values we've received aren't null. If one of them is null, and the other isn't, then they obviously can't be equal.  But how are you going to check if they're null? You can't use address1 == null or adress2 == null because then you'd go straight back into this == overload which would cause a stack overflow. So we use Object.ReferenceEquals() to do the check for us. If neither of the objects is null, we simply return the result of calling the Equals method.
 
 We now have a true Value Object. Its values are immutable, and the instances will behave properly when checked for equality.  The following tests all pass:
 
-<div>
-[csharp]
-  [TestFixture]
-  public class AddressTests
-  {
-    private string _defaultStreet = &quot;MyStreet 243&quot;;
-    private string _defaultCity = &quot;MyCity&quot;;
-    private string _defaultRegion = &quot;MyRegion&quot;;
-    private string _defaultPostalCode = &quot;12345&quot;;
-    private string _defaultCountry = &quot;MyCountry&quot;;
-    private string _defaultPhoneNumber = &quot;123-4567-89&quot;;
-
-    [Test]
-    public void TwoInstancesWithSameDataAreEqual()
-    {
-      Address address1 = CreateTestAddressWithDefaultData();
-      Address address2 = CreateTestAddressWithDefaultData();
-
-      Assert.AreEqual(address1, address2);
-      Assert.That(address1 == address2);
-    }
-
-    [Test]
-    public void TwoInstancesWithDifferentDataAreNotEqual()
-    {
-      Address address1 = CreateTestAddressWithDefaultData();
-      Address address2 = new Address(_defaultStreet + &quot;2&quot;, _defaultCity, _defaultRegion,
-        _defaultPostalCode, _defaultCountry, _defaultPhoneNumber);
-
-      Assert.AreNotEqual(address1, address2);
-      Assert.That(address1 != address2);
-    }
-
-    [Test]
-    public void NullAddressReferenceDoesntCrashWhenUsingEqualityOperator()
-    {
-      Address address1 = null;
-      Address address2 = CreateTestAddressWithDefaultData();
-
-      Assert.That(address1 != address2);
-    }
-
-    [Test]
-    public void TwoInstancesWithSameDateReturnSameHashCode()
-    {
-      Address address1 = CreateTestAddressWithDefaultData();
-      Address address2 = CreateTestAddressWithDefaultData();
-
-      Assert.AreEqual(address1.GetHashCode(), address2.GetHashCode());
-    }
-
-    [Test]
-    public void TwoInstancesWithDifferentDataDoNotReturnSameHashCode()
-    {
-      Address address1 = CreateTestAddressWithDefaultData();
-      Address address2 = new Address(_defaultStreet + &quot;2&quot;, _defaultCity, _defaultRegion,
-        _defaultPostalCode, _defaultCountry, _defaultPhoneNumber);
-
-      Assert.AreNotEqual(address1.GetHashCode(), address2.GetHashCode());
-    }
-
-    private Address CreateTestAddressWithDefaultData()
-    {
-      return new Address(_defaultStreet, _defaultCity, _defaultRegion,
-        _defaultPostalCode, _defaultCountry, _defaultPhoneNumber);
-    }
-  }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3611056.js?file=s5.cs"></script>

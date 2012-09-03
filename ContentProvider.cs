@@ -20,17 +20,23 @@ namespace ThatExtraMile.be
 
         public string GetContent(string contentName)
         {
+#if !DEBUG
             if (!_content.ContainsKey(contentName))
             {
+#endif
                 var split = contentName.Split('-');
                 var fileName = split.Length == 1 ? HostingEnvironment.MapPath("~/content/" + contentName + ".md") : 
                                                    HostingEnvironment.MapPath("~/content/blog/" + split.Join("-") + ".md");
 
                 if (!File.Exists(fileName)) return null;
+#if DEBUG
+                return _markdown.Transform(File.ReadAllText(fileName));
+#else
                 _content[contentName] = _markdown.Transform(File.ReadAllText(fileName));
             }
 
             return _content[contentName];
+#endif
         }
     }
 }
