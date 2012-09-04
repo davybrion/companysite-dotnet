@@ -129,64 +129,6 @@
     ]
   },
   {
-    "title": "Introduction to IoC with Windsor",
-    "link": "/2008/04/introduction-to-ioc-with-windsor/",
-    "date": "2008-04-29 22:35:24",
-    "disqusthreadid": "213623840",
-    "categories": [
-      "castle",
-      "castle-windsor",
-      "dependency-injection",
-      "inversion-of-control",
-      "software-development",
-      "testing",
-      "windsor"
-    ]
-  },
-  {
-    "title": "Windsor and component instance lifetimes",
-    "link": "/2008/05/windsor-and-component-instance-lifetimes/",
-    "date": "2008-05-01 16:39:53",
-    "disqusthreadid": "213623846",
-    "categories": [
-      "castle",
-      "castle-windsor",
-      "dependency-injection",
-      "inversion-of-control",
-      "software-development",
-      "windsor"
-    ]
-  },
-  {
-    "title": "Providing configuration data with Windsor",
-    "link": "/2008/05/providing-configuration-data-with-windsor/",
-    "date": "2008-05-02 15:08:50",
-    "disqusthreadid": "215029451",
-    "categories": [
-      "castle",
-      "castle-windsor",
-      "dependency-injection",
-      "inversion-of-control",
-      "software-development",
-      "windsor"
-    ]
-  },
-  {
-    "title": "Adding behavior without modifying existing code with Windsor",
-    "link": "/2008/05/adding-behavior-without-modifying-existing-code-with-windsor/",
-    "date": "2008-05-04 21:18:27",
-    "disqusthreadid": "213623848",
-    "categories": [
-      "aspect-oriented-programming",
-      "castle",
-      "castle-windsor",
-      "dependency-injection",
-      "inversion-of-control",
-      "software-development",
-      "windsor"
-    ]
-  },
-  {
     "title": "The Art Of Agile Development",
     "link": "/2008/05/the-art-of-agile-development/",
     "date": "2008-05-08 18:32:35",
@@ -194,33 +136,6 @@
     "categories": [
       "books",
       "software-development"
-    ]
-  },
-  {
-    "title": "Windsor's Interceptors and Performance",
-    "link": "/2008/05/windsors-interceptors-and-performance/",
-    "date": "2008-05-09 23:13:58",
-    "disqusthreadid": "213623862",
-    "categories": [
-      "castle",
-      "castle-windsor",
-      "inversion-of-control",
-      "software-development",
-      "windsor"
-    ]
-  },
-  {
-    "title": "Windsor’s Interceptors and Performance, Part 2",
-    "link": "/2008/05/windsors-interceptors-and-performance-part-2/",
-    "date": "2008-05-10 10:55:14",
-    "disqusthreadid": "216021860",
-    "categories": [
-      "castle",
-      "castle-windsor",
-      "dependency-injection",
-      "inversion-of-control",
-      "software-development",
-      "windsor"
     ]
   },
   {
@@ -265,17 +180,6 @@
     ]
   },
   {
-    "title": "WCF Exception Handling with PostSharp",
-    "link": "/2008/05/wcf-exception-handling-with-postsharp/",
-    "date": "2008-05-23 11:37:55",
-    "disqusthreadid": "213623888",
-    "categories": [
-      "aspect-oriented-programming",
-      "postsharp",
-      "wcf"
-    ]
-  },
-  {
     "title": "Storing data in the HttpSession",
     "link": "/2008/05/storing-data-in-the-httpsession/",
     "date": "2008-05-25 12:49:38",
@@ -285,51 +189,11 @@
     ]
   },
   {
-    "title": "The Multithreaded Task Executor",
-    "link": "/2008/05/the-multithreaded-task-executor/",
-    "date": "2008-05-26 17:01:51",
-    "disqusthreadid": "213623922",
-    "categories": [
-      "multithreading",
-      "patterns"
-    ]
-  },
-  {
     "title": "How a simple foreach statement can waste an afternoon",
     "link": "/2008/05/how-a-simple-foreach-statement-can-waste-an-afternoon/",
     "date": "2008-05-27 19:56:13",
     "disqusthreadid": "213623936",
     "categories": [
-      "performance"
-    ]
-  },
-  {
-    "title": "Conditional Queueing Of Statements",
-    "link": "/2008/06/conditional-queueing-of-statements/",
-    "date": "2008-06-03 13:42:02",
-    "disqusthreadid": "237214680",
-    "categories": [
-      "patterns",
-      "software-development"
-    ]
-  },
-  {
-    "title": "Calling Synchronous Methods Asynchronously",
-    "link": "/2008/06/calling-synchronous-methods-asynchronously/",
-    "date": "2008-06-04 11:03:56",
-    "disqusthreadid": "213623951",
-    "categories": [
-      "asynchronous-programming",
-      "performance"
-    ]
-  },
-  {
-    "title": "Efficient data fetching",
-    "link": "/2008/06/efficient-data-fetching/",
-    "date": "2008-06-08 20:52:36",
-    "disqusthreadid": "398259578",
-    "categories": [
-      "nhibernate",
       "performance"
     ]
   },
@@ -353,18 +217,6 @@
     ]
   },
   {
-    "title": "Automanual Dependency Injection?",
-    "link": "/2008/06/automanual-dependency-injection/",
-    "date": "2008-06-16 09:00:39",
-    "disqusthreadid": "213623986",
-    "categories": [
-      "aspnet",
-      "castle-windsor",
-      "dependency-injection",
-      "inversion-of-control"
-    ]
-  },
-  {
     "title": "Are women better developers than men?",
     "link": "/2008/06/are-women-better-developers-than-men/",
     "date": "2008-06-16 15:13:38",
@@ -382,27 +234,6 @@
       "memory-management",
       "patterns",
       "performance"
-    ]
-  },
-  {
-    "title": "Managing your NHibernate Sessions",
-    "link": "/2008/06/managing-your-nhibernate-sessions/",
-    "date": "2008-06-22 20:22:42",
-    "disqusthreadid": "213624024",
-    "categories": [
-      "dependency-injection",
-      "inversion-of-control",
-      "nhibernate",
-      "patterns"
-    ]
-  },
-  {
-    "title": "Data Access With NHibernate",
-    "link": "/2008/06/data-access-with-nhibernate/",
-    "date": "2008-06-23 22:18:50",
-    "disqusthreadid": "213624095",
-    "categories": [
-      "nhibernate"
     ]
   },
   {
@@ -442,15 +273,6 @@
     "categories": [
       "performance",
       "wcf"
-    ]
-  },
-  {
-    "title": "Basic MSBuild script",
-    "link": "/2008/07/basic-msbuild-script/",
-    "date": "2008-07-04 19:40:58",
-    "disqusthreadid": "213624136",
-    "categories": [
-      "msbuild"
     ]
   },
   {
@@ -500,41 +322,12 @@
     ]
   },
   {
-    "title": "Using TeamCity's NUnit support, while keeping the output around",
-    "link": "/2008/07/using-teamcitys-nunit-support-while-keeping-the-output-around/",
-    "date": "2008-07-19 16:56:15",
-    "disqusthreadid": "213624207",
-    "categories": [
-      "continuous-integration",
-      "msbuild",
-      "teamcity"
-    ]
-  },
-  {
-    "title": "Mocking dilemma",
-    "link": "/2008/07/mocking-dilemma/",
-    "date": "2008-07-20 22:27:03",
-    "disqusthreadid": "213624222",
-    "categories": [
-      "testing"
-    ]
-  },
-  {
     "title": "The Known Type Provider",
     "link": "/2008/07/the-known-type-provider/",
     "date": "2008-07-21 14:35:32",
     "disqusthreadid": "213624240",
     "categories": [
       "wcf"
-    ]
-  },
-  {
-    "title": "Mocking Dilemma, Solved!",
-    "link": "/2008/07/mocking-dilemma-solved/",
-    "date": "2008-07-21 20:22:19",
-    "disqusthreadid": "213624252",
-    "categories": [
-      "testing"
     ]
   },
   {
@@ -579,16 +372,6 @@
     ]
   },
   {
-    "title": "Can't We Just Stop Living In The Past?",
-    "link": "/2008/08/cant-we-just-stop-living-in-the-past/",
-    "date": "2008-08-05 00:22:08",
-    "disqusthreadid": "213624361",
-    "categories": [
-      "rants",
-      "software-development"
-    ]
-  },
-  {
     "title": "ALT.NET: what does it mean?",
     "link": "/2008/08/altnet-what-does-it-mean/",
     "date": "2008-08-08 07:50:25",
@@ -626,15 +409,6 @@
     "disqusthreadid": "213624466",
     "categories": [
       "memory-management"
-    ]
-  },
-  {
-    "title": "The CI Build should be a given",
-    "link": "/2008/08/the-ci-build-should-be-a-given/",
-    "date": "2008-08-19 22:24:13",
-    "disqusthreadid": "213624495",
-    "categories": [
-      "continuous-integration"
     ]
   },
   {
@@ -738,15 +512,6 @@
     ]
   },
   {
-    "title": "Extending NHibernate's DriverConnectionProvider",
-    "link": "/2008/09/extending-nhibernates-driverconnectionprovider/",
-    "date": "2008-09-18 20:47:27",
-    "disqusthreadid": "213624646",
-    "categories": [
-      "nhibernate"
-    ]
-  },
-  {
     "title": "Recommended Books: Working Effectively With Legacy Code",
     "link": "/2008/09/recommended-books-working-effectively-with-legacy-code/",
     "date": "2008-09-20 16:20:05",
@@ -812,15 +577,6 @@
     ]
   },
   {
-    "title": "Exceptional Exception Handling Behavior",
-    "link": "/2008/10/exceptional-exception-handlingbehavior/",
-    "date": "2008-10-08 18:48:59",
-    "disqusthreadid": "213624754",
-    "categories": [
-      "net-bugs"
-    ]
-  },
-  {
     "title": "How To Write Testable ASP.NET UserControls",
     "link": "/2008/10/how-to-write-testable-aspnet-usercontrols/",
     "date": "2008-10-11 17:28:27",
@@ -870,15 +626,6 @@
     ]
   },
   {
-    "title": "Compiler Enforced Disposal?",
-    "link": "/2008/11/compiler-enforced-disposal/",
-    "date": "2008-11-16 22:52:51",
-    "disqusthreadid": "213624948",
-    "categories": [
-      "memory-management"
-    ]
-  },
-  {
     "title": "Agile Development Going Downhill?",
     "link": "/2008/11/agile-development-going-downhill/",
     "date": "2008-11-17 00:39:01",
@@ -916,15 +663,6 @@
     ]
   },
   {
-    "title": "NHibernate And The Second Level Cache",
-    "link": "/2008/11/nhibernate-and-the-second-level-cache/",
-    "date": "2008-11-23 19:55:26",
-    "disqusthreadid": "242455319",
-    "categories": [
-      "nhibernate"
-    ]
-  },
-  {
     "title": "Populating Entities With Associations From Stored Procedures With NHibernate",
     "link": "/2008/11/populating-entities-with-associations-from-stored-procedures-with-nhibernate/",
     "date": "2008-11-24 02:17:59",
@@ -944,30 +682,12 @@
     ]
   },
   {
-    "title": "First Look At NHibernate Profiler",
-    "link": "/2008/12/first-look-at-nhibernate-profiler/",
-    "date": "2008-12-01 14:35:51",
-    "disqusthreadid": "213625061",
-    "categories": [
-      "nhibernate"
-    ]
-  },
-  {
     "title": "Do Not Litter Your Code With Null Checks",
     "link": "/2008/12/do-not-litter-your-code-with-null-check/",
     "date": "2008-12-02 20:59:42",
     "disqusthreadid": "213625071",
     "categories": [
       "opinions"
-    ]
-  },
-  {
-    "title": "How Do You Deal With Common Infrastructure Code For Multiple Projects?",
-    "link": "/2008/12/how-do-you-deal-with-common-infrastructure-code-for-multiple-projects/",
-    "date": "2008-12-02 15:23:00",
-    "disqusthreadid": "213625083",
-    "categories": [
-      "software-development"
     ]
   },
   {
@@ -1066,31 +786,12 @@
     ]
   },
   {
-    "title": "What Would You Choose For New .NET Web Development?",
-    "link": "/2008/12/what-would-you-choose-for-new-dotnetweb-development/",
-    "date": "2008-12-29 12:24:34",
-    "disqusthreadid": "213625206",
-    "categories": [
-      "aspnet",
-      "software-development"
-    ]
-  },
-  {
     "title": "The Life And Times Of A Bug",
     "link": "/2009/01/the-life-and-times-of-a-bug/",
     "date": "2009-01-01 17:52:40",
     "disqusthreadid": "213625264",
     "categories": [
       "the-life-and-times-of"
-    ]
-  },
-  {
-    "title": "NHibernate Profiler Review",
-    "link": "/2009/01/nhibernate-profiler-review/",
-    "date": "2009-01-04 22:07:53",
-    "disqusthreadid": "213625270",
-    "categories": [
-      "nhibernate"
     ]
   },
   {
@@ -1137,15 +838,6 @@
     "categories": [
       "aspnet",
       "wcf"
-    ]
-  },
-  {
-    "title": "Design Principles That You Should Try To Stick To",
-    "link": "/2009/01/design-principles-that-you-should-try-to-stick-to/",
-    "date": "2009-01-18 13:25:33",
-    "disqusthreadid": "222239903",
-    "categories": [
-      "software-development"
     ]
   },
   {
@@ -1285,15 +977,6 @@
     ]
   },
   {
-    "title": "Different Kind Of Factory?",
-    "link": "/2009/03/different-kind-of-factory/",
-    "date": "2009-03-04 12:57:48",
-    "disqusthreadid": "213625653",
-    "categories": [
-      "software-development"
-    ]
-  },
-  {
     "title": "Smarten Up Instead Of Generating Dumb Tests",
     "link": "/2009/03/smarten-up-instead-of-generating-dumb-tests/",
     "date": "2009-03-05 23:58:52",
@@ -1313,40 +996,12 @@
     ]
   },
   {
-    "title": "Your Data Retrieval Code Should Be Readable Too",
-    "link": "/2009/03/your-data-retrieval-code-should-be-readable-too/",
-    "date": "2009-03-09 19:35:50",
-    "disqusthreadid": "213625727",
-    "categories": [
-      "nhibernate",
-      "opinions"
-    ]
-  },
-  {
     "title": "I Love Easy Extensibility",
     "link": "/2009/03/i-love-easy-extensibility/",
     "date": "2009-03-10 18:01:13",
     "disqusthreadid": "213625733",
     "categories": [
       "wcf"
-    ]
-  },
-  {
-    "title": "TechDays? No Thanks",
-    "link": "/2009/03/techdays-no-thanks/",
-    "date": "2009-03-10 21:55:59",
-    "disqusthreadid": "213625738",
-    "categories": [
-      "opinions"
-    ]
-  },
-  {
-    "title": "Continuous Failure",
-    "link": "/2009/03/continuous-failure/",
-    "date": "2009-03-11 11:02:59",
-    "disqusthreadid": "213625758",
-    "categories": [
-      "rants"
     ]
   },
   {
@@ -1365,15 +1020,6 @@
     "disqusthreadid": "213625810",
     "categories": [
       "books",
-      "nhibernate"
-    ]
-  },
-  {
-    "title": "NHibernate 2.1 Alpha 1 Is Out!",
-    "link": "/2009/03/nhibernate-21-alpha-1-is-out/",
-    "date": "2009-03-15 15:29:53",
-    "disqusthreadid": "215520126",
-    "categories": [
       "nhibernate"
     ]
   },
@@ -1525,15 +1171,6 @@
     ]
   },
   {
-    "title": "Gotta Love Refactoring",
-    "link": "/2009/04/gotta-love-refactoring/",
-    "date": "2009-04-19 17:19:50",
-    "disqusthreadid": "213626199",
-    "categories": [
-      "software-development"
-    ]
-  },
-  {
     "title": "Using The Guid.Comb Identifier Strategy",
     "link": "/2009/05/using-the-guidcomb-identifier-strategy/",
     "date": "2009-05-21 14:00:31",
@@ -1634,17 +1271,6 @@
     ]
   },
   {
-    "title": "Avoid Using NHibernate With NUnit 2.4.6",
-    "link": "/2009/06/avoid-using-nhibernate-with-nunit-2-4-6/",
-    "date": "2009-06-24 19:35:42",
-    "disqusthreadid": "213626552",
-    "categories": [
-      "nhibernate",
-      "performance",
-      "testing"
-    ]
-  },
-  {
     "title": "Save Some Time With The Right Testrunner",
     "link": "/2009/07/save-some-time-with-the-right-testrunner/",
     "date": "2009-07-01 10:04:27",
@@ -1684,15 +1310,6 @@
     ]
   },
   {
-    "title": "Hosting Silverlight Client Apps In A Silverlight Host App",
-    "link": "/2009/08/hosting-silverlight-client-apps-in-a-silverlight-host-app/",
-    "date": "2009-08-02 15:23:28",
-    "disqusthreadid": "213626606",
-    "categories": [
-      "silverlight"
-    ]
-  },
-  {
     "title": "This Is Why I Don't Like Microsoft's Way Of Open Source Development",
     "link": "/2009/08/this-is-why-i-dont-like-microsofts-way-of-open-source-development/",
     "date": "2009-08-03 10:29:36",
@@ -1709,24 +1326,6 @@
     "categories": [
       "memory-management",
       "silverlight"
-    ]
-  },
-  {
-    "title": "Refactor Safe Implementation Of INotifyPropertyChanged",
-    "link": "/2009/08/refactor-safe-implementation-of-inotifypropertychanged/",
-    "date": "2009-08-05 11:34:31",
-    "disqusthreadid": "213626678",
-    "categories": [
-      "silverlight"
-    ]
-  },
-  {
-    "title": "Increasing Functional Test Coverage With QuickNet",
-    "link": "/2009/08/increasing-functional-test-coverage-with-quicknet/",
-    "date": "2009-08-05 19:22:55",
-    "disqusthreadid": "213626695",
-    "categories": [
-      "testing"
     ]
   },
   {
@@ -1923,15 +1522,6 @@
     "disqusthreadid": "213627132",
     "categories": [
       "nhibernate"
-    ]
-  },
-  {
-    "title": "Trying MonoDevelop On OS X",
-    "link": "/2009/09/trying-monodevelop-on-os-x/",
-    "date": "2009-09-15 10:08:07",
-    "disqusthreadid": "213627156",
-    "categories": [
-      "mono"
     ]
   },
   {
@@ -2307,30 +1897,12 @@
     ]
   },
   {
-    "title": "Agatha's First (Vocal) Happy User",
-    "link": "/2009/12/agathas-first-vocal-happy-user/",
-    "date": "2009-12-09 22:47:17",
-    "disqusthreadid": "213627863",
-    "categories": [
-      "agatha"
-    ]
-  },
-  {
     "title": "Using NHibernate In Your Service Layer",
     "link": "/2009/12/using-nhibernate-in-your-service-layer/",
     "date": "2009-12-11 13:53:36",
     "disqusthreadid": "213627872",
     "categories": [
       "nhibernate"
-    ]
-  },
-  {
-    "title": "NDepend And Lack Of Cohesion Of Methods… Not to be trusted",
-    "link": "/2009/12/ndepend-and-lack-of-cohesion-of-methods-not-to-be-trusted/",
-    "date": "2009-12-11 16:25:05",
-    "disqusthreadid": "213627898",
-    "categories": [
-      "ndepend"
     ]
   },
   {
@@ -2423,17 +1995,6 @@
     "disqusthreadid": "213628081",
     "categories": [
       "quicknet"
-    ]
-  },
-  {
-    "title": "How QuickNet Found 2 Bugs That You And I Didn’t",
-    "link": "/2009/12/how-quicknet-found-2-bugs-that-you-and-i-didnt/",
-    "date": "2009-12-22 22:56:48",
-    "disqusthreadid": "213628094",
-    "categories": [
-      "agatha",
-      "quicknet",
-      "testing"
     ]
   },
   {
