@@ -2,101 +2,23 @@ Events in .NET are very useful. But if you're not careful, they might prevent ob
 
 Suppose we have the following Publisher class:
 
-<div>
-[csharp]
-    public class Publisher
-    {
-        public event EventHandler MyEvent;
- 
-        public void FireEvent()
-        {
-            if (MyEvent != null)
-            {
-                MyEvent(this, EventArgs.Empty);
-            }
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3676624.js?file=s1.cs"></script>
 
 And then we have a BadSubscriber class:
 
-<div>
-[csharp]
-    public class BadSubscriber
-    {
-        public BadSubscriber(Publisher publisher)
-        {
-            publisher.MyEvent += publisher_MyEvent;
-        }
- 
-        void publisher_MyEvent(object sender, EventArgs e)
-        {
-            Console.WriteLine(&quot;the publisher notified the bad subscriber of an event&quot;);
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3676624.js?file=s2.cs"></script>
 
 Notice how the BadSubscriber subscribes to the Publisher's event, but never unsubscribes from it.
 
 Then we have the GoodSubscriber:
 
-<div>
-[csharp]
-    public class GoodSubscriber : IDisposable
-    {
-        private readonly Publisher publisher;
- 
-        public GoodSubscriber(Publisher publisher)
-        {
-            this.publisher = publisher;
-            publisher.MyEvent += publisher_MyEvent;
-        }
- 
-        void publisher_MyEvent(object sender, EventArgs e)
-        {
-            Console.WriteLine(&quot;the publisher notified the good subscriber of an event&quot;);
-        }
- 
-        public void Dispose()
-        {
-            publisher.MyEvent -= publisher_MyEvent;
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3676624.js?file=s3.cs"></script>
 
 The GoodSubscriber is very similar to the BadSubscriber, but it unsubscribes from the Publisher's event when it is disposed.  Note that the implementation of the IDisposable interface is hardly ideal, but for the purpose of this demo it's sufficient.
 
 The following code illustrates the problem:
 
-<div>
-[csharp]
-        static void Main(string[] args)
-        {
-            var publisher = new Publisher();
-            var badSubscriber = new BadSubscriber(publisher);
-            var goodSubscriber = new GoodSubscriber(publisher);
- 
-            var badSubscriberRef = new WeakReference(badSubscriber);
-            var goodSubscriberRef = new WeakReference(goodSubscriber);
- 
-            publisher.FireEvent();
- 
-            badSubscriber = null;
-            goodSubscriber.Dispose();
-            goodSubscriber = null;
- 
-            GC.Collect();
- 
-            Console.WriteLine(goodSubscriberRef.IsAlive ? &quot;good publisher is alive&quot; : &quot;good publisher is gone&quot;);
-            Console.WriteLine(badSubscriberRef.IsAlive ? &quot;bad publisher is alive&quot; : &quot;bad publisher is gone&quot;);
- 
-            publisher.FireEvent();
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3676624.js?file=s4.cs"></script>
 
 The output of that code is the following:
 

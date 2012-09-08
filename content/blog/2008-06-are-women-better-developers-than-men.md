@@ -1,14 +1,10 @@
-A coworker just pointed out the following <a href="http://blogs.wsj.com/biztech/2008/06/06/men-write-code-from-mars-women-write-more-helpful-code-from-venus/">article</a>. This is something i'm pretty interested in. Let's just get to the two most important quotes from the article:
+A coworker just pointed out the following [article](http://blogs.wsj.com/biztech/2008/06/06/men-write-code-from-mars-women-write-more-helpful-code-from-venus/). This is something i'm pretty interested in. Let's just get to the two most important quotes from the article:
 
-<quote>
-<em>"Women are more touchy-feely and considerate of those who will use the code later, she says. They’ll intersperse their code with helpful comments and directions, explaining why they wrote the lines the way they did and exactly how they did it.  The code becomes a type of “roadmap” for others who might want to alter it or add to it later"</em>
-</quote> 
+> Women are more touchy-feely and considerate of those who will use the code later, she says. They’ll intersperse their code with helpful comments and directions, explaining why they wrote the lines the way they did and exactly how they did it.  The code becomes a type of “roadmap” for others who might want to alter it or add to it later"
 
 and...
 
-<quote>
-<em>"Men, on the other hand, have no such pretenses. They try to show how clever they are by writing very cryptic code. They try to obfuscate things in the code and don’t leave clear directions for people using it later."</em>
-</quote>
+> Men, on the other hand, have no such pretenses. They try to show how clever they are by writing very cryptic code. They try to obfuscate things in the code and don’t leave clear directions for people using it later.
 
 I wouldn't be surprised if this was actually true, to be honest. Allthough there are always exceptions of course (no pun intended). But how many of us have been confronted with cryptic code with hardly any comments to clarify the code? How likely was it that that code was written by a male developer? Since there aren't that many female developers, i'd say the odds are pretty high it was written by a guy.  Now, i don't believe men write crappy code on purpose though.  But considering how common crappy code really is, while keeping in mind that most developers are male, and that women in general think differently than men, is it really that hard to believe that women might actually be better at this?
 

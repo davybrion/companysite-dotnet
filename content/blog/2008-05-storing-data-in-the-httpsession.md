@@ -8,47 +8,14 @@ In .NET, you can use the <a href="http://msdn.microsoft.com/en-us/library/system
 
 When you want to store data in the HttpSession, instead of doing this:
 
-<code>
-
-<div style="font-family: Consolas; font-size: 10pt; color: black; background: white;">
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: #2b91af;">IEnumerable</span>&lt;<span style="color: #2b91af;">OrderView</span>&gt; outstandingOrders </p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; = orderManagementServiceProxy.GetOverviewOfAllOutstandingOrders();</p>
-<p style="margin: 0px;">&nbsp;</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Session[<span style="color: #a31515;">"outstandingOrders"</span>] = outstandingOrders;</p>
-</div>
-
-</code>  
+<script src="https://gist.github.com/3655907.js?file=s1.cs"></script>
 
 You could do this:
 
-<code>
-
-<div style="font-family: Consolas; font-size: 10pt; color: black; background: white;">
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: #2b91af;">IEnumerable</span>&lt;<span style="color: #2b91af;">OrderView</span>&gt; outstandingOrders </p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; = orderManagementServiceProxy.GetOverviewOfAllOutstandingOrders();</p>
-<p style="margin: 0px;">&nbsp;</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Session[<span style="color: #a31515;">"outstandingOrders"</span>] = <span style="color: blue;">new</span> <span style="color: #2b91af;">WeakReference</span>(outstandingOrders);</p>
-</div>
-
-</code>
+<script src="https://gist.github.com/3655907.js?file=s2.cs"></script>
 
 And when you'd need to retrieve that data in a later request, you could do this:
 
-<code>
-
-<div style="font-family: Consolas; font-size: 10pt; color: black; background: white;">
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: #2b91af;">WeakReference</span> reference = Session[<span style="color: #a31515;">"outstandingOrders"</span>] <span style="color: blue;">as</span> <span style="color: #2b91af;">WeakReference</span>;</p>
-<p style="margin: 0px;">&nbsp;</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: blue;">if</span> (reference != <span style="color: blue;">null</span> &amp;&amp; reference.IsAlive)</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; outstandingOrders = reference.Target <span style="color: blue;">as</span> <span style="color: #2b91af;">IEnumerable</span>&lt;<span style="color: #2b91af;">OrderView</span>&gt;;</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: blue;">else</span></p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; outstandingOrders = orderManagementServiceProxy.GetOverviewOfAllOutstandingOrders();</p>
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</p>
-</div>
-
-</code>
+<script src="https://gist.github.com/3655907.js?file=s3.cs"></script>
 
 Like i said, this is a quick-n-dirty example... normally you'd want to prevent direct access to the HttpSession and you'd probably write some kind of class that takes care of wrapping the reference in a WeakReference and unwrapping it from a WeakReference but this code is just to illustrate the approach.

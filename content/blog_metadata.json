@@ -198,16 +198,6 @@
     ]
   },
   {
-    "title": "The Query Batcher",
-    "link": "/2008/06/the-query-batcher/",
-    "date": "2008-06-14 11:35:29",
-    "disqusthreadid": "213623973",
-    "categories": [
-      "nhibernate",
-      "performance"
-    ]
-  },
-  {
     "title": "C# In Depth",
     "link": "/2008/06/c-in-depth/",
     "date": "2008-06-14 11:30:15",
@@ -237,45 +227,6 @@
     ]
   },
   {
-    "title": "Batching WCF calls",
-    "link": "/2008/06/batching-wcf-calls/",
-    "date": "2008-06-26 16:13:49",
-    "disqusthreadid": "213624122",
-    "categories": [
-      "performance",
-      "wcf"
-    ]
-  },
-  {
-    "title": "The Service Call Batcher",
-    "link": "/2008/06/the-service-call-batcher/",
-    "date": "2008-06-28 09:30:25",
-    "disqusthreadid": "214496319",
-    "categories": [
-      "performance",
-      "wcf"
-    ]
-  },
-  {
-    "title": "Testing batched Service calls",
-    "link": "/2008/06/testing-batched-service-calls/",
-    "date": "2008-06-29 20:39:54",
-    "disqusthreadid": "214496823",
-    "categories": [
-      "testing"
-    ]
-  },
-  {
-    "title": "Batching WCF calls, Take 2",
-    "link": "/2008/07/batching-wcf-calls-take-2/",
-    "date": "2008-07-01 21:56:45",
-    "disqusthreadid": "214497126",
-    "categories": [
-      "performance",
-      "wcf"
-    ]
-  },
-  {
     "title": "How To Write Testable ASP.NET WebForms",
     "link": "/2008/07/how-to-write-testable-aspnet-webforms/",
     "date": "2008-07-06 21:53:28",
@@ -283,15 +234,6 @@
     "categories": [
       "aspnet",
       "testing"
-    ]
-  },
-  {
-    "title": "IMultiQuery/IMultiCriteria usability improvement",
-    "link": "/2008/07/imultiqueryimulticriteria-usability-improvement/",
-    "date": "2008-07-09 20:33:42",
-    "disqusthreadid": "213646534",
-    "categories": [
-      "nhibernate"
     ]
   },
   {
@@ -322,44 +264,12 @@
     ]
   },
   {
-    "title": "The Known Type Provider",
-    "link": "/2008/07/the-known-type-provider/",
-    "date": "2008-07-21 14:35:32",
-    "disqusthreadid": "213624240",
-    "categories": [
-      "wcf"
-    ]
-  },
-  {
     "title": "Is SQL going the way of Disco?",
     "link": "/2008/07/is-sql-going-the-way-of-disco/",
     "date": "2008-07-22 21:35:02",
     "disqusthreadid": "213624269",
     "categories": [
       "software-development"
-    ]
-  },
-  {
-    "title": "The Request/Response Service Layer",
-    "link": "/2008/07/the-request-response-service-layer/",
-    "date": "2008-07-27 13:07:15",
-    "disqusthreadid": "213624297",
-    "categories": [
-      "patterns",
-      "software-development",
-      "wcf"
-    ]
-  },
-  {
-    "title": "Batching++",
-    "link": "/2008/07/batching/",
-    "date": "2008-07-30 21:25:36",
-    "disqusthreadid": "213624327",
-    "categories": [
-      "nhibernate",
-      "performance",
-      "software-development",
-      "wcf"
     ]
   },
   {

@@ -4,13 +4,11 @@ This week, i was asked to do a 2-day code review of a project. Considering my pr
 
 So i tried a different approach... I browsed through the code, and in my document i listed general issues that were prevalent in the code base. I didn't really focus on good or bad code, more on good or bad practices that had an impact on the performance, stability and consistency of the application in general. Stuff that affected how the application ran and behaved and also, how easy or hard it would be to maintain or add functionality to the application.  In other words, the stuff that end-users and stakeholders of the project care about.  They don't care about how the code looks, nor should they.  So i focused on innefficient data structures and data fetching strategies, chatty remote communication, and stuff that would be painful (and thus, expensive) to maintain or to extend with new functionality.  After that, i wrote down my conclusions on the general technical state of the project. Instead of providing a summary of what i had mentioned already in the document, i listed a couple of questions that i think are pretty useful to judge a project on:
 
-<ul>
-	<li>Does it work and if so, how well?</li>
-	<li>How much did it cost to develop?</li>
-	<li>How much will it keep costing us in maintenance?</li>
-	<li>How much will it cost if we want to improve it?</li>
-	<li>How much will it cost to add new functionality?</li>
-</ul>
+- Does it work and if so, how well?
+- How much effort did it take to develop?
+- How much effort will it keep taking in maintenance?
+- How much effort will it take if we want to improve it?
+- How much effort will it take to add new functionality?
 
 This is for general in-house IT projects btw... if you're developing applications or sites that generate revenue, one of the most important questions is obviously: "How much revenue does it generate?"
 
