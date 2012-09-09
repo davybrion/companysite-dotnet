@@ -8,154 +8,35 @@ My first version of this DAL hardly had any support for this, and when using the
 
 Let's go over the details... First of all, we have this simple IQuery interface:
 
-<div>
-[csharp]
-    public interface IQuery
-    {
-        void AddParameter(string name, object value, DbType dbType);
-        TResult GetSingleResult&lt;TResult&gt;();
-        IEnumerable&lt;TResult&gt; GetResults&lt;TResult&gt;();
-        int ExecuteNonQuery();
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685082.js?file=s1.cs"></script>
 
 That is what you should be able to do with a query once you've created it.  Creating a query is possible through my session API (which will be covered in the next post):
 
-<div>
-[csharp]
-        IQuery CreateQuery(string sql);
-        IQuery CreateQuery&lt;TEntity&gt;(string whereClause);
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685082.js?file=s2.cs"></script>
 
 Through the regular CreateQuery method, you can provide the full SQL string and you have full control over the actual SQL.  The CreateQuery&lt;TEntity&gt; overload only requires you to provide the WHERE clause because it will generate a SELECT clause for the given entity which automatically retrieves all of the columns for this entity.  This also ensures that the result of CreateQuery&lt;TEntity&gt; can always be cleanly transformed to a list of entities or a single entity instance through the EntityHydrater.
 
 This is the implementation of both CreateQuery methods:
 
-<div>
-[csharp]
-        public IQuery CreateQuery(string sql)
-        {
-            var command = GetConnection().CreateCommand();
-            command.Transaction = GetTransaction();
-            command.CommandText = sql;
-            return new Query(command, metaDataStore, hydrater);
-        }
- 
-        public IQuery CreateQuery&lt;TEntity&gt;(string whereClause)
-        {
-            return CreateQuery(metaDataStore.GetTableInfoFor&lt;TEntity&gt;().GetSelectStatementForAllFields() + &quot; &quot; + whereClause);
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685082.js?file=s3.cs"></script>
 
 And here's the actual implementation of the Query class:
 
-<div>
-[csharp]
-    public class Query : IQuery
-    {
-        private readonly SqlCommand command;
-        private readonly MetaDataStore metaDataStore;
-        private readonly EntityHydrater hydrater;
- 
-        public Query(SqlCommand command, MetaDataStore metaDataStore, EntityHydrater hydrater)
-        {
-            this.command = command;
-            this.metaDataStore = metaDataStore;
-            this.hydrater = hydrater;
-        }
- 
-        public void AddParameter(string name, object value, DbType dbType)
-        {
-            command.CreateAndAddInputParameter(dbType, name, value);
-        }
- 
-        public TResult GetSingleResult&lt;TResult&gt;()
-        {
-            var tableInfo = metaDataStore.GetTableInfoFor&lt;TResult&gt;();
- 
-            if (tableInfo == null)
-            {
-                var scalar = (TResult)command.ExecuteScalar();
-                command.Dispose();
-                return scalar;
-            }
- 
-            var result = hydrater.HydrateEntity&lt;TResult&gt;(command);
-            command.Dispose();
-            return result;
-        }
- 
-        public IEnumerable&lt;TResult&gt; GetResults&lt;TResult&gt;()
-        {
-            var tableInfo = metaDataStore.GetTableInfoFor&lt;TResult&gt;();
- 
-            if (tableInfo == null)
-            {
-                var listOfValues = GetListOfValues&lt;TResult&gt;();
-                command.Dispose();
-                return listOfValues;
-            }
- 
-            var result = hydrater.HydrateEntities&lt;TResult&gt;(command);
-            command.Dispose();
-            return result;
-        }
- 
-        private IEnumerable&lt;TResult&gt; GetListOfValues&lt;TResult&gt;()
-        {
-            using (var reader = command.ExecuteReader())
-            {
-                var list = new List&lt;object&gt;();
-                while (reader.Read())
-                {
-                    list.Add(reader.GetValue(0));
-                }
-                return list.Cast&lt;TResult&gt;();
-            }
-        }
- 
-        public int ExecuteNonQuery()
-        {
-            var rowsAffected = command.ExecuteNonQuery();
-            command.Dispose();
-            return rowsAffected;
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685082.js?file=s4.cs"></script>
 
 Pretty simple, right? The ability to get a strong typed result is something that i find very important when using any DAL, and the Query class makes this very easy to do.  If you want to return a list of single value results, you can do that easily.  If you want to return a single scalar result, you can do that easily.  A single entity instance? No problem, the EntityHydrater takes care of that for us.  Same thing goes for a list of entities.  Custom delete or update statements? No problem, the ExecuteUpdate method can be used for that and will return the typical number of affected rows as reported by the database.
 
 And now you can do things like this pretty easily:
 
-<div>
-[csharp]
-            var query = session.CreateQuery&lt;Customer&gt;(&quot;where this.NumberOfPurchases &gt; @numberOfPurchases&quot;);
-            query.AddParameter(&quot;@numberOfPurchases&quot;, 100, DbType.Int32);
-            var goodCustomers = query.GetResults&lt;Customer&gt;();
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685082.js?file=s5.cs"></script>
 
 or
 
-<div>
-[csharp]
-            var query = session.CreateQuery(&quot;select max(NumberOfPurchases) from Customer&quot;);
-            int max = query.GetSingleResult&lt;int&gt;();
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685082.js?file=s6.cs"></script>
 
 or
 
-<div>
-[csharp]
-            var query = session.CreateQuery&lt;Customer&gt;(&quot;where this.NumberOfPurchases = (select max(NumberOfPurchases) from Customer))&quot;);
-            var bestCustomer = query.GetSingleResult&lt;Customer&gt;();
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685082.js?file=s7.cs"></script>
 
 I'm sure you get the idea by now ;)
 

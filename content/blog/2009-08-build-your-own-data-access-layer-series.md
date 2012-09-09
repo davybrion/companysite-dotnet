@@ -14,7 +14,7 @@ In this series, we're going to go over the entire implementation of this DAL and
 </ul>
 
 These are the posts that this series consists of:
-<ol>
+<ul>
 	<li><a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-mapping-classes-to-tables/">Mapping Classes To Tables</a></li>
 	<li><a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-out-of-the-box-crud-functionality/">Out Of The Box CRUD Functionality</a></li>
 	<li><a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-hydrating-entities/">Hydrating Entities</a></li>
@@ -24,8 +24,6 @@ These are the posts that this series consists of:
 	<li><a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-bringing-it-all-together/">Bringing It All Together</a></li>
 	<li><a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-conclusions/">Conclusions</a></li>
 	<li><a href="http://davybrion.com/blog/2009/10/build-your-own-data-access-layer-enabling-bulk-inserts/">Enabling Bulk Inserts</a></li>
-</ol>
+</ul>
 
-I will update the list above with actual links to the posts as soon as they are published.
-
-Note: the code of this series can be found <a href="https://github.com/davybrion/BuildYourOwnDal">here</a>
+The code of this series can be found <a href="https://github.com/davybrion/BuildYourOwnDal">here</a>

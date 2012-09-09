@@ -2,35 +2,15 @@ Note: This post is part of a series. Be sure to read the introduction <a href="h
 
 The Request/Response Service Layer (RRSL) only defines one service operation, or entry point if you will:
 
-<div>
-[csharp]
-    public interface IRequestProcessor : IDisposable
-    {
-        Response[] Process(params Request[] requests);
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685427.js?file=s1.cs"></script>
 
 The topic of this post is how we go from that interface, to some kind of mechanism that can actually process the incoming requests and send the appropriate responses back to the client.  Note that i make a difference between <em>processing</em> requests and <em>handling</em> them.  Processing the requests is done by the Request Processor, and each request will be handled by its very own Request Handler.  The Request Processor accepts all incoming requests, delegates the actual handling of each request to the correct Request Handler and will then send back all of the responses to the client.  Handling requests and how Request Handlers work is the topic of a different post, but you do already need to know that each Request Handler will implement the following interface:
 
-<div>
-[csharp]
-    public interface IRequestHandler&lt;TRequest&gt; : IRequestHandler where TRequest : Request
-    {
-        Response Handle(TRequest request);
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685427.js?file=s2.cs"></script>
 
 Unfortunately, when trying to work with Generic types in .NET in a generic manner you typically need to resort to a non-generic version to be able to handle your generic usage (read that sentence a few more times if you didn't get it):
 
-<div>
-    public interface IRequestHandler : IDisposable
-    {
-        Response Handle(Request request);
-        Response CreateDefaultResponse();
-    }
-</div>
+<script src="https://gist.github.com/3685427.js?file=s3.cs"></script>
 
 The Request Processor will make use of the non-generic IRequestHandler interface, while each Request Handler will simply implement the generic version. 
 
@@ -38,58 +18,7 @@ We'll begin with a relatively simple implementation of the Request Processor, wh
 
 This is the simplest version of the Request Processor:
 
-<div>
-[csharp]
-    public class RequestProcessor : IRequestProcessor
-    {
-        // the server-side implementation should be stateless, but the IRequestProcessor
-        // interface defines the Dispose method, so we just provide an empty one here
-        public void Dispose() { }
- 
-        public Response[] Process(params Request[] requests)
-        {
-            if (requests == null) return null;
- 
-            var responses = new List&lt;Response&gt;(requests.Length);
- 
-            foreach (var request in requests)
-            {
-                using (var handler = (IRequestHandler)IoC.Container.Resolve(GetHandlerTypeFor(request)))
-                {
-                    try
-                    {
-                        var response = GetResponseFromHandler(request, handler);
-                        responses.Add(response);
-                    }
-                    finally
-                    {
-                        IoC.Container.Release(handler);
-                    }
-                }
-            }
- 
-            return responses.ToArray();
-        }
- 
-        private static Type GetHandlerTypeFor(Request request)
-        {
-            // get a type reference to IRequestHandler&lt;ThisSpecificRequestType&gt;
-            return typeof(IRequestHandler&lt;&gt;).MakeGenericType(request.GetType());
-        }
- 
-        private Response GetResponseFromHandler(Request request, IRequestHandler handler)
-        {
-            BeforeHandle(request);
-            var response = handler.Handle(request);
-            AfterHandle(request);
-            return response;
-        }
- 
-        protected virtual void BeforeHandle(Request request) { }
-        protected virtual void AfterHandle(Request request) { }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685427.js?file=s4.cs"></script>
 
 First of all, you'll notice that the RequestProcessor has an empty Dispose method.  The only reason it's there is because the IRequestProcessor interface will also be used client-side, and it's <strong>very</strong> important that client-side implementations of the IRequestProcessor interface are disposable.  We'll cover this in detail in a future post of this series though so let's just focus on how the requests are processed.
 
@@ -109,86 +38,11 @@ I've chosen the following approach to dealing with exceptions, and after using t
 
 Our previously simple Process method now looks like this:
 
-<div>
-[csharp]
-        public Response[] Process(params Request[] requests)
-        {
-            if (requests == null) return null;
- 
-            var responses = new List&lt;Response&gt;(requests.Length);
- 
-            bool exceptionsPreviouslyOccurred = false;
- 
-            foreach (var request in requests)
-            {
-                using (var handler = (IRequestHandler)IoC.Container.Resolve(GetHandlerTypeFor(request)))
-                {
-                    try
-                    {
-                        if (!exceptionsPreviouslyOccurred)
-                        {
-                            var response = GetResponseFromHandler(request, handler);
-                            exceptionsPreviouslyOccurred = response.ExceptionType != ExceptionType.None;
-                            responses.Add(response);
-                        }
-                        else
-                        {
-                            var response = handler.CreateDefaultResponse();
-                            response.ExceptionType = ExceptionType.EarlierRequestAlreadyFailed;
-                            response.Exception = new ExceptionInfo(new Exception(ExceptionType.EarlierRequestAlreadyFailed.ToString()));
-                            responses.Add(response);
-                        }
-                    }
-                    finally
-                    {
-                        IoC.Container.Release(handler);
-                    }
-                }
-            }
- 
-            return responses.ToArray();
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685427.js?file=s5.cs"></script>
 
 It now uses a boolean to keep track of whether the batch can still be considered successful.  Once a request failed, it will start adding default responses which indicate that a previous request in the batch failed.  We also have to modify the GetResponseFromHandler method so that it can add the actual exception to the response in case of failure:
 
-<div>
-        private Response GetResponseFromHandler(Request request, IRequestHandler handler)
-        {
-            try
-            {
-                BeforeHandle(request);
-                var response = handler.Handle(request);
-                AfterHandle(request);
-                return response;
-            }
-            catch (Exception e)
-            {
-                var response = handler.CreateDefaultResponse();
-                response.Exception = new ExceptionInfo(e);
-                SetExceptionType(response, e);
-                return response;
-            }
-        }
- 
-        private static void SetExceptionType(Response response, Exception exception)
-        {
-            if (exception is BusinessException)
-            {
-                response.ExceptionType = ExceptionType.Business;
-                return;
-            }
- 
-            if (exception is SecurityException)
-            {
-                response.ExceptionType = ExceptionType.Security;
-                return;
-            }
- 
-            response.ExceptionType = ExceptionType.Unknown;
-        }
-</div>
+<script src="https://gist.github.com/3685427.js?file=s6.cs"></script>
 
 I agree that it's not pretty, but it works :)
 
@@ -200,135 +54,6 @@ This version of the Request Processor is still not complete though.  We still ne
 
 So to wrap up this post, here's the final version of the Request Processor that we use for all our projects:
 
-<div>
-[csharp]
-    public class RequestProcessor : IRequestProcessor
-    {
-        private readonly ILog logger = LogManager.GetLogger(typeof(RequestProcessor));
-        private readonly ILog performanceLogger = LogManager.GetLogger(&quot;PERFORMANCE&quot;);
- 
-        // the server-side implementation should be stateless, but the IRequestProcessor
-        // interface defines the Dispose method, so we just provide an empty one here
-        public void Dispose() { }
- 
-        public Response[] Process(params Request[] requests)
-        {
-            if (requests == null) return null;
- 
-            var responses = new List&lt;Response&gt;(requests.Length);
- 
-            bool exceptionsPreviouslyOccurred = false;
- 
-            var batchStopwatch = Stopwatch.StartNew();
- 
-            foreach (var request in requests)
-            {
-                try
-                {
-                    using (var handler = (IRequestHandler)IoC.Container.Resolve(GetHandlerTypeFor(request)))
-                    {
-                        var requestStopwatch = Stopwatch.StartNew();
- 
-                        try
-                        {
-                            if (!exceptionsPreviouslyOccurred)
-                            {
-                                var response = GetResponseFromHandler(request, handler);
-                                exceptionsPreviouslyOccurred = response.ExceptionType != ExceptionType.None;
-                                responses.Add(response);
-                            }
-                            else
-                            {
-                                var response = handler.CreateDefaultResponse();
-                                response.ExceptionType = ExceptionType.EarlierRequestAlreadyFailed;
-                                response.Exception = new ExceptionInfo(new Exception(ExceptionType.EarlierRequestAlreadyFailed.ToString()));
-                                responses.Add(response);
-                            }
-                        }
-                        finally
-                        {
-                            requestStopwatch.Stop();
- 
-                            if (requestStopwatch.ElapsedMilliseconds &gt; 100)
-                            {
-                                performanceLogger.Warn(string.Format(&quot;Performance warning: {0}ms for {1}&quot;, requestStopwatch.ElapsedMilliseconds, handler.GetType().Name));
-                            }
- 
-                            IoC.Container.Release(handler);
-                        }
-                    }
-                }
-                catch (Exception e)
-                {
-                    logger.Error(e);
-                    throw;
-                }
-            }
- 
-            batchStopwatch.Stop();
- 
-            if (batchStopwatch.ElapsedMilliseconds &gt; 200)
-            {
-                StringBuilder builder = new StringBuilder();
- 
-                foreach (var request in requests)
-                {
-                    builder.Append(request.GetType().Name + &quot;, &quot;);
-                }
-                builder.Remove(builder.Length - 2, 2);
- 
-                performanceLogger.Warn(string.Format(&quot;Performance warning: {0}ms for the following batch: {1}&quot;, batchStopwatch.ElapsedMilliseconds, builder));
-            }
- 
-            return responses.ToArray();
-        }
- 
-        private static Type GetHandlerTypeFor(Request request)
-        {
-            // get a type reference to IRequestHandler&lt;ThisSpecificRequestType&gt;
-            return typeof(IRequestHandler&lt;&gt;).MakeGenericType(request.GetType());
-        }
- 
-        private Response GetResponseFromHandler(Request request, IRequestHandler handler)
-        {
-            try
-            {
-                BeforeHandle(request);
-                var response = handler.Handle(request);
-                AfterHandle(request);
-                return response;
-            }
-            catch (Exception e)
-            {
-                logger.Error(&quot;RequestProcessor: unhandled exception while handling request!&quot;, e);
-                var response = handler.CreateDefaultResponse();
-                response.Exception = new ExceptionInfo(e);
-                SetExceptionType(response, e);
-                return response;
-            }
-        }
- 
-        private static void SetExceptionType(Response response, Exception exception)
-        {
-            if (exception is BusinessException)
-            {
-                response.ExceptionType = ExceptionType.Business;
-                return;
-            }
- 
-            if (exception is SecurityException)
-            {
-                response.ExceptionType = ExceptionType.Security;
-                return;
-            }
- 
-            response.ExceptionType = ExceptionType.Unknown;
-        }
- 
-        protected virtual void BeforeHandle(Request request) { }
-        protected virtual void AfterHandle(Request request) { }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685427.js?file=s7.cs"></script>
 
 Yes, the logging and exception handling code looks ugly.  I could clean it up and extract it to more methods, but since it only occurs in this single class i don't really see the point and it might actually reduce readability in this particular case.

@@ -5,162 +5,25 @@ Plenty of implementations of this pattern can be found online already, so i figu
 
 Fist of all, an event is nothing more than a class that inherits from this class:
 
-<div>
-[csharp]
-    public abstract class Event {}
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685223.js?file=s1.cs"></script>
 
 Every event should inherit from this class, and add whatever necessary properties that are important for that particular type of event. 
 
 If a class is interested in listening to a specific event, it needs to implement the following interface:
 
-<div>
-[csharp]
-    public interface IListener { }
- 
-    public interface IListener&lt;TEvent&gt; : IListener
-        where TEvent : Event
-    {
-        void Handle(TEvent receivedEvent);
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685223.js?file=s2.cs"></script>
 
 If a class is interested in multiple events, it simply needs to implement the generic IListener interface for each type of event that it wants to handle.
 
 Then we obviously need the Event Aggregator.  I wanted an aggregator that allowed listeners to either subscribe/unsubscribe to/from very specific events, or just subscribe/unsubscribe to/from whatever it supports.  So i have the following IEventAggregator interface:
 
-<div>
-[csharp]
-    public interface IEventAggregator
-    {
-        void Publish&lt;TEvent&gt;(TEvent message) where TEvent : Event;
-        void Publish&lt;TEvent&gt;() where TEvent : Event, new();
- 
-        void Subscribe(IListener listener);
-        void Unsubscribe(IListener listener);
- 
-        void Subscribe&lt;TEvent&gt;(IListener&lt;TEvent&gt; listener) where TEvent : Event;
-        void Unsubscribe&lt;TEvent&gt;(IListener&lt;TEvent&gt; listener) where TEvent : Event;
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685223.js?file=s3.cs"></script>
 
 The Subscribe and Unsubscribe methods that simply take an IListener reference will either subscribe or unsubscribe the given listener to/from every event that it can handle.  In other words, for every generic IListener interface that it implements.  Yet you also have the ability to subscribe/unsubscribe from a specific event type.
 
 And here's the implementation:
 
-<div>
-[csharp]
-    public class EventAggregator : IEventAggregator
-    {
-        private readonly object listenerLock = new object();
-        protected readonly Dictionary&lt;Type, List&lt;IListener&gt;&gt; listeners = new Dictionary&lt;Type, List&lt;IListener&gt;&gt;();
-        private readonly IDispatcher dispatcher;
- 
-        public EventAggregator(IDispatcher dispatcher)
-        {
-            this.dispatcher = dispatcher;
-        }
- 
-        public virtual void Subscribe(IListener listener)
-        {
-            ForEachListenerInterfaceImplementedBy(listener, Subscribe);
-        }
- 
-        public virtual void Unsubscribe(IListener listener)
-        {
-            ForEachListenerInterfaceImplementedBy(listener, Unsubscribe);
-        }
- 
-        private static void ForEachListenerInterfaceImplementedBy(IListener listener, Action&lt;Type, IListener&gt; action)
-        {
-            var listenerTypeName = typeof(IListener).Name;
- 
-            foreach (var interfaceType in listener.GetType().GetInterfaces().Where(i =&gt; i.Name.StartsWith(listenerTypeName)))
-            {
-                Type typeOfEvent = GetEventType(interfaceType);
- 
-                if (typeOfEvent != null)
-                {
-                    action(typeOfEvent, listener);
-                }
-            }
-        }
- 
-        private static Type GetEventType(Type type)
-        {
-            if (type.GetGenericArguments().Count() &gt; 0)
-            {
-                return type.GetGenericArguments()[0];
-            }
- 
-            return null;
-        }
- 
-        public virtual void Subscribe&lt;TEvent&gt;(IListener&lt;TEvent&gt; listener) where TEvent : Event
-        {
-            Subscribe(typeof(TEvent), listener);
-        }
- 
-        protected virtual void Subscribe(Type typeOfEvent, IListener listener)
-        {
-            lock (listenerLock)
-            {
-                if (!listeners.ContainsKey(typeOfEvent))
-                {
-                    listeners.Add(typeOfEvent, new List&lt;IListener&gt;());
-                }
- 
-                if (listeners[typeOfEvent].Contains(listener))
-                {
-                    throw new InvalidOperationException(&quot;You're not supposed to register to the same event twice&quot;);
-                }
- 
-                listeners[typeOfEvent].Add(listener);
-            }
-        }
- 
-        public virtual void Unsubscribe&lt;TEvent&gt;(IListener&lt;TEvent&gt; listener) where TEvent : Event
-        {
-            Unsubscribe(typeof(TEvent), listener);
-        }
- 
-        protected virtual void Unsubscribe(Type typeOfEvent, IListener listener)
-        {
-            lock(listenerLock)
-            {
-                if (listeners.ContainsKey(typeOfEvent))
-                {
-                    listeners[typeOfEvent].Remove(listener);
-                }
-            }
-        }
- 
-        public virtual void Publish&lt;TEvent&gt;(TEvent message) where TEvent : Event
-        {
-            var typeOfEvent = typeof(TEvent);
- 
-            lock (listenerLock)
-            {
-                if (!listeners.ContainsKey(typeOfEvent)) return;
- 
-                foreach (var listener in listeners[typeOfEvent])
-                {
-                    var typedReference = (IListener&lt;TEvent&gt;)listener;
-                    dispatcher.BeginInvoke(() =&gt; typedReference.Handle(message));
-                }
-            }
-        }
- 
-        public virtual void Publish&lt;TEvent&gt;() where TEvent : Event, new()
-        {
-            Publish(new TEvent());
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685223.js?file=s4.cs"></script>
 
 In case you're wondering... the IDispatcher interface is merely a way to wrap Silverlight's real Dispatcher.  We wrap it so we can use a different implementation of the IDispatcher in our automated tests.  Other than that, the implementation is very straightforward.
 

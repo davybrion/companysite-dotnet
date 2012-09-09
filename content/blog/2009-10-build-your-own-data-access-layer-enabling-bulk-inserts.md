@@ -4,71 +4,11 @@ I know i wrapped up the series already, but i just had to add the ability to do 
 
 After that, adding the bulk insert feature to the DAL was as simple as creating this class:
 
-<div>
-[csharp]
-    public class BulkInsertAction : DatabaseAction
-    {
-        public BulkInsertAction(SqlConnection connection, SqlTransaction transaction, MetaDataStore metaDataStore,
-            EntityHydrater hydrater, SessionLevelCache sessionLevelCache)
-            : base(connection, transaction, metaDataStore, hydrater, sessionLevelCache) {}
- 
-        public void Insert&lt;TEntity&gt;(IEnumerable&lt;TEntity&gt; entities, int batchSize, int commandTimeOut)
-        {
-            var tableInfo = MetaDataStore.GetTableInfoFor&lt;TEntity&gt;();
-            var insertStatement = tableInfo.GetInsertStatementWithoutReturningTheIdentityValue();
- 
-            var sqlCommandSet = new PublicSqlCommandSet { CommandTimeout = commandTimeOut, Connection = GetConnection(), Transaction = GetTransaction() };
- 
-            foreach (var entity in entities)
-            {
-                var currentCommand = CreateCommand();
-                currentCommand.CommandText = insertStatement;
- 
-                foreach (var parameterInfo in tableInfo.GetParametersForInsert(entity))
-                {
-                    currentCommand.CreateAndAddInputParameter(parameterInfo.DbType, &quot;@&quot; + parameterInfo.Name, parameterInfo.Value);
-                }
- 
-                sqlCommandSet.Append(currentCommand);
- 
-                if (sqlCommandSet.CommandCount == batchSize)
-                {
-                    ExecuteCurrentBatch(sqlCommandSet);
-                    sqlCommandSet = new PublicSqlCommandSet { CommandTimeout = commandTimeOut, Connection = GetConnection(), Transaction = GetTransaction() };
-                }
-            }
- 
-            if (sqlCommandSet.CommandCount &gt; 0)
-            {
-                ExecuteCurrentBatch(sqlCommandSet);
-            }
-        }
- 
-        private void ExecuteCurrentBatch(PublicSqlCommandSet sqlCommandSet)
-        {
-            try
-            {
-                sqlCommandSet.ExecuteNonQuery();
-            }
-            finally
-            {
-                sqlCommandSet.Dispose();
-            }
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685116.js?file=s1.cs"></script>
 
 And then adding this to the Session class:
 
-<div>
-[csharp]
-        public void BulkInsert&lt;TEntity&gt;(IEnumerable&lt;TEntity&gt; entities)
-        {
-            CreateAction&lt;BulkInsertAction&gt;().Insert(entities, 50, 200);
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685116.js?file=s2.cs"></script>
 
 Obviously, the method signature was also added to the ISession interface.  The batch-size and commandtimeout parameters are currently hardcoded but they should come from some kind of configuration file.
 

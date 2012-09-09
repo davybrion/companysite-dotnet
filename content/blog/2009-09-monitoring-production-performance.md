@@ -1,81 +1,10 @@
 It's always interesting to know how well your applications perform in production.  To get a better view on this, i recently added a bit of performance related logging to the RequestProcessor class of my <a href="http://davybrion.com/blog/2008/07/the-request-response-service-layer/">Request/Response service layer</a>.  I have the following 2 loggers set up:
 
-<div>
-[csharp]
-        private readonly ILog logger = LogManager.GetLogger(typeof(RequestProcessor));
-        private readonly ILog performanceLogger = LogManager.GetLogger(&quot;PERFORMANCE&quot;);
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685184.js?file=s1.cs"></script>
 
 And here's a simplified version of the Process method:
 
-<div>
-[csharp]
-        public Response[] Process(params Request[] requests)
-        {
-            if (requests == null) return null;
- 
-            var responses = new List&lt;Response&gt;(requests.Length);
- 
-            var batchStopwatch = Stopwatch.StartNew();
- 
-            foreach (var request in requests)
-            {
-                try
-                {
-                    using (var handler = (IRequestHandler)IoC.Container.Resolve(GetHandlerTypeFor(request)))
-                    {
-                        var requestStopwatch = Stopwatch.StartNew();
- 
-                        try
-                        {
-                            // NOTE: the real code has a lot more stuff in this block for dealing with
-                            // failed requests etc...
-                            responses.Add(GetResponseFromHandler(request, handler));
-                        }
-                        finally
-                        {
-                            requestStopwatch.Stop();
- 
-                            if (requestStopwatch.ElapsedMilliseconds &gt; 100)
-                            {
-                                performanceLogger.Warn(string.Format(&quot;Performance warning: {0}ms for {1}&quot;,
-                                    requestStopwatch.ElapsedMilliseconds, handler.GetType().Name));
-                            }
- 
-                            IoC.Container.Release(handler);
-                        }
-                    }
-                }
-                catch (Exception e)
-                {
-                    // NOTE: every single thrown exception in the service layer (and everything below it)
-                    // is caught here and logged only once
-                    logger.Error(e);          
-                    throw;
-                }
-            }
- 
-            batchStopwatch.Stop();
- 
-            if (batchStopwatch.ElapsedMilliseconds &gt; 200)
-            {
-                var builder = new StringBuilder();
- 
-                foreach (var request in requests)
-                {
-                    builder.Append(request.GetType().Name + &quot;, &quot;);
-                }
-                builder.Remove(builder.Length - 2, 2);
- 
-                performanceLogger.Warn(string.Format(&quot;Performance warning: {0}ms for the following batch: {1}&quot;,
-                    batchStopwatch.ElapsedMilliseconds, builder));
-            }
- 
-            return responses.ToArray();
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685184.js?file=s2.cs"></script>
 
 The part that is simplified is simply the part that deals with getting the actual responses for each request, including how to deal with failed requests and how to handle subsequent requests in the batch.  It's not relevant to this post and it only clutters the code more so i left that out.  But anyways, the interesting part here is the performance logging.  Ok, the code itself isn't interesting but what you get out of it is pretty nice.  Each single request that takes more than 100 milliseconds is logged.  Also, each batch of requests that takes more than 200 milliseconds is logged.  Both of these 'events' are logged to the performance logger which, in our case, is set up to use a different logfile than the typical error log. 
 

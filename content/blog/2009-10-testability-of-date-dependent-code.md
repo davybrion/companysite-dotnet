@@ -2,28 +2,11 @@ Just read a <a href="http://jonathan-oliver.blogspot.com/2009/10/ddd-entity-inje
 
 The problem obviously is that you can't override the value that DateTime.Now will return during your tests.  Many people seem to resort to using some kind of DateTimeService dependency which each piece of code that needs the current date will use.  Basically, something like this:
 
-<div>
-[csharp]
-    public interface IDateTimeService
-    {
-        DateTime Now { get; }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685240.js?file=s1.cs"></script>
 
 The implementation that will be used at runtime then looks like this:
 
-<div>
-[csharp]
-    public class DateTimeService : IDateTimeService
-    {
-        public DateTime Now
-        {
-            get { return DateTime.Now; }
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685240.js?file=s2.cs"></script>
 
 Code that needs the current date simply declares a dependency on IDateTimeService and at run-time the IOC container will inject an instance of DateTimeService to fulfill the IDateTimeService dependency.  At test-time, the IDateTimeService is mocked so you can easily set which date should be returned for each test. 
 
@@ -31,29 +14,7 @@ Personally, i'm not a fan of this approach.  I mean, i use the same approach for
 
 Instead, we simply use something like this:
 
-<div>
-[csharp]
-    public static class DateTimeProvider
-    {
-        private static DateTime? dateTimeToReturn;
- 
-        public static DateTime Now
-        {
-            get { return dateTimeToReturn == null ? DateTime.Now : dateTimeToReturn.Value; }
-        }
- 
-        public static void SetDateTimeToReturn(DateTime overriddenCurrentDateTime)
-        {
-            dateTimeToReturn = overriddenCurrentDateTime;
-        }
- 
-        public static void ResetCurrentDateTime()
-        {
-            dateTimeToReturn = null;
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685240.js?file=s3.cs"></script>
 
 And our real code simply calls DateTimeProvider.Now instead of DateTime.Now.  In our tests, we call the SetDateTimeToReturn method to provide the date that we want to use for a particular test.  At the end of the test, simply call the ResetCurrentDateTime method and that's it.
 

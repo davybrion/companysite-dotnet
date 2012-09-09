@@ -12,30 +12,11 @@ At any rate, I was surprised by the sentence I quoted, because I didn’t realiz
 
 Once again, the answer is related to the dynamic proxies that NHibernate uses.  Value Objects will never be proxied by NHibernate, so NHibernate only needs a private default constructor to create the instances.  If an entity is eligible for lazy loading however, then NHibernate will create a type which inherits from your entity (this is described in depth <a href="http://davybrion.com/blog/2009/03/must-everything-be-virtual-with-nhibernate/">here</a> and <a href="http://davybrion.com/blog/2009/09/must-everything-be-virtual-with-nhibernate-part-iii/">here</a>).  Which means that we really need either a public or protected constructor in entity classes that are eligible for lazy loading.  Consider the following class:
 
-<div>
-[csharp]
-    public class SomeEntity
-    {
-        public SomeEntity(string someRequiredValue)
-        {
-        }
- 
-        private SomeEntity()
-        {
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685257.js?file=s1.cs"></script>
 
 If we try to create the following derived class:
 
-<div>
-[csharp]
-    public class SomeEntityProxy : SomeEntity
-    {
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685257.js?file=s2.cs"></script>
 
 We get the following compiler error:
 

@@ -6,31 +6,17 @@ Next, you need to make sure that the virtual directory where you're hosting the 
 
 After that, you need to add the following to the binding configuration of the service endpoint (in the host, obviously):
 
-<div>
-[xml]
-          &lt;security mode=&quot;TransportCredentialOnly&quot;&gt;
-            &lt;transport clientCredentialType=&quot;Windows&quot; /&gt;
-          &lt;/security&gt;
-[/xml]
-</div>
+<script src="https://gist.github.com/3685323.js?file=s1.xml"></script>
 
 I only got it working with basicHttpBinding, so unfortunately i can no longer use the customBinding to use binary XML...
 
 In your Silverlight project, open the ServiceReferences.ClientConfig file and add the following to the binding configuration:
 
-<div>
-[xml]
-          &lt;security mode=&quot;TransportCredentialOnly&quot; /&gt;
-[/xml]
-</div>
+<script src="https://gist.github.com/3685323.js?file=s2.xml"></script>
 
 After that, you should be able to do this in your WCF service:
 
-<div>
-[csharp]
-            WindowsIdentity myuser = ServiceSecurityContext.Current.WindowsIdentity;
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685323.js?file=s3.cs"></script>
 
 And that should return the Windows user of the user running the Silverlight client.
 

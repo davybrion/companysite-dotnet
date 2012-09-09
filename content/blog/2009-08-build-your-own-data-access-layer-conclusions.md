@@ -10,14 +10,11 @@ Also, this series of blog posts helps in figuring out how it works since pretty 
 
 All in all, i had a lot of fun in writing both the DAL and this series of posts (which took another 8 hours in total).  
 
-In the introduction of this series, i mentioned the following:
+In the introduction of this series, i said that the purpose of this series was to:
 
-<blockquote>
-The purpose of this series is basically to: <br/>
-    * Show you that you really don’t need to resort to code generation to build your own custom DAL<br/>
-    * Show you what kind of complexity is involved with the implementation of a good DAL<br/>
-    * Convince you that you typically are better off with simply using something that is already available as a mature, powerful and proven solution
-</blockquote>
+* Show you that you really don’t need to resort to code generation to build your own custom DAL
+* Show you what kind of complexity is involved with the implementation of a good DAL
+* Convince you that you typically are better off with simply using something that is already available as a mature, powerful and proven solution
 
 So tell me, did the series succeed in these listed goals? Would you still go for code generation if you had to create a custom DAL? Would you still prefer to use a custom DAL over something that already exists? How would you react to having to use this particular DAL?  What would need to be added or modified before you would find it acceptable?  What are your thoughts on this in general?
 

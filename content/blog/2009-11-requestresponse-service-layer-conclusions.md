@@ -16,5 +16,3 @@ Now that you've learned everything there is to know about the Request/Response S
 </ul>
 
 One of the goals of this series was to convince people that those benefits are indeed real.  I really wanted to prove each and every one of those listed benefits and i hope that i succeeded at that.  I also hope you realized how cleanly we can write our client code, as well as our actual service layer logic.  I definitely recommend that you consider this entire approach for your future applications.  While i won't claim that it is the best solution for every project, it's definitely one that can give you quite a few tremendous benefits.
-
-Since i really don't have much more to say about this entire topic, i'm just going to leave it at that :)

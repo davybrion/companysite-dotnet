@@ -2,21 +2,7 @@ As i mentioned in a <a href="http://davybrion.com/blog/2009/08/tracking-dangling
 
 I wrote a very simple Silverlight application which has a rather typical memory leak. Here's the actual code:
 
-<div>
-[csharp]
-        public event EventHandler&lt;MyEventArgs&gt; MyEvent = delegate { };
- 
-        private void CreateNewViewButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            ViewContainer.Children.Clear();
- 
-            var newView = new MyView();
-            MyEvent += newView.EventHandler;
- 
-            ViewContainer.Children.Add(newView);
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685131.js?file=s1.cs"></script>
 
 For some of you, the memory leak is already very clear.  Like i said, it's a very simple example ;)
 
@@ -56,31 +42,7 @@ The correct way to fix this is to make sure that whenever we remove an instance 
 
 Here's the modified version of the above code which avoids the memory leak:
 
-<div>
-[csharp]
-        public event EventHandler&lt;MyEventArgs&gt; MyEvent = delegate { };
- 
-        private void CreateNewViewButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            CleanUpPreviousView();
- 
-            var newView = new MyView();
-            MyEvent += newView.EventHandler;
- 
-            ViewContainer.Children.Add(newView);
-        }
- 
-        private void CleanUpPreviousView()
-        {
-            if (ViewContainer.Children.Count &gt; 0)
-            {
-                var myView = ViewContainer.Children[0] as MyView;
-                if (myView != null) MyEvent -= myView.EventHandler;
-                ViewContainer.Children.Clear();
-            }
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685131.js?file=s2.cs"></script>
 
 Let's see if this really fixed the memory leak.  If we fire up the application and press the button a couple of times, the application should normally only have one live reference of MyView in memory.
 

@@ -4,7 +4,7 @@ I wrote a <a href="http://davybrion.com/blog/2009/07/why-i-dislike-classic-or-ty
 
 These are the posts that this series consists of:
 
-<ol>
+<ul>
 	<li><a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-requests-and-responses/">Requests And Responses</a></li>
 	<li><a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-processing-requests/">Processing Requests</a></li>
 	<li><a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-handling-requests/">Handling Requests</a></li>
@@ -14,6 +14,6 @@ These are the posts that this series consists of:
 	<li><a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-asynchronous-client-side-usage/">Asynchronous Client-Side Usage</a></li>
 	<li><a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-testing-asynchronous-client-side-usage/">Testing Asynchronous Client-Side Usage</a></li>
 	<li><a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-conclusions/">Conclusions</a></li>
-</ol>
+</ul>
 
-Update: i've created an <a href="http://code.google.com/p/agatha-rrsl/">open source implementation of the RRSL</a> which i highly encourage you to try out :)
+Update: i've created an <a href="http://code.google.com/p/agatha-rrsl/">open source implementation of the RRSL.

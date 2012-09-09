@@ -2,47 +2,7 @@ I dislike ViewState as much as the next guy, but when you're working with ASP.NE
 
 First of all, ViewState is persisted in the resulting HTML page through an IStateFormatter object.  We'll provide our own CompressedStateFormatter which implements the IStateFormatter interface, and uses the standard IStateFormatter that ASP.NET uses:
 
-<div>
-[csharp]
-    public class CompressedStateFormatter : IStateFormatter
-    {
-        private readonly IStateFormatter actualFormatter;
- 
-        public CompressedStateFormatter(IStateFormatter actualFormatter)
-        {
-            this.actualFormatter = actualFormatter;
-        }
- 
-        public string Serialize(object state)
-        {
-            string decompressedState = actualFormatter.Serialize(state);
- 
-            using (MemoryStream memoryStream = new MemoryStream())
-            {
-                using (Stream zipStream = new GZipStream(memoryStream, CompressionMode.Compress))
-                using (StreamWriter writer = new StreamWriter(zipStream))
-                {
-                    writer.Write(decompressedState);
-                }
- 
-                return Convert.ToBase64String(memoryStream.ToArray());
-            }
-        }
- 
-        public object Deserialize(string serializedState)
-        {
-            byte[] data = Convert.FromBase64String(serializedState);
- 
-            using (MemoryStream memoryStream = new MemoryStream(data))
-            using (Stream zippedStream = new GZipStream(memoryStream, CompressionMode.Decompress))
-            using (StreamReader reader = new StreamReader(zippedStream))
-            {
-                return actualFormatter.Deserialize(reader.ReadToEnd());
-            }
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685209.js?file=s1.cs"></script>
 
 The idea is very simple: when the Serialize method is called, we first call the real formatter's Serialize method, compress its return value and then return the Base64-encoded string of the compressed serialized state.  And in the Deserialize method, we do the exact opposite: we first decompress the Base64-encoded string and then we use the real formatter to deserialize the actual ViewState.
 
@@ -50,72 +10,21 @@ In Mamanze's example, he checks to see if the compressed version is actually sma
 
 Now we still have to plug this into ASP.NET's behavior somehow... first we add a pagestate.browser file to the App_Browsers folder of your web application (if it doesn't exist, just create it) with the following content:
 
-<div>
-[xml]
-&lt;browsers&gt;
-  &lt;browser refID=&quot;Default&quot;&gt;
-    &lt;controlAdapters&gt;
-      &lt;adapter controlType=&quot;System.Web.UI.Page&quot; adapterType=&quot;Our.Application.CompressedPageStateAdapter&quot; /&gt;
-    &lt;/controlAdapters&gt;
-  &lt;/browser&gt;
-&lt;/browsers&gt;
-[/xml]
-</div>
+<script src="https://gist.github.com/3685209.js?file=s2.xml"></script>
 
 The CompressedPageStateAdapter looks like this:
 
-<div>
-[csharp]
-    public class CompressedPageStateAdapter : PageAdapter
-    {
-        public override PageStatePersister GetStatePersister()
-        {
-            return new CompressedHiddenFieldPageStatePersister(Page);
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685209.js?file=s3.cs"></script>
 
 And the CompressedHiddenFieldPageStatePersister class looks like this:
 
-<div>
-[csharp]
-    public class CompressedHiddenFieldPageStatePersister : HiddenFieldPageStatePersister
-    {
-        public CompressedHiddenFieldPageStatePersister(Page page) : base(page)
-        {
-            FieldInfo field = typeof(PageStatePersister).GetField(&quot;_stateFormatter&quot;, BindingFlags.NonPublic | BindingFlags.Instance);
-            // retrieving this property instantiates the default IStateFormatter
-            var defaultFormatter = base.StateFormatter;
-            var formatter = new CompressedStateFormatter(defaultFormatter);
-            field.SetValue(this, formatter);
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685209.js?file=s4.cs"></script>
 
 The HiddenFieldPageStatePersister is the class that ASP.NET WebForms will use by default to store your ViewState into a hidden field in the resulting HTML.  By default, the HiddenFieldPageStatePersister uses the default IStateFormatter type that ASP.NET uses, which only uses Base64 encoding but no compression.  Unfortunately, there is no clean way to instruct ASP.NET to use a different implementation for IStateFormatter, so we need to use a bit of reflection to overwrite the value of HiddenFieldPageStatePersister's _stateFormatter field.  Luckily, this also enables us to first get the value of the StateFormatter property so we can pass this reference (which is the 'real' formatter) to our CompressedStateFormatter.
 
 And that is all there is to it... all of your pages will now use this CompressedHiddenFieldPageStatePersister so you get the benefit of ViewState compression in each of your pages.  You can also do this selectively if you want, by not using the pagestate.browser file and overriding the PageStatePersister property of your ASPX page:
 
-<div>
-[csharp]
-        private CompressedHiddenFieldPageStatePersister persister;
- 
-        protected override PageStatePersister PageStatePersister
-        {
-            get
-            {
-                if (persister == null)
-                {
-                    persister = new CompressedHiddenFieldPageStatePersister(this);
-                }
- 
-                return persister;
-            }
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3685209.js?file=s5.cs"></script>
 
 This way, only the pages that contain this code will use the CompressedHiddenFieldPageStatePersister.
 
