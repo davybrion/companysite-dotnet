@@ -1,11 +1,10 @@
 I always felt that, for all the great books about developing software that we have, there weren't enough on how to approach your career as a software developer.  Thankfully, Chad Fowler's <a href="http://pragprog.com/titles/cfcar2/the-passionate-programmer">The Passionate Programmer</a> (subtitle: Creating a Remarkable Career in Software Development) covers exactly that. It's a quick read at only 200 pages, but it's filled to the brim with very wise advice.  The book consists of the following 5 parts:
-<ol>
-	<li>Choosing Your Market</li>
-	<li>Investing In Your Product</li>
-	<li>Executing</li>
-	<li>Marketing... Not Just For Suits</li>
-	<li>Maintaining Your Edge</li>
-</ol>
+
+- Choosing Your Market
+- Investing In Your Product
+- Executing
+- Marketing... Not Just For Suits
+- Maintaining Your Edge
 
 In these 5 parts, Chad offers a truckload of solid advice on things like figuring out which technologies to focus on, expanding your skill-set to more than just coding, improving yourself continuously, being as effective as you can be, getting the word out on how good you are, and making sure you keep improving as your career progresses.
 

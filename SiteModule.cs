@@ -8,7 +8,7 @@ namespace ThatExtraMile.be
 
         public SiteModule()
         {
-            Get["/(?<year>[\\d]{4})/(?<month>[\\d]{4})/{slug}"] =
+            Get["/blog/(?<year>[\\d]{4})/(?<month>[\\d]{4})/{slug}"] =
                 p => RenderMarkdown("blog post", "Home", string.Format("{0}-{1}-{2}", p.year, p.month, p.slug));
 
 

@@ -5,14 +5,13 @@ Coming from the Microsoft world were SOAP services have for a long time been the
 The book then gradually starts diving deeper and deeper into the implementation of the Restful services for the Restbucks example. Everything is explained very clearly, and the authors continuously show both the requests and the responses that are going over the wire to illustrate what is going on at the HTTP level, which makes it even easier to understand everything that's being discussed.  After the explanations and request/response examples, there's typically a code-based example in either Java or .NET to show how you can implement these systems. After a while i just started skipping these examples entirely because i thought they didn't really bring any added benefit.  Though i'm sure some people will appreciate those examples being included as well.
 
 Another great thing about this book is that it remains very clear and easy to follow, even though it covers <em>a lot</em> of ground. Here's a brief overview of the things you'll see implemented in the next couple of chapters:
-<ul>
-	<li>CRUD</li>
-	<li>Hypermedia (the engine of application state transformations)</li>
-	<li>Everything you need to know about caching</li>
-	<li>Event-driven services with Atom</li>
-	<li>Atom publishing</li>
-	<li>Security: authentication as well as authorization</li>
-</ul>
+
+- CRUD
+- Hypermedia (the engine of application state transformations)
+- Everything you need to know about caching
+- Event-driven services with Atom
+- Atom publishing
+- Security: authentication as well as authorization
 
 After that, there's a chapter on the semantic web and microformats, which i didn't find very interesting but others likely will. The final 2 chapters make for a great conclusion of the book. First, there's a pretty extensive comparison between the benefits and drawbacks of SOAP versus REST.  And finally, the last chapter covers when it makes sense to use REST and when it doesn't and ends with a recap of the major selling points of using the Web as a central building block of your architecture.
 

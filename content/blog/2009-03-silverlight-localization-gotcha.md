@@ -5,7 +5,7 @@ In the output folder of the Silverlight project, you can clearly see that the Ou
 Apparantly, the key to 'fixing' this is opening the .csproj file of your Silverlight project, and then you need to modify the SupportedCultures element so it contains the cultures you're supporting:
 
 <code>
-<div style="font-family: Consolas; font-size: 9pt; color: black; background: white;">
+<div style="font-family: Consolas; font-size: 9pt; color: black;">
 <p style="margin: 0px;"><span style="color: blue;">&lt;</span><span style="color: #a31515;">SupportedCultures</span><span style="color: blue;">&gt;</span>en;nl<span style="color: blue;">&lt;/</span><span style="color: #a31515;">SupportedCultures</span><span style="color: blue;">&gt;</span></p>
 </div>
 </code>
@@ -15,7 +15,7 @@ There might be a way to do this from the UI within Visual Studio, but i sure did
 And now you can simply switch between the translations setting the generated resource class's static Culture property to the culture you want, for instance:
 
 <code>
-<div style="font-family: Consolas; font-size: 9pt; color: black; background: white;">
-<p style="margin: 0px;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: #2b91af;">TextResources</span>.Culture = <span style="color: blue;">new</span> <span style="color: #2b91af;">CultureInfo</span>(<span style="color: #a31515;">&quot;nl-BE&quot;</span>);</p>
+<div style="font-family: Consolas; font-size: 9pt; color: black;">
+<p style="margin: 0px;"><span style="color: #2b91af;">TextResources</span>.Culture = <span style="color: blue;">new</span> <span style="color: #2b91af;">CultureInfo</span>(<span style="color: #a31515;">&quot;nl-BE&quot;</span>);</p>
 </div>
 </code>

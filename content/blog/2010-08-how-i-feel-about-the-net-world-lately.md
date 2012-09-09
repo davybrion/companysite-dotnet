@@ -2,7 +2,7 @@ Just a little heads-up to those reading this: this post is filed in the 'Rants' 
 
 I haven't been too happy with the .NET world lately.  I've always been somewhat critical of the .NET world, but generally, i felt it was one of the better environments to work in.  But there are some things that have been bothering me for a while now, and there are some recent developments that really made me think about the future of this platform.  First, i want to focus on the things that have been bothering me since the beginning.  After that, i'll discuss the problems that i expect in the future.
 
-<h3>One Ring To Rule Them All</h3>
+## One Ring To Rule Them All
 
 As we all know, Microsoft has a tremendously large influence on how software gets developed in the .NET world.  For many companies, this is indeed quite convenient.  You can stick to the Microsoft Path (or should i say: the One Microsoft Way?) and you'll have all the guidance you can ask for.  They provide architectural and design guidance for everything from your database to your business layer to your service layer all the way to your presentation layer.  Unfortunately, a lot of that guidance is of a terribly low quality.  Follow their guidance and odds are pretty high that either your database implementation details are leaking through all the way to your screens, or that a lot of your business details are taken care of in the database.  Depending on how many Microsoft MVP's you've listened to, you might end up with both situations simultaneously.  
 
@@ -10,7 +10,7 @@ One of the most important goals of every piece of guidance and tooling that they
 
 The low quality of the guidance and the tools is the reason why i have started referring to the typical Microsoft recommended development practices and products as Fisher Price Development.  It's great if you're into toys, but if you wanna get serious, it's just not gonna cut it.  It wouldn't be so much of a problem if the vast majority of the .NET developer community wouldn't just blindly accept everything that Microsoft tells them to do or use.  Which brings me to my next point...  
 
-<h3>Developers, Developers, Developers!</h3>
+## Developers, Developers, Developers!
 
 There is a huge difference in quality between the higher-end .NET developers, and the lower-end.  The higher-end developers are generally more open-minded to what works in other development communities and want to learn from that.  And they want to take what they've learned and apply that in their .NET work.  The lower-end developers however will rarely venture beyond the approaches that Microsoft recommends.  The higher-end developers generally try to share their knowledge and experience with others, but in doing so, will waste a lot of time and effort going against the backlash they'll get from the lower-end developers.  The lower-end developers frequently accuse the higher-end developers for making things more complicated than they need to be, while they fail to realize that their initially simple solutions (as recommended by Microsoft of course) only leads to severe complications later on.  
 
@@ -18,7 +18,7 @@ If you think about it, it's pretty similar to the Matrix.  You've got a small mi
 
 It's just not easy to be a .NET developer who values Continuous Improvement.  If you're not wasting time working with people who are quite content with Fisher Price Development, you're likely working for people who're telling you to use some of the Fisher Price Building Blocks because "It's Fisher Price! You can't go wrong with that!".  I've been in both situations in the past and it just drains so much energy from you.  If you're in neither situation, you are in a very small minority.
 
-<h3>The Road Ahead</h3>
+## The Road Ahead
 
 So what exactly does the future of the .NET platform look like? Obviously, nobody knows.  I'll tell you what i expect to happen though.  I found it extremely telling that Microsoft is capable of putting resources on products like WebMatrix and LightSwitch (both of which are targeting the very-very-lower-end developers, or even non-developers) while at the same time, they are severely cutting back the resources for projects like IronRuby, IronPython and the DLR (which drew more interest from the higher-end developers than the lower-end developers).  So what exactly does that tell us?  I can only consider that to be a very clear message that the lower-end developers will always be the primary target of Microsoft, and that they really care less and less about the higher-end developers.  When it comes to guidance and tooling, they are continuously displaying that they either just don't get it, or that they just don't care.
 

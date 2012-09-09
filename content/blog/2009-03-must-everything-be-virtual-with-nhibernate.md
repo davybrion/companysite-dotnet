@@ -1,8 +1,12 @@
 If you've ever used NHibernate 2.0 or later, you will have undoubtedly run into the following runtime exception a couple of times:
 
+<pre>
+<code>
 NHibernate.InvalidProxyTypeException: The following types may not be used as proxies:
 NHibernateExamples.Entities.OrderLine: method get_UnitPrice should be 'public/protected virtual' or 'protected internal virtual'
 NHibernateExamples.Entities.OrderLine: method set_UnitPrice should be 'public/protected virtual' or 'protected internal virtual'
+</code>
+</pre>
 
 Oops... we forgot to make the UnitPrice property on the OrderLine entity virtual.  But why does it need to be virtual in the first place? That's a question that many people who are new to NHibernate have.
 
@@ -22,7 +26,7 @@ But for those cases where you really do not want to make members virtual, and do
 
 <code>
 <style type="text/css">
-.cf { font-family: Consolas; font-size: 9pt; color: black; background: white; }
+.cf { font-family: Consolas; font-size: 9pt; color: black; }
 .cl { margin: 0px; }
 .cb1 { color: blue; }
 .cb2 { color: #a31515; }

@@ -2,27 +2,13 @@ This <a href="http://blogs.msdn.com/efdesign/archive/2009/03/16/foreign-keys-in-
 
 Take a look at the following code:
 
-<div>
-[csharp]
-                product.Category = session.Get&lt;ProductCategory&gt;(categoryId);
-                session.SaveOrUpdate(product);
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684452.js?file=s1.cs"></script>
 
 This code changes the product's Category property, and to do that it retrieves the actual ProductCategory instance through the id value of the category.  This causes 2 database hits.  One to retrieve the ProductCategory, and one to persist the Product.
 
 You could do this instead:
 
-<div>
-[csharp]
-                product.Category = session.Load&lt;ProductCategory&gt;(categoryId);
-                // this verifies that the product.Category is an uninitialized proxy
-                // which means that we did not fetch the product category from the database
-                Assert.IsFalse(NHibernateUtil.IsInitialized(product.Category));
-                // we were able to save the product without having loaded the product category
-                session.Save(product);
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684452.js?file=s2.cs"></script>
 
 Notice how we use ISession's Load method here, instead of the Get method to 'retrieve' the ProductCategory.  The Get method actually fetches the entity from the database if it's not already in the session cache.  The Load method however will return an uninitialized proxy to the ProductCategory entity if it's not present in the session cache.  The NHibernateUtil.IsInitialized() method will return false, because this proxy is indeed uninitialized.  It does not hit the database until you try to access any of the properties of the ProductCategory proxy, except for its identifier property.  So accessing product.Category.Id would not hit the database, but product.Category.Name or product.Category.Description would.  
 

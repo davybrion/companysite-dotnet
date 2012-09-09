@@ -2,69 +2,21 @@ An oft-forgotten feature of NHibernate is that of batching DML statements.  If y
 
 I have an 'entity' with the following mapping:
 
-<div>
-[xml]
-  &lt;class name=&quot;CrudTest&quot; table=&quot;CrudTest&quot;&gt;
-    &lt;id name=&quot;Id&quot; column=&quot;Id&quot; type=&quot;guid&quot; &gt;
-      &lt;generator class=&quot;assigned&quot; /&gt;
-    &lt;/id&gt;
- 
-    &lt;property name=&quot;Description&quot; column=&quot;Description&quot; type=&quot;string&quot; length=&quot;200&quot; not-null=&quot;true&quot; /&gt;
- 
-  &lt;/class&gt;
-[/xml]
-</div>
+<script src="https://gist.github.com/3684012.js?file=s1.xml"></script>
 
 Nothing special here, just a Guid Id field and a string Description field. 
 
 First, let's see how much time it takes to create 10000 records of this without using the batching feature.  I use the following method to create a bunch of dummy objects:
 
-<div>
-[csharp]
-        private IEnumerable&lt;CrudTest&gt; CreateTestObjects(int count)
-        {
-            List&lt;CrudTest&gt; objects = new List&lt;CrudTest&gt;(count);
- 
-            for (int i = 0; i &lt; count; i++)
-            {
-                objects.Add(new CrudTest { Id = Guid.NewGuid(), Description = Guid.NewGuid().ToString() });
-            }
- 
-            return objects;
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684012.js?file=s2.cs"></script>
 
 Then, the code to persist these objects:
 
-<div>
-[csharp]
-            var testObjects = CreateTestObjects(10000);
- 
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
- 
-            using (ITransaction transaction = Session.BeginTransaction())
-            {
-                foreach (var testObject in testObjects)
-                {
-                    Session.Save(testObject);
-                }
- 
-                transaction.Commit();
-            }
- 
-            stopwatch.Stop();
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684012.js?file=s3.cs"></script>
 
 Without enabling the batching, this code took 23 seconds to run on my cheap MacBook.  Now let's enable the batching in the hibernate.cfg.xml file:
 
-<div>
-[xml]
-&lt;property name=&quot;adonet.batch_size&quot;&gt;5&lt;/property&gt;
-[/xml]
-</div>
+<script src="https://gist.github.com/3684012.js?file=s4.xml"></script>
 
 A batch size of 5 is still very small, but for this test it means that it only has to do 2000 trips to the database instead of the original 10000.  The code above now runs in 5.5 seconds.  Setting the batch size to 100 made it run in 1.8 seconds.  Going from 23 to 1.8 seconds with a small configuration change is a pretty nice improvement with very little effort.  Obviously, these aren't real benchmarks so your results may vary but i think it does show that you can easily get some performance benefits from it.
 

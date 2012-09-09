@@ -1,26 +1,6 @@
 I just saw the following piece of code:
 
-<div>
-[csharp]
-        public void Execute()
-        {
-            ArrayList empIds = PayrollDatabase.GetAllEmployeeIds();
- 
-            foreach (int empId in empIds)
-            {
-                Employee employee = PayrollDatabase.GetEmployee(empId);
- 
-                if (employee.IsPayDate(payDate))
-                {
-                    DateTime startDate = employee.GetPayPeriodStartDate(payDate);
-                    Paycheck pc = new Paycheck(startDate, payDate);
-                    paychecks[empId] = pc;
-                    employee.Payday(pc);
-                }
-            }
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684099.js?file=s1.cs"></script>
 
 The code is old, pre .NET 2.0.  But no, the usage of the ArrayList isn't what bothers me here.  It first gets all of the Id values for all of the employees in the database.  Then it loops through the list of Id values, and fetches each employee from the database.  Whenever i see this kind of code, it makes me want to kick the person who wrote it.  
 

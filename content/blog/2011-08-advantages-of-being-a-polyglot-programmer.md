@@ -2,22 +2,22 @@ For the majority of my career, i considered myself a C# developer because that w
 
 I used to think it was more interesting to focus on one platform/language and really strive to know it thoroughly, but i couldn't disagree more with that nowadays. I've noticed that there are quite a few advantages to learning new languages and exposing yourself to new communities, approaches and ideas. And i believe they far outweigh the benefits of sticking to just one platform/language. There are 5 advantages in particular that i'd like to discuss in more detail.
 
-<h3>It expands your horizons</h3>
+## It expands your horizons
 
 There's more to becoming productive with a new language than merely learning the syntax of the language. You're going to learn about new tricks, new libraries and new ways of solving problems that are common in the community of whatever it is that you're learning. You're basically trying to soak up knowledge that is common to others, but new to you. Depending on what you already know, there might be a lot of new stuff to learn or it might just be small tidbits here and there. If you already know a dynamic class-based language, learning another one might not expose you to a lot of new stuff. But if you're used to static class-based languages, learning a dynamic class-based language is going to be quite an interesting experience. Try to mix paradigms to get the most out of this. It'll start to influence the way you think about problems and how you can solve them.
 
-<h3>It makes it easier to learn new things</h3>
+## It makes it easier to learn new things
 
 Practice makes perfect, right? If you're routinely trying to learn new things, the very act of learning new things actually becomes easier. A lot of people have problems learning things that conflict or contradict with what they already know. The first time you learn a new language based on a paradigm that you don't quite understand yet, it might take a while to grasp it because you're likely having difficulties thinking about things outside of the structure and rules that you're used to. It'll be easier the second time, because you're already more comfortable with letting go of what you already know and not restricting the way you think about things or try to comprehend them. And it'll keep on getting easier and easier. This obviously applies to more than just programming languages.
 
-<h3>It continuously refreshes your love of programming</h3>
+## It continuously refreshes your love of programming
 
 This one probably depends from person to person, but when i was still just a C# developer i routinely got into stretches of time where i didn't really have fun writing code. During those stretches, writing code was just a job, and no longer something that i once considered a joy and a hobby. Those stretches could last a couple of weeks, sometimes even a month or two. Since i started learning more languages, i haven't really hit a stretch like that anymore. It remains fun, interesting and challenging because you just keep on learning new things and you keep on improving continuously.
 
-<h3>It decreases your reliance on certain tools and introduces you to new ones</h3>
+## It decreases your reliance on certain tools and introduces you to new ones
 
 2 years ago, i couldn't imagine writing code without a strong IDE to back me up. I was so dependent on Visual Studio's (and Resharper's) Intellisense, code completion, code navigation and strong debugging features that i just couldn't believe i could be as productive without those things. Nowadays, i really just prefer to code in a strong text-editor (TextMate was my favorite, but i recently switched to Sublime Text 2) with a terminal window to run my tests. I avoid debuggers by working in small steps, with small, focused tests which also make it (relatively) easy to isolate bugs and fix them. I actually don't mind 'poor man's debugging' (putting log statements in certain parts of your code to find out where things go wrong) anymore because i'm starting to think it can often be quicker than relying on your IDE's debugger. I recently even joked that they call it poor man's debugging because it's used by people who can't afford to waste time waiting for an IDE and its debugger ;). Another benefit is that you'll have to get comfortable with the command line and perhaps even different operating systems. If you want to get into Ruby or Node, you're better off installing a Linux distro (or run on OS X if you happen to have a Mac) and experiment with the language/platform on that instead of trying to get things working on Windows. Getting comfortable with a *NIX shell and its tools is something that you're probably going to be able to use for a long time to come so there's no reason to shy away from it.
 
-<h3>It makes you less emotionally attached to a language/platform</h3>
+## It makes you less emotionally attached to a language/platform
 
 People who only work with one language/platform often have an emotional attachment to it. If you're emotionally attached, it's not always easy to remain rational during discussions or when the future of your language/platform is being threatened. If you know more than one language/platform, you know that your skills are transferable. You know that you can be a good developer no matter what you have to work with. You know that you really don't have anything to fear about how things will evolve. You just know that you can deal with it. Easily even.

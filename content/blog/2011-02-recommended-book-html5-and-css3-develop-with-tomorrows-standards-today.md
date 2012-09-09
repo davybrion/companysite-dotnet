@@ -2,11 +2,9 @@ Going by the hype surrounding HTML5, you'd think it's all about animations and t
 
 The first chapter gives you a good overview on what exactly HTML5 and CSS3 will allow you to do, and also contains a helpful list of tags and attributes that will be deprecated in the HTML5 specification.  After that, the book is split up in 3 larger parts:
 
-<ol>
-	<li>Improving User Interfaces</li>
-	<li>New Sights And Sounds</li>
-	<li>Beyond HTML5</li>
-</ol>
+- Improving User Interfaces
+- New Sights And Sounds
+- Beyond HTML5
 
 The first part consists of 4 chapters that cover how you can improve the things that you're already doing with HTML. You'll learn about new structural tags and attributes that help you avoid '<a href="http://csscreator.com/divitis">divitis</a>', how you can create much better forms, and a bunch of new CSS selectors that'll make your CSS code much cleaner and easier.  Finally, you'll learn more about how to make sure that your pages are accessible to people who require assistive technology to browse your site/webapp.  What's really interesting about these chapters is that for each new thing that is discussed, fallback strategies for browsers that don't support the new features are covered as well.
 

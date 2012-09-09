@@ -4,98 +4,23 @@ If your code executes in an ASP.NET environment, you can safely use the HttpCont
 
 First, we have the IRequestState interface:
 
-<div>
-[csharp]
-    public interface IRequestState
-    {
-        T Get&lt;T&gt;(string key);
-        void Store(string key, object something);
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684186.js?file=s1.cs"></script>
 
 This just offers a way to store objects and retrieve them.  That's pretty much al we need, right?
 
 Then we have the ASP.NET implementation:
 
-<div>
-[csharp]
-    public class AspNetRequestState : IRequestState
-    {
-        public T Get&lt;T&gt;(string key)
-        {
-            return (T)HttpContext.Current.Items[key];
-        }
- 
-        public void Store(string key, object something)
-        {
-            HttpContext.Current.Items[key] = something;
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684186.js?file=s2.cs"></script>
 
 Very simple stuff... the AspNetRequestState implementation simply uses the HttpContext.Current.Items dictionary underneath to store and retrieve the objects.
 
 For WCF, it is slightly more complicated.  Every WCF call is an operation and it has a context as well, which is provided through the OperationContext class.  The OperationContext class doesn't have an Items dictionary like HttpContext does, but it does have a way to add extensions to the context.  We can use this extensions mechanism to store state which should be kept around for the duration of the current WCF operation.  First, we need to define our Extension:
 
-<div>
-[csharp]
-    public class MyExtension : IExtension&lt;OperationContext&gt;
-    {
-        public MyExtension()
-        {
-            State = new Dictionary&lt;string, object&gt;();
-        }
- 
-        public IDictionary&lt;string, object&gt; State { get; private set; }
- 
-        // we don't really need implementations for these methods in this case
-        public void Attach(OperationContext owner) { }
-        public void Detach(OperationContext owner) { }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684186.js?file=s3.cs"></script>
 
 The IExtension interface that we must implement defines the Attach and Detach methods but we don't really need them for what we're trying to do.  This extension simply initializes a Dictionary instance and exposes it with a public getter.  Now we can easily create our WcfRequestState implementation:
 
-<div>
-[csharp]
-    public class WcfRequestState : IRequestState
-    {
-        private static IDictionary&lt;string, object&gt; State
-        {
-            get
-            {
-                var extension = OperationContext.Current.Extensions.Find&lt;StateExtension&gt;();
- 
-                if (extension == null)
-                {
-                    extension = new StateExtension();
-                    OperationContext.Current.Extensions.Add(extension);
-                }
- 
-                return extension.State;
-            }
-        }
- 
-        public T Get&lt;T&gt;(string key)
-        {
-            if (State.ContainsKey(key))
-            {
-                return (T)State[key];
-            }
- 
-            return default(T);
-        }
- 
-        public void Store(string key, object something)
-        {
-            State[key] = something;
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684186.js?file=s4.cs"></script>
 
 Pretty simple as well, and pretty similar to the AspNetRequestState implementation.  The AspNetRequestState implementation is able to simply use the HttpContext.Current.Items dictionary, which we can't use here.  So when we want to access the 'State' dictionary in this implementation, we look it up in the current OperationContext's Extensions collection.  If it's not there yet, we add a new instance of our MyExtension class to the OperationContext's Extensions collection.
 

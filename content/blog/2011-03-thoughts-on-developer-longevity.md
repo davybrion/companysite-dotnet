@@ -7,20 +7,13 @@ The second big reason is that a lot of long-term developers kinda start thinking
 I don't know about you, but i'm not exactly interested in either of those paths for the rest of my career.  I want to keep coding for as long as i find it interesting and fun, and more importantly, i want to make sure that my skills don't become outdated.  I believe i bring a lot of value to the table as a developer, and as i get older i'd like to make sure that i keep increasing the value that i bring to my customers.  Not only through experience, but also by staying up to date with how the rest of the industry is developing software.  The question is: how do you do that? How do you prevent becoming one of those "trust me kiddo, i've been writing code this way for 20 years and dag nabbit, it works"-veterans?
 
 Obviously, i don't have a definitive answer because i've only been working as a developer for 8 years. But i do have a simple plan that i hope will enable me to continuously increase my value as a developer:
-<ol>
-	<li>Keep feeling stupid
 
-<p>
+## Keep feeling stupid
+
 Once you think you know it all, you're pretty much done and are only harming yourself, your customers and the poor people who have the misfortune to work with you. Instead, keep reading blogs and books by people who are smarter than you, who are talking about things you don't understand.  When you're reading their material and their code, you'll probably feel stupid.  Which is great because those are the times when you are most open to learning new things.  Keep reading until you get it, and then, start experimenting with what you've just learned.  Keep doing this over and over again. In short: Keep feeling stupid, it's the only way to keep learning.
-</p>
-</li>
-	<li>Question what you know and think, all the time
 
-<p>
+## Question what you know and think, all the time
+
 When it comes to software development, pretty much all knowledge has a limited shelf life.  Everything you know right now about building software might be completely irrelevant 10 years from now.  You probably don't even need half the things you know now 5 years from now.  Allow me to go even further: half the things you know now might actually hurt your ability to build good software 5 years from now. Who the hell knows, right?  Make sure you frequently question what you know.  Every approach, pattern, practice or whatever that you like right now, needs to be revisited from time to time.  Does it still make sense <em>now</em>? Are there any new factors in play that change the situation or the context that led me to think or feel this way? <a href="http://davybrion.com/blog/2011/01/dont-be-afraid-to-change-your-mind/">It's OK to change your mind, you know</a>. Be especially wary if you feel the same about something for more than a year or two... you might have stopped feeling stupid, which isn't exactly a smart thing to do.
-</p>
-
-</li>
-</ol>
 
 Again, i can't definitively say that this is the best approach to achieving longevity as a valuable developer, but i think i'm gonna take my chances on this.

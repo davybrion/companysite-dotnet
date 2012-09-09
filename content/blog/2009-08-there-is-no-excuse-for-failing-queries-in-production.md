@@ -1,21 +1,20 @@
 <a href="http://weblogs.asp.net/bleroy">Bertrand Le Roy</a> left a few interesting comments on a <a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-executing-custom-queries/">previous post</a>.  Here's a 'transcript' of the comments (i'm only showing the parts that pertain to this particular topic):
 
-<blockquote>
-<strong>Bertrand Le Roy</strong>: Would it make sense for the query to implement IDisposable so that you can put it in a using block? I would be a little concerned about the query failing and never getting disposed of.
-<strong>Me</strong>: well, if a query fails the underlying SqlCommand object will eventually be garbage collected so i wouldn’t really worry about that. Failed queries shouldn’t happen frequently anyway IMO because they typically are the result of incorrect code.
-<strong>Bertrand Le Roy</strong>:Incorrect code happens. When it happens, you may exhaust your connection pool before that stuff gets collected.
-<strong>Me</strong>:code that causes failing queries should never even make it to your source code repository… you do write tests for queries, no? If you deploy code which causes frequently failing queries, then you have some fundamental problems in the way you create, test and deliver software.
-</blockquote>
+> <strong>Bertrand Le Roy</strong>: Would it make sense for the query to implement IDisposable so that you can put it in a using block? I would be a little concerned about the query failing and never getting disposed of.
+
+> <strong>Me</strong>: well, if a query fails the underlying SqlCommand object will eventually be garbage collected so i wouldn’t really worry about that. Failed queries shouldn’t happen frequently anyway IMO because they typically are the result of incorrect code.
+
+> <strong>Bertrand Le Roy</strong>:Incorrect code happens. When it happens, you may exhaust your connection pool before that stuff gets collected.
+
+> <strong>Me</strong>:code that causes failing queries should never even make it to your source code repository… you do write tests for queries, no? If you deploy code which causes frequently failing queries, then you have some fundamental problems in the way you create, test and deliver software.
 
 I wanted to expand on this since i think it's an important topic.  Simply put, i believe that failing queries in a production environment are simply inexcusable.
 
 First of all, every single query in your application <a href="http://davybrion.com/blog/2009/07/when-you-absolutely-need-to-use-a-real-database-in-tests/">should be tested properly with automated tests</a>.  Doing this consistently will avoid a lot of problems.  In fact, i can only think of 3 reasons why queries could still fail in production, even if you do write tests for each and every one of them:
 
-<ul>
-	<li>The query is composed dynamically, based on a set of conditions (for instance, a complex search screen with lots of filtering possibilities).</li>
-	<li>Queries that use a dynamic number of parameters (like with a WHERE yaddiyadda IN ({your parameters here}) clause) and the parameter list grows bigger than the maximum allowed by your database.</li>
-	<li>Some idiot modified parts of the database structure without redeploying an updated version of the application.</li>
-</ul>
+- The query is composed dynamically, based on a set of conditions (for instance, a complex search screen with lots of filtering possibilities).
+- Queries that use a dynamic number of parameters (like with a WHERE yaddiyadda IN ({your parameters here}) clause) and the parameter list grows bigger than the maximum allowed by your database.
+- Someone modified parts of the database structure without redeploying an updated version of the application.
 
 In case of dynamically composed queries, you obviously need some tests for each and every possible filter that can be added to the query.  Parameter values shouldn't cause problems either, unless you're adding their values straight into the SQL statement (which is terrible for a host of reasons).  Different filter combinations shouldn't cause issues either since you should have tests for those as well anyway.  In any case, this can only fail due to not testing each possible combination.
 
@@ -25,7 +24,7 @@ And then there's the last situation... and it's an oh-so-typical one unfortunate
 
 Proper testing practices and proper deployment procedures can virtually eliminate the possibility of having failed queries in production.  Having said all that, we all know that even the best of intentions and practices won't prevent all bugs from showing up in production.  I'll once again quote from Bertrand's comment:
 
-<blockquote>Incorrect code happens. When it happens, you may exhaust your connection pool before that stuff gets collected</blockquote>
+> Incorrect code happens. When it happens, you may exhaust your connection pool before that stuff gets collected
 
 He does have a point there.  However, i personally don't think that you should keep this particular situation in mind whenever you need to execute a query in your code.  Like i said, i consider failed queries in production inexcusable and therefore, i do not think it's worth the effort of protecting yourself against a situation that shouldn't occur in every possible place where it _might_ occur.  
 

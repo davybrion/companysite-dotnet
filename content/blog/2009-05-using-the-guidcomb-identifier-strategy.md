@@ -11,47 +11,13 @@ This obviously has some great benefits:
 
 Let's see how we can use this with NHibernate.  First of all, you need to map the identifier of your entity like this:
 
-<div>
-[xml]
-    &lt;id name=&quot;Id&quot; column=&quot;Id&quot; type=&quot;guid&quot; &gt;
-      &lt;generator class=&quot;guid.comb&quot; /&gt;
-    &lt;/id&gt;
-[/xml]
-</div>
+<script src="https://gist.github.com/3684514.js?file=s1.xml"></script>
 
 And that's actually all you have to do.  You don't have to assign the primary key values or anything like that.  You don't need to worry about them at all.  
 
 Take a look at the following test:
 
-<div>
-[csharp]
-        [Test]
-        public void InsertsAreOnlyExecutedAtTransactionCommit()
-        {
-            var insertCountBefore = sessionFactory.Statistics.EntityInsertCount;
- 
-            using (var session = sessionFactory.OpenSession())
-            using (var transaction = session.BeginTransaction())
-            {
-                for (int i = 0; i &lt; 50; i++)
-                {
-                    var category = new ProductCategory(string.Format(&quot;category {0}&quot;, i + 1));
-                    // at this point, the entity doesn't have an ID value yet
-                    Assert.AreEqual(Guid.Empty, category.Id);
-                    session.Save(category);
-                    // now the entity has an ID value, but we still haven't hit the database yet
-                    Assert.AreNotEqual(Guid.Empty, category.Id);
-                }
- 
-                // just verifying that we haven't hit the database yet to insert the new categories
-                Assert.AreEqual(insertCountBefore, sessionFactory.Statistics.EntityInsertCount);
-                transaction.Commit();
-                // only now have the recors been inserted
-                Assert.AreEqual(insertCountBefore + 50, sessionFactory.Statistics.EntityInsertCount);
-            }
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684514.js?file=s2.cs"></script>
 
 Interesting, no? The entities have an ID value after they have been 'saved' by NHibernate.  But they haven't actually been saved to the database yet though.  NHibernate always tries to wait as long as possible to hit the database, and in this case it only needs to hit the database when the transaction is committed.  If you've enabled <a href="http://davybrion.com/blog/2008/10/batching-nhibernates-dm-statements/">batching of DML statements</a>, you could severly reduce the number of times you need to hit the database in this scenario.
 

@@ -4,11 +4,9 @@ That's a quote from Don Roberts, found in Martin Fowler's Refactoring book (page
 
 The most important thing I remember when learning about TDD was:
 
-1. Write a failing test
-
-2. Do the simplest thing that could possibly work to make the test pass.
-
-3. Refactor.
+- Write a failing test
+- Do the simplest thing that could possibly work to make the test pass.
+- Refactor.
 
 With all the literature that's out there, as well as popular opinion on how important clean code is, it's tempting to go overboard with that 'refactor' step. It's tempting to go for the solution that is crispy clean. The solution that'll have your coworkers or peers go "ohhh, now *that* is nice". However, you really need to ask yourself the following question: "is it really worth it?". Wanting to make sure that every piece of code is perfect takes up a lot of time, and I've learned that it certainly isn't always worth it. Besides, it's quite easy to go off on a path of introducing new concepts and abstractions to your code that end up being totally unnecessary. If this increases complexity in parts that don't really matter, it ends up being a huge waste. Not only for the person who wrote it, but for every person who has to read it and comprehend it later on.
 

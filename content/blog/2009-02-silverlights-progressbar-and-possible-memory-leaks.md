@@ -6,19 +6,11 @@ So why was pretty much everything kept in memory?  Further research with windbg 
 
 The ProgressBar is defined like this:
 
-<div>
-[xml]
-&lt;ProgressBar Height=&quot;40&quot; Style=&quot;{StaticResource ourKickAssStyle}&quot; VerticalAlignment=&quot;Center&quot; Width=&quot;40&quot; IsIndeterminate=&quot;True&quot;/&gt;
-[/xml]
-</div>
+<script src="https://gist.github.com/3684306.js?file=s1.xaml"></script>
 
 The key here is the usage of the IsIndeterminate property... setting this to true causes the ProgressBar to move continuously without respecting any current Value property.  You know, basic stuff.  The thing is... if i change the definition of the ProgressBar to this:
 
-<div>
-[xml]
-&lt;ProgressBar Height=&quot;40&quot; Style=&quot;{StaticResource ourKickAssStyle}&quot; VerticalAlignment=&quot;Center&quot; Width=&quot;40&quot; /&gt;
-[/xml]
-</div>
+<script src="https://gist.github.com/3684306.js?file=s2.xaml"></script>
 
 The memory leak suddenly went away :)
 
@@ -28,27 +20,4 @@ So for some reason, when you set the ProgressBar's IsIndeterminate property to t
 
 We now have the following ugly method in one of our base UI classes:
 
-<div>
-[csharp]
-        private static void StopProgressBars(DependencyObject dependencyObject)
-        {
-            var count = VisualTreeHelper.GetChildrenCount(dependencyObject);
- 
-            for (int i = 0; i &lt; count; i++)
-            {
-                var child = VisualTreeHelper.GetChild(dependencyObject, i);
-                if (child != null)
-                {
-                    var progressBar = child as ProgressBar;
- 
-                    if (progressBar != null)
-                    {
-                        progressBar.IsIndeterminate = false;
-                    }
- 
-                    StopProgressBars(child);
-                }
-            }
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684306.js?file=s3.cs"></script>

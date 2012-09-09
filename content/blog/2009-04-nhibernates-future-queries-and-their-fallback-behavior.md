@@ -2,59 +2,14 @@ I've blogged about NHibernate's Future queries a <a href="http://davybrion.com/b
 
 As of today, (revision 4177 if you want to be specific) this is no longer the case.  If you use the Future or FutureValue methods of either ICriteria or IQuery, and the database doesn't support batching queries, NHibernate will fall back to simply executing the queries immediately, as the following tests show:
 
-<div>
-[csharp]
-        [Test]
-        public void FutureOfCriteriaFallsBackToListImplementationWhenQueryBatchingIsNotSupported()
-        {
-            using (var session = sessions.OpenSession())
-            {
-                var results = session.CreateCriteria&lt;Person&gt;().Future&lt;Person&gt;();
-                results.GetEnumerator().MoveNext();
-            }
-        }
-
-        [Test]
-        public void FutureValueOfCriteriaCanGetSingleEntityWhenQueryBatchingIsNotSupported()
-        {
-            int personId = CreatePerson();
- 
-            using (var session = sessions.OpenSession())
-            {
-                var futurePerson = session.CreateCriteria&lt;Person&gt;()
-                    .Add(Restrictions.Eq(&quot;Id&quot;, personId))
-                    .FutureValue&lt;Person&gt;();
-                Assert.IsNotNull(futurePerson.Value);
-            }
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684484.js?file=s1.cs"></script>
 
 There are more tests obviously, but you get the point.  The interesting part about these tests is how i disabled query batching support.  I only have Sql Server and MySQL running on this machine, and they both support query batching.  I didn't really feel like installing a database that doesn't support it, so i just took advantage of NHibernate's extensibility.  Since most of us run the NHibernate tests on Sql Server, i inherited from the Sql Server Driver and made sure that it would report to NHibernate that it didn't support query batching:
 
-<div>
-[csharp]
-    public class TestDriverThatDoesntSupportQueryBatching : SqlClientDriver
-    {
-        public override bool SupportsMultipleQueries
-        {
-            get { return false; }
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684484.js?file=s2.cs"></script>
 
 Easy huh? Then i just inherited from the TestCase class we have in the NHibernate.Tests project which offers a virtual method where you can modify the NHibernate configuration for the current fixture:
 
-<div>
-[csharp]
-        protected override void Configure(Configuration configuration)
-        {
-            configuration.Properties[Environment.ConnectionDriver] =
-                &quot;NHibernate.Test.NHSpecificTest.Futures.TestDriverThatDoesntSupportQueryBatching, NHibernate.Test&quot;;
-            base.Configure(configuration);
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684484.js?file=s3.cs"></script>
 
 Now NHibernate thinks that query batching isn't supported, yet the above tests still work.  Mission accomplished :)

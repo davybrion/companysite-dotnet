@@ -2,23 +2,21 @@ I recently showed how you can <a href="http://davybrion.com/blog/2010/09/using-n
 
 We have a scenario which consists of 15 'actions'.  For these actions, we use some tables from the Chinook database, basically just Artist/Album/Track/Genre/MediaType.  The actions are the following:
 
-<ol>
-	<li>Retrieve single track without joins, and access each non-reference property</li>
-	<li>Retrieve single track with joins, and access all properties, including references</li>
-	<li>Retrieve single track without joins, and access all properties, including references (triggers lazy-loading)</li>
-	<li>Create and persist object graph: one artist with two albums with 13 tracks each</li>
-	<li>Retrieve created artist from nr 4, add a new album with another 13 tracks, change the title of the first album from nr 4, and remove the second album from nr 4 including its tracks</li>
-	<li>Retrieve created artist from nr 4 and delete its entire graph</li>
-	<li>Create a single track</li>
-	<li>Retrieve single track from step 7 and update it</li>
-	<li>Retrieve single track from step 7 and update the name of one of its referenced properties</li>
-	<li>Retrieve single track from step 7 and change one of the reference properties so it references a different instance</li>
-	<li>Delete the track from step 7</li>
-	<li>Retrieve 100 tracks and access each non-reference property</li>
-	<li>Retrieve 200 tracks and access each non-reference property</li>
-	<li>Retrieve 100 tracks without joins and access all properties, including references (triggers lazy-loading)</li>
-	<li>Retrieve 100 tracks with joins and access all properties, including references</li>
-</ol>
+- Retrieve single track without joins, and access each non-reference property
+- Retrieve single track with joins, and access all properties, including references
+- Retrieve single track without joins, and access all properties, including references (triggers lazy-loading)
+- Create and persist object graph: one artist with two albums with 13 tracks each
+- Retrieve created artist from nr 4, add a new album with another 13 tracks, change the title of the first album from nr 4, and remove the second album from nr 4 including its tracks
+- Retrieve created artist from nr 4 and delete its entire graph
+- Create a single track
+- Retrieve single track from step 7 and update it
+- Retrieve single track from step 7 and update the name of one of its referenced properties
+- Retrieve single track from step 7 and change one of the reference properties so it references a different instance
+- Delete the track from step 7
+- Retrieve 100 tracks and access each non-reference property
+- Retrieve 200 tracks and access each non-reference property
+- Retrieve 100 tracks without joins and access all properties, including references (triggers lazy-loading)
+- Retrieve 100 tracks with joins and access all properties, including references
 
 Note: when i say we access reference properties to trigger lazy loading, i mean that we access a non-id property of the referenced property to make sure it indeed hits the database.
 

@@ -478,15 +478,6 @@
     ]
   },
   {
-    "title": "Querying With NHibernate",
-    "link": "/2008/10/querying-with-nhibernate/",
-    "date": "2008-10-05 12:58:57",
-    "disqusthreadid": "213624725",
-    "categories": [
-      "nhibernate"
-    ]
-  },
-  {
     "title": "How To Write Testable ASP.NET UserControls",
     "link": "/2008/10/how-to-write-testable-aspnet-usercontrols/",
     "date": "2008-10-11 17:28:27",
@@ -504,15 +495,6 @@
     "categories": [
       "opinions",
       "workcareer"
-    ]
-  },
-  {
-    "title": "Exploring NHibernate Statistics, Part 1: Simple Data Fetching",
-    "link": "/2008/10/exploring-nhibernate-statistics-part-1-simple-data-fetching/",
-    "date": "2008-10-26 19:50:43",
-    "disqusthreadid": "213624793",
-    "categories": [
-      "nhibernate"
     ]
   },
   {
@@ -1743,16 +1725,6 @@
     ]
   },
   {
-    "title": "Which Code Metrics Do You Consider Important?",
-    "link": "/2009/12/which-code-metrics-do-you-consider-important/",
-    "date": "2009-12-09 11:43:06",
-    "disqusthreadid": "213627843",
-    "categories": [
-      "code-quality",
-      "ndepend"
-    ]
-  },
-  {
     "title": "Using NHibernate In Your Service Layer",
     "link": "/2009/12/using-nhibernate-in-your-service-layer/",
     "date": "2009-12-11 13:53:36",
@@ -1762,7 +1734,7 @@
     ]
   },
   {
-    "title": "Don’t Be A Whiny Developer",
+    "title": "Don't Be A Whiny Developer",
     "link": "/2009/12/dont-be-a-whiny-developer/",
     "date": "2009-12-15 21:17:02",
     "disqusthreadid": "213627934",
@@ -1961,15 +1933,6 @@
     ]
   },
   {
-    "title": "Can You Come Up With A WHY Comment For This Code?",
-    "link": "/2010/02/can-you-come-up-with-a-why-comment-for-this-code/",
-    "date": "2010-02-18 17:26:18",
-    "disqusthreadid": "213628559",
-    "categories": [
-      "memory-management"
-    ]
-  },
-  {
     "title": "Have You Jumped On The Bandwagon Yet?",
     "link": "/2010/02/have-you-jumped-on-the-bandwagon-yet/",
     "date": "2010-02-18 21:16:29",
@@ -2128,24 +2091,6 @@
     ]
   },
   {
-    "title": "My First Request For The Next .NET Version",
-    "link": "/2010/06/my-first-request-for-the-next-net-version/",
-    "date": "2010-06-23 12:38:37",
-    "disqusthreadid": "213629016",
-    "categories": [
-      "net-bugs"
-    ]
-  },
-  {
-    "title": "More On System.Tuple And Serialization/Deserialization",
-    "link": "/2010/06/more-on-system-tuple-and-serializationdeserialization/",
-    "date": "2010-06-23 20:19:07",
-    "disqusthreadid": "213629032",
-    "categories": [
-      "net-bugs"
-    ]
-  },
-  {
     "title": "Working Overtime: What It Really Means",
     "link": "/2010/06/working-overtime-what-it-really-means/",
     "date": "2010-06-24 21:42:28",
@@ -2173,15 +2118,6 @@
       "architecture",
       "code-quality",
       "silverlight"
-    ]
-  },
-  {
-    "title": "Is That How You Talk To People?",
-    "link": "/2010/07/is-that-how-you-talk-to-people/",
-    "date": "2010-07-26 14:29:05",
-    "disqusthreadid": "213629310",
-    "categories": [
-      "code-quality"
     ]
   },
   {
@@ -2318,16 +2254,6 @@
     "disqusthreadid": "213629700",
     "categories": [
       "ruby"
-    ]
-  },
-  {
-    "title": "The Downside Of Providing An API Through Extension Methods",
-    "link": "/2010/08/the-downside-of-providing-an-api-through-extension-methods/",
-    "date": "2010-08-26 17:24:00",
-    "disqusthreadid": "213629592",
-    "categories": [
-      "code-quality",
-      "testing"
     ]
   },
   {
@@ -2492,16 +2418,6 @@
     ]
   },
   {
-    "title": "Monkey Patching FTW!",
-    "link": "/2010/10/monkey-patching-ftw/",
-    "date": "2010-10-04 22:47:24",
-    "disqusthreadid": "213630136",
-    "categories": [
-      "ironruby",
-      "ruby"
-    ]
-  },
-  {
     "title": "Why You Don't Need Dependency Injection In Ruby",
     "link": "/2010/10/why-you-dont-need-dependency-injection-in-ruby/",
     "date": "2010-10-11 08:00:32",
@@ -2599,16 +2515,6 @@
     "categories": [
       "opinions",
       "software-development"
-    ]
-  },
-  {
-    "title": "What Do You Think Of This Hack?",
-    "link": "/2010/11/what-do-you-think-of-this-hack/",
-    "date": "2010-11-16 15:37:58",
-    "disqusthreadid": "213630344",
-    "categories": [
-      "c",
-      "code-quality"
     ]
   },
   {
@@ -2867,15 +2773,6 @@
     "categories": [
       "opinions",
       "silverlight"
-    ]
-  },
-  {
-    "title": "Keeping Things Interesting (Or: Avoiding .NET At Home)",
-    "link": "/2011/06/keeping-things-interesting-or-avoiding-net-at-home/",
-    "date": "2011-06-26 20:51:46",
-    "disqusthreadid": "342786755",
-    "categories": [
-      "opinions"
     ]
   },
   {
@@ -3177,16 +3074,6 @@
     "disqusthreadid": "550113875",
     "categories": [
       "security"
-    ]
-  },
-  {
-    "title": "(Ab)Using Conventions To Enforce Good Practices",
-    "link": "/2012/01/abusing-conventions-to-enforce-good-practices/",
-    "date": "2012-01-26 20:15:29",
-    "disqusthreadid": "553655709",
-    "categories": [
-      "nhibernate",
-      "performance"
     ]
   },
   {

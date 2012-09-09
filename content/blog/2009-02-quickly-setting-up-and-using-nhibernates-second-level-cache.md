@@ -2,45 +2,23 @@ The purpose of this post is just to quickly go over what you need to do to get N
 
 Anyways, the first thing you need to do, is to enable the 2nd level cache.  Add the following 2 properties to your hibernate.cfg.xml file:
 
-<div>
-[xml]
-    &lt;property name=&quot;cache.use_second_level_cache&quot;&gt;true&lt;/property&gt;
-    &lt;property name=&quot;cache.use_query_cache&quot; &gt;true&lt;/property&gt;
-[/xml]
-</div>
+<script src="https://gist.github.com/3684295.js?file=s1.xml"></script>
 
 The first one (obviously) enables the 2nd level cache, while the second one enables query caching. That basically means that you can (optionally) cache the results of specific queries.  Note that this doesn't mean that the results of all queries will be cached, only the ones where you specify that the results can be cached.
 
-Next, you need to choose a CacheProvider.  There are various options available, although i generally just use SysCache (which makes use of the ASP.NET Cache).  You can download the CacheProviders <a href="http://sourceforge.net/project/showfiles.php?group_id=216446&package_id=286204">here</a>.
+Next, you need to choose a CacheProvider.  There are various options available, although i generally just use SysCache (which makes use of the ASP.NET Cache).
 
 Once you've picked out a CacheProvider, you need to add a property for it to your hibernate.cfg.xml file as well:
 
-<div>
-[xml]
-    &lt;property name=&quot;cache.provider_class&quot;&gt;NHibernate.Caches.SysCache.SysCacheProvider, NHibernate.Caches.SysCache&lt;/property&gt;
-[/xml]
-</div>
+<script src="https://gist.github.com/3684295.js?file=s2.xml"></script>
 
 Let's first start with caching the results of a query.  Suppose we have the following query:
 
-<div>
-[csharp]
-                var products = session.CreateCriteria(typeof(Product))
-                    .Add(Restrictions.Eq(&quot;Category.Id&quot;, categoryId))
-                    .List&lt;Product&gt;();
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684295.js?file=s3.cs"></script>
 
 If we want NHibernate to cache the results of this query, we can make that happen like this:
 
-<div>
-[csharp]
-                var products = session.CreateCriteria(typeof(Product))
-                    .SetCacheable(true)
-                    .Add(Restrictions.Eq(&quot;Category.Id&quot;, categoryId))
-                    .List&lt;Product&gt;();
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684295.js?file=s4.cs"></script>
 
 When we execute this query, NHibernate will cache the results of this query.  It is very important to know that it won't actually cache all of the values of each row.  Instead, when the results of queries are cached, only the identifiers of the returned rows are cached.
 
@@ -50,12 +28,7 @@ Obviously, this is bad.  What good is caching if it's actually making us go to t
 
 To enable caching on the entity level, add the following property right below the class definition in the Product.hbm.xml file:
 
-<div>
-[xml]
-  &lt;class name=&quot;Product&quot; table=&quot;Products&quot;&gt;
-    &lt;cache usage=&quot;read-write&quot;/&gt;
-[/xml]
-</div>
+<script src="https://gist.github.com/3684295.js?file=s5.xml"></script>
 
 This tells NHibernate to store the data of Product entities in the 2nd level cache, and that any updates that we make to Product entities need to be synchronized in both the database and the cache.
 

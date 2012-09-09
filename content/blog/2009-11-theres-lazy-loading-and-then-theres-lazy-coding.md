@@ -5,10 +5,9 @@ If you need data, then it is your responsibility to retrieve that data as effici
 Most problems that are attributed to lazy loading are really manifestations of the laziness (or ignorance) of the developers who write code like that.  They are not inherently related to what lazy loading is about.  In many cases, lazy loading can indeed improve performance of your code, but as with so many concepts and practices, it all depends on the situation.  If a certain subset of the data that you would retrieve will not be used in the majority of cases, then obviously lazily loading that subset of data instead of eagerly fetching it could be a big performance improvement.  
 
 Here are some rules of thumb that i usually employ when it comes to lazy loading:
-<ul>
-	<li>If a set of data is always, or at least in the (large) majority of cases, needed by your code then don't use lazy loading and fetch the required data as efficiently as you can</li>
-	<li>If a set of data is not needed in the majority of cases, then use lazy loading instead of eager fetching</li>
-	<li>If the probability of a set of data being needed is about 50%, decide on a case by case basis and keep the size of the set of data in mind, as well as the cost of fetching it separately over the cost of fetching everything together</li>
-</ul>
 
-And that is really all there is to it.  Keep those rules in mind, and you'll hardly ever run into problems with lazy loading.  Remember kids: don't say no to lazy loading, say no to lazy coding instead.
+- If a set of data is always, or at least in the (large) majority of cases, needed by your code then don't use lazy loading and fetch the required data as efficiently as you can
+- If a set of data is not needed in the majority of cases, then use lazy loading instead of eager fetching
+- If the probability of a set of data being needed is about 50%, decide on a case by case basis and keep the size of the set of data in mind, as well as the cost of fetching it separately over the cost of fetching everything together
+
+And that is really all there is to it.  Keep those rules in mind, and you'll hardly ever run into problems with lazy loading. Don't say no to lazy loading, say no to lazy coding instead.

@@ -2,64 +2,19 @@ In my previous <a href="http://davybrion.com/blog/2008/10/batching-nhibernates-d
 
 First of all, let's get back to our test code from the last post:
 
-<div>
-[csharp]
-            var testObjects = CreateTestObjects(500000);
- 
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
- 
-            using (ITransaction transaction = Session.BeginTransaction())
-            {
-                foreach (var testObject in testObjects)
-                {
-                    Session.Save(testObject);
-                }
- 
-                transaction.Commit();
-            }
- 
-            stopwatch.Stop();
-            var time = stopwatch.Elapsed;
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684023.js?file=s1.cs"></script>
 
 The only thing that changed since the previous post is the amount of objects that are created. In the previous post we only created 10000 objects, whereas now we'll be creating 500000 objects.
 
 The batch size is configured like this:
 
-<div>
-[xml]
-   &lt;property name=&quot;adonet.batch_size&quot;&gt;100&lt;/property&gt;
-[/xml]
-</div>
+<script src="https://gist.github.com/3684023.js?file=s2.xml"></script>
 
 This means that NHibernate will send its DML statements in batches of 100 statements instead of sending all of them one by one.  The above code runs in 2 minutes and 24 seconds with a batch size of 100.  
 
 However, if we use NHibernate's IStatelessionSession instead of a regular ISession, we can get some nice improvements.  First of all, here's the code to use the IStatelessSession:
 
-<div>
-[csharp]
-            var testObjects = CreateTestObjects(500000);
- 
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
- 
-            using (IStatelessSession statelessSession = sessionFactory.OpenStatelessSession())
-            using (ITransaction transaction = statelessSession.BeginTransaction())
-            {
-                foreach (var testObject in testObjects)
-                {
-                    statelessSession.Insert(testObject);
-                }
- 
-                transaction.Commit();
-            }
- 
-            stopwatch.Stop();
-            var time = stopwatch.Elapsed;
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684023.js?file=s3.cs"></script>
 
 As you can see, apart from the usage of the IStatelessSession instead of the regular ISession, this is pretty much the same code.
 

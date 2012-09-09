@@ -2,39 +2,15 @@ A coworker of mine was recently trying to figure out why some code wouldn't comp
 
 Consider the following code:
 
-<div>
-[csharp]
-            var point = new System.Windows.Point(5, 7);
-            point.X = 6;
-            point.Y = 8;
-            Assert.AreEqual(6, point.X);
-            Assert.AreEqual(8, point.Y);
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684569.js?file=s1.cs"></script>
 
 This compiles and works.  Now consider the following class:
 
-<div>
-[csharp]
-    public class SomeClass
-    {
-        public System.Windows.Point SomePoint { get; set; }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684569.js?file=s2.cs"></script>
 
 And then this small piece of code:
 
-<div>
-[csharp]
-            var myObject = new SomeClass
-            {
-                SomePoint = new Point(2, 3)
-            };
- 
-            myObject.SomePoint.X = 5;
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684569.js?file=s3.cs"></script>
 
 You'd typically expect that this code would compile, right? Well it doesn't.  It fails with the following compiler error:
 
@@ -44,25 +20,14 @@ Not exactly what you would expect, right? Well, the compiler error in this case 
 
 Let me just borrow the explanation of the "DO NOT define mutable value types" guideline, from Microsoft's <a href="http://www.amazon.com/Framework-Design-Guidelines-Conventions-Development/dp/0321545613/ref=sr_1_1?ie=UTF8&s=books&qid=1241181546&sr=8-1">Framework Design Guidelines</a>:
 
-<blockquote>
-Mutable value types have several problems.  For example, when a property getter returns a value type, the caller receives a copy. Because the copy is created implicitly, developers might not be aware that they are mutating the copy, and not the original value.
-</blockquote>
+
+> Mutable value types have several problems.  For example, when a property getter returns a value type, the caller receives a copy. Because the copy is created implicitly, developers might not be aware that they are mutating the copy, and not the original value.
 
 Now the compiler error makes sense, right? Well, the message still sucks, but it makes sense that the compiler would protect you from making this mistake.
 
 It won't protect you from the following mistake though:
 
-<div>
-[csharp]
-            var myObject = new SomeClass
-            {
-                SomePoint = new Point(2, 3)
-            };
- 
-            var point = myObject.SomePoint;
-            point.X = 5;
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684569.js?file=s4.cs"></script>
 
 This code will compile, though if you expect that myObject.SomePoint.X will return 5, you're in for a treat.  Hopefully nobody writes code like this, but imagine having to debug something like this in some legacy code that was never properly tested.
 

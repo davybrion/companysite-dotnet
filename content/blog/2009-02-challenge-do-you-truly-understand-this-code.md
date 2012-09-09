@@ -6,61 +6,6 @@ I will do a follow-up post about this soon.  Perhaps tomorrow, or in a few days,
 
 So, this is the code:
 
-<div>
-[csharp]
-    public class Broadcaster : IBroadcaster
-    {
-        private readonly object monitor = new object();
-        private List&lt;IClientProxy&gt; clients;
-        private readonly IClientProxyFactory clientProxyFactory;
- 
-        public Broadcaster(IClientProxyFactory clientProxyFactory)
-        {
-            this.clientProxyFactory = clientProxyFactory;
-            clients = new List&lt;IClientProxy&gt;();
-        }
- 
-        public void Register()
-        {
-            var client = clientProxyFactory.CreateClientProxyForCurrentContext(&quot;MyCoolNamespace/IBroadcastOverWcf/Receive&quot;);
-            client.Faulted += Client_Faulted;
-            AddClientToRegisteredClients(client);
-        }
- 
-        private void AddClientToRegisteredClients(IClientProxy client)
-        {
-            lock (monitor)
-            {
-                clients = new List&lt;IClientProxy&gt;(clients) { client };
-            }
-        }
- 
-        public void Broadcast(Notification notification)
-        {
-            foreach (var client in clients)
-            {
-                client.SendNotificationAsynchronously(notification);
-            }
-        }
- 
-        private void Client_Faulted(object sender, System.EventArgs e)
-        {
-            var client = (IClientProxy)sender;
-            client.Faulted -= Client_Faulted;
-            RemoveClientFromRegisteredClients(client);
-        }
- 
-        private void RemoveClientFromRegisteredClients(IClientProxy client)
-        {
-            lock (monitor)
-            {
-                var clientList = new List&lt;IClientProxy&gt;(clients);
-                clientList.Remove(client);
-                clients = clientList;
-            }
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684268.js?file=s1.cs"></script>
 
 Update: you can find the commented version of this code <a href="http://davybrion.com/blog/2009/02/the-commented-version-of-the-readable-code-challeng/">here</a>

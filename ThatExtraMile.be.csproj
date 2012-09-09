@@ -174,10 +174,8 @@
     <Content Include="content\blog\2008-10-bulk-data-operations-with-nhibernates-stateless-sessions.md" />
     <Content Include="content\blog\2008-10-career-advice-for-young-developers.md" />
     <Content Include="content\blog\2008-10-do-not-dispose-in-the-prerender-event.md" />
-    <Content Include="content\blog\2008-10-exploring-nhibernate-statistics-part-1-simple-data-fetching.md" />
     <Content Include="content\blog\2008-10-how-to-write-testable-aspnet-usercontrols.md" />
     <Content Include="content\blog\2008-10-ordering-on-joined-columnsproperties-with-nhibernate.md" />
-    <Content Include="content\blog\2008-10-querying-with-nhibernate.md" />
     <Content Include="content\blog\2008-11-agile-development-going-downhill.md" />
     <Content Include="content\blog\2008-11-orm-is-not-inherently-evil.md" />
     <Content Include="content\blog\2008-11-populating-entities-from-stored-procedures-with-nhibernate.md" />
@@ -313,7 +311,6 @@
     <Content Include="content\blog\2009-12-the-padawa-that-couldnt.md" />
     <Content Include="content\blog\2009-12-unit-testing-an-nhibernate-application.md" />
     <Content Include="content\blog\2009-12-using-nhibernate-in-your-service-layer.md" />
-    <Content Include="content\blog\2009-12-which-code-metrics-do-you-consider-important.md" />
     <Content Include="content\blog\2009-12-you-can-benefit-from-open-sourcing-your-code.md" />
     <Content Include="content\blog\2010-01-agatha-vs-nservicebus.md" />
     <Content Include="content\blog\2010-01-as-a-movement-alt-net-has-been-dead-for-a-while.md" />
@@ -331,7 +328,6 @@
     <Content Include="content\blog\2010-01-theres-nothing-courageous-about-being-honest-about-mistakes.md" />
     <Content Include="content\blog\2010-01-virtual-method-performance-penalty.md" />
     <Content Include="content\blog\2010-02-avoiding-memory-leaks-with-nservicebus-and-your-own-castle-windsor-instance.md" />
-    <Content Include="content\blog\2010-02-can-you-come-up-with-a-why-comment-for-this-code.md" />
     <Content Include="content\blog\2010-02-have-you-jumped-on-the-bandwagon-yet.md" />
     <Content Include="content\blog\2010-02-wanna-review-my-code.md" />
     <Content Include="content\blog\2010-02-when-it-comes-to-ioc-containers-we-seem-to-be-pretty-loyal.md" />
@@ -346,13 +342,10 @@
     <Content Include="content\blog\2010-05-why-you-shouldnt-expose-your-entities-through-your-services.md" />
     <Content Include="content\blog\2010-06-if-you-cant-say-something-bad-about-it-you-dont-know-it-well-enough.md" />
     <Content Include="content\blog\2010-06-isolation-at-work-good-or-bad.md" />
-    <Content Include="content\blog\2010-06-more-on-system-tuple-and-serializationdeserialization.md" />
-    <Content Include="content\blog\2010-06-my-first-request-for-the-next-net-version.md" />
     <Content Include="content\blog\2010-06-using-agathas-server-side-caching.md" />
     <Content Include="content\blog\2010-06-why-do-we-recycle-our-application-pools.md" />
     <Content Include="content\blog\2010-06-working-overtime-what-it-really-means.md" />
     <Content Include="content\blog\2010-07-estimates-are-a-double-edged-sword.md" />
-    <Content Include="content\blog\2010-07-is-that-how-you-talk-to-people.md" />
     <Content Include="content\blog\2010-07-the-mvvm-pattern-is-highly-overrated.md" />
     <Content Include="content\blog\2010-07-which-language-do-you-code-in.md" />
     <Content Include="content\blog\2010-08-auto-wiring-ruby-events.md" />
@@ -371,7 +364,6 @@
     <Content Include="content\blog\2010-08-mvp-in-silverlightwpf-some-infrastructure-bits.md" />
     <Content Include="content\blog\2010-08-mvp-in-silverlightwpf-the-sample.md" />
     <Content Include="content\blog\2010-08-once-again-comments-in-code-arent-necessarily-bad.md" />
-    <Content Include="content\blog\2010-08-the-downside-of-providing-an-api-through-extension-methods.md" />
     <Content Include="content\blog\2010-08-using-agathas-client-side-caching.md" />
     <Content Include="content\blog\2010-08-using-c-style-events-in-ruby.md" />
     <Content Include="content\blog\2010-08-using-more-rubyesq-events-in-ruby.md" />
@@ -387,7 +379,6 @@
     <Content Include="content\blog\2010-10-developers-shouldnt-specialize.md" />
     <Content Include="content\blog\2010-10-do-you-still-believe-in-silverlight.md" />
     <Content Include="content\blog\2010-10-highly-recommended-book-rework.md" />
-    <Content Include="content\blog\2010-10-monkey-patching-ftw.md" />
     <Content Include="content\blog\2010-10-performance-of-nhibernate-with-ruby-objects-compared-to-traditional-c-objects.md" />
     <Content Include="content\blog\2010-10-recommended-book-dsls-in-action.md" />
     <Content Include="content\blog\2010-10-recommended-book-ironruby-unleashed.md" />
@@ -398,7 +389,6 @@
     <Content Include="content\blog\2010-10-why-you-dont-need-dependency-injection-in-ruby.md" />
     <Content Include="content\blog\2010-11-favor-value-over-quality.md" />
     <Content Include="content\blog\2010-11-never-underestimate-the-power-of-a-message.md" />
-    <Content Include="content\blog\2010-11-what-do-you-think-of-this-hack.md" />
     <Content Include="content\blog\2010-12-a-little-piece-of-advice-for-tech-bloggers.md" />
     <Content Include="content\blog\2010-12-highly-recommended-book-the-passionate-programmer.md" />
     <Content Include="content\blog\2010-12-virtual-method-performance-penalty-revisited.md" />
@@ -424,7 +414,6 @@
     <Content Include="content\blog\2011-04-customizing-asp-net-mvcs-required-property-validation-messages.md" />
     <Content Include="content\blog\2011-04-nhibernate-examples.md" />
     <Content Include="content\blog\2011-05-going-independent-is-the-best-move-i-ever-made.md" />
-    <Content Include="content\blog\2011-06-keeping-things-interesting-or-avoiding-net-at-home.md" />
     <Content Include="content\blog\2011-06-yet-another-nail-in-silverlights-coffin.md" />
     <Content Include="content\blog\2011-06-you-might-want-to-start-taking-javascript-seriously.md" />
     <Content Include="content\blog\2011-07-arguing-about-developer-communities-doesnt-make-sense.md" />
@@ -454,7 +443,6 @@
     <Content Include="content\blog\2011-12-challenge-displaying-feed-items-on-a-web-page.md" />
     <Content Include="content\blog\2011-12-displaying-feed-items-on-a-web-page-my-solution.md" />
     <Content Include="content\blog\2011-12-node-js-for-dummies.md" />
-    <Content Include="content\blog\2012-01-abusing-conventions-to-enforce-good-practices.md" />
     <Content Include="content\blog\2012-01-hosting-a-node-js-site-through-apache.md" />
     <Content Include="content\blog\2012-01-how-do-you-pick-open-source-libraries.md" />
     <Content Include="content\blog\2012-01-stop-storing-passwords-already.md" />

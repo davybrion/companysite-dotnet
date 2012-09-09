@@ -7,10 +7,8 @@ Turns out that someone recently ran an import process to import a bunch of data 
 With that in mind, we simply rebuilt the indexes for Tenant A's database, and the same query that took 25 seconds completed almost instantly from then on.  Now, we did had a weekly job running on that database server to keep the indexes in a healthy shape but that job didn't really do a good umm... job of it, apparently.  
 
 Lessons learned: make sure that you:
-<ul>
-	<li>Have a proper maintenance job set up which keeps your indexes healthy and schedule it to run regularly</li>
-	<li>Run that job manually if you need to perform a manual import process</li>
-	<li>Execute that job in an automated fashion whenever an intensive automated import process has completed</li>
-</ul>
+- Have a proper maintenance job set up which keeps your indexes healthy and schedule it to run regularly
+- Run that job manually if you need to perform a manual import process
+- Execute that job in an automated fashion whenever an intensive automated import process has completed
 
 Oh, and consult with your DBA's or at least people who know what they're doing when it comes to your particular database on how to keep those indexes healthy.  In this case, we rebuilt them.  In other cases it's sufficient to recalculate the statistics... i'm not sure which way is the best but you should at least keep an eye on this possible problem :) 

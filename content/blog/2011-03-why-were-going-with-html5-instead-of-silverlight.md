@@ -3,18 +3,17 @@ I recently had to research which UI technology would be the best choice for the 
 In this post, i want to go over the categories of criteria, and discuss our findings. I'm also going to share the spreadsheet so you can go through the numbers yourself. Depending on your needs or your opinions, you can change the weights and the scores and see how that affects the outcome. I removed some of the criteria that were specific to my client, but it didn't have a significant impact on the outcome. For this post, I also limited the candidates to ASP.NET MVC 3 in combination with the jQuery family (jQuery Core, jQuery UI and jQuery Mobile) and Silverlight.
 
 Here's a quick listing of the categories and some of their criteria (for the actual list, check the spreadsheet... the link is at the end of the post):
-<ul>
-	<li>User experience (compelling UI, accessibility, intuitive/ease-of-use, accessible from multiple devices, accessable from multiple platforms)</li>
-	<li>Infrastructure (easy/flexible deployment, monitorability)</li>
-	<li>Security (safe from XSS, CSRF)</li>
-	<li>Performance (server footprint, client-side resource usage, asynchronicity, UI responsiveness, initial load times)</li>
-	<li>Code/Architecture (maturity, reusability of validation logic, simplicity, maintainability, flexibility, power, testability, i18n, feedback cycle, learning curve, potential efficiency, rapid application prototyping, readable URLs, extensibility)</li>
-	<li>People (limits the number of required skills, mindshare, documentation, community support, commercial support)</li>
-	<li>Strategic (future-proof, standards-compliant, differentiator, backing, vision)</li>
-	<li>License (do we have access to the code?)</li>
-	<li>Cost</li>
-	<li>Tools (IDE support, availability of extra tools, free 3rd party component availability, commercial 3rd party component availability</li>
-</ul>
+
+- User experience (compelling UI, accessibility, intuitive/ease-of-use, accessible from multiple devices, accessable from multiple platforms)
+- Infrastructure (easy/flexible deployment, monitorability)
+- Security (safe from XSS, CSRF)
+- Performance (server footprint, client-side resource usage, asynchronicity, UI responsiveness, initial load times)
+- Code/Architecture (maturity, reusability of validation logic, simplicity, maintainability, flexibility, power, testability, i18n, feedback cycle, learning curve, potential efficiency, rapid application prototyping, readable URLs, extensibility)
+- People (limits the number of required skills, mindshare, documentation, community support, commercial support)
+- Strategic (future-proof, standards-compliant, differentiator, backing, vision)
+- License (do we have access to the code?)
+- Cost
+- Tools (IDE support, availability of extra tools, free 3rd party component availability, commercial 3rd party component availability
 
 Depending on what you or your organization requires, some of these might not apply to you. Perhaps there are other criteria that you find important and that we missed. Nevertheless, i think this is a pretty comprehensive list which covers most of the factors that you need to think about when making this kind of decision. 
 

@@ -12,12 +12,10 @@ This guy made it very clear from the beginning that he wanted to pursue another 
 
 So finally, we get to the 'advice' part of the post.  To him specifically, and anyone else who recognizes himself (or herself) in a story like this i would advise the following:
 
-<ul>
-	<li>Do not automatically assume that a fancy position at a large company is the best situation for you.  For most of these companies, you're only valuable as long as you're willing to play along with <em>their</em> game.  It's their game, their rules.  You either play along, or you fold after a while, and believe me when i tell you that it is going to end up bothering the hell out of you.</li>
-	<li>Learn to appreciate criticism.  If you handle it right, you're only going to end up better from it and you will truly learn from it.</li>
-	<li>Status or position doesn't mean anything if you suddenly realize you're surrounded by idiots.</li>
-	<li>If you don't really need the extra money you can make while working for people who truly couldn't care less about you personally, you certainly don't need to subject yourself to all of the crap that <em>will</em> come with it.</li>
-</ul>
+- Do not automatically assume that a fancy position at a large company is the best situation for you.  For most of these companies, you're only valuable as long as you're willing to play along with <em>their</em> game.  It's their game, their rules.  You either play along, or you fold after a while, and believe me when i tell you that it is going to end up bothering the hell out of you.
+- Learn to appreciate criticism.  If you handle it right, you're only going to end up better from it and you will truly learn from it.
+- Status or position doesn't mean anything if you suddenly realize you're surrounded by idiots.
+- If you don't really need the extra money you can make while working for people who truly couldn't care less about you personally, you certainly don't need to subject yourself to all of the crap that <em>will</em> come with it.
 
 
 

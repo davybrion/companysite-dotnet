@@ -1,8 +1,7 @@
 A very common reaction for developers to have when they hear about new technical approaches or new approaches to team organization is "yeah right, that won't work in the real world" or "that'll never work in our situation". A lot of us have felt that way. I certainly have as well a few times in the past. The 2 most common excuses you'll hear for not believing something can work are:
 
-1. The people I work with aren't good/talented/disciplined enough to make this work.
-
-2. It can't possibly work in our organization.
+- The people I work with aren't good/talented/disciplined enough to make this work.
+- It can't possibly work in our organization.
 
 The truth though, is that it's actually because of *you*. Whenever you say "that won't work for us" or something similar because of the people you work with, you immediately show your lack of faith in them. You might think that that lack of faith is justified, but that basically means you've given up all hope of making things better. You know it, and worst of all, *they know it too*. People who aren't trusted by their coworkers or superiors generally pick up on that rather quickly. Some of them will respond by putting in more effort and trying to do better. Others will become demotivated and wonder why they should even try because "it's never good enough anyway". At this point, your lack of trust in your coworkers becomes a self-fulfilling prophecy.
 

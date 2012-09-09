@@ -1,43 +1,16 @@
 In my <a href="http://davybrion.com/blog/2008/12/the-importance-of-releasing-your-components-through-windsor/">previous post</a> i showed you how important it is to properly release the components you've resolved through the Windsor IoC container.  At the end of that post, i showed an example where a disposable dependency of a component had to be disposed by the component.  Basically something like this:
 
-<div>
-[csharp]
-    public class Controller : IController
-    {
-        public IDependency Dependency { get; private set; }
- 
-        public Controller(IDependency myDependency)
-        {
-            Dependency = myDependency;
-        }
- 
-        public void Dispose()
-        {
-            Dependency.Dispose();
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3684104.js?file=s1.cs"></script>
 
 This prompted the following <a href="http://elegantcode.com/2008/12/13/the-importance-of-releasing-your-components-through-windsor/#comment-39632">comment</a> by Bryan Watts:
 
-<blockquote>
-So Controller is responsible for disposing of something it did not explicitly create? That’s a little presumptuous isn’t it?
-
-<blockquote>
-> if you own a reference to an IDisposable instance, you are responsible for properly disposing of that instance.
-</blockquote>
-
-I agree (and I’ve read your other article). However, in this case, Controller clearly does not own its dependency.
-</blockquote>
+> So Controller is responsible for disposing of something it did not explicitly create? That’s a little presumptuous isn’t it? If you own a reference to an IDisposable instance, you are responsible for properly disposing of that instance. However, in this case, Controller clearly does not own its dependency.
 
 And Bryan is right.  For a lot of languages, memory management rules can be summarized (somewhat simplified) like this:
 
-<ul>
-	<li>If you create an instance of a class, you are responsible for releasing/freeing/disposing it.</li>
-	<li>If a factory creates an instance of a class, the factory is not responsible for releasing/freeing/disposing it.  This burden falls upon the object which requested the object from the factory</li>
-	<li>If you receive an instance of an object, you should not release/free/dispose it, unless you received the instance from a factory</li>
-</ul>
+- If you create an instance of a class, you are responsible for releasing/freeing/disposing it.
+- If a factory creates an instance of a class, the factory is not responsible for releasing/freeing/disposing it.  This burden falls upon the object which requested the object from the factory
+- If you receive an instance of an object, you should not release/free/dispose it, unless you received the instance from a factory
 
 So where does this leave us with the example code shown above?  Clearly, we did not create the instance of the disposable dependency, so in theory, we are not allowed to dispose it.  Then again, if we weren't using Dependency Injection we would have probably instantiated the disposable dependency in our constructor (or when we first need it).  In that case, we would have been responsible for disposing the disposable dependency.  
 
