@@ -310,7 +310,6 @@
     <Content Include="content\blog\2009-12-testing-crud-operations-with-nhibernate.md" />
     <Content Include="content\blog\2009-12-the-padawa-that-couldnt.md" />
     <Content Include="content\blog\2009-12-unit-testing-an-nhibernate-application.md" />
-    <Content Include="content\blog\2009-12-using-nhibernate-in-your-service-layer.md" />
     <Content Include="content\blog\2009-12-you-can-benefit-from-open-sourcing-your-code.md" />
     <Content Include="content\blog\2010-01-agatha-vs-nservicebus.md" />
     <Content Include="content\blog\2010-01-as-a-movement-alt-net-has-been-dead-for-a-while.md" />
@@ -326,8 +325,6 @@
     <Content Include="content\blog\2010-01-omg-someone-stole-my-code.md" />
     <Content Include="content\blog\2010-01-securing-your-agatha-service-layer.md" />
     <Content Include="content\blog\2010-01-theres-nothing-courageous-about-being-honest-about-mistakes.md" />
-    <Content Include="content\blog\2010-01-virtual-method-performance-penalty.md" />
-    <Content Include="content\blog\2010-02-avoiding-memory-leaks-with-nservicebus-and-your-own-castle-windsor-instance.md" />
     <Content Include="content\blog\2010-02-have-you-jumped-on-the-bandwagon-yet.md" />
     <Content Include="content\blog\2010-02-wanna-review-my-code.md" />
     <Content Include="content\blog\2010-02-when-it-comes-to-ioc-containers-we-seem-to-be-pretty-loyal.md" />
@@ -391,7 +388,6 @@
     <Content Include="content\blog\2010-11-never-underestimate-the-power-of-a-message.md" />
     <Content Include="content\blog\2010-12-a-little-piece-of-advice-for-tech-bloggers.md" />
     <Content Include="content\blog\2010-12-highly-recommended-book-the-passionate-programmer.md" />
-    <Content Include="content\blog\2010-12-virtual-method-performance-penalty-revisited.md" />
     <Content Include="content\blog\2011-01-dont-be-afraid-to-change-your-mind.md" />
     <Content Include="content\blog\2011-01-how-developers-should-read-exceptions.md" />
     <Content Include="content\blog\2011-01-learn-to-work-with-the-web-instead-of-against-it.md" />

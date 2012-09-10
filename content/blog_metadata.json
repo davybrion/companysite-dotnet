@@ -1725,15 +1725,6 @@
     ]
   },
   {
-    "title": "Using NHibernate In Your Service Layer",
-    "link": "/2009/12/using-nhibernate-in-your-service-layer/",
-    "date": "2009-12-11 13:53:36",
-    "disqusthreadid": "213627872",
-    "categories": [
-      "nhibernate"
-    ]
-  },
-  {
     "title": "Don't Be A Whiny Developer",
     "link": "/2009/12/dont-be-a-whiny-developer/",
     "date": "2009-12-15 21:17:02",
@@ -1805,16 +1796,6 @@
     "disqusthreadid": "213628208",
     "categories": [
       "opinions"
-    ]
-  },
-  {
-    "title": "Virtual Method Performance Penalty",
-    "link": "/2010/01/virtual-method-performance-penalty/",
-    "date": "2010-01-10 17:14:51",
-    "disqusthreadid": "213628217",
-    "categories": [
-      "c",
-      "performance"
     ]
   },
   {
@@ -1939,17 +1920,6 @@
     "disqusthreadid": "213628567",
     "categories": [
       "rants"
-    ]
-  },
-  {
-    "title": "Avoiding Memory Leaks With NServiceBus And Your Own Castle Windsor Instance",
-    "link": "/2010/02/avoiding-memory-leaks-with-nservicebus-and-your-own-castle-windsor-instance/",
-    "date": "2010-02-19 10:42:55",
-    "disqusthreadid": "213628592",
-    "categories": [
-      "castle-windsor",
-      "memory-management",
-      "nservicebus"
     ]
   },
   {
@@ -2524,16 +2494,6 @@
     "disqusthreadid": "213630407",
     "categories": [
       "books"
-    ]
-  },
-  {
-    "title": "Virtual Method Performance Penalty, Revisited",
-    "link": "/2010/12/virtual-method-performance-penalty-revisited/",
-    "date": "2010-12-17 16:13:05",
-    "disqusthreadid": "213630439",
-    "categories": [
-      "c",
-      "performance"
     ]
   },
   {

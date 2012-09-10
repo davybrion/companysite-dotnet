@@ -4,36 +4,7 @@ Usage of the client-side caching is practically identical to usage of the server
 
 Here's a small example from the Sample that is included in the Agatha source code:
 
-<div>
-[csharp]
-    [EnableServiceResponseCaching(Minutes = 5)]
-    [EnableClientResponseCaching(Seconds = 30)]
-    public class ReverseStringRequest : Request
-    {
-        public string StringToReverse { get; set; }
- 
-        public bool Equals(ReverseStringRequest other)
-        {
-            if (ReferenceEquals(null, other)) return false;
-            if (ReferenceEquals(this, other)) return true;
-            return Equals(other.StringToReverse, StringToReverse);
-        }
- 
-        public override bool Equals(object obj)
-        {
-            if (ReferenceEquals(null, obj)) return false;
-            if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != typeof(ReverseStringRequest)) return false;
-            return Equals((ReverseStringRequest)obj);
-        }
- 
-        public override int GetHashCode()
-        {
-            return (StringToReverse != null ? StringToReverse.GetHashCode() : 0);
-        }
-    }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3693394.js?file=s1.cs"></script>
 
 In this case, both the EnableServiceResponseCaching and EnableClientResponseCaching attributes were used, which means that responses for this request will be cached for 5 minutes on the server, and for 30 seconds on the client.  You don't have to use both attributes simultaneously, you can use either one of them as well depending on where you want to cache the response.  You can also set a region (like you can with the server-side caching) so you can explicitely clean a certain region of the cache if you need to at some point.
 
