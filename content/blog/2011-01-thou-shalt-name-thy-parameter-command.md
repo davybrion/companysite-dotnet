@@ -2,29 +2,17 @@ I'm currently doing a proof of concept with <a href="http://www.telerik.com/prod
 
 The method definition looks like this:
 
-[csharp]
-		[GridAction(EnableCustomBinding = true)]
-		public ActionResult GetModels(GridCommand gridCommand)
-[/csharp]
+<script src="https://gist.github.com/3728615.js?file=s1.cs"></script>
 
 When i go to a different page in the grid, the gridCommand instance contains the relevant paging information (pagesize, current page).  The GridCommand type also exposes a SortDescriptors collection which contains all the information you'd need to correctly sort the data you're supposed to return.  Except that in my case, the SortDescriptors collection was always empty. I went through the documentation and looked over everything to make sure that i wasn't doing anything stupid, which is always my first assumption.  Unfortunately, everything looked alright. I googled and didn't really find anything, until i found a thread on the Telerik support forum where someone else mentioned the exact same problem.  Unfortunately, the thread didn't get an answer so that didn't offer any help. 
 
 Then i turned to Reflector to check out the code of Telerik's GridAction attribute. I noticed the following code in the constructor of the argument:
 
-[csharp]
-public GridActionAttribute()
-{
-    this.ActionParameterName = &quot;command&quot;;
-    this.adapterFactory = DI.Current.Resolve&lt;IGridActionResultAdapterFactory&gt;();
-}
-[/csharp]
+<script src="https://gist.github.com/3728615.js?file=s2.cs"></script>
 
 Cue the "you've gotta be shitting me" response.  I went back to my controller method and changed it to this:
 
-[csharp]
-		[GridAction(EnableCustomBinding = true)]
-		public ActionResult GetModels(GridCommand command)
-[/csharp]
+<script src="https://gist.github.com/3728615.js?file=s3.cs"></script>
 
 And suddenly, it worked. 
 

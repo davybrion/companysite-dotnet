@@ -10,84 +10,24 @@ Let's demonstrate this with a simple example. The example is from a Node.js appl
 
 This is my User model:
 
-<div>
-[javascript]
-var mongoose = require('mongoose'),
-	crypto = require('crypto'),
-	uuid = require('node-uuid'),
-	Schema = mongoose.Schema,
-	ObjectId = Schema.ObjectId;
-
-var userSchema = new Schema({
-	name: { type: String, required: true, unique: true },
-	email: { type: String, required: true },
-	salt: { type: String, required: true, default: uuid.v1 },
-	passwdHash: { type: String, required: true }
-});
-
-var hash = function(passwd, salt) {
-	return crypto.createHmac('sha256', salt).update(passwd).digest('hex');
-};
-
-userSchema.methods.setPassword = function(passwordString) {
-	this.passwdHash = hash(passwordString, this.salt);
-};
-
-userSchema.methods.isValidPassword = function(passwordString) {
-	return this.passwdHash === hash(passwordString, this.salt);
-};
-
-mongoose.model('User', userSchema);
-module.exports = mongoose.model('User');
-[/javascript]
-</div>
+<script src="https://gist.github.com/3728895.js?file=s1.js"></script>
 
 Notice that the salt property of my User type has its default value set to 'uuid.v1'. In this case, uuid.v1 is a function which will be invoked by Mongoose whenever a new User instance is created. Every User instance will thus have a UUID value stored in its salt property. You can also see that I'm not storing the given passwordString in the setPassword function, but that I calculate the hash value based on the passwordString and the UUID salt value.
 
+NOTE: the code above uses SHA-256 to create the hash. These days, a better alternative is to use bcrypt, which is specifically designed to be slow so that it makes brute forcing a much more expensive and impractical operation.
+
 Suppose I create a user with the following code:
 
-<div>
-[javascript]
-var user = new User({
-	name: 'test_user',
-	email: 'blah'
-});
-user.setPassword('test');
-
-user.save(function(err, result) {
-	if (err) throw err;
-});	
-[/javascript]
-</div>
+<script src="https://gist.github.com/3728895.js?file=s2.js"></script>
 
 Its database representation will look like this:
 
-<div>
-[javascript]
-{ 
-	&quot;passwdHash&quot; : &quot;b604367796274cf64177eec345532fc6ca66c6f0501906f82bb03f7916265e9d&quot;, 
-	&quot;name&quot; : &quot;test_user&quot;, 
-	&quot;email&quot; : &quot;blah&quot;, 
-	&quot;_id&quot; : ObjectId(&quot;4f1dbb2cfa6157b118000001&quot;), 
-	&quot;salt&quot; : &quot;304a33f0-45fc-11e1-80d2-43c594a44fa0&quot; 
-}
-[/javascript]
-</div>
+<script src="https://gist.github.com/3728895.js?file=s3.js"></script>
 
 If an attacker would get access to this, he'd have to generate a rainbow table using the salt value, which takes time, and even then he has no guarantee that the rainbow table will actually contain the correct password. Again, this is why it's so important to use a unique salt for every password. Also, you can use whatever value you want as the salt value so if you can determine it based on some other fields or by using a specific formula you don't need to store the actual salt value. It's recommended to use a long salt value though. Theoretically speaking, it's safer if the salt value isn't stored so clearly as I'm doing here, but even with the salt value clearly visible to a possible attacker, it would still be practically infeasible for him to generate all those rainbow tables.
 
 And of course, my actual authentication function is still very simple as well:
 
-<div>
-[javascript]
-var authenticate = function(username, password, callback) {
-	User.findOne({ name: username }, function(err, user) {
-		if (err) return callback(new Error('User not found'));
-		if (user.isValidPassword(password)) return callback(null, user);
-		return callback(new Error('Invalid password'));
-	});
-};
-[/javascript]
-</div>
+<script src="https://gist.github.com/3728895.js?file=s4.js"></script>
 
 So as you can see, there's nothing hard or complicated about storing credentials in a secure manner. It's quite easy to do so and there are no downsides to doing this.

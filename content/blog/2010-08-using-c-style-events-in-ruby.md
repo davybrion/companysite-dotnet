@@ -4,162 +4,49 @@ For those of you who already know and use Ruby: i know that this is most likely 
 
 First of all, we're going to need an Event class:
 
-<div>
-[ruby]
-class Event
-
-	attr_reader :name
-
-	def initialize(name)
-		@name = name
-		@handlers = []
-	end
-
-	def +(eventhandler)
-		raise TypeError &quot;Method expected&quot; unless eventhandler.is_a? Method
-		@handlers[@handlers.size] = eventhandler
-		self
-	end
-	
-	def -(eventhandler)
-		@handlers.delete eventhandler
-		self
-	end
-	
-	def trigger(args)
-		@handlers.each { |handler| handler.call args }
-	end
-	
-end
-[/ruby]
-</div>
+<script src="https://gist.github.com/3728156.js?file=s1.rb"></script>
 
 This code is really simple.  An Event instance has a name, and an array of handlers.  A handler is just a reference to a Method that we can execute whenever we want.  The + method allows you to add a handler to the event, and it simply returns self, so we can sort of mimic the C# event subscription code.  Our Ruby variant basically looks like this:
 
-<div>
-[ruby] publisher.some_event += method(:my_event_handler) [/ruby]
-</div>
+<script src="https://gist.github.com/3728156.js?file=s2.rb"></script>
 
 The - method basically uses the same trick, so unsubscribing from an event looks like this:
 
-<div>
-[ruby] publisher.some_event -= method(:my_event_handler) [/ruby]
-</div>
+<script src="https://gist.github.com/3728156.js?file=s3.rb"></script>
 
 With that in place, we need a way to define an event in a class, and to trigger it.  Preferably, this has to look as natural as possible and with that i mean that it should look like it's just supported by language keywords.  We naturally can't add language keywords, but we can fake it sort of by adding methods which you can call without parentheses so at least it'll look like language keywords.  There are multiple ways to do this, but i've chosen the simplest one, which is to open the Object class and add a few private methods it.  Note that in Ruby, private methods can be used by derived classes so these methods are accessible by any class that inherits from it, but you'll never be able to call them on any instance but yourself.
 
-<div>
-[ruby]
-class Object
-	
-	private
-	
-	def define_event(symbol)
-		getter = symbol
-		setter = :&quot;#{symbol}=&quot;
-		variable = :&quot;@#{symbol}&quot;
-
-		define_method getter do
-			event = instance_variable_get variable
-			
-			if event == nil
-				event = Event.new(symbol.to_s)
-				instance_variable_set variable, event
-			end
-			
-			event
-		end	
-		
-		define_method setter do |value|
-			instance_variable_set variable, value
-		end
-	end
-
-	def trigger_event(symbol, args)
-		event = instance_variable_get :&quot;@#{symbol}&quot;
-		event.trigger *args
-	end
-	
-end
-[/ruby]
-</div>
+<script src="https://gist.github.com/3728156.js?file=s4.rb"></script>
 
 This piece of code probably deserves some more explanation :).  We basically add two methods to the Object class: define_event and trigger_event.  When define_event is called, we dynamically add 2 methods to the class: a getter and a setter for the newly created Event.  The only reason we need the setter is to enable the subscription syntax:
 
-<div>
-[ruby] publisher.some_event += method(:my_event_handler) [/ruby]
-</div>
+<script src="https://gist.github.com/3728156.js?file=s5.rb"></script>
 
 Which is basically the same as doing this:
 
-<div>
-[ruby] publisher.some_event = publisher.some_event + method(:my_event_handler) [/ruby]
-</div>
+<script src="https://gist.github.com/3728156.js?file=s6.rb"></script>
 
 The trigger_event method is very straightforward: it just retrieves the instance variable for the event, and calls its trigger method and passes the args variable.
 
 And that's it... lets demonstrate this new 'language feature' with a simple example.  First, we have the Publisher class:
 
-<div>
-[ruby]
-class Publisher
-	define_event :notify
-	
-	def trigger_notify
-		trigger_event :notify, &quot;hello world!&quot;
-	end
-	
-end
-[/ruby]
-</div>
+<script src="https://gist.github.com/3728156.js?file=s7.rb"></script>
 
 It defines an event with the name 'notify' and it has a public method to trigger the event.  We also have a Subscriber class:
 
-<div>
-[ruby]
-class Subscriber
-	
-	def start_listening_to(publisher)
-		raise TypeError &quot;Publisher expected&quot; unless publisher.is_a? Publisher
-		@publisher = publisher
-		@publisher.notify += method(:event_handler)
-	end
-
-	def stop_listening
-		@publisher.notify -= method(:event_handler)
-		@publiser = nil
-	end
-	
-	def event_handler(args)
-		puts &quot;#{object_id} #{Time.now} received: #{args}&quot;
-	end
-	
-end
-[/ruby]
-</div>
+<script src="https://gist.github.com/3728156.js?file=s8.rb"></script>
 
 As you can see, the Subscriber subscribes and unsubscribes from the 'notify' event in a manner that is very similar to how it's done in C#.  
 
 Finally, the output of the following code:
 
-<div>
-[ruby]
-publisher = Publisher.new
-subscriber1 = Subscriber.new
-subscriber2 = Subscriber.new
-subscriber1.start_listening_to publisher
-subscriber2.start_listening_to publisher
-publisher.trigger_notify
-subscriber1.stop_listening
-publisher.trigger_notify
-[/ruby]
-</div>
+<script src="https://gist.github.com/3728156.js?file=s9.rb"></script>
 
 is this:
 
-2148074920 Sun Aug 22 12:17:58 +0200 2010 received: hello world!
-2148074900 Sun Aug 22 12:17:58 +0200 2010 received: hello world!
-2148074900 Sun Aug 22 12:17:58 +0200 2010 received: hello world!
+2148074920 Sun Aug 22 12:17:58 +0200 2010 received: hello world!</br>
+2148074900 Sun Aug 22 12:17:58 +0200 2010 received: hello world!</br>
+2148074900 Sun Aug 22 12:17:58 +0200 2010 received: hello world!</br>
 
 As you can see, subscriber1 received the event once, while subscriber2 received it twice.
 

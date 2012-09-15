@@ -6,111 +6,11 @@ When i started with these tests for the EventPublisher module, i instinctively w
 
 I eventually ended up with the following:
 
-<div>
-[ruby]
-class Publisher
-	include EventPublisher
-	event :my_first_event
-	event :my_second_event
-	
-	def trigger_first_event(args)
-		trigger :my_first_event, args
-	end
-	
-	def trigger_second_event(arg1, arg2)
-		trigger :my_second_event, arg1, arg2
-	end
-end
-
-describe EventPublisher, &quot;: triggering event&quot; do
-	before(:each) do
-	  @publisher = Publisher.new
-	end
-
-	it &quot;should not fail without any subscribers&quot; do
-	  @publisher.trigger_first_event &quot;testing&quot;
-	end
-
-	it &quot;should pass single event arg correctly to subscribed method with one argument&quot; do
-		@args = nil
-	  def my_first_event_handler(args);
-			@args = args
-		end
-
-		@publisher.subscribe :my_first_event, method(:my_first_event_handler)
-		@publisher.trigger_first_event &quot;testing!&quot;
-		@args.should == &quot;testing!&quot;
-	end
-	
-	it &quot;should pass multiple event args correctly to subscribed method with multiple arguments&quot; do
-		@args2_1, @args2_2 = nil, nil
-		def my_second_event_handler(arg1, arg2)
-			@args2_1, @args2_2 = arg1, arg2
-		end
-		
-		@publisher.subscribe :my_second_event, method(:my_second_event_handler)
-		@publisher.trigger_second_event &quot;second&quot;, &quot;event&quot;
-		@args2_1.should == &quot;second&quot;
-		@args2_2.should == &quot;event&quot;
-	end
-
-	it &quot;should pass single event arg correctly to subscribed block with one argument&quot; do
-		event_args = nil
-		@publisher.subscribe(:my_first_event) { |args| event_args = args }
-		@publisher.trigger_first_event &quot;test&quot;
-	  event_args.should == &quot;test&quot;
-	end
-	
-	it &quot;should pass multiple event args correctly to subscribed block with two arguments&quot; do
-	  first_arg, second_arg = nil, nil
-		@publisher.subscribe(:my_second_event) { |arg1,arg2| first_arg, second_arg = arg1, arg2 }
-		@publisher.trigger_second_event &quot;first&quot;, &quot;second&quot;
-		first_arg.should == &quot;first&quot;
-		second_arg.should == &quot;second&quot;
-	end
-	
-	it &quot;should call subscribed method once for each time it was subscribed&quot; do
-	  @counter1 = 0
-		def my_first_event_handler(args)
-			@counter1 += 1
-		end
-		
-		2.times { @publisher.subscribe :my_first_event, method(:my_first_event_handler) }
-		@publisher.trigger_first_event &quot;test&quot;
-		@counter1.should == 2
-	end
-	
-	it &quot;should call all subscribed methods&quot; do
-		@counter1, @counter2 = 0, 0
-		def handler1(args)
-			@counter1 += 1
-		end
-		
-		def handler2(args)
-			@counter2 += 1
-		end
-		
-		@publisher.subscribe :my_first_event, method(:handler1)
-		@publisher.subscribe :my_first_event, method(:handler2)
-		@publisher.trigger_first_event &quot;first_event&quot;
-		@counter1.should == 1
-		@counter2.should == 1
-	end
-	
-end
-[/ruby]
-</div>
+<script src="https://gist.github.com/3727873.js?file=s1.rb"></script>
 
 There are a couple of things i like about this.  For starters, the output of running this code looks like this:
 
-EventPublisher: triggering event
-  should not fail without any subscribers
-  should pass single event arg correctly to subscribed method with one argument
-  should pass multiple event args correctly to subscribed method with multiple arguments
-  should pass single event arg correctly to subscribed block with one argument
-  should pass multiple event args correctly to subscribed block with two arguments
-  should call subscribed method once for each time it was subscribed
-  should call all subscribed methods
+<script src="https://gist.github.com/3727873.js?file=s2.txt"></script>
 
 Anyone can read that and understand what kind of functionality is supported.  
 

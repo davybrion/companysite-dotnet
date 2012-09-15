@@ -6,65 +6,7 @@ With a class, that's easy to do because we're all so used to doing that... just 
 
 Take a look at the code, which i'll discuss further below:
 
-<div>
-[javascript]
-var MyNameSpace = MyNameSpace || {};
-
-MyNameSpace.jsondateformatter = (function () {
-    var that = this;
-
-    var toDate = function (jsonDateString) {
-        var time = jsonDateString.replace(/\/Date\(([0-9]*)\)\//, '$1');
-        var date = new Date();
-        date.setTime(time);
-        return date;
-    };
-
-    var prefixWithZeroIfNecessary = function (number) {
-        return number &lt; 10 ? '0' + number : number;
-    };
-
-    var dayAsDoubleDigitDayString = function (date) {
-        return prefixWithZeroIfNecessary(date.getDate());
-    };
-
-    var monthAsDoubleDigitMonthString = function (date) {
-        // for some reason, the result of getMonth is zero-based
-        return prefixWithZeroIfNecessary(date.getMonth() + 1); 
-    };
-
-    var hourAsDoubleDigitHourString = function (date) {
-        return prefixWithZeroIfNecessary(date.getHours());
-    };
-
-    var minutesAsDoubleDigitMinuteString = function (date) {
-        return prefixWithZeroIfNecessary(date.getMinutes());
-    }
-
-    return {
-        toDate: function (jsonDateString) {
-            return that.toDate(jsonDateString);
-        },
-
-        toShortDateString: function (jsonDateString) {
-            var date = toDate(jsonDateString);
-            return dayAsDoubleDigitDayString(date) + '/' +
-                   monthAsDoubleDigitMonthString(date) + '/' +
-                   date.getFullYear();
-        },
-
-        toShortDateTimeString: function (jsonDateString) {
-            var date = toDate(jsonDateString);
-            return dayAsDoubleDigitDayString(date) + '/' +
-                   monthAsDoubleDigitMonthString(date) + '/' +
-                   date.getFullYear() + ' ' +
-                   hourAsDoubleDigitHourString(date) + ':' +
-                   minutesAsDoubleDigitMinuteString(date);
-        }
-    }
-})();
-[/javascript]
-</div>
+<script src="https://gist.github.com/3728759.js?file=s1.js"></script>
 
 First, i create an object (if it doesn't already exist) to serve as a namespace.  Then i add a property called 'jsondateformatter' to that 'namespace object'.  So far this is pretty boring.  But the value that gets assigned to the jsondateformatter property is what's interesting here.  As you can see, i'm wrapping a function expression between 2 braces, and all the way at the bottom of the code i add the invoke operator, which is ().  That means that my function expression will be immediately evaluated (typically referred to as an immediate function), and the result of that will be assigned to the jsondateformatter property.  And what exactly is the return value of my immediate function?  It's an object which contains 3 properties: toDate, toShortDateString and toShortDateTimeString.  Each of those properties contains a function, and each of those functions refers to one or more variables that i created in the immediate function.
 

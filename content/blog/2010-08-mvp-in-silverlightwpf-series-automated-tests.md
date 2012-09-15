@@ -6,22 +6,7 @@ First of all, let's start off with our BindingModels.  Every single thing that y
 
 For instance, the UserGroupDetailBindingModel from the sample has a Name property.  Since the View binds to that property, we need to make sure that the PropertyChanged event is raised when its value is set.  We've also defined some validation for the Name property so we need to test that our BindingModel raises the ErrorsChanged event and that the correct validation message is made available through the GetErrors method.  Now, i'm a big fan of using base classes for test fixtures which contain utility assert methods which reduce code noise in your tests as much as possible.  It makes it possible to write tests like these:
 
-<div>
-[csharp]
-        [TestMethod]
-        public void SettingNameRaisesPropertyChangedEvent()
-        {
-            AssertThatPropertyChangesIsTriggeredCorrectly(m =&gt; m.Name, &quot;some name&quot;);
-        }
- 
-        [TestMethod]
-        public void SettingNameToInvalidValueCausesValidationError()
-        {
-            BindingModel.Name = null;
-            AssertHasErrorMessageForProperty(m =&gt; m.Name, &quot;name is a required field&quot;);
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3728116.js?file=s1.cs"></script>
 
 The BindingModelFixture base class that is used in the sample automatically creates the correct BindingModel and exposes it through the BindingModel property.  There are various utility methods to assert that the PropertyChanged event is correctly raised when you want it to, as well as utility methods to assert that the validation is working correctly.  These utility methods use the BindingModel property, which is why we only need to pass an Expression to the utility methods in the 2 tests above to indicate which property we're testing.  
 
@@ -29,33 +14,7 @@ In the first test, the utility method will assign the given value (in this case 
 
 It's also important to test the methods you have on your model to populate it with data, or to change the data that is present, like these 2 tests for instance:
 
-<div>
-[csharp]
-        [TestMethod]
-        public void Populate_SetsSelectedParentUserGroupIfCurrentGroupHasParent()
-        {
-            var currentUserGroup = new UserGroupDto {Id = Guid.NewGuid(), ParentId = Guid.NewGuid()};
-            var suitableParents = new[] {new UserGroupDto {Id = currentUserGroup.ParentId.Value}};
-            BindingModel.Populate(suitableParents, currentUserGroup);
- 
-            Assert.AreEqual(currentUserGroup.ParentId.Value, BindingModel.SelectedParentUserGroup.Id);
-        }
- 
-        [TestMethod]
-        public void RevertToOriginalValues_SetsIdAndNameToOriginalValues()
-        {
-            var userGroup = new UserGroupDto {Id = Guid.NewGuid(), Name = &quot;some name&quot;};
-            BindingModel.Populate(new UserGroupDto[0], userGroup);
-            BindingModel.Id = Guid.NewGuid();
-            BindingModel.Name = &quot;some other name&quot;;
- 
-            BindingModel.RevertToOriginalValues();
- 
-            Assert.AreEqual(userGroup.Id, BindingModel.Id);
-            Assert.AreEqual(userGroup.Name, BindingModel.Name);
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3728116.js?file=s2.cs"></script>
 
 Again, both test are short, very simple and focused.  They don't have to worry about anything that isn't relevant to what we're actually trying to test.
 
@@ -76,111 +35,22 @@ The only thing that makes testing the Presenter a little bit more difficult than
 
 Let's go to some examples. The UserGroupDetailPresenter needs to retrieve the selected UserGroup from the service layer (to make sure we're working with the latest data), and it also needs to retrieve a list of suitable parent UserGroups.  When the data is returned from the service, the model needs to be populated.  Take a look at the following 3 tests:
 
-<div>
-[csharp]
-        [TestMethod]
-        public void RetrievesUserGroupDetails()
-        {
-            var userGroupId = Guid.NewGuid();
-            Presenter.Handle(new UserGroupSelectedEvent(userGroupId));
-            Assert.AreEqual(userGroupId, RequestDispatcherStub.GetRequest&lt;GetUserGroupRequest&gt;().UserGroupId);
-        }
- 
-        [TestMethod]
-        public void RetrievesSuitableParentUserGroups()
-        {
-            var userGroupId = Guid.NewGuid();
-            Presenter.Handle(new UserGroupSelectedEvent(userGroupId));
-            Assert.AreEqual(userGroupId, RequestDispatcherStub.GetRequest&lt;GetSuitableParentUserGroupsRequest&gt;().UserGroupId.Value);
-        }
- 
-
-        [TestMethod]
-        public void ResponsesReceived_PopulatesModel()
-        {
-            var userGroup = new UserGroupDto { Id = Guid.NewGuid() };
-            var suitableParents = new[] { new UserGroupDto { Id = Guid.NewGuid() } };
- 
-            Presenter.Handle(new UserGroupSelectedEvent(Guid.NewGuid()));
-            RequestDispatcherStub.SetResponsesToReturn(new GetUserGroupResponse { UserGroup = userGroup },
-                                                       new GetSuitableParentUserGroupsResponse { SuitableParentUserGroups = suitableParents });
-            RequestDispatcherStub.ReturnResponses();
- 
-            Assert.AreEqual(userGroup.Id, Presenter.BindingModel.Id);
-            Assert.AreEqual(suitableParents[0].Id, Presenter.BindingModel.SuitableParentUserGroups[1].Id);
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3728116.js?file=s3.cs"></script>
 
 Once again, these tests are very short (except for the last one, which is still pretty short considering what it's actually testing) and highly focused.  We're not doing anything here that isn't relevant to what we're actually testing.  
 
 We can also easily test whether the presenter interacts with the view as expected, like these 2 tests illustrate:
 
-<div>
-[csharp]
-        [TestMethod]
-        public void ResponsesReceived_DoesNotTellViewToPreventModificationIfUserHasPermission()
-        {
-            Presenter.Handle(new UserGroupSelectedEvent(Guid.NewGuid()));
-            RequestDispatcherStub.SetResponsesToReturn(new GetUserGroupResponse(),
-                                                       new GetSuitableParentUserGroupsResponse {SuitableParentUserGroups = new UserGroupDto[0]},
-                                                       new CheckPermissionsResponse
-                                                       {
-                                                               AuthorizationResults = new Dictionary&lt;Guid, bool&gt; {{Permissions.DeleteUserGroup, true}, {Permissions.EditUserGroup, true}}
-                                                       });
-            RequestDispatcherStub.ReturnResponses();
- 
-            ViewMock.Verify(v =&gt; v.PreventModification(), Times.Never());
-        }
- 
-        [TestMethod]
-        public void ResponsesReceived_ShowsTheView()
-        {
-            var userGroup = new UserGroupDto { Id = Guid.NewGuid() };
-            var suitableParents = new[] { new UserGroupDto { Id = Guid.NewGuid() } };
- 
-            Presenter.Handle(new UserGroupSelectedEvent(Guid.NewGuid()));
-            RequestDispatcherStub.SetResponsesToReturn(new GetUserGroupResponse { UserGroup = userGroup },
-                                                       new GetSuitableParentUserGroupsResponse { SuitableParentUserGroups = suitableParents });
-            RequestDispatcherStub.ReturnResponses();
- 
-            ViewMock.Verify(v =&gt; v.Show());
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3728116.js?file=s4.cs"></script>
 
-For those wondering: i'm using the (excellent) <a href="http://code.google.com/p/moq/">Moq </a>library to mock the view in these tests.
+For those wondering: i'm using the (excellent) <a href="http://code.google.com/p/moq/">Moq</a> library to mock the view in these tests.
 
 I also said that we can easily test that the presenter doesn't make unwanted service layer calls, which you can see in this test:
 
-<div>
-[csharp]
-        [TestMethod]
-        public void DoesNotProceedIfModelIsInvalid()
-        {
-            Presenter.BindingModel.Name = null;
-            Presenter.PersistChanges();
-            Assert.IsFalse(RequestDispatcherStub.HasRequest&lt;SaveUserGroupRequest&gt;());
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3728116.js?file=s5.cs"></script>
 
 Testing whether the presenter publishes the correct events is pretty easy as well:
 
-<div>
-[csharp]
-        [TestMethod]
-        public void PublishesUserGroupDeletedEventWhenResponseIsReturned()
-        {
-            Presenter.BindingModel.Id = Guid.NewGuid();
-            RequestDispatcherStub.SetResponsesToReturn(new DeleteUserGroupResponse());
- 
-            Presenter.Delete();
-            RequestDispatcherStub.ReturnResponses();
- 
-            Assert.AreEqual(Presenter.BindingModel.Id.Value, EventAggregatorStub.GetPublishedEvents&lt;UserGroupDeletedEvent&gt;()[0].UserGroupId);
-        }
-[/csharp]
-</div>
+<script src="https://gist.github.com/3728116.js?file=s6.cs"></script>
 
 As you can see, we can really test a lot of code if we want to (you do want to test a lot of code don't you?).  And it really is pretty easy to do so.  The sample project of this series contains 47 tests for 2 presenters.  I again encourage you to check out those tests to see how easily you can cover a lot of functionality.

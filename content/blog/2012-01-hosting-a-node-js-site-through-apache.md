@@ -4,27 +4,7 @@ First of all, you need a way to start your Node.js process automatically when yo
 
 Once you have your sysv init or upstart script in place, as well as monit, your Node.js process can stay running on your server. Of course, you probably have it set to listen to connections on some other port than port 80 because that's what your Apache server is listening on. So now, the only thing you have to do is configure Apache to proxy all requests coming in on port 80 through the URL of your Node.js site to your local Node.js process. You'll first need to install <a href="http://httpd.apache.org/docs/2.1/mod/mod_proxy.html" target="_blank">mod_proxy</a> and <a href="http://httpd.apache.org/docs/2.0/mod/mod_proxy_http.html" target="_blank">mod_proxy_http</a>. After that, the configuration to make it work is quite easy:
 
-<div>
-[xml]
-&lt;VirtualHost 109.74.199.47:80&gt;
-	ServerAdmin davy.brion@thatextramile.be
-	ServerName thatextramile.be
-	ServerAlias www.thatextramile.be
-
-	ProxyRequests off
-
-	&lt;Proxy *&gt;
-		Order deny,allow
-		Allow from all
-	&lt;/Proxy&gt;
-
-	&lt;Location /&gt;
-		ProxyPass http://localhost:3000/
-		ProxyPassReverse http://localhost:3000/
-	&lt;/Location&gt;
-&lt;/VirtualHost&gt;
-[/xml]
-</div>
+<script src="https://gist.github.com/3728871.js?file=s1.xml"></script>
 
 And that's it. Every request coming in at http://thatextramile.be or http://www.thatextramile.be will be forwarded to http://localhost:3000 where Node.js is listening. Note that the ProxyPassReverse is required to make sure that all HTTP response headers will contain the proxied URL instead of the real one (localhost).
 
