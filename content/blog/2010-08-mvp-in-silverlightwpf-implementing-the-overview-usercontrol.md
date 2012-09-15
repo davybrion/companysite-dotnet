@@ -1,8 +1,8 @@
-Note: This post is part of a series. You can find the introduction and overview of the series <a href="http://davybrion.com/blog/2010/08/mvp-in-silverlightwpf-series">here</a>.
+Note: This post is part of a series. You can find the introduction and overview of the series <a href="/blog/2010/08/mvp-in-silverlightwpf-series">here</a>.
 
 The first UserControl that we're going to implement looks like this:
 
-<a href="http://davybrion.com/blog/wp-content/uploads/2010/08/sample_overview1.png"><img src="http://davybrion.com/blog/wp-content/uploads/2010/08/sample_overview1.png" alt="" title="sample_overview" width="500" height="344" class="aligncenter size-full wp-image-2452" /></a>
+<a href="/blog/wp-content/uploads/2010/08/sample_overview1.png"><img src="/blog/wp-content/uploads/2010/08/sample_overview1.png" alt="" title="sample_overview" width="500" height="344" class="aligncenter size-full wp-image-2452" /></a>
 
 There's a TreeView which shows a hierarcy of User Groups and there's a Button to create a new one. When this UserControl is first loaded, it needs to retrieve the User Group hierarchy and show it in the TreeView.  When a user selects a User Group, an event should be published to notify anyone else who might be interested in the selection of a User Group (in our case, our Details UserControl which i'll cover in the next post).  When the Button is pushed, another event is published to notify anyone who might be listening that we need a new User Group to be created.  Again, this event will be handled by our Details UserControl.
 
@@ -18,7 +18,7 @@ First of all, we need to look at what kind of data we're going to get back from 
 
 <script src="https://gist.github.com/3728019.js?file=s1.cs"></script>
 
-(If you're unfamiliar with this kind of Request/Response Service Layer implementation, you can catch up <a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-series/">here</a>)
+(If you're unfamiliar with this kind of Request/Response Service Layer implementation, you can catch up <a href="/blog/2009/11/requestresponse-service-layer-series/">here</a>)
 
 And the UserGroupDto class looks like this:
 

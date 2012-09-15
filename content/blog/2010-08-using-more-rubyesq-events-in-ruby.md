@@ -1,4 +1,4 @@
-In my <a href="http://davybrion.com/blog/2010/08/using-c-style-events-in-ruby/">previous post</a> i showed a way to use events in Ruby in a way that is very similar to how it is in C#.  Somebody left a comment saying that i should take off my C# hat, and do it in a more typical Ruby way.  I agree with that so i wanted to create an implementation based on his <a href="http://davybrion.com/blog/2010/08/using-c-style-events-in-ruby/#comment-55315">comment</a>.  I also wanted to avoid opening up the Object class and requiring you to mix-in a module in order to use the events.
+In my <a href="/blog/2010/08/using-c-style-events-in-ruby/">previous post</a> i showed a way to use events in Ruby in a way that is very similar to how it is in C#.  Somebody left a comment saying that i should take off my C# hat, and do it in a more typical Ruby way.  I agree with that so i wanted to create an implementation based on his <a href="/blog/2010/08/using-c-style-events-in-ruby/#comment-55315">comment</a>.  I also wanted to avoid opening up the Object class and requiring you to mix-in a module in order to use the events.
 
 The goal is basically to declare an event like this:
 

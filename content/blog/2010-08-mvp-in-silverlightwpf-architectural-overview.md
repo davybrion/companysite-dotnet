@@ -1,4 +1,4 @@
-Note: This post is part of a series. You can find the introduction and overview of the series <a href="http://davybrion.com/blog/2010/08/mvp-in-silverlightwpf-series">here</a>.
+Note: This post is part of a series. You can find the introduction and overview of the series <a href="/blog/2010/08/mvp-in-silverlightwpf-series">here</a>.
 
 Just a little warning up front: I'm not going to show a diagram of the architecture.  When it comes to this kind of posts, people often just scroll until they see a diagram which depicts the architecture, glance over it, either think they get it or won't get it, and base their opinions on just that.  I want people to actually focus and read what i'm saying about this, so i'm not using any diagrams.  This approach usually results in increased understanding of the architecture and less misunderstandings.  Obviously, it's not a foolproof approach as you'll likely soon discover in the comments.
 

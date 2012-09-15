@@ -1,8 +1,8 @@
-Note: This post is part of a series. You can find the introduction and overview of the series <a href="http://davybrion.com/blog/2010/08/mvp-in-silverlightwpf-series">here</a>.
+Note: This post is part of a series. You can find the introduction and overview of the series <a href="/blog/2010/08/mvp-in-silverlightwpf-series">here</a>.
 
 The second (and last) UserControl of this series and its accompanying sample looks like this:
 
-<a href="http://davybrion.com/blog/wp-content/uploads/2010/08/sample_details1.png"><img src="http://davybrion.com/blog/wp-content/uploads/2010/08/sample_details1.png" alt="" title="sample_details" width="503" height="92" class="aligncenter size-full wp-image-2463" /></a>
+<a href="/blog/wp-content/uploads/2010/08/sample_details1.png"><img src="/blog/wp-content/uploads/2010/08/sample_details1.png" alt="" title="sample_details" width="503" height="92" class="aligncenter size-full wp-image-2463" /></a>
 
 Nothing fancy (it never is when i do the UI) and pretty much a typical edit screen, though there are very few fields to edit obviously. The DropDown shows the suitable parent User Groups for this User Group.  These suitable parents are retrieved from the Service Layer and the 'logic' behind them is very simple: it can't be the selected User Group, and it can't be any User Group that is currently below it in the hierarchy.  Other than that, anything goes. 
 

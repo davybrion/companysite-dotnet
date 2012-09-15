@@ -1,4 +1,4 @@
-I recently showed how you can <a href="http://davybrion.com/blog/2010/09/using-nhibernate-to-persist-and-query-ruby-objects/">use NHibernate to persist and query Ruby objects</a> through IronRuby. We've continued the experiment (though we've already done some big optimizations in the code based on the first results of these tests) and we recently had to decide whether or not the performance difference between using NHibernate with regular static C# code and using it with dynamic Ruby objects was acceptable.  So we ran a set of tests, and compared all of the numbers.  Note that we don't claim that these benchmarks are scientifically correct in any way, but we do think they give us a good idea on what we can reasonably expect.  I want to share the results with you, and would appreciate any feedback you guys have on this... particularly on whether or not we missed something obvious in our tests or whether or not we should trust these numbers. After all, we're not professional benchmarkers so our approach might very well just suck :)
+I recently showed how you can <a href="/blog/2010/09/using-nhibernate-to-persist-and-query-ruby-objects/">use NHibernate to persist and query Ruby objects</a> through IronRuby. We've continued the experiment (though we've already done some big optimizations in the code based on the first results of these tests) and we recently had to decide whether or not the performance difference between using NHibernate with regular static C# code and using it with dynamic Ruby objects was acceptable.  So we ran a set of tests, and compared all of the numbers.  Note that we don't claim that these benchmarks are scientifically correct in any way, but we do think they give us a good idea on what we can reasonably expect.  I want to share the results with you, and would appreciate any feedback you guys have on this... particularly on whether or not we missed something obvious in our tests or whether or not we should trust these numbers. After all, we're not professional benchmarkers so our approach might very well just suck :)
 
 We have a scenario which consists of 15 'actions'.  For these actions, we use some tables from the Chinook database, basically just Artist/Album/Track/Genre/MediaType.  The actions are the following:
 
@@ -24,13 +24,13 @@ The scenario is ran 500 times with regular C# objects, and 500 times with Ruby o
 
 The following graph shows the average duration of each action in milliseconds on the Y axis, and the number of the action on the X axis:
 
-<a href="http://davybrion.com/blog/wp-content/uploads/2010/10/average_duration_of_each_action_in_millis.png"><img src="http://davybrion.com/blog/wp-content/uploads/2010/10/average_duration_of_each_action_in_millis.png" alt="" title="average_duration_of_each_action_in_millis" width="600" height="406" class="aligncenter size-medium wp-image-2818" /></a>
+<a href="/blog/wp-content/uploads/2010/10/average_duration_of_each_action_in_millis.png"><img src="/blog/wp-content/uploads/2010/10/average_duration_of_each_action_in_millis.png" alt="" title="average_duration_of_each_action_in_millis" width="600" height="406" class="aligncenter size-medium wp-image-2818" /></a>
 
 (you can click on the graph to watch it in its full size)
 
 Before i'll discuss these results, i'd also like to show the following graph which shows the average difference in milliseconds between the static and the dynamic execution of each action:
 
-<a href="http://davybrion.com/blog/wp-content/uploads/2010/10/average_difference_in_millis_for_each_action.png"><img src="http://davybrion.com/blog/wp-content/uploads/2010/10/average_difference_in_millis_for_each_action.png" alt="" title="average_difference_in_millis_for_each_action" width="600" height="418" class="aligncenter size-medium wp-image-2821" /></a>
+<a href="/blog/wp-content/uploads/2010/10/average_difference_in_millis_for_each_action.png"><img src="/blog/wp-content/uploads/2010/10/average_difference_in_millis_for_each_action.png" alt="" title="average_difference_in_millis_for_each_action" width="600" height="418" class="aligncenter size-medium wp-image-2821" /></a>
 
 Two actions immediately stand out: the last two which both deal with fetching a set of items and accessing all of their properties.  They're both about 6ms slower than their static counterparts, which is a performance penalty of 71% for action 14, and 87% for action 15.  That deals with a part of code that we can't really optimize any more.  Well, it probably is possible but we've already done a lot of work on that, and this is the best we can come up with so far.
 
@@ -40,19 +40,19 @@ We also wanted to see whether the performance difference would get worse when sp
 
 The following graph shows the average duration of the entire scenario in a couple of different situations:
 
-<a href="http://davybrion.com/blog/wp-content/uploads/2010/10/average_scenario_duration.png"><img src="http://davybrion.com/blog/wp-content/uploads/2010/10/average_scenario_duration.png" alt="" title="average_scenario_duration" width="462" height="363" class="aligncenter size-full wp-image-2822" /></a>
+<a href="/blog/wp-content/uploads/2010/10/average_scenario_duration.png"><img src="/blog/wp-content/uploads/2010/10/average_scenario_duration.png" alt="" title="average_scenario_duration" width="462" height="363" class="aligncenter size-full wp-image-2822" /></a>
 
 I do have to mention that the numbers shown in this graph aren't averages, but the result from running the scenario once in each situation.  We did however ran the scenarios in each situation more than once, and while we didn't list the averages, the numbers are representative of each testrun... we didn't see any really noticeable differences over multiple runs.  The percentage difference for each situation is shown in this graph:
 
-<a href="http://davybrion.com/blog/wp-content/uploads/2010/10/average_scenario_duration_difference.png"><img src="http://davybrion.com/blog/wp-content/uploads/2010/10/average_scenario_duration_difference.png" alt="" title="average_scenario_duration_difference" width="395" height="365" class="aligncenter size-full wp-image-2825" /></a>
+<a href="/blog/wp-content/uploads/2010/10/average_scenario_duration_difference.png"><img src="/blog/wp-content/uploads/2010/10/average_scenario_duration_difference.png" alt="" title="average_scenario_duration_difference" width="395" height="365" class="aligncenter size-full wp-image-2825" /></a>
 
 As you can see, the performance penalty of the entire scenario in each situation varies between 15% and 26%.
 
 Now, considering the fact that we prefer to avoid loading 'large' sets of data through NHibernate into entities (we prefer to use projections instead for that) we wanted to see what the difference would be for the entire duration of the scenario in each situation, without the final 4 actions.  Basically, just the typical CRUD scenarios:
 
-<a href="http://davybrion.com/blog/wp-content/uploads/2010/10/average_scenario_duration_without_last_4_actions.png"><img src="http://davybrion.com/blog/wp-content/uploads/2010/10/average_scenario_duration_without_last_4_actions.png" alt="" title="average_scenario_duration_without_last_4_actions" width="468" height="365" class="aligncenter size-full wp-image-2826" /></a>
+<a href="/blog/wp-content/uploads/2010/10/average_scenario_duration_without_last_4_actions.png"><img src="/blog/wp-content/uploads/2010/10/average_scenario_duration_without_last_4_actions.png" alt="" title="average_scenario_duration_without_last_4_actions" width="468" height="365" class="aligncenter size-full wp-image-2826" /></a>
 
-<a href="http://davybrion.com/blog/wp-content/uploads/2010/10/average_scenario_duration_difference_without_last_4_actions.png"><img src="http://davybrion.com/blog/wp-content/uploads/2010/10/average_scenario_duration_difference_without_last_4_actions.png" alt="" title="average_scenario_duration_difference_without_last_4_actions" width="405" height="368" class="aligncenter size-full wp-image-2827" /></a>
+<a href="/blog/wp-content/uploads/2010/10/average_scenario_duration_difference_without_last_4_actions.png"><img src="/blog/wp-content/uploads/2010/10/average_scenario_duration_difference_without_last_4_actions.png" alt="" title="average_scenario_duration_difference_without_last_4_actions" width="405" height="368" class="aligncenter size-full wp-image-2827" /></a>
 
 Now the difference varies between 6% and 15%.
 

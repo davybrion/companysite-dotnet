@@ -1,4 +1,4 @@
-Note: This post is part of a series. Be sure to read the introduction <a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-series/">here</a>.
+Note: This post is part of a series. Be sure to read the introduction <a href="/blog/2009/11/requestresponse-service-layer-series/">here</a>.
 
 If you want to write automated tests for your client-side code, it's often useful to replace the service proxy with a mock instance.  With typical WCF services and their proxies, that's pretty easy to do.  With the Request/Response Service Layer (RRSL) and its IRequestDispatcher, it's a bit more tricky.  While you could provide a mock instance of IRequestDispatcher to your classes under test, we've learned that it's easier to use a prepared stub class which inherits from the RequestDispatcher class and adds some extra methods to inspect the requests that were supposed to be sent, and to return response objects that you can easily prepare yourself.
 

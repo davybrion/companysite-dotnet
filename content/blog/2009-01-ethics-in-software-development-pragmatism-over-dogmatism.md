@@ -6,7 +6,7 @@ A lot of opinionated developers claim that a true craftsman developer will never
 
 Those of you who've been reading my posts for a while know how important clean code is to me. I generally hate crappy code and i generally hate quick fixes that don't fix the real problem.  Then again, i do realize that we sometimes need to put our principles aside in order to be able to deliver value to our users. 
 
-Allow me to use an example to defend my position on this.  I recently had to fix a <a href="http://davybrion.com/blog/2009/01/the-life-and-times-of-a-bug/">nasty bug</a> in NHibernate.  Once i found the true reason for the bug's existence i had two options to fix it.  The correct solution would have required me to modify some crucial parts in NHibernate.  The easiest fix required me to modify one non-essential class in a manner that couldn't impact anything else.
+Allow me to use an example to defend my position on this.  I recently had to fix a <a href="/blog/2009/01/the-life-and-times-of-a-bug/">nasty bug</a> in NHibernate.  Once i found the true reason for the bug's existence i had two options to fix it.  The correct solution would have required me to modify some crucial parts in NHibernate.  The easiest fix required me to modify one non-essential class in a manner that couldn't impact anything else.
 
 Certainly, a true craftsman would go for the best solution, right? Well, let me tell you something about the NHibernate code base... it's pretty big, it's quite complex, and it's been worked on by a lot of people over the years.  There are parts of the code where you really don't feel comfortable making drastic changes.  Sure, we have our test-suite, but it unfortunately doesn't cover every possible thing that could go wrong.
 

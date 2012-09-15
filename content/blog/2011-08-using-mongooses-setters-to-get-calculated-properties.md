@@ -1,4 +1,4 @@
-Note: if you haven't read my introductory post about Mongoose, you might want to do so <a href="http://davybrion.com/blog/2011/07/first-steps-with-mongodb-mongoose-and-jasmine-node-on-node-js/" target="_blank">first</a> if you haven't seen anything about it yet.
+Note: if you haven't read my introductory post about Mongoose, you might want to do so <a href="/blog/2011/07/first-steps-with-mongodb-mongoose-and-jasmine-node-on-node-js/" target="_blank">first</a> if you haven't seen anything about it yet.
 
 I wanted to add an Invoice entity to my breakable toy project, and came up with this mongoose Schema:
 

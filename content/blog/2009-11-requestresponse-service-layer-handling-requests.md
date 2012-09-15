@@ -1,4 +1,4 @@
-Note: This post is part of a series. Be sure to read the introduction <a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-series/">here</a>.
+Note: This post is part of a series. Be sure to read the introduction <a href="/blog/2009/11/requestresponse-service-layer-series/">here</a>.
 
 We already covered how you can define your request/response types, and how they can be processed.  Now it's time to deal with how they can be handled by their respective Request Handlers.  As shown in the previous post, we have the following 2 interfaces:
 
@@ -24,7 +24,7 @@ The interesting part is that this class overrides the Handle(Request) method ins
 
 Should an exception occur, the transaction is automatically rolled back and otherwise it's automatically committed.  Each derived Request Handler can simply declare its dependencies in its constructor (or through property setters if that's what you want) and only needs to implement the Handle(TRequest) method.  It can of course also implement the BeforeHandle(TRequest) and AfterHandle(TRequest) methods when it makes sense. 
 
-This is a simple example of an NHibernate-enabled base class for Request Handlers.  We also have one of these for projects that don't use NHibernate but use <a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-series/">our custom DAL</a> instead.  It's virtually identical to this one though.  The important part to remember is that these classes are very simple, yet still give you a lot of flexibility and power.
+This is a simple example of an NHibernate-enabled base class for Request Handlers.  We also have one of these for projects that don't use NHibernate but use <a href="/blog/2009/08/build-your-own-data-access-layer-series/">our custom DAL</a> instead.  It's virtually identical to this one though.  The important part to remember is that these classes are very simple, yet still give you a lot of flexibility and power.
 
 In fact, most of our applications' Request Handlers don't inherit directly from the NhRequestHandler (or the AdoNetRequestHandler).  In most cases, we have another class in between the actual Request Handlers and the NhRequestHandler which adds custom logic for authentication, provides hooks (virtual methods) for authorization and whatever else that might make sense (like setting up the user's context for the duration of the request).
 

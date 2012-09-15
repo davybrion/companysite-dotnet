@@ -1,4 +1,4 @@
-Note: This post is part of a series.  Be sure to read the introduction <a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
+Note: This post is part of a series.  Be sure to read the introduction <a href="/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
 
 Building your own DAL is almost never a cost-efficient solution.  In this case, i wrote this DAL in 24 working hours, but it is limited in scope, power, flexibility and functionality.  Having said that, i do think it's better than every single custom DAL i've come across so far.  Taking it to the next step however would take a lot more effort, which truly is never worth it.  As you try to provide more functionality, overall complexity of your custom DAL will increase heavily and the effort you'll eventually spend on it will more than outweigh any of the downsides that might come with using something that already exists.  Building your own DAL is an undertaking that should always be questioned, and shouldn't be considered unless the alternative of doing so is even worse.
 

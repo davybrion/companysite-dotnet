@@ -1,4 +1,4 @@
-Before i post the tests and a further explanation of the code i listed in <a href="http://davybrion.com/blog/2009/02/challenge-do-you-truly-understand-this-code">the readable code challenge</a>, i wanted to post only the commented version of this code:
+Before i post the tests and a further explanation of the code i listed in <a href="/blog/2009/02/challenge-do-you-truly-understand-this-code">the readable code challenge</a>, i wanted to post only the commented version of this code:
 
 <script src="https://gist.github.com/3684309.js?file=s1.cs"></script>
 

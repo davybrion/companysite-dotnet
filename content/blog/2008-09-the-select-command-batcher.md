@@ -1,4 +1,4 @@
-As <a href="http://davybrion.com/blog/2008/08/batching-sqlcommand-queries/">promised</a>, this post describes a way to make batching of select queries through SqlCommands as easy to use as my <a href="http://davybrion.com/blog/2008/06/the-query-batcher/">QueryBatcher for NHibernate</a>.  
+As <a href="/blog/2008/08/batching-sqlcommand-queries/">promised</a>, this post describes a way to make batching of select queries through SqlCommands as easy to use as my <a href="/blog/2008/06/the-query-batcher/">QueryBatcher for NHibernate</a>.  
 
 So naturally, i came up with the SelectCommandBatcher class (i know, i really need to come up with better names).  It's very similar in usage to the QueryBatcher for NHibernate.  Obviously, there is one important difference: NHibernate takes care of transforming the database result into entity objects automagically.  For the SelectCommandBatcher, you either have to provide some functionality that takes care of mapping the database results to objects, or you can access the results through DataTables (yikes!).
 

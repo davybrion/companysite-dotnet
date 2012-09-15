@@ -1,8 +1,8 @@
-Note: This post is part of a series.  Be sure to read the introduction <a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
+Note: This post is part of a series.  Be sure to read the introduction <a href="/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
 
 One thing that i consider an absolute must-have in any data access layer is the ability to perform CRUD operations out-of-the-box without having to write any code to enable these operations.  Once your data access layer knows about your classes and your tables, CRUD operations should 'just work'.
 
-As you've seen in the <a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-mapping-classes-to-tables/">previous post</a> of this series, the TableInfo class offers a couple of methods to automatically build the required SQL statements for CRUD actions.  With these statements, we can easily create SqlCommand instances for all CRUD operations.
+As you've seen in the <a href="/blog/2009/08/build-your-own-data-access-layer-mapping-classes-to-tables/">previous post</a> of this series, the TableInfo class offers a couple of methods to automatically build the required SQL statements for CRUD actions.  With these statements, we can easily create SqlCommand instances for all CRUD operations.
 
 First of all, i use the following helper method to easily add a SqlParameter to a SqlCommand:
 

@@ -1,4 +1,4 @@
-Note: This post is part of a series. You can find the introduction and overview of the series <a href="http://davybrion.com/blog/2010/08/mvp-in-silverlightwpf-series">here</a>.
+Note: This post is part of a series. You can find the introduction and overview of the series <a href="/blog/2010/08/mvp-in-silverlightwpf-series">here</a>.
 
 The MVP approach that i've shown in this series makes it easy to write clean code where responsibilities are properly separated.  One of the biggest benefits of that is that you get easy testability because of it as well.  Now, the MVVM proponents will tell you that MVVM leads to code that is highly testable as well and they're right.  However, i think that because of the cleaner separation in MVP, the automated tests you can write for your code is often cleaner, simpler, requiring less set up and often resulting in more focused tests.  I'm going to show a few tests of the sample project accompanying this series to show you what i mean.
 

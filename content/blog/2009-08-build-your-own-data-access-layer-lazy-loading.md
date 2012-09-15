@@ -1,4 +1,4 @@
-Note: This post is part of a series.  Be sure to read the introduction <a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
+Note: This post is part of a series.  Be sure to read the introduction <a href="/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
 
 In the post about entity hydration, i mentioned the following:
 
@@ -44,6 +44,6 @@ And now there's only one more missing piece in our lazy loading puzzle, which is
 
 <script src="https://gist.github.com/3685057.js?file=s7.cs"></script>
 
-When using an approach like this, it's best to make everything in your entity classes virtual... NHibernate has a similar restriction and i've tried to explain the reasons behind this in <a href="http://davybrion.com/blog/2009/03/must-everything-be-virtual-with-nhibernate/">this post</a>.
+When using an approach like this, it's best to make everything in your entity classes virtual... NHibernate has a similar restriction and i've tried to explain the reasons behind this in <a href="/blog/2009/03/must-everything-be-virtual-with-nhibernate/">this post</a>.
 
 I'm not sure if i succeeded in explaining this topic in a simple and clear manner, but this technique really is pretty easy.  If you have any questions, i'd be glad to anser them in the comments :)

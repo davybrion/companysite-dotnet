@@ -8,4 +8,4 @@ So, this is the code:
 
 <script src="https://gist.github.com/3684268.js?file=s1.cs"></script>
 
-Update: you can find the commented version of this code <a href="http://davybrion.com/blog/2009/02/the-commented-version-of-the-readable-code-challeng/">here</a>
+Update: you can find the commented version of this code <a href="/blog/2009/02/the-commented-version-of-the-readable-code-challeng/">here</a>

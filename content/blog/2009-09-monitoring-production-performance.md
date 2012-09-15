@@ -1,4 +1,4 @@
-It's always interesting to know how well your applications perform in production.  To get a better view on this, i recently added a bit of performance related logging to the RequestProcessor class of my <a href="http://davybrion.com/blog/2008/07/the-request-response-service-layer/">Request/Response service layer</a>.  I have the following 2 loggers set up:
+It's always interesting to know how well your applications perform in production.  To get a better view on this, i recently added a bit of performance related logging to the RequestProcessor class of my <a href="/blog/2008/07/the-request-response-service-layer/">Request/Response service layer</a>.  I have the following 2 loggers set up:
 
 <script src="https://gist.github.com/3685184.js?file=s1.cs"></script>
 

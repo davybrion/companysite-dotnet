@@ -1,4 +1,4 @@
-Note: This post is part of a series. Be sure to read the introduction <a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-series/">here</a>.
+Note: This post is part of a series. Be sure to read the introduction <a href="/blog/2009/11/requestresponse-service-layer-series/">here</a>.
 
 One of my biggest issues with using typical WCF Services is that you always need to update your client-side proxies whenever a new operation is added to your service layer.  I definitely wanted to avoid that with the Request/Response Service Layer, and that was easy to do because this is our only Service Contract:
 

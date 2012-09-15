@@ -2,7 +2,7 @@ Microsoft's upcoming ASP.NET MVC framework makes it easy to write tests for your
 
 This is the screen we're going to create:
 
-<a href='http://davybrion.com/blog/wp-content/uploads/2008/07/searchproducts.png'><img src="http://davybrion.com/blog/wp-content/uploads/2008/07/searchproducts.png" alt="" title="searchproducts" width="500" height="243" class="alignleft size-full wp-image-161" /></a>
+<a href='/blog/wp-content/uploads/2008/07/searchproducts.png'><img src="/blog/wp-content/uploads/2008/07/searchproducts.png" alt="" title="searchproducts" width="500" height="243" class="alignleft size-full wp-image-161" /></a>
 
 The very first thing you'll notice is that i completely suck at graphic design. So try to ignore the crappy look, and lets focus on what this screen should do. A user can perform a search on products based on the name, the product category and the supplier of the product. After clicking the Search button, the user is presented with a list of products that match the search criteria.  Next to each product is an Edit link (because i was too lazy to find a nice image for this). When clicked, the application should navigate to an Edit screen where the chosen product can be edited.  To keep this example short (this post will be long enough already!), that's all for this screen.
 
@@ -30,7 +30,7 @@ Anyways, you probably want to know what the controller looks like. We'll get to 
 
 <script src="https://gist.github.com/3675170.js?file=s3.cs"></script>
 
-Right now, this is a pretty simple class, but as you implement more screens, you will most likely refactor common controller methods to this base class.  In this application, the controller will usually communicate with a proxy to a remote service. That proxy is actually the model in this implementation. Obviously, if you don't need a service layer you can simply use the real Model objects in the controller.  But since a proxy to a remote service is an expensive object that needs to be cleaned up properly, i made the controller inherit from the <a href="http://davybrion.com/blog/2008/06/disposing-of-the-idisposable-implementation/">Disposable class</a>.  Each derived controller will need to provide a method to clean up its expensive resources.
+Right now, this is a pretty simple class, but as you implement more screens, you will most likely refactor common controller methods to this base class.  In this application, the controller will usually communicate with a proxy to a remote service. That proxy is actually the model in this implementation. Obviously, if you don't need a service layer you can simply use the real Model objects in the controller.  But since a proxy to a remote service is an expensive object that needs to be cleaned up properly, i made the controller inherit from the <a href="/blog/2008/06/disposing-of-the-idisposable-implementation/">Disposable class</a>.  Each derived controller will need to provide a method to clean up its expensive resources.
 
 The specific controller for this application looks like this:
 
@@ -50,7 +50,7 @@ First of all, we'll define a base controller test class:
 
 <script src="https://gist.github.com/3675170.js?file=s6.cs"></script>
 
-This class will simply provide some helper methods that will be common to our controller tests. The method that is already there can be ignored for now, but if you want to know what it does you can look <a href="http://davybrion.com/blog/2008/06/testing-batched-service-calls/">here</a>.  I'll also (briefly) explain it when it's used in a test.
+This class will simply provide some helper methods that will be common to our controller tests. The method that is already there can be ignored for now, but if you want to know what it does you can look <a href="/blog/2008/06/testing-batched-service-calls/">here</a>.  I'll also (briefly) explain it when it's used in a test.
 
 Our test class needs to set up the mocked dependencies and provide a way to create the controller with those mocks so we already have the following code:
 
@@ -66,7 +66,7 @@ We instruct the mocked view to return true for the IsPostBack property. Then we 
 
 <script src="https://gist.github.com/3675170.js?file=s9.cs"></script>
 
-First, we create two empty arrays of objects that we'll instruct the mocked service to return when its Process method is called.  We're using the PrepareServiceToReturnResponses method here, which you've seen listed in the ControllerTest class. It basically allows you to provide Response instances and it uses the ServiceRequestResponseSpy class to hook into the mocked service.  If you want to know the details behind this technique, go <a href="http://davybrion.com/blog/2008/06/testing-batched-service-calls/">here</a>.  
+First, we create two empty arrays of objects that we'll instruct the mocked service to return when its Process method is called.  We're using the PrepareServiceToReturnResponses method here, which you've seen listed in the ControllerTest class. It basically allows you to provide Response instances and it uses the ServiceRequestResponseSpy class to hook into the mocked service.  If you want to know the details behind this technique, go <a href="/blog/2008/06/testing-batched-service-calls/">here</a>.  
 
 Then we set some expectations on the view. We expect that its ProductCategories property will be set to the value that we've instructed the mocked service to return.  Same thing for the Suppliers property. Then we define an expectation that the view's DataBind method should be called.  After that, we create the controller, call the Load method and we verify that all expectations on the view were met. We also assert that the service indeed received the proper requests.
 
@@ -74,7 +74,7 @@ So what code did we just test? Well, the Load method of the controller, which no
 
 <script src="https://gist.github.com/3675198.js?file=s1.cs"></script>
 
-The load method uses the service to retrieve the product categories and the suppliers, in one remote call.  You can find more information on that <a href="http://davybrion.com/blog/2008/06/batching-wcf-calls/">here</a> and <a href="http://davybrion.com/blog/2008/06/the-service-call-batcher/">here</a>.
+The load method uses the service to retrieve the product categories and the suppliers, in one remote call.  You can find more information on that <a href="/blog/2008/06/batching-wcf-calls/">here</a> and <a href="/blog/2008/06/the-service-call-batcher/">here</a>.
 
 Now we can write a test to make sure that the controller behaves correctly when the user presses the Search button:
 

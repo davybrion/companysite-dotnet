@@ -1,4 +1,4 @@
-All of our projects that use NHibernate (which is all of them except those where the customer explicitly doesn't want us to use it or where it wouldn't make sense to use it) use the same Repository implementation.  After the <a href="http://davybrion.com/blog/2009/01/nhibernate-and-future-queries/">Future</a> and <a href="http://davybrion.com/blog/2009/01/nhibernate-and-future-queries-part-2/">FutureValue</a> queries were added to NHibernate, i modified the implementation of that Repository class.  
+All of our projects that use NHibernate (which is all of them except those where the customer explicitly doesn't want us to use it or where it wouldn't make sense to use it) use the same Repository implementation.  After the <a href="/blog/2009/01/nhibernate-and-future-queries/">Future</a> and <a href="/blog/2009/01/nhibernate-and-future-queries-part-2/">FutureValue</a> queries were added to NHibernate, i modified the implementation of that Repository class.  
 
 Two of the FindAll methods now look like this:
 

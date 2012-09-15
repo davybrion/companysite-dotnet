@@ -33,7 +33,7 @@ So what's so good about the Dispose pattern? Well, we make a clear distinction b
 
 If your class (or a derived class) implements a finalizer method, it should call the Dispose method with the disposing parameter set to false.  The reason for this is that the order in which objects are finalized is not specified. If you're not careful, you could accidentally call the Dispose method of a Disposable Managed Resource which may have already been finalized as well.  This would cause an exception and a finalizer method should never ever throw an exception because that could keep other objects from being finalized.
 
-If you can, try to put this pattern into a reusable base class and make your Disposable Managed Resource holding types inherit from this.  An example of this approach can be found <a href="http://davybrion.com/blog/2008/06/disposing-of-the-idisposable-implementation/">here</a>.
+If you can, try to put this pattern into a reusable base class and make your Disposable Managed Resource holding types inherit from this.  An example of this approach can be found <a href="/blog/2008/06/disposing-of-the-idisposable-implementation/">here</a>.
 
 ## Using Disposable Managed Resources
 

@@ -1,4 +1,4 @@
-Update: check out my [MVP In Silverlight/WPF series](http://davybrion.com/blog/2010/08/mvp-in-silverlightwpf-series/) which discusses the MVP approach as an alternative to MVVM
+Update: check out my [MVP In Silverlight/WPF series](/blog/2010/08/mvp-in-silverlightwpf-series/) which discusses the MVP approach as an alternative to MVVM
 
 If you're doing Silverlight or WPF, you've no doubt come across the MVVM (Model-View-ViewModel) pattern.  It seems to be the most popular client-side architecture pattern used among Silverlight/WPF developers.  I find the pattern to be highly overrated, and actually have some big issues with the whole thing. 
 
@@ -59,4 +59,4 @@ Presentation Model:
 
 Which leads to classes which are more focused on their task instead of trying to focus on too many things at the same time.  In my opinion, this approach is much better/cleaner than MVVM.  Not only is there a noticeable benefit in code quality (classes are more focused), there is also increased potential to reuse our 'light Presentation Models' in multiple controls.  Testability is increased over MVVM as well since it's always easier to test classes which are focused versus testing classes which have too many responsibilities.  All in all, a couple of important benefits and we still haven't thought of a real drawback compared to MVVM.
 
-Update: check out my [MVP In Silverlight/WPF series](http://davybrion.com/blog/2010/08/mvp-in-silverlightwpf-series/) which discusses the MVP approach as an alternative to MVVM
+Update: check out my [MVP In Silverlight/WPF series](/blog/2010/08/mvp-in-silverlightwpf-series/) which discusses the MVP approach as an alternative to MVVM

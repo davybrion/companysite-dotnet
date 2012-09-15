@@ -1,4 +1,4 @@
-In my last post i <a href="http://davybrion.com/blog/2009/01/nhibernate-and-future-queries/">showed you</a> how we can now use the Future feature in NHibernate.  The only downside to the feature is that we only have the Future method in ICriteria, which returns a generic IEnumerable.  Which doesn't really lead to nice code when dealing with queries that return a scalar value, or just a single row in general.  So i decided to extend the feature a little bit.  
+In my last post i <a href="/blog/2009/01/nhibernate-and-future-queries/">showed you</a> how we can now use the Future feature in NHibernate.  The only downside to the feature is that we only have the Future method in ICriteria, which returns a generic IEnumerable.  Which doesn't really lead to nice code when dealing with queries that return a scalar value, or just a single row in general.  So i decided to extend the feature a little bit.  
 
 I introduced the IFutureValue interface, which only defines a Value property:
 

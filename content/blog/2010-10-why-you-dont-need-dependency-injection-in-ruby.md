@@ -1,7 +1,7 @@
 If you're new to Ruby and you're coming from static languages like C# or Java, you'll probably wonder why there isn't much interest in Dependency Injection in the Ruby community.  The answer is quite simple: because you don't need it.  Now, that's not to say that Dependency Injection isn't a valuable technique in your toolbox.  In fact, if you're doing C# or Java i'd even go as far as saying it's absolutely necessary to use Dependency Injection in most of your code.  Two of the biggest reasons (i know there are more, but let's focus on these for now) why Dependency Injection is important if you're using a static language are these:
 <ul>
 	<li>Highly increased testability because you can control the dependencies during automated tests</li>
-	<li>Lowered coupling between classes which enables you to change implementations of dependencies at will (granted, not a lot of people actually do that often but it certainly is <a href="http://davybrion.com/blog/2009/12/real-world-benefits-from-loose-coupling-inversion-of-control-and-dependency-injection/">a real benefit</a>)</li>
+	<li>Lowered coupling between classes which enables you to change implementations of dependencies at will (granted, not a lot of people actually do that often but it certainly is <a href="/blog/2009/12/real-world-benefits-from-loose-coupling-inversion-of-control-and-dependency-injection/">a real benefit</a>)</li>
 </ul>
 
 In Ruby however, you don't really need dependency injection to achieve the 2 benefits mentioned above as i hope the following contrived example shows.  Suppose we have the following 2 classes.

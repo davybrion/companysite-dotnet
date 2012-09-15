@@ -19,7 +19,7 @@ Take a look at the following test:
 
 <script src="https://gist.github.com/3684514.js?file=s2.cs"></script>
 
-Interesting, no? The entities have an ID value after they have been 'saved' by NHibernate.  But they haven't actually been saved to the database yet though.  NHibernate always tries to wait as long as possible to hit the database, and in this case it only needs to hit the database when the transaction is committed.  If you've enabled <a href="http://davybrion.com/blog/2008/10/batching-nhibernates-dm-statements/">batching of DML statements</a>, you could severly reduce the number of times you need to hit the database in this scenario.
+Interesting, no? The entities have an ID value after they have been 'saved' by NHibernate.  But they haven't actually been saved to the database yet though.  NHibernate always tries to wait as long as possible to hit the database, and in this case it only needs to hit the database when the transaction is committed.  If you've enabled <a href="/blog/2008/10/batching-nhibernates-dm-statements/">batching of DML statements</a>, you could severly reduce the number of times you need to hit the database in this scenario.
 
 And in case you're wondering, the generated guids look like this:
 

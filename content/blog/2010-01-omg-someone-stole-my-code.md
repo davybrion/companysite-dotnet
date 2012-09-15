@@ -1,4 +1,4 @@
-I received an email from someone who wanted to let me know that she noticed that a coworker of her used all of the code from my <a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-series/">Build Your Own Data Access Layer Series</a> in their project without any notice of where it actually came from.  The code in that series was posted using the <a href="http://creativecommons.org/licenses/by/2.0/">Creative Commons Attribution license</a> which only states one simple condition:
+I received an email from someone who wanted to let me know that she noticed that a coworker of her used all of the code from my <a href="/blog/2009/08/build-your-own-data-access-layer-series/">Build Your Own Data Access Layer Series</a> in their project without any notice of where it actually came from.  The code in that series was posted using the <a href="http://creativecommons.org/licenses/by/2.0/">Creative Commons Attribution license</a> which only states one simple condition:
 
 <blockquote>You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).</blockquote>
 

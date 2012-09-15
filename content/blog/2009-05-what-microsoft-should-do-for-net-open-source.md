@@ -12,7 +12,7 @@ Would it really be so bad for Microsoft if they would just assign some developer
 
 There also needs to be some kind of PR cleanup campaign for all of the FUD that Microsoft has spread about Open Source software in general in the past few years.  While it can be argued that that FUD was mainly targeted at GPL software, to many managers in big companies the message came across as "Do not use Open Source because it's a legal minefield".   That is a misconception that many .NET developers are still fighting on a daily basis which isn't good for anyone.
 
-Then there is the issue of support.  I'm not going to repeat myself so i'll just link to a previous post of mine which covers that topic: <a href="http://davybrion.com/blog/2009/03/support-of-commercial-software-vs-open-source-software/">Support Of Commercial Software vs Open Source Software</a>.  
+Then there is the issue of support.  I'm not going to repeat myself so i'll just link to a previous post of mine which covers that topic: <a href="/blog/2009/03/support-of-commercial-software-vs-open-source-software/">Support Of Commercial Software vs Open Source Software</a>.  
 
 And as for the host of legal aspects that Microsoft is probably afraid of, i would suggest looking into the reasons why other (large) companies are able to be cooperative citizens within the Open Source world without legal troubles.  Hell, commercial software can be a legal minefield as well so is the Open Source world truly worse?  Maybe they should ask companies like IBM... surely they have plenty of experience in both cases.
 

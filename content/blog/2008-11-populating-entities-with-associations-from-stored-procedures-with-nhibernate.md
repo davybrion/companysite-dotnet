@@ -1,4 +1,4 @@
-In response to my last post where i showed how you could <a href="http://davybrion.com/blog/2008/11/populating-entities-from-stored-procedures-with-nhibernate/">fill entities with the resultset of a stored procedure</a>, i was asked if it was also possible to fill entities and their associations if the stored procedure returned all of the necessary data.  I looked into it, and it's possible, although it did take me some time to figure out how to actually do it.
+In response to my last post where i showed how you could <a href="/blog/2008/11/populating-entities-from-stored-procedures-with-nhibernate/">fill entities with the resultset of a stored procedure</a>, i was asked if it was also possible to fill entities and their associations if the stored procedure returned all of the necessary data.  I looked into it, and it's possible, although it did take me some time to figure out how to actually do it.
 
 First of all, here's the modified stored procedure:
 

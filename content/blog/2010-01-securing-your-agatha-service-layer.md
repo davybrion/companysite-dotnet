@@ -36,7 +36,7 @@ Another alternative is to create a base Request Handler for your project and to 
 
 <script src="https://gist.github.com/3693029.js?file=s7.cs"></script>
   
-In case you’re wondering why i’m using Setter-injection here instead of Constructor-injection, read <a href="http://davybrion.com/blog/2009/11/constructor-injection-vs-sette-injection/" target="_blank">this</a>.
+In case you’re wondering why i’m using Setter-injection here instead of Constructor-injection, read <a href="/blog/2009/11/constructor-injection-vs-sette-injection/" target="_blank">this</a>.
 
 I typically prefer the custom Request Handler approach for authentication. In most applications that we write, authentication is not enough and we need custom authorization checks for many requests. So i’m going to need a base Request Handler which introduces the virtual Authorize method anyway. So i might as well do my authentication check right before it. 
 

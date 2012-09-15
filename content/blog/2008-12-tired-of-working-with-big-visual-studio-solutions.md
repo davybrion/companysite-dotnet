@@ -2,17 +2,17 @@ Ever noticed how Visual Studio can be painfully slow when it comes to working wi
 
 Consider the following solution:
 
-<img src="http://davybrion.com/blog/wp-content/uploads/2008/12/full_solution_tree.png" alt="full_solution_tree" title="full_solution_tree" width="238" height="344" />
+<img src="/blog/wp-content/uploads/2008/12/full_solution_tree.png" alt="full_solution_tree" title="full_solution_tree" width="238" height="344" />
 
 Now, i'm not going to get into the specifics of each project in this solution... most of these projects were created before i ever got involved with this project, and i'm not really happy with the entire structure.  It's a pretty big application, and a while ago we decided to move to a new architecture.  But since we can't just rewrite the whole thing, we put the new stuff (using the new architecture) in the same application and we're going to gradually rewrite the old parts using the new architecture.  
 
 I wanted to keep the new stuff completely separated from the old stuff, so i added more projects to it (the EMS.* projects).  Before i added the new projects to the solution, it was already painfully slow to use this solution with Visual Studio.  After adding the new projects, it obviously only got worse.  Since we're spending most of our development work in the new projects, i wanted to see if i could simply create a new solution which would contain only the projects we usually need.  That new solution looks like this:
 
-<img src="http://davybrion.com/blog/wp-content/uploads/2008/12/smaller_solution_tree.png" alt="smaller_solution_tree" title="smaller_solution_tree" width="267" height="131"  />
+<img src="/blog/wp-content/uploads/2008/12/smaller_solution_tree.png" alt="smaller_solution_tree" title="smaller_solution_tree" width="267" height="131"  />
 
 Much better.... but now you're probably thinking: doesn't CMS.WebApplication reference any of the other projects? It does reference a few of them actually:
 
-<img src="http://davybrion.com/blog/wp-content/uploads/2008/12/dependencies.png" alt="dependencies" title="dependencies" width="165" height="134" />
+<img src="/blog/wp-content/uploads/2008/12/dependencies.png" alt="dependencies" title="dependencies" width="165" height="134" />
 
 Visual Studio indicates that it can't resolve these references.  So this new solution isn't usable, right? Well, it is actually.  You just have to make sure that you've done a full build of the entire solution (the one that has all of the projects in it) before you build the small one.  If you use the small solution after you've built the big one, Visual Studio is smart enough to remember where it got those compiled dependencies from in the first place.
 
@@ -26,6 +26,6 @@ and it builds the entire solution without using Visual Studio.  After that, your
 
 If you're working with big Visual Studio solutions and the slowness of this bothers you, be sure to give this a shot.  You can create as many of these small solutions as you like, depending on which parts of the codebase you typically need to work with.  It can easily save you a lot of time, and avoid unnecessary frustration as well :)
 
-For new solutions, i think it's better to just keep the number of projects to a minimum which i've explained previously <a href="http://davybrion.com/blog/2008/07/many-projects-dont-lead-to-a-good-solution/">here</a>
+For new solutions, i think it's better to just keep the number of projects to a minimum which i've explained previously <a href="/blog/2008/07/many-projects-dont-lead-to-a-good-solution/">here</a>
 
 <a href="http://www.dotnetkicks.com/kick/?url=http%3a%2f%2fdavybrion.com%2fblog%2f2008%2f12%2ftired-of-working-with-big-visual-studio-solutions%2f"><img src="http://www.dotnetkicks.com/Services/Images/KickItImageGenerator.ashx?url=http%3a%2f%2fdavybrion.com%2fblog%2f2008%2f12%2ftired-of-working-with-big-visual-studio-solutions%2f" border="0" alt="kick it on DotNetKicks.com" /></a>

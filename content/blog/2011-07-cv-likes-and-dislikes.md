@@ -1,10 +1,10 @@
 Last week, i posted the following tweet:
 
-<a href="http://davybrion.com/blog/wp-content/uploads/2011/07/first.png"><img src="http://davybrion.com/blog/wp-content/uploads/2011/07/first.png" alt="" title="first" width="546" height="184" class="aligncenter size-full wp-image-3452" /></a>
+<a href="/blog/wp-content/uploads/2011/07/first.png"><img src="/blog/wp-content/uploads/2011/07/first.png" alt="" title="first" width="546" height="184" class="aligncenter size-full wp-image-3452" /></a>
 
 <a href="http://twitter.com/bart_dk" target="_blank">Bart De Keersmaeker</a> replied with an interesting question:
 
-<a href="http://davybrion.com/blog/wp-content/uploads/2011/07/second.png"><img src="http://davybrion.com/blog/wp-content/uploads/2011/07/second.png" alt="" title="second" width="556" height="215" class="aligncenter size-full wp-image-3453" /></a>
+<a href="/blog/wp-content/uploads/2011/07/second.png"><img src="/blog/wp-content/uploads/2011/07/second.png" alt="" title="second" width="556" height="215" class="aligncenter size-full wp-image-3453" /></a>
 
 I don't read a lot of CV's in my current job (in this case, i was just filling in for someone else who was on vacation), but in my last job i did a lot of technical screenings and have seen more than my fair share of CV's. I don't really have a 'number 1 item' that is guaranteed to get your CV in the 'must-interview' pile. But there are things that i love to see on a CV, and there are things that i absolutely hate to see on a CV. While reading this, please keep in mind that i am a developer and that my opinions of what makes a good CV are most likely entirely different than those of recruiters (since most of them just scan for buzzwords and specific technology mentions). If you let this influence your CV, don't complain if it actually makes it harder to get through the recruiters. But i do think that once (if?) your CV makes it into the mailbox of a developer, it should improve your odds. 
 

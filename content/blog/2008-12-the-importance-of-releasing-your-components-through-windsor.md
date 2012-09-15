@@ -48,12 +48,12 @@ Now let's see what happens with the Controller's dependencies when we release th
 
 <script src="https://gist.github.com/3684127.js?file=s10.cs"></script>
 
-The container holds no references, but the Controller's Dependency instance is not disposed! Notice however that the Controller has been disposed by the container. As i've mentioned <a href="http://davybrion.com/blog/2008/08/net-memory-management/">earlier</a>, if you own a reference to an IDisposable instance, you are responsible for properly disposing of that instance. So we modify the Controller's Dispose method so that it looks like this:
+The container holds no references, but the Controller's Dependency instance is not disposed! Notice however that the Controller has been disposed by the container. As i've mentioned <a href="/blog/2008/08/net-memory-management/">earlier</a>, if you own a reference to an IDisposable instance, you are responsible for properly disposing of that instance. So we modify the Controller's Dispose method so that it looks like this:
 
 <script src="https://gist.github.com/3684171.js?file=s1.cs"></script>
 
 The previous test will now fail, because the Dependency will be properly disposed.
 
-NOTE: i certainly don't recommend to implement your Dispose methods like i just did. This is just a simplified example. The proper way to implement the Disposable Pattern is discussed <a href="http://davybrion.com/blog/2008/06/disposing-of-the-idisposable-implementation/">here</a>.
+NOTE: i certainly don't recommend to implement your Dispose methods like i just did. This is just a simplified example. The proper way to implement the Disposable Pattern is discussed <a href="/blog/2008/06/disposing-of-the-idisposable-implementation/">here</a>.
 
 Anyways, i hope it's clear now how you can make sure your IoC usage does not cause memory leaks, and that everything is properly disposed of.

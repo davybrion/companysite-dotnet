@@ -1,4 +1,4 @@
-Note: This post is part of a series. Be sure to read the introduction <a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-series/">here</a>.
+Note: This post is part of a series. Be sure to read the introduction <a href="/blog/2009/11/requestresponse-service-layer-series/">here</a>.
 
 The previous posts in the series already covered everything there is to know about implementing the Request/Response Service Layer (RRSL).  In this post, we'll focus on hosting the RRSL through WCF and the next posts will show you how you can actually use the RRSL from your clients (both synchronously and asynchronously).  First, let's take another look at what our service actually exposes:
 

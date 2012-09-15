@@ -1,4 +1,4 @@
-Note: This post is part of a series. Be sure to read the introduction <a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-series/">here</a>.
+Note: This post is part of a series. Be sure to read the introduction <a href="/blog/2009/11/requestresponse-service-layer-series/">here</a>.
 
 First of all, i would like to mention that i am by no means an expert on WCF and asynchronous operations, so it is quite possible that some of the things in this post could be done easier by someone who knows more about it.  Most of the code in this post wasn't written by me either, but by my co-worker Tom Ceulemans (who unfortunately doesn't have a blog that i can link to).  What you'll see in this post does work and it actually works very well.  But as i said, there very well might be room for some nice improvements here.  Anyways, let's get to it.
 
@@ -60,7 +60,7 @@ The implementation of which looks like this:
 
 <script src="https://gist.github.com/3685577.js?file=s1.cs"></script>
 
-One thing that you need to be very careful of: if your IAsyncRequestDispatcherFactory implementation happens to use Castle Windsor's container (ours doesn't because we have our own custom little container for our Silverlight apps) then you absolutely have to make sure that the Dispose method of the IAsyncRequestDispatcher implementation calls the Release method of the Windsor container.  More information on why you'd need to do that can be found <a href="http://davybrion.com/blog/2008/12/the-importance-of-releasing-your-components-through-windsor/">here</a> and <a href="http://davybrion.com/blog/2008/12/the-component-burden/">here</a>.
+One thing that you need to be very careful of: if your IAsyncRequestDispatcherFactory implementation happens to use Castle Windsor's container (ours doesn't because we have our own custom little container for our Silverlight apps) then you absolutely have to make sure that the Dispose method of the IAsyncRequestDispatcher implementation calls the Release method of the Windsor container.  More information on why you'd need to do that can be found <a href="/blog/2008/12/the-importance-of-releasing-your-components-through-windsor/">here</a> and <a href="/blog/2008/12/the-component-burden/">here</a>.
 
 That's it for this post, which is probably the most difficult one to comprehend but again, the most important facts to remember are the ease of use of IAsyncRequestDispatcher and ReceivedResponses.  Also, keep in mind that even though we use this primarily for Silverlight clients, you can just as well do this from WPF applications or any other .NET application for that matter.
 

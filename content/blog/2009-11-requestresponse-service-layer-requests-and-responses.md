@@ -1,4 +1,4 @@
-Note: This post is part of a series. Be sure to read the introduction <a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-series/">here</a>.
+Note: This post is part of a series. Be sure to read the introduction <a href="/blog/2009/11/requestresponse-service-layer-series/">here</a>.
 
 In a typical WCF service, you'll have one or more Service Contracts, and each Service Contract will define one or more Service Operations.  These operations are just methods that you can call on the service.  An operation can have parameters and it can have a return value.  Most people typically expose multiple operations on their services for each piece of functionality they want their service to offer to consumers.
 

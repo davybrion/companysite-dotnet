@@ -1,4 +1,4 @@
-As i mentioned <a href="http://davybrion.com/blog/2008/11/joining-the-nhibernate-developers/">recently</a>, i'm now part of the NHibernate development team.  Ever since i posted that i've gotten a lot of questions about what exactly it is i do for NHibernate.  The short answer is: not much so far!
+As i mentioned <a href="/blog/2008/11/joining-the-nhibernate-developers/">recently</a>, i'm now part of the NHibernate development team.  Ever since i posted that i've gotten a lot of questions about what exactly it is i do for NHibernate.  The short answer is: not much so far!
 
 Allow me to elaborate.  The way it usually works with Open Source projects is that contributors submit patches when they fix bugs, or add features, etc...  After a while, the project lead(s) starts to trust the contributors if their patches are usually of good quality.  In that case, it makes sense to invite those contributors to become a member of team.  After all, they've already proven that they're worth it.  They are already familiar with the codebase and they've demonstrated their ability to modify/fix it without breaking other stuff.
 

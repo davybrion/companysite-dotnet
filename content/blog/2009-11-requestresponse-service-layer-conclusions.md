@@ -1,6 +1,6 @@
-Note: This post is part of a series. Be sure to read the introduction <a href="http://davybrion.com/blog/2009/11/requestresponse-service-layer-series/">here</a>.
+Note: This post is part of a series. Be sure to read the introduction <a href="/blog/2009/11/requestresponse-service-layer-series/">here</a>.
 
-Now that you've learned everything there is to know about the Request/Response Service Layer (RRSL), i'd like to repeat the benefits of the RRSL that i stated in a <a href="http://davybrion.com/blog/2009/07/why-i-dislike-classic-or-typical-wcf-usage/">previous post</a>:
+Now that you've learned everything there is to know about the Request/Response Service Layer (RRSL), i'd like to repeat the benefits of the RRSL that i stated in a <a href="/blog/2009/07/why-i-dislike-classic-or-typical-wcf-usage/">previous post</a>:
 
 <ul>
 	<li>Since we only have one service contract with one service operation, we don't need to spend time thinking about how to design and implement our service contracts and our operations.  After all, every operation that the service layer must support is a specific request type that can be added, together with its requesthandler.</li>

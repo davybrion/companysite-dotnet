@@ -1,4 +1,4 @@
-I have an older post where i discuss <a href="http://davybrion.com/blog/2009/03/implementing-a-value-object-with-nhibernate">how you can implement a Value Object with NHibernate</a>.  In that post i mentioned the following:
+I have an older post where i discuss <a href="/blog/2009/03/implementing-a-value-object-with-nhibernate">how you can implement a Value Object with NHibernate</a>.  In that post i mentioned the following:
 
 <blockquote>NHibernate allows a private default constructor for Value Objects, but for Entities you will need a default public or protected constructor as private is not sufficient.</blockquote>
 
@@ -10,7 +10,7 @@ I too am trying to determine how well NHibernate lives up to the promise of pers
 At any rate, I was surprised by the sentence I quoted, because I didn’t realize there were any circumstances in which NHibernate required protected default constructors.
 </blockquote>
 
-Once again, the answer is related to the dynamic proxies that NHibernate uses.  Value Objects will never be proxied by NHibernate, so NHibernate only needs a private default constructor to create the instances.  If an entity is eligible for lazy loading however, then NHibernate will create a type which inherits from your entity (this is described in depth <a href="http://davybrion.com/blog/2009/03/must-everything-be-virtual-with-nhibernate/">here</a> and <a href="http://davybrion.com/blog/2009/09/must-everything-be-virtual-with-nhibernate-part-iii/">here</a>).  Which means that we really need either a public or protected constructor in entity classes that are eligible for lazy loading.  Consider the following class:
+Once again, the answer is related to the dynamic proxies that NHibernate uses.  Value Objects will never be proxied by NHibernate, so NHibernate only needs a private default constructor to create the instances.  If an entity is eligible for lazy loading however, then NHibernate will create a type which inherits from your entity (this is described in depth <a href="/blog/2009/03/must-everything-be-virtual-with-nhibernate/">here</a> and <a href="/blog/2009/09/must-everything-be-virtual-with-nhibernate-part-iii/">here</a>).  Which means that we really need either a public or protected constructor in entity classes that are eligible for lazy loading.  Consider the following class:
 
 <script src="https://gist.github.com/3685257.js?file=s1.cs"></script>
 

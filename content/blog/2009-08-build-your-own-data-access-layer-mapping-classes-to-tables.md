@@ -1,4 +1,4 @@
-Note: This post is part of a series.  Be sure to read the introduction <a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
+Note: This post is part of a series.  Be sure to read the introduction <a href="/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
 
 When you need to populate entity instances with data from a database, you need to know which table the data needs to come from, which columns will map to which property on the entity class, and you'll need to deal with a variety of types.  The approach that i've chosen to use tries to make this as simple as possible.  The idea is basically to place an attribute with the name of the table on top of the entity class, and an attribute on each property with the name of the column it maps to.  For foreign keys, i wanted to be able to just use properties of the type of the referenced entity, instead of having foreign keys in my entities.  For these references, we will use an attribute with the name of the foreign key column.
 

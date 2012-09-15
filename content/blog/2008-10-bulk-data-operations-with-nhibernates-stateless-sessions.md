@@ -1,4 +1,4 @@
-In my previous <a href="http://davybrion.com/blog/2008/10/batching-nhibernates-dm-statements/">post</a>, i showed how you can configure NHibernate to batch create/update/delete statements and what kind of performance benefits you can get from it.  In this post, we're going to take this a bit further so we can actually use NHibernate in bulk data operations, an area where ORM's traditionally perform pretty badly.
+In my previous <a href="/blog/2008/10/batching-nhibernates-dm-statements/">post</a>, i showed how you can configure NHibernate to batch create/update/delete statements and what kind of performance benefits you can get from it.  In this post, we're going to take this a bit further so we can actually use NHibernate in bulk data operations, an area where ORM's traditionally perform pretty badly.
 
 First of all, let's get back to our test code from the last post:
 
@@ -24,11 +24,11 @@ The biggest difference however is in memory usage while the code is running. A r
 
 To give you an idea on the difference in memory usage, here are the memory statistics (captured by Process Explorer) after running the original code (with the ISession instance):
 
-<a href="http://davybrion.com/blog/wp-content/uploads/2008/10/isession.png"><img src="http://davybrion.com/blog/wp-content/uploads/2008/10/isession.png" alt="" title="isession" width="398" height="385" class="alignnone size-full wp-image-551" /></a>
+<a href="/blog/wp-content/uploads/2008/10/isession.png"><img src="/blog/wp-content/uploads/2008/10/isession.png" alt="" title="isession" width="398" height="385" class="alignnone size-full wp-image-551" /></a>
 
 And here are the memory statistics after running the modified code (with the IStatelessSession instance):
 
-<a href="http://davybrion.com/blog/wp-content/uploads/2008/10/istatelesssession.png"><img src="http://davybrion.com/blog/wp-content/uploads/2008/10/istatelesssession.png" alt="" title="istatelesssession" width="400" height="386" class="alignnone size-full wp-image-552" /></a>
+<a href="/blog/wp-content/uploads/2008/10/istatelesssession.png"><img src="/blog/wp-content/uploads/2008/10/istatelesssession.png" alt="" title="istatelesssession" width="400" height="386" class="alignnone size-full wp-image-552" /></a>
 
 Quite a difference for what is essentially the same operation.  We could even improve on this because the code in its current form keeps all of the object instances in its own collection, preventing them from being garbage collected after they have been inserted in the database.  But i think this already demonstrates the value in using the IStatelessSession if you need to perform bulk operations.
 

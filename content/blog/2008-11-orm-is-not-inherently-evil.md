@@ -1,4 +1,4 @@
-There were some comments on [a previous post](http://davybrion.com/blog/2008/11/why-on-earth-would-a-developer-do-this/) about how the problem described in that post is somehow typical for applications that use ORMs.  I really could not disagree more.
+There were some comments on [a previous post](/blog/2008/11/why-on-earth-would-a-developer-do-this/) about how the problem described in that post is somehow typical for applications that use ORMs.  I really could not disagree more.
 
 It seems that even today, in 2008 mind you, we still have a lot of people who are convinced that ORM usage can never be as efficient as the more classic data access approaches.  Now, i don't even want to get into the whole debate about where business logic belongs (but if you think it belongs in the database you no doubt have better things to do than reading this blog), but one thing that does bother me tremendously is that a lot of people discard ORMs because they simply **don't know how to use it properly**.
 

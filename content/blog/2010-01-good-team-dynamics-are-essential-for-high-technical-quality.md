@@ -20,5 +20,5 @@ That doesn’t mean you have to become Mr Popular. It doesn’t mean you have to
 
 - communication is extremely important
 - treating others with respect is crucial
-- <a href="http://davybrion.com/blog/2009/12/dont-be-a-whiny-developer/" target="_blank">nobody likes working with whiney developers</a>
+- <a href="/blog/2009/12/dont-be-a-whiny-developer/" target="_blank">nobody likes working with whiney developers</a>
 - you can’t expect others to work on their flaws if you’re not willing to work on yours… it’s a two-way street

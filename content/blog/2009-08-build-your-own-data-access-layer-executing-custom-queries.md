@@ -1,4 +1,4 @@
-Note: This post is part of a series.  Be sure to read the introduction <a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
+Note: This post is part of a series.  Be sure to read the introduction <a href="/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
 
 You've already seen that this DAL offers you the ability to query each entity by primary key, or to retrieve a list of all instances of an entity type.  Obviously, this isn't even sufficient for the most trivial applications so we need a way to execute custom queries.  So i needed to provide something that would enable you to easily execute custom queries and get a list of entity instances, or a single result without having to muck around with transforming the results on your own.  
 

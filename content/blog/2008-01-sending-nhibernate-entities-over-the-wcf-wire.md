@@ -1,4 +1,4 @@
-Note: i no longer recommend this solution for reasons that i've talked about in more detail [here](http://davybrion.com/blog/2010/05/why-you-shouldnt-expose-your-entities-through-your-services/).
+Note: i no longer recommend this solution for reasons that i've talked about in more detail [here](/blog/2010/05/why-you-shouldnt-expose-your-entities-through-your-services/).
 
 Last year, Tim Scott posted this very good [article](http://lunaverse.wordpress.com/2007/05/09/remoting-using-wcf-and-nhibernate/) on how to distribute NHiberate entities through WCF services. In it, he mentions this:
 

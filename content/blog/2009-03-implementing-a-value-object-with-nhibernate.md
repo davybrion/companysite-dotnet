@@ -1,4 +1,4 @@
-I've covered <a href="http://davybrion.com/blog/2007/07/implementing-a-value-object/">implementing a Value Object</a> before, but this post is about using Value Objects with NHibernate.  First, a little recap of what a Value Object is for those who don't know yet.
+I've covered <a href="/blog/2007/07/implementing-a-value-object/">implementing a Value Object</a> before, but this post is about using Value Objects with NHibernate.  First, a little recap of what a Value Object is for those who don't know yet.
 
 A Value Object (also known as Immutable Object) is basically an object without a conceptual identity. A Value Object is defined through its inner values, and not an identity like Entities. This means that a Value Object’s inner values can not be changed after object creation, hence the term Immutable Object. Should you need to change the inner values of the Value Object, you should actually create a new Value Object.
 

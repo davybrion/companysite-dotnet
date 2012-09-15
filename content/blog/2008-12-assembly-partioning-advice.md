@@ -1,4 +1,4 @@
-Patrick Smacchia wrote an <a href="http://codebetter.com/blogs/patricksmacchia/archive/2008/12/08/advices-on-partitioning-code-through-net-assemblies.aspx">excellent post</a> on how you should partition your code in multiple assemblies.  Because this is one of those subjects that i'm <a href="http://davybrion.com/blog/2008/07/many-projects-dont-lead-to-a-good-solution/">pretty opinionated about</a>, i figured i'd quickly recap the valid and invalid reasons for creating assemblies that Patrick highlighted.
+Patrick Smacchia wrote an <a href="http://codebetter.com/blogs/patricksmacchia/archive/2008/12/08/advices-on-partitioning-code-through-net-assemblies.aspx">excellent post</a> on how you should partition your code in multiple assemblies.  Because this is one of those subjects that i'm <a href="/blog/2008/07/many-projects-dont-lead-to-a-good-solution/">pretty opinionated about</a>, i figured i'd quickly recap the valid and invalid reasons for creating assemblies that Patrick highlighted.
 
 Valid reasons for creating a new assembly:
 

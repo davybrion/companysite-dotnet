@@ -1,4 +1,4 @@
-Note: This post is part of a series.  Be sure to read the introduction <a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
+Note: This post is part of a series.  Be sure to read the introduction <a href="/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
 
 In the previous 2 posts of this series, you may have noticed the usage of the SessionLevelCache class. This class is a simple implementation of the <a href="http://martinfowler.com/eaaCatalog/identityMap.html">Identity Map pattern</a>.  It basically offers us two important benefits:
 <ul>

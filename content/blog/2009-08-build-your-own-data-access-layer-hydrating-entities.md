@@ -1,6 +1,6 @@
-Note: This post is part of a series.  Be sure to read the introduction <a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
+Note: This post is part of a series.  Be sure to read the introduction <a href="/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
 
-In the <a href="http://davybrion.com/blog/2009/08/build-your-own-data-access-layer-out-of-the-box-crud-functionality/">previous post</a> of this series, you saw that some of the DatabaseActions use the EntityHydrater to umm.. hydrate the entities with their values from the database.  In this post, we'll go over how this actually works.  First, i'm going to post the code of the entire class and then we'll go over the interesting parts.
+In the <a href="/blog/2009/08/build-your-own-data-access-layer-out-of-the-box-crud-functionality/">previous post</a> of this series, you saw that some of the DatabaseActions use the EntityHydrater to umm.. hydrate the entities with their values from the database.  In this post, we'll go over how this actually works.  First, i'm going to post the code of the entire class and then we'll go over the interesting parts.
 
 So, here's the entire code of the EntityHydrater class:
 

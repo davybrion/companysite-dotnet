@@ -12,6 +12,6 @@ Now you can write the following code to communicate with your Agatha Service Lay
 
 <script src="https://gist.github.com/3693369.js?file=s2.cs"></script>
 
-Notice that there are no Agatha-related using statements, nor is there any reference to Agatha or the assembly which contains the Request/Response types. All of the required data can be found within the WSDL and you can generate proxies for it just as you could with any other WCF service.&#160; The client-side usage model is of course as bad as it always is with standard WCF (for more information, be sure to read: <a href="http://davybrion.com/blog/2009/07/why-i-dislike-classic-or-typical-wcf-usage/" target="_blank">Why I Dislike Classic Or Typical WCF Usage</a>) but if you’re willing to put up with it, then at least you can ;)
+Notice that there are no Agatha-related using statements, nor is there any reference to Agatha or the assembly which contains the Request/Response types. All of the required data can be found within the WSDL and you can generate proxies for it just as you could with any other WCF service.&#160; The client-side usage model is of course as bad as it always is with standard WCF (for more information, be sure to read: <a href="/blog/2009/07/why-i-dislike-classic-or-typical-wcf-usage/" target="_blank">Why I Dislike Classic Or Typical WCF Usage</a>) but if you’re willing to put up with it, then at least you can ;)
 
 This also means that you should be able to generate service proxies for other platforms as well, as long as they support SOAP services.

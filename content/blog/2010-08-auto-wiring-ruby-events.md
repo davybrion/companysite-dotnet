@@ -1,4 +1,4 @@
-My <a href="http://davybrion.com/blog/2010/08/using-more-rubyesq-events-in-ruby/">Rubyesq events</a> received some nice comments in the <a href="http://5by5.tv/rubyshow/130">Ruby Show #130</a> (fast forward to the 15 minute mark in the audio stream, or the 14 minute mark in the video stream if you wanna see or hear the part about the events), so i figured: why not make them even better?
+My <a href="/blog/2010/08/using-more-rubyesq-events-in-ruby/">Rubyesq events</a> received some nice comments in the <a href="http://5by5.tv/rubyshow/130">Ruby Show #130</a> (fast forward to the 15 minute mark in the audio stream, or the 14 minute mark in the video stream if you wanna see or hear the part about the events), so i figured: why not make them even better?
 
 Alex Simkin had suggested to implement some kind of auto-wiring of events.  I thought it would be fun to implement, so i did.  Suppose we have the following class:
 

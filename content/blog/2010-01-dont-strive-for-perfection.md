@@ -15,7 +15,7 @@ The reality of the situation is that despite your best intentions, focusing too 
 
 Generally speaking, i think you’re better off focusing on the following goals/principles:
 
-- Avoid writing classes that are <a href="http://davybrion.com/blog/2009/10/slutty-types/" target="_blank">slutty</a>
+- Avoid writing classes that are <a href="/blog/2009/10/slutty-types/" target="_blank">slutty</a>
 - Make sure that your consumers primarily communicate with your classes through interfaces. Though you don’t need to put everything behind an interface either… pretty much anything that people might need/want to change in some way typically are good candidates.
 - Use Dependency Injection so implementations can easily be switched with others
 - Use virtual methods unless you can think of a really good reason not to 

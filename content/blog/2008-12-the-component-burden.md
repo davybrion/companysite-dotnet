@@ -1,4 +1,4 @@
-In my <a href="http://davybrion.com/blog/2008/12/the-importance-of-releasing-your-components-through-windsor/">previous post</a> i showed you how important it is to properly release the components you've resolved through the Windsor IoC container.  At the end of that post, i showed an example where a disposable dependency of a component had to be disposed by the component.  Basically something like this:
+In my <a href="/blog/2008/12/the-importance-of-releasing-your-components-through-windsor/">previous post</a> i showed you how important it is to properly release the components you've resolved through the Windsor IoC container.  At the end of that post, i showed an example where a disposable dependency of a component had to be disposed by the component.  Basically something like this:
 
 <script src="https://gist.github.com/3684104.js?file=s1.cs"></script>
 

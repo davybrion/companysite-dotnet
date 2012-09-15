@@ -1,4 +1,4 @@
-A couple of days ago I <a href="http://davybrion.com/blog/2011/12/challenge-displaying-feed-items-on-a-web-page/">asked you</a> how you'd implement showing links from an RSS feed on a web page (in this case: my new company web site). These are my requirements for this:
+A couple of days ago I <a href="/blog/2011/12/challenge-displaying-feed-items-on-a-web-page/">asked you</a> how you'd implement showing links from an RSS feed on a web page (in this case: my new company web site). These are my requirements for this:
 
 <ul>
 	<li>It needs to be <strong>fast</strong></li>

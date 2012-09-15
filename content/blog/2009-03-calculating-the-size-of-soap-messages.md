@@ -1,4 +1,4 @@
-I <a href="http://davybrion.com/blog/2009/03/i-love-easy-extensibility/">recently</a> needed something to log the size of incoming and outgoing SOAP messages, and my first implementation of calculating the size looked like this:
+I <a href="/blog/2009/03/i-love-easy-extensibility/">recently</a> needed something to log the size of incoming and outgoing SOAP messages, and my first implementation of calculating the size looked like this:
 
 <script src="https://gist.github.com/3684381.js?file=s1.cs"></script>
 

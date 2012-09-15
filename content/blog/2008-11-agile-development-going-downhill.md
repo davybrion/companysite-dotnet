@@ -1,4 +1,4 @@
-James Shore (author of the fantastic book: <a href="http://davybrion.com/blog/2008/05/the-art-of-agile-development/">The Art Of Agile Development</a>) wrote a very interesting post on his blog: <a href="http://jamesshore.com/Blog/The-Decline-and-Fall-of-Agile.html">The Decline And Fall Of Agile</a>.  You should definitely read it.
+James Shore (author of the fantastic book: <a href="/blog/2008/05/the-art-of-agile-development/">The Art Of Agile Development</a>) wrote a very interesting post on his blog: <a href="http://jamesshore.com/Blog/The-Decline-and-Fall-of-Agile.html">The Decline And Fall Of Agile</a>.  You should definitely read it.
 
 I'm afraid i agree with James.  Over the last few years i've heard a lot of people saying they were doing Agile development, where in reality they hardly were.  To quote James:
 
