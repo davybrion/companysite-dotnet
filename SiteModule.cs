@@ -43,7 +43,7 @@ namespace ThatExtraMile.be
             Get["/blog/page/(?<year>[\\d]*)"] = p => RenderPostArchivePage(p.year);
         }
 
-        private Response RenderMarkdown(string title, string section, string contentName)
+        private dynamic RenderMarkdown(string title, string section, string contentName)
         {
             return View["NormalContent", new
             {
@@ -53,7 +53,7 @@ namespace ThatExtraMile.be
             }];
         }
 
-        private Response RenderPost(dynamic p)
+        private dynamic RenderPost(dynamic p)
         {
             var post = PostsPerLink[(string)string.Format("/blog/{0}/{1}/{2}/", p.year, p.month, p.slug)];
             var indexOfPost = IndexedListOfPosts.IndexOf(post);
@@ -71,7 +71,7 @@ namespace ThatExtraMile.be
                 }];
         }
 
-        private Response RenderPostArchivePage(int page)
+        private dynamic RenderPostArchivePage(int page)
         {
             const int pageSize = 5;
             var posts = ReversedIndexedListOfPosts.Skip((page - 1) * pageSize).Take(pageSize);
