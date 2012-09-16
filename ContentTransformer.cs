@@ -1,5 +1,4 @@
 ﻿using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.IO;
 using System.Web.Hosting;
 using MarkdownSharp;
@@ -7,18 +6,16 @@ using ServiceStack.Text;
 
 namespace ThatExtraMile.be
 {
-    public class ContentProvider
+    public class ContentTransformer
     {
         private readonly ConcurrentDictionary<string, string> _content = new ConcurrentDictionary<string, string>();   
         private readonly Markdown _markdown = new Markdown();
-        private readonly IEnumerable<BlogPost> _blogPosts;
 
-        public ContentProvider()
+        public ContentTransformer()
         {
-            _blogPosts = JsonSerializer.DeserializeFromString<BlogPost[]>(File.ReadAllText(HostingEnvironment.MapPath("~/content/blog_metadata.json")));
         }
 
-        public string GetContent(string contentName)
+        public string GetTransformedContent(string contentName)
         {
 #if !DEBUG
             if (!_content.ContainsKey(contentName))

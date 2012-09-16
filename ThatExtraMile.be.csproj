@@ -106,7 +106,7 @@
   <ItemGroup>
     <Compile Include="BlogPost.cs" />
     <Compile Include="BootStrapper.cs" />
-    <Compile Include="ContentProvider.cs" />
+    <Compile Include="ContentTransformer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SiteModule.cs" />
   </ItemGroup>
@@ -121,7 +121,7 @@
     <Content Include="content\reviews.md" />
     <Content Include="content\training.md" />
     <Content Include="Views\_Layout.cshtml" />
-    <Content Include="Views\MarkDown.cshtml" />
+    <Content Include="Views\NormalContent.cshtml" />
     <Content Include="content\blog\2007-06-programming-languages-dont-matter.md" />
     <Content Include="content\blog\2007-06-why-you-should-write-tests-before-code.md" />
     <Content Include="content\blog\2007-07-implementing-a-value-object.md" />
@@ -452,6 +452,7 @@
     <Content Include="content\blog\2012-05-three-strikes-and-you-refactor.md" />
     <Content Include="content\blog\2012-05-why-things-dont-work-in-your-world.md" />
     <Content Include="content\blog_metadata.json" />
+    <Content Include="Views\BlogPost.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
