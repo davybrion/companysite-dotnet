@@ -1,7 +1,7 @@
 [
   {
     "title": "Programming Languages Don't Matter",
-    "link": "/2007/06/programming-languages-dont-matter/",
+    "link": "/blog/2007/06/programming-languages-dont-matter/",
     "date": "2007-06-17 13:24:09",
     "disqusthreadid": "213623400",
     "categories": [
@@ -10,7 +10,7 @@
   },
   {
     "title": "Why you should write tests before code",
-    "link": "/2007/06/why-you-should-write-tests-before-code/",
+    "link": "/blog/2007/06/why-you-should-write-tests-before-code/",
     "date": "2007-06-24 13:13:07",
     "disqusthreadid": "213623437",
     "categories": [
@@ -21,7 +21,7 @@
   },
   {
     "title": "Implementing a Value Object",
-    "link": "/2007/07/implementing-a-value-object/",
+    "link": "/blog/2007/07/implementing-a-value-object/",
     "date": "2007-07-08 13:29:39",
     "disqusthreadid": "213623491",
     "categories": [
@@ -31,7 +31,7 @@
   },
   {
     "title": "Native ID generation with NHibernate",
-    "link": "/2007/07/native-id-generation-with-nhibernate/",
+    "link": "/blog/2007/07/native-id-generation-with-nhibernate/",
     "date": "2007-07-17 21:19:55",
     "disqusthreadid": "213623571",
     "categories": [
@@ -41,7 +41,7 @@
   },
   {
     "title": "Introduction to Dependency Injection",
-    "link": "/2007/07/introduction-to-dependency-injection/",
+    "link": "/blog/2007/07/introduction-to-dependency-injection/",
     "date": "2007-07-31 23:08:36",
     "disqusthreadid": "213623605",
     "categories": [
@@ -52,7 +52,7 @@
   },
   {
     "title": "Read-only data in NHibernate",
-    "link": "/2007/08/read-only-data-in-nhibernate/",
+    "link": "/blog/2007/08/read-only-data-in-nhibernate/",
     "date": "2007-08-02 08:26:46",
     "disqusthreadid": "213623610",
     "categories": [
@@ -61,7 +61,7 @@
   },
   {
     "title": "Tech Blogs: The good, the bad and the ugly",
-    "link": "/2007/12/tech-blogs-the-good-the-bad-and-the-ugly/",
+    "link": "/blog/2007/12/tech-blogs-the-good-the-bad-and-the-ugly/",
     "date": "2007-12-21 19:52:17",
     "disqusthreadid": "213623710",
     "categories": [
@@ -71,7 +71,7 @@
   },
   {
     "title": "Sending NHibernate entities over the WCF wire",
-    "link": "/2008/01/sending-nhibernate-entities-over-the-wcf-wire/",
+    "link": "/blog/2008/01/sending-nhibernate-entities-over-the-wcf-wire/",
     "date": "2008-01-03 15:12:51",
     "disqusthreadid": "213623720",
     "categories": [
@@ -83,7 +83,7 @@
   },
   {
     "title": "The Mythical Man-Month",
-    "link": "/2008/02/the-mythical-man-month/",
+    "link": "/blog/2008/02/the-mythical-man-month/",
     "date": "2008-02-20 19:51:55",
     "disqusthreadid": "232542254",
     "categories": [
@@ -92,7 +92,7 @@
   },
   {
     "title": "Creating remote TCP/IP printer ports from code",
-    "link": "/2008/02/creating-remote-tcpip-printer-ports-from-code/",
+    "link": "/blog/2008/02/creating-remote-tcpip-printer-ports-from-code/",
     "date": "2008-02-27 21:00:51",
     "disqusthreadid": "213623790",
     "categories": [
@@ -103,7 +103,7 @@
   },
   {
     "title": "Encapsulating collections",
-    "link": "/2008/03/encapsulating-collections/",
+    "link": "/blog/2008/03/encapsulating-collections/",
     "date": "2008-03-17 10:09:56",
     "disqusthreadid": "250976100",
     "categories": [
@@ -112,7 +112,7 @@
   },
   {
     "title": "Testing Exceptions",
-    "link": "/2008/04/testing-exceptions/",
+    "link": "/blog/2008/04/testing-exceptions/",
     "date": "2008-04-20 14:02:10",
     "disqusthreadid": "398256155",
     "categories": [
@@ -121,7 +121,7 @@
   },
   {
     "title": "Kent Beck's Implementation Patterns",
-    "link": "/2008/04/kent-becks-implementation-patterns/",
+    "link": "/blog/2008/04/kent-becks-implementation-patterns/",
     "date": "2008-04-21 10:01:59",
     "disqusthreadid": "216747922",
     "categories": [
@@ -130,7 +130,7 @@
   },
   {
     "title": "The Art Of Agile Development",
-    "link": "/2008/05/the-art-of-agile-development/",
+    "link": "/blog/2008/05/the-art-of-agile-development/",
     "date": "2008-05-08 18:32:35",
     "disqusthreadid": "213623852",
     "categories": [
@@ -140,7 +140,7 @@
   },
   {
     "title": "Easy non-blocking locking",
-    "link": "/2008/05/easy-non-blocking-locking/",
+    "link": "/blog/2008/05/easy-non-blocking-locking/",
     "date": "2008-05-13 11:08:29",
     "disqusthreadid": "220756401",
     "categories": [
@@ -152,7 +152,7 @@
   },
   {
     "title": "Thoughts on code reviews",
-    "link": "/2008/05/thoughts-on-code-reviews/",
+    "link": "/blog/2008/05/thoughts-on-code-reviews/",
     "date": "2008-05-17 14:20:33",
     "disqusthreadid": "258401701",
     "categories": [
@@ -161,7 +161,7 @@
   },
   {
     "title": "The Circuit Breaker",
-    "link": "/2008/05/the-circuit-breaker/",
+    "link": "/blog/2008/05/the-circuit-breaker/",
     "date": "2008-05-18 02:21:04",
     "disqusthreadid": "213623868",
     "categories": [
@@ -172,7 +172,7 @@
   },
   {
     "title": "Release It!",
-    "link": "/2008/05/release-it/",
+    "link": "/blog/2008/05/release-it/",
     "date": "2008-05-18 14:08:46",
     "disqusthreadid": "239281563",
     "categories": [
@@ -181,7 +181,7 @@
   },
   {
     "title": "Storing data in the HttpSession",
-    "link": "/2008/05/storing-data-in-the-httpsession/",
+    "link": "/blog/2008/05/storing-data-in-the-httpsession/",
     "date": "2008-05-25 12:49:38",
     "disqusthreadid": "214333427",
     "categories": [
@@ -190,7 +190,7 @@
   },
   {
     "title": "How a simple foreach statement can waste an afternoon",
-    "link": "/2008/05/how-a-simple-foreach-statement-can-waste-an-afternoon/",
+    "link": "/blog/2008/05/how-a-simple-foreach-statement-can-waste-an-afternoon/",
     "date": "2008-05-27 19:56:13",
     "disqusthreadid": "213623936",
     "categories": [
@@ -199,7 +199,7 @@
   },
   {
     "title": "C# In Depth",
-    "link": "/2008/06/c-in-depth/",
+    "link": "/blog/2008/06/c-in-depth/",
     "date": "2008-06-14 11:30:15",
     "disqusthreadid": "216940751",
     "categories": [
@@ -208,7 +208,7 @@
   },
   {
     "title": "Are women better developers than men?",
-    "link": "/2008/06/are-women-better-developers-than-men/",
+    "link": "/blog/2008/06/are-women-better-developers-than-men/",
     "date": "2008-06-16 15:13:38",
     "disqusthreadid": "213623992",
     "categories": [
@@ -217,7 +217,7 @@
   },
   {
     "title": "Disposing of the IDisposable implementation",
-    "link": "/2008/06/disposing-of-the-idisposable-implementation/",
+    "link": "/blog/2008/06/disposing-of-the-idisposable-implementation/",
     "date": "2008-06-17 15:01:36",
     "disqusthreadid": "213624008",
     "categories": [
@@ -228,7 +228,7 @@
   },
   {
     "title": "How To Write Testable ASP.NET WebForms",
-    "link": "/2008/07/how-to-write-testable-aspnet-webforms/",
+    "link": "/blog/2008/07/how-to-write-testable-aspnet-webforms/",
     "date": "2008-07-06 21:53:28",
     "disqusthreadid": "213624141",
     "categories": [
@@ -238,7 +238,7 @@
   },
   {
     "title": "Mocking expensive template methods",
-    "link": "/2008/07/mocking-expensive-template-methods/",
+    "link": "/blog/2008/07/mocking-expensive-template-methods/",
     "date": "2008-07-11 00:35:57",
     "disqusthreadid": "213624160",
     "categories": [
@@ -247,7 +247,7 @@
   },
   {
     "title": "My Guide To Effective Test Driven Development",
-    "link": "/2008/07/my-guide-to-effective-test-driven-development/",
+    "link": "/blog/2008/07/my-guide-to-effective-test-driven-development/",
     "date": "2008-07-14 21:38:16",
     "disqusthreadid": "213624188",
     "categories": [
@@ -256,7 +256,7 @@
   },
   {
     "title": "Many projects don't lead to a good solution",
-    "link": "/2008/07/many-projects-dont-lead-to-a-good-solution/",
+    "link": "/blog/2008/07/many-projects-dont-lead-to-a-good-solution/",
     "date": "2008-07-17 23:01:10",
     "disqusthreadid": "213624194",
     "categories": [
@@ -265,7 +265,7 @@
   },
   {
     "title": "Is SQL going the way of Disco?",
-    "link": "/2008/07/is-sql-going-the-way-of-disco/",
+    "link": "/blog/2008/07/is-sql-going-the-way-of-disco/",
     "date": "2008-07-22 21:35:02",
     "disqusthreadid": "213624269",
     "categories": [
@@ -274,7 +274,7 @@
   },
   {
     "title": "What do you like about coding?",
-    "link": "/2008/08/what-do-you-like-about-coding/",
+    "link": "/blog/2008/08/what-do-you-like-about-coding/",
     "date": "2008-08-02 19:52:29",
     "disqusthreadid": "213624338",
     "categories": [
@@ -283,7 +283,7 @@
   },
   {
     "title": "ALT.NET: what does it mean?",
-    "link": "/2008/08/altnet-what-does-it-mean/",
+    "link": "/blog/2008/08/altnet-what-does-it-mean/",
     "date": "2008-08-08 07:50:25",
     "disqusthreadid": "213624385",
     "categories": [
@@ -293,7 +293,7 @@
   },
   {
     "title": "Test Doubles: When To (Not) Use Them",
-    "link": "/2008/08/test-doubles-when-to-not-use-them/",
+    "link": "/blog/2008/08/test-doubles-when-to-not-use-them/",
     "date": "2008-08-13 22:44:29",
     "disqusthreadid": "213624430",
     "categories": [
@@ -302,7 +302,7 @@
   },
   {
     "title": ".NET Memory Management",
-    "link": "/2008/08/net-memory-management/",
+    "link": "/blog/2008/08/net-memory-management/",
     "date": "2008-08-16 20:44:32",
     "disqusthreadid": "213624445",
     "categories": [
@@ -314,7 +314,7 @@
   },
   {
     "title": "Why you should always unscubscribe event handlers",
-    "link": "/2008/08/why-you-should-always-unscubscribe-event-handlers/",
+    "link": "/blog/2008/08/why-you-should-always-unscubscribe-event-handlers/",
     "date": "2008-08-17 20:55:20",
     "disqusthreadid": "213624466",
     "categories": [
@@ -323,7 +323,7 @@
   },
   {
     "title": "Easing The Pain Of WCF Debugging",
-    "link": "/2008/08/easing-the-pain-of-wcf-debugging/",
+    "link": "/blog/2008/08/easing-the-pain-of-wcf-debugging/",
     "date": "2008-08-20 20:56:05",
     "disqusthreadid": "213624505",
     "categories": [
@@ -332,7 +332,7 @@
   },
   {
     "title": "Software Development Books: Investing In Yourself",
-    "link": "/2008/08/software-development-books-investing-in-yourself/",
+    "link": "/blog/2008/08/software-development-books-investing-in-yourself/",
     "date": "2008-08-24 20:32:53",
     "disqusthreadid": "213624529",
     "categories": [
@@ -342,7 +342,7 @@
   },
   {
     "title": "Why The ALT.NET Community Needs To Change Their Ways",
-    "link": "/2008/08/why-the-altnet-community-needs-to-change-their-ways/",
+    "link": "/blog/2008/08/why-the-altnet-community-needs-to-change-their-ways/",
     "date": "2008-08-25 20:41:33",
     "disqusthreadid": "213624544",
     "categories": [
@@ -351,7 +351,7 @@
   },
   {
     "title": "Recommended Books: Clean Code",
-    "link": "/2008/08/recommended-books-clean-code/",
+    "link": "/blog/2008/08/recommended-books-clean-code/",
     "date": "2008-08-30 14:12:56",
     "disqusthreadid": "213624565",
     "categories": [
@@ -360,7 +360,7 @@
   },
   {
     "title": "Batching SqlCommand Queries",
-    "link": "/2008/08/batching-sqlcommand-queries/",
+    "link": "/blog/2008/08/batching-sqlcommand-queries/",
     "date": "2008-08-31 20:00:56",
     "disqusthreadid": "213624567",
     "categories": [
@@ -369,7 +369,7 @@
   },
   {
     "title": "Make It Work, Make It Clean?",
-    "link": "/2008/09/make-it-work-make-it-clean/",
+    "link": "/blog/2008/09/make-it-work-make-it-clean/",
     "date": "2008-09-01 20:00:41",
     "disqusthreadid": "213624571",
     "categories": [
@@ -378,7 +378,7 @@
   },
   {
     "title": "The Select Command Batcher",
-    "link": "/2008/09/the-select-command-batcher/",
+    "link": "/blog/2008/09/the-select-command-batcher/",
     "date": "2008-09-03 12:30:25",
     "disqusthreadid": "213624589",
     "categories": [
@@ -387,7 +387,7 @@
   },
   {
     "title": "What A Slow Build Might Tell You",
-    "link": "/2008/09/what-a-slow-build-might-tell-you/",
+    "link": "/blog/2008/09/what-a-slow-build-might-tell-you/",
     "date": "2008-09-06 14:06:20",
     "disqusthreadid": "230185781",
     "categories": [
@@ -396,7 +396,7 @@
   },
   {
     "title": "WCF And Large Amounts Of Data",
-    "link": "/2008/09/wcf-and-large-amounts-of-data/",
+    "link": "/blog/2008/09/wcf-and-large-amounts-of-data/",
     "date": "2008-09-14 13:00:02",
     "disqusthreadid": "213624595",
     "categories": [
@@ -405,7 +405,7 @@
   },
   {
     "title": "Technical Interviews: What Questions To Ask?",
-    "link": "/2008/09/technical-interviews-what-questions-to-ask/",
+    "link": "/blog/2008/09/technical-interviews-what-questions-to-ask/",
     "date": "2008-09-10 20:00:15",
     "disqusthreadid": "213624624",
     "categories": [
@@ -414,7 +414,7 @@
   },
   {
     "title": "Code Health",
-    "link": "/2008/09/code-health/",
+    "link": "/blog/2008/09/code-health/",
     "date": "2008-09-14 13:36:40",
     "disqusthreadid": "213624641",
     "categories": [
@@ -423,7 +423,7 @@
   },
   {
     "title": "Recommended Books: Working Effectively With Legacy Code",
-    "link": "/2008/09/recommended-books-working-effectively-with-legacy-code/",
+    "link": "/blog/2008/09/recommended-books-working-effectively-with-legacy-code/",
     "date": "2008-09-20 16:20:05",
     "disqusthreadid": "213624655",
     "categories": [
@@ -432,7 +432,7 @@
   },
   {
     "title": "Is Teaching TDD Worth It?",
-    "link": "/2008/09/is-teaching-tdd-worth-it/",
+    "link": "/blog/2008/09/is-teaching-tdd-worth-it/",
     "date": "2008-09-21 20:43:59",
     "disqusthreadid": "213624658",
     "categories": [
@@ -441,7 +441,7 @@
   },
   {
     "title": "When Commented-Out Code Is Acceptable",
-    "link": "/2008/09/when-commented-out-code-is-acceptable/",
+    "link": "/blog/2008/09/when-commented-out-code-is-acceptable/",
     "date": "2008-09-21 21:08:32",
     "disqusthreadid": "213624673",
     "categories": [
@@ -450,7 +450,7 @@
   },
   {
     "title": "Beware The Evils Of Code Generation",
-    "link": "/2008/09/beware-the-evils-of-code-generation/",
+    "link": "/blog/2008/09/beware-the-evils-of-code-generation/",
     "date": "2008-09-22 22:51:41",
     "disqusthreadid": "213624684",
     "categories": [
@@ -459,7 +459,7 @@
   },
   {
     "title": "Do Not .Dispose In The PreRender Event",
-    "link": "/2008/10/do-not-dispose-in-the-prerender-event/",
+    "link": "/blog/2008/10/do-not-dispose-in-the-prerender-event/",
     "date": "2008-10-01 21:43:31",
     "disqusthreadid": "213624719",
     "categories": [
@@ -470,7 +470,7 @@
   },
   {
     "title": "Ordering On Joined Columns/Properties With NHibernate",
-    "link": "/2008/10/ordering-on-joined-columnsproperties-with-nhibernate/",
+    "link": "/blog/2008/10/ordering-on-joined-columnsproperties-with-nhibernate/",
     "date": "2008-10-05 12:17:13",
     "disqusthreadid": "213624723",
     "categories": [
@@ -479,7 +479,7 @@
   },
   {
     "title": "How To Write Testable ASP.NET UserControls",
-    "link": "/2008/10/how-to-write-testable-aspnet-usercontrols/",
+    "link": "/blog/2008/10/how-to-write-testable-aspnet-usercontrols/",
     "date": "2008-10-11 17:28:27",
     "disqusthreadid": "213624769",
     "categories": [
@@ -489,7 +489,7 @@
   },
   {
     "title": "Career Advice For Young Developers",
-    "link": "/2008/10/career-advice-for-young-developers/",
+    "link": "/blog/2008/10/career-advice-for-young-developers/",
     "date": "2008-10-25 16:42:40",
     "disqusthreadid": "213624796",
     "categories": [
@@ -499,7 +499,7 @@
   },
   {
     "title": "Bulk Data Operations With NHibernate's Stateless Sessions",
-    "link": "/2008/10/bulk-data-operations-with-nhibernates-stateless-sessions/",
+    "link": "/blog/2008/10/bulk-data-operations-with-nhibernates-stateless-sessions/",
     "date": "2008-10-30 21:28:15",
     "disqusthreadid": "213624841",
     "categories": [
@@ -509,7 +509,7 @@
   },
   {
     "title": "Batching NHibernate's DML Statements",
-    "link": "/2008/10/batching-nhibernates-dm-statements/",
+    "link": "/blog/2008/10/batching-nhibernates-dm-statements/",
     "date": "2008-10-27 20:22:33",
     "disqusthreadid": "213624852",
     "categories": [
@@ -519,7 +519,7 @@
   },
   {
     "title": "Agile Development Going Downhill?",
-    "link": "/2008/11/agile-development-going-downhill/",
+    "link": "/blog/2008/11/agile-development-going-downhill/",
     "date": "2008-11-17 00:39:01",
     "disqusthreadid": "213624966",
     "categories": [
@@ -528,7 +528,7 @@
   },
   {
     "title": "The Only Way To Test Private Methods",
-    "link": "/2008/11/the-only-way-to-test-private-methods/",
+    "link": "/blog/2008/11/the-only-way-to-test-private-methods/",
     "date": "2008-11-19 23:01:42",
     "disqusthreadid": "213624971",
     "categories": [
@@ -537,7 +537,7 @@
   },
   {
     "title": "Why On Earth Would A Developer Do This?",
-    "link": "/2008/11/why-on-earth-would-a-developer-do-this/",
+    "link": "/blog/2008/11/why-on-earth-would-a-developer-do-this/",
     "date": "2008-11-22 15:59:19",
     "disqusthreadid": "213624976",
     "categories": [
@@ -547,7 +547,7 @@
   },
   {
     "title": "Populating Entities From Stored Procedures With NHibernate",
-    "link": "/2008/11/populating-entities-from-stored-procedures-with-nhibernate/",
+    "link": "/blog/2008/11/populating-entities-from-stored-procedures-with-nhibernate/",
     "date": "2008-11-23 18:34:24",
     "disqusthreadid": "213625031",
     "categories": [
@@ -556,7 +556,7 @@
   },
   {
     "title": "Populating Entities With Associations From Stored Procedures With NHibernate",
-    "link": "/2008/11/populating-entities-with-associations-from-stored-procedures-with-nhibernate/",
+    "link": "/blog/2008/11/populating-entities-with-associations-from-stored-procedures-with-nhibernate/",
     "date": "2008-11-24 02:17:59",
     "disqusthreadid": "213625040",
     "categories": [
@@ -565,7 +565,7 @@
   },
   {
     "title": "ORM Is NOT Inherently Evil",
-    "link": "/2008/11/orm-is-not-inherently-evil/",
+    "link": "/blog/2008/11/orm-is-not-inherently-evil/",
     "date": "2008-11-25 00:06:38",
     "disqusthreadid": "213625046",
     "categories": [
@@ -575,7 +575,7 @@
   },
   {
     "title": "Do Not Litter Your Code With Null Checks",
-    "link": "/2008/12/do-not-litter-your-code-with-null-check/",
+    "link": "/blog/2008/12/do-not-litter-your-code-with-null-check/",
     "date": "2008-12-02 20:59:42",
     "disqusthreadid": "213625071",
     "categories": [
@@ -584,7 +584,7 @@
   },
   {
     "title": "What It Takes To Be A Great Technical Lead",
-    "link": "/2008/12/what-it-takes-to-be-a-great-technical-lead/",
+    "link": "/blog/2008/12/what-it-takes-to-be-a-great-technical-lead/",
     "date": "2008-12-04 00:41:53",
     "disqusthreadid": "213625108",
     "categories": [
@@ -594,7 +594,7 @@
   },
   {
     "title": "So What's NHibernate Development Like?",
-    "link": "/2008/12/so-whats-nhibernate-development-like/",
+    "link": "/blog/2008/12/so-whats-nhibernate-development-like/",
     "date": "2008-12-07 23:06:52",
     "disqusthreadid": "213625116",
     "categories": [
@@ -603,7 +603,7 @@
   },
   {
     "title": "Assembly Partioning Advice",
-    "link": "/2008/12/assembly-partioning-advice/",
+    "link": "/blog/2008/12/assembly-partioning-advice/",
     "date": "2008-12-08 12:35:41",
     "disqusthreadid": "213625123",
     "categories": [
@@ -612,7 +612,7 @@
   },
   {
     "title": "Batching Remote Operations Is Not Premature Optimization",
-    "link": "/2008/12/batching-remote-operations-is-not-premature-optimization/",
+    "link": "/blog/2008/12/batching-remote-operations-is-not-premature-optimization/",
     "date": "2008-12-12 23:14:09",
     "disqusthreadid": "213625130",
     "categories": [
@@ -622,7 +622,7 @@
   },
   {
     "title": "The Importance Of Releasing Your Components Through Windsor",
-    "link": "/2008/12/the-importance-of-releasing-your-components-through-windsor/",
+    "link": "/blog/2008/12/the-importance-of-releasing-your-components-through-windsor/",
     "date": "2008-12-13 15:12:45",
     "disqusthreadid": "213625132",
     "categories": [
@@ -632,7 +632,7 @@
   },
   {
     "title": "The Component Burden",
-    "link": "/2008/12/the-component-burden/",
+    "link": "/blog/2008/12/the-component-burden/",
     "date": "2008-12-14 13:37:23",
     "disqusthreadid": "213625141",
     "categories": [
@@ -642,7 +642,7 @@
   },
   {
     "title": "The Resolvable",
-    "link": "/2008/12/the-resolvable/",
+    "link": "/blog/2008/12/the-resolvable/",
     "date": "2008-12-21 15:48:26",
     "disqusthreadid": "213625170",
     "categories": [
@@ -652,7 +652,7 @@
   },
   {
     "title": "The Unrealistic Deadline Anti-Pattern",
-    "link": "/2008/12/the-unrealistic-deadline-anti-pattern/",
+    "link": "/blog/2008/12/the-unrealistic-deadline-anti-pattern/",
     "date": "2008-12-23 13:29:33",
     "disqusthreadid": "213625182",
     "categories": [
@@ -661,7 +661,7 @@
   },
   {
     "title": "Tired Of Working With Big Visual Studio Solutions?",
-    "link": "/2008/12/tired-of-working-with-big-visual-studio-solutions/",
+    "link": "/blog/2008/12/tired-of-working-with-big-visual-studio-solutions/",
     "date": "2008-12-29 01:27:07",
     "disqusthreadid": "213625223",
     "categories": [
@@ -670,7 +670,7 @@
   },
   {
     "title": "Junior Vs Senior Developers?",
-    "link": "/2008/12/junior-vs-senior-developers/",
+    "link": "/blog/2008/12/junior-vs-senior-developers/",
     "date": "2008-12-29 01:31:00",
     "disqusthreadid": "213625243",
     "categories": [
@@ -679,7 +679,7 @@
   },
   {
     "title": "The Life And Times Of A Bug",
-    "link": "/2009/01/the-life-and-times-of-a-bug/",
+    "link": "/blog/2009/01/the-life-and-times-of-a-bug/",
     "date": "2009-01-01 17:52:40",
     "disqusthreadid": "213625264",
     "categories": [
@@ -688,7 +688,7 @@
   },
   {
     "title": "Recommended Books: Behind Closed Doors, Secrets Of Great Management",
-    "link": "/2009/01/recommended-books-behind-closed-doors-secrets-of-great-management/",
+    "link": "/blog/2009/01/recommended-books-behind-closed-doors-secrets-of-great-management/",
     "date": "2009-01-11 20:17:00",
     "disqusthreadid": "213625279",
     "categories": [
@@ -697,7 +697,7 @@
   },
   {
     "title": "Great Links On Using Garbage Collection Efficiently",
-    "link": "/2009/01/great-links-on-using-garbage-collection-efficiently/",
+    "link": "/blog/2009/01/great-links-on-using-garbage-collection-efficiently/",
     "date": "2009-01-11 20:23:56",
     "disqusthreadid": "222020854",
     "categories": [
@@ -706,7 +706,7 @@
   },
   {
     "title": "Ethics In Software Development: Pragmatism Over Dogmatism",
-    "link": "/2009/01/ethics-in-software-development-pragmatism-over-dogmatism/",
+    "link": "/blog/2009/01/ethics-in-software-development-pragmatism-over-dogmatism/",
     "date": "2009-01-11 22:18:14",
     "disqusthreadid": "213625285",
     "categories": [
@@ -715,7 +715,7 @@
   },
   {
     "title": "Framework Configuration: A Different Approach",
-    "link": "/2009/01/framework-configuration-a-different-approach/",
+    "link": "/blog/2009/01/framework-configuration-a-different-approach/",
     "date": "2009-01-12 22:19:19",
     "disqusthreadid": "221759488",
     "categories": [
@@ -724,7 +724,7 @@
   },
   {
     "title": "Abstracting Request State",
-    "link": "/2009/01/abstracting-request-state/",
+    "link": "/blog/2009/01/abstracting-request-state/",
     "date": "2009-01-17 16:19:43",
     "disqusthreadid": "213625291",
     "categories": [
@@ -734,7 +734,7 @@
   },
   {
     "title": "I Don't Really See The Problem With NHibernate's XML Mapping Files",
-    "link": "/2009/01/i-dont-really-see-the-problem-with-nhibernates-xml-mapping-files/",
+    "link": "/blog/2009/01/i-dont-really-see-the-problem-with-nhibernates-xml-mapping-files/",
     "date": "2009-01-18 16:50:01",
     "disqusthreadid": "213625307",
     "categories": [
@@ -743,7 +743,7 @@
   },
   {
     "title": "Which Path To Follow?",
-    "link": "/2009/01/which-path-to-follow/",
+    "link": "/blog/2009/01/which-path-to-follow/",
     "date": "2009-01-20 00:54:08",
     "disqusthreadid": "213625322",
     "categories": [
@@ -752,7 +752,7 @@
   },
   {
     "title": "We All Write Bad Code",
-    "link": "/2009/01/we-all-write-bad-code/",
+    "link": "/blog/2009/01/we-all-write-bad-code/",
     "date": "2009-01-24 17:33:57",
     "disqusthreadid": "213625335",
     "categories": [
@@ -761,7 +761,7 @@
   },
   {
     "title": "NHibernate and Future Queries",
-    "link": "/2009/01/nhibernate-and-future-queries/",
+    "link": "/blog/2009/01/nhibernate-and-future-queries/",
     "date": "2009-01-25 12:02:05",
     "disqusthreadid": "213625341",
     "categories": [
@@ -770,7 +770,7 @@
   },
   {
     "title": "NHibernate and Future Queries, Part 2",
-    "link": "/2009/01/nhibernate-and-future-queries-part-2/",
+    "link": "/blog/2009/01/nhibernate-and-future-queries-part-2/",
     "date": "2009-01-26 08:23:47",
     "disqusthreadid": "214820481",
     "categories": [
@@ -779,7 +779,7 @@
   },
   {
     "title": "My 2 Most Cherished Mistakes",
-    "link": "/2009/01/my-2-most-cherished-mistakes/",
+    "link": "/blog/2009/01/my-2-most-cherished-mistakes/",
     "date": "2009-01-29 00:29:13",
     "disqusthreadid": "213625390",
     "categories": [
@@ -788,7 +788,7 @@
   },
   {
     "title": "Quickly Setting Up And Using NHibernate's Second Level Cache",
-    "link": "/2009/02/quickly-setting-up-and-using-nhibernates-second-level-cache/",
+    "link": "/blog/2009/02/quickly-setting-up-and-using-nhibernates-second-level-cache/",
     "date": "2009-02-09 22:06:56",
     "disqusthreadid": "213625415",
     "categories": [
@@ -797,7 +797,7 @@
   },
   {
     "title": "Performance Rules Of Thumb",
-    "link": "/2009/02/performance-rules-of-thumb/",
+    "link": "/blog/2009/02/performance-rules-of-thumb/",
     "date": "2009-02-15 21:44:45",
     "disqusthreadid": "213625463",
     "categories": [
@@ -806,7 +806,7 @@
   },
   {
     "title": "Book Review: Building Domain Specific Languages in Boo",
-    "link": "/2009/02/book-review-building-domain-specific-languages-in-boo/",
+    "link": "/blog/2009/02/book-review-building-domain-specific-languages-in-boo/",
     "date": "2009-02-16 07:06:41",
     "disqusthreadid": "213625472",
     "categories": [
@@ -815,7 +815,7 @@
   },
   {
     "title": "The Other Kind Of Exception Handling",
-    "link": "/2009/02/the-other-kind-of-exception-handling/",
+    "link": "/blog/2009/02/the-other-kind-of-exception-handling/",
     "date": "2009-02-09 17:46:49",
     "disqusthreadid": "213625514",
     "categories": [
@@ -824,7 +824,7 @@
   },
   {
     "title": "Buzzword Driven Development Isn't Gonna Help You",
-    "link": "/2009/02/buzzword-driven-development-isnt-gonna-help-you/",
+    "link": "/blog/2009/02/buzzword-driven-development-isnt-gonna-help-you/",
     "date": "2009-02-10 21:18:47",
     "disqusthreadid": "213625523",
     "categories": [
@@ -833,7 +833,7 @@
   },
   {
     "title": "Challenge: Do You Truly Understand This Code?",
-    "link": "/2009/02/challenge-do-you-truly-understand-this-code/",
+    "link": "/blog/2009/02/challenge-do-you-truly-understand-this-code/",
     "date": "2009-02-19 16:19:01",
     "disqusthreadid": "213625529",
     "categories": [
@@ -842,7 +842,7 @@
   },
   {
     "title": "The Commented Version Of The Readable Code Challenge",
-    "link": "/2009/02/the-commented-version-of-the-readable-code-challeng/",
+    "link": "/blog/2009/02/the-commented-version-of-the-readable-code-challeng/",
     "date": "2009-02-21 16:22:51",
     "disqusthreadid": "213625583",
     "categories": [
@@ -851,7 +851,7 @@
   },
   {
     "title": "The Tests For The Readable Code Challenge",
-    "link": "/2009/02/the-tests-for-the-readable-code-challenge/",
+    "link": "/blog/2009/02/the-tests-for-the-readable-code-challenge/",
     "date": "2009-02-22 10:53:37",
     "disqusthreadid": "213625616",
     "categories": [
@@ -860,7 +860,7 @@
   },
   {
     "title": "Silverlight's ProgressBar And Possible Memory Leaks",
-    "link": "/2009/02/silverlights-progressbar-and-possible-memory-leaks/",
+    "link": "/blog/2009/02/silverlights-progressbar-and-possible-memory-leaks/",
     "date": "2009-02-25 16:42:44",
     "disqusthreadid": "213625622",
     "categories": [
@@ -870,7 +870,7 @@
   },
   {
     "title": "Smarten Up Instead Of Generating Dumb Tests",
-    "link": "/2009/03/smarten-up-instead-of-generating-dumb-tests/",
+    "link": "/blog/2009/03/smarten-up-instead-of-generating-dumb-tests/",
     "date": "2009-03-05 23:58:52",
     "disqusthreadid": "213625703",
     "categories": [
@@ -880,7 +880,7 @@
   },
   {
     "title": "Book Review: 97 Things Every Software Architect Should Know",
-    "link": "/2009/03/book-review-97-things-every-software-architect-should-know/",
+    "link": "/blog/2009/03/book-review-97-things-every-software-architect-should-know/",
     "date": "2009-03-07 15:37:15",
     "disqusthreadid": "213625709",
     "categories": [
@@ -889,7 +889,7 @@
   },
   {
     "title": "I Love Easy Extensibility",
-    "link": "/2009/03/i-love-easy-extensibility/",
+    "link": "/blog/2009/03/i-love-easy-extensibility/",
     "date": "2009-03-10 18:01:13",
     "disqusthreadid": "213625733",
     "categories": [
@@ -898,7 +898,7 @@
   },
   {
     "title": "Calculating The Size Of SOAP Messages",
-    "link": "/2009/03/calculating-the-size-of-soap-messages/",
+    "link": "/blog/2009/03/calculating-the-size-of-soap-messages/",
     "date": "2009-03-11 12:06:34",
     "disqusthreadid": "213625762",
     "categories": [
@@ -907,7 +907,7 @@
   },
   {
     "title": "Book Review: NHibernate In Action",
-    "link": "/2009/03/book-review-nhibernate-in-action/",
+    "link": "/blog/2009/03/book-review-nhibernate-in-action/",
     "date": "2009-03-15 18:39:34",
     "disqusthreadid": "213625810",
     "categories": [
@@ -917,7 +917,7 @@
   },
   {
     "title": "Why Don't We Learn?",
-    "link": "/2009/03/why-dont-we-learn/",
+    "link": "/blog/2009/03/why-dont-we-learn/",
     "date": "2009-03-17 00:37:06",
     "disqusthreadid": "213625869",
     "categories": [
@@ -926,7 +926,7 @@
   },
   {
     "title": "Continuous Integration 101",
-    "link": "/2009/03/continuous-integration-101/",
+    "link": "/blog/2009/03/continuous-integration-101/",
     "date": "2009-03-17 20:43:19",
     "disqusthreadid": "213625897",
     "categories": [
@@ -935,7 +935,7 @@
   },
   {
     "title": "What I'd Like To See At Microsoft's Technical Events",
-    "link": "/2009/03/what-id-like-to-see-at-microsofts-technical-events/",
+    "link": "/blog/2009/03/what-id-like-to-see-at-microsofts-technical-events/",
     "date": "2009-03-19 22:47:44",
     "disqusthreadid": "213625919",
     "categories": [
@@ -944,7 +944,7 @@
   },
   {
     "title": "Implementing A Value Object With NHibernate",
-    "link": "/2009/03/implementing-a-value-object-with-nhibernate/",
+    "link": "/blog/2009/03/implementing-a-value-object-with-nhibernate/",
     "date": "2009-03-25 23:12:06",
     "disqusthreadid": "213625951",
     "categories": [
@@ -953,7 +953,7 @@
   },
   {
     "title": "Entities: Required Properties And Properties That Shouldn't Be Modified",
-    "link": "/2009/03/entities-required-properties-and-properties-that-shouldnt-be-modified/",
+    "link": "/blog/2009/03/entities-required-properties-and-properties-that-shouldnt-be-modified/",
     "date": "2009-03-24 20:48:26",
     "disqusthreadid": "213625961",
     "categories": [
@@ -962,7 +962,7 @@
   },
   {
     "title": "Silverlight Localization Gotcha",
-    "link": "/2009/03/silverlight-localization-gotcha/",
+    "link": "/blog/2009/03/silverlight-localization-gotcha/",
     "date": "2009-03-27 14:09:36",
     "disqusthreadid": "213625985",
     "categories": [
@@ -971,7 +971,7 @@
   },
   {
     "title": "Transparent Query Batching Through Your Repository",
-    "link": "/2009/04/transparent-query-batching-through-your-repository/",
+    "link": "/blog/2009/04/transparent-query-batching-through-your-repository/",
     "date": "2009-04-01 12:35:52",
     "disqusthreadid": "213625988",
     "categories": [
@@ -981,7 +981,7 @@
   },
   {
     "title": "Assigning Foreign Keys In NHibernate",
-    "link": "/2009/04/assigning-foreign-keys-in-nhibernate/",
+    "link": "/blog/2009/04/assigning-foreign-keys-in-nhibernate/",
     "date": "2009-04-03 06:46:52",
     "disqusthreadid": "213626000",
     "categories": [
@@ -990,7 +990,7 @@
   },
   {
     "title": "Must Everything Be Virtual With NHibernate?",
-    "link": "/2009/03/must-everything-be-virtual-with-nhibernate/",
+    "link": "/blog/2009/03/must-everything-be-virtual-with-nhibernate/",
     "date": "2009-03-30 21:05:11",
     "disqusthreadid": "213626008",
     "categories": [
@@ -999,7 +999,7 @@
   },
   {
     "title": "Support Of Commercial Software vs Open Source Software",
-    "link": "/2009/03/support-of-commercial-software-vs-open-source-software/",
+    "link": "/blog/2009/03/support-of-commercial-software-vs-open-source-software/",
     "date": "2009-03-29 12:17:37",
     "disqusthreadid": "213626051",
     "categories": [
@@ -1008,7 +1008,7 @@
   },
   {
     "title": "Avoiding MySQL's MAX_JOIN_SIZE Limit With NHibernate",
-    "link": "/2009/03/avoiding-mysqls-max_join_size-limit-with-nhibernate/",
+    "link": "/blog/2009/03/avoiding-mysqls-max_join_size-limit-with-nhibernate/",
     "date": "2009-03-30 12:26:51",
     "disqusthreadid": "213626121",
     "categories": [
@@ -1017,7 +1017,7 @@
   },
   {
     "title": "The Joys Of Debugging ASP.NET Memory Leaks",
-    "link": "/2009/04/the-joys-of-debugging-aspnet-memory-leaks/",
+    "link": "/blog/2009/04/the-joys-of-debugging-aspnet-memory-leaks/",
     "date": "2009-04-06 22:37:14",
     "disqusthreadid": "213626158",
     "categories": [
@@ -1028,7 +1028,7 @@
   },
   {
     "title": "Guaranteeing Disposal Of UserControls In ASP.NET",
-    "link": "/2009/04/guaranteeing-disposal-of-usercontrols-in-aspnet/",
+    "link": "/blog/2009/04/guaranteeing-disposal-of-usercontrols-in-aspnet/",
     "date": "2009-04-09 17:26:35",
     "disqusthreadid": "213626160",
     "categories": [
@@ -1037,7 +1037,7 @@
   },
   {
     "title": "Educate Developers Instead Of Protecting Them",
-    "link": "/2009/04/educate-developers-instead-of-protecting-them/",
+    "link": "/blog/2009/04/educate-developers-instead-of-protecting-them/",
     "date": "2009-04-15 22:04:37",
     "disqusthreadid": "213626166",
     "categories": [
@@ -1046,7 +1046,7 @@
   },
   {
     "title": "NHibernate's Future Queries And Their Fallback Behavior",
-    "link": "/2009/04/nhibernates-future-queries-and-their-fallback-behavior/",
+    "link": "/blog/2009/04/nhibernates-future-queries-and-their-fallback-behavior/",
     "date": "2009-04-13 20:07:55",
     "disqusthreadid": "213626197",
     "categories": [
@@ -1055,7 +1055,7 @@
   },
   {
     "title": "Put Performance Concerns Into Perspective",
-    "link": "/2009/04/put-performance-concerns-into-perspective/",
+    "link": "/blog/2009/04/put-performance-concerns-into-perspective/",
     "date": "2009-04-18 16:58:03",
     "disqusthreadid": "213943361",
     "categories": [
@@ -1064,7 +1064,7 @@
   },
   {
     "title": "Using The Guid.Comb Identifier Strategy",
-    "link": "/2009/05/using-the-guidcomb-identifier-strategy/",
+    "link": "/blog/2009/05/using-the-guidcomb-identifier-strategy/",
     "date": "2009-05-21 14:00:31",
     "disqusthreadid": "213626077",
     "categories": [
@@ -1074,7 +1074,7 @@
   },
   {
     "title": "At This Point, I'd Prefer Java Developers Over .NET Developers",
-    "link": "/2009/04/at-this-point-id-prefer-java-developers-over-net-developers/",
+    "link": "/blog/2009/04/at-this-point-id-prefer-java-developers-over-net-developers/",
     "date": "2009-04-27 22:37:18",
     "disqusthreadid": "213626237",
     "categories": [
@@ -1083,7 +1083,7 @@
   },
   {
     "title": "The Good, The Bad And The Ugly In The .NET World",
-    "link": "/2009/04/the-good-the-bad-and-the-ugly-in-the-net-world/",
+    "link": "/blog/2009/04/the-good-the-bad-and-the-ugly-in-the-net-world/",
     "date": "2009-04-29 23:21:37",
     "disqusthreadid": "213626383",
     "categories": [
@@ -1092,7 +1092,7 @@
   },
   {
     "title": "Using SQL Functions in Criteria Restrictions",
-    "link": "/2009/04/using-sql-functions-in-criteria-restrictions/",
+    "link": "/blog/2009/04/using-sql-functions-in-criteria-restrictions/",
     "date": "2009-04-30 13:31:53",
     "disqusthreadid": "213626416",
     "categories": [
@@ -1101,7 +1101,7 @@
   },
   {
     "title": "Why Are Mutable Value Types Even Possible?",
-    "link": "/2009/05/why-are-mutable-value-types-even-possible/",
+    "link": "/blog/2009/05/why-are-mutable-value-types-even-possible/",
     "date": "2009-05-17 14:06:07",
     "disqusthreadid": "213626424",
     "categories": [
@@ -1110,7 +1110,7 @@
   },
   {
     "title": "When You Absolutely Need To Use A Real Database In Tests",
-    "link": "/2009/07/when-you-absolutely-need-to-use-a-real-database-in-tests/",
+    "link": "/blog/2009/07/when-you-absolutely-need-to-use-a-real-database-in-tests/",
     "date": "2009-07-20 17:19:39",
     "disqusthreadid": "213626440",
     "categories": [
@@ -1119,7 +1119,7 @@
   },
   {
     "title": "On Getting Rid Of Common Libraries... What About Don't Repeat Yourself?",
-    "link": "/2009/05/on-getting-rid-of-common-libraries-what-about-dont-repeat-yourself/",
+    "link": "/blog/2009/05/on-getting-rid-of-common-libraries-what-about-dont-repeat-yourself/",
     "date": "2009-05-02 19:26:49",
     "disqusthreadid": "213626454",
     "categories": [
@@ -1128,7 +1128,7 @@
   },
   {
     "title": "Keep An Eye On Those Indexes",
-    "link": "/2009/05/keep-an-eye-on-those-indexes/",
+    "link": "/blog/2009/05/keep-an-eye-on-those-indexes/",
     "date": "2009-05-21 14:14:57",
     "disqusthreadid": "213626468",
     "categories": [
@@ -1137,7 +1137,7 @@
   },
   {
     "title": "Continuous Integration On A Real, Big Project",
-    "link": "/2009/05/continuous-integration-on-a-real-big-project/",
+    "link": "/blog/2009/05/continuous-integration-on-a-real-big-project/",
     "date": "2009-05-24 21:45:54",
     "disqusthreadid": "213626471",
     "categories": [
@@ -1146,7 +1146,7 @@
   },
   {
     "title": "What Microsoft Should Do For .NET Open Source",
-    "link": "/2009/05/what-microsoft-should-do-for-net-open-source/",
+    "link": "/blog/2009/05/what-microsoft-should-do-for-net-open-source/",
     "date": "2009-05-25 22:37:06",
     "disqusthreadid": "213626484",
     "categories": [
@@ -1155,7 +1155,7 @@
   },
   {
     "title": "Protecting Your Application From Remote Problems",
-    "link": "/2009/07/protecting-your-application-from-remote-problems/",
+    "link": "/blog/2009/07/protecting-your-application-from-remote-problems/",
     "date": "2009-07-05 21:45:41",
     "disqusthreadid": "213626560",
     "categories": [
@@ -1166,7 +1166,7 @@
   },
   {
     "title": "Why I Dislike Classic Or Typical WCF Usage",
-    "link": "/2009/07/why-i-dislike-classic-or-typical-wcf-usage/",
+    "link": "/blog/2009/07/why-i-dislike-classic-or-typical-wcf-usage/",
     "date": "2009-07-21 00:54:40",
     "disqusthreadid": "213626563",
     "categories": [
@@ -1176,7 +1176,7 @@
   },
   {
     "title": "This Is Why I Don't Like Microsoft's Way Of Open Source Development",
-    "link": "/2009/08/this-is-why-i-dont-like-microsofts-way-of-open-source-development/",
+    "link": "/blog/2009/08/this-is-why-i-dont-like-microsofts-way-of-open-source-development/",
     "date": "2009-08-03 10:29:36",
     "disqusthreadid": "213626621",
     "categories": [
@@ -1185,7 +1185,7 @@
   },
   {
     "title": "Tracking Dangling Object References In Silverlight",
-    "link": "/2009/08/tracking-dangling-object-references-in-silverlight/",
+    "link": "/blog/2009/08/tracking-dangling-object-references-in-silverlight/",
     "date": "2009-08-04 17:39:58",
     "disqusthreadid": "213626664",
     "categories": [
@@ -1195,7 +1195,7 @@
   },
   {
     "title": "Finding Memory Leaks In Silverlight With WinDbg",
-    "link": "/2009/08/finding-memory-leaks-in-silverlight-with-windbg/",
+    "link": "/blog/2009/08/finding-memory-leaks-in-silverlight-with-windbg/",
     "date": "2009-08-08 19:00:15",
     "disqusthreadid": "213626712",
     "categories": [
@@ -1205,7 +1205,7 @@
   },
   {
     "title": "Choose The Right Goals",
-    "link": "/2009/08/choose-the-right-goals/",
+    "link": "/blog/2009/08/choose-the-right-goals/",
     "date": "2009-08-10 22:11:30",
     "disqusthreadid": "213626732",
     "categories": [
@@ -1215,7 +1215,7 @@
   },
   {
     "title": "Of Course NHibernate Is Slow When You Use It Incorrectly",
-    "link": "/2009/08/of-course-nhibernate-is-slow-when-you-use-it-incorrectly/",
+    "link": "/blog/2009/08/of-course-nhibernate-is-slow-when-you-use-it-incorrectly/",
     "date": "2009-08-19 22:48:36",
     "disqusthreadid": "213626744",
     "categories": [
@@ -1225,7 +1225,7 @@
   },
   {
     "title": "Build Your Own Data Access Layer Series",
-    "link": "/2009/08/build-your-own-data-access-layer-series/",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-series/",
     "date": "2009-08-23 15:38:43",
     "disqusthreadid": "213626771",
     "categories": [
@@ -1234,7 +1234,7 @@
   },
   {
     "title": "Build Your Own Data Access Layer: Mapping Classes To Tables",
-    "link": "/2009/08/build-your-own-data-access-layer-mapping-classes-to-tables/",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-mapping-classes-to-tables/",
     "date": "2009-08-23 17:08:47",
     "disqusthreadid": "213626797",
     "categories": [
@@ -1243,7 +1243,7 @@
   },
   {
     "title": "Build Your Own Data Access Layer: Out Of The Box CRUD Functionality",
-    "link": "/2009/08/build-your-own-data-access-layer-out-of-the-box-crud-functionality/",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-out-of-the-box-crud-functionality/",
     "date": "2009-08-24 19:29:19",
     "disqusthreadid": "213626806",
     "categories": [
@@ -1252,7 +1252,7 @@
   },
   {
     "title": "Build Your Own Data Access Layer: Hydrating Entities",
-    "link": "/2009/08/build-your-own-data-access-layer-hydrating-entities/",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-hydrating-entities/",
     "date": "2009-08-25 17:42:31",
     "disqusthreadid": "213626821",
     "categories": [
@@ -1261,7 +1261,7 @@
   },
   {
     "title": "Build Your Own Data Access Layer: Session Level Cache",
-    "link": "/2009/08/build-your-own-data-access-layer-session-level-cache/",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-session-level-cache/",
     "date": "2009-08-26 17:11:28",
     "disqusthreadid": "213626833",
     "categories": [
@@ -1270,7 +1270,7 @@
   },
   {
     "title": "Build Your Own Data Access Layer: Lazy Loading",
-    "link": "/2009/08/build-your-own-data-access-layer-lazy-loading/",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-lazy-loading/",
     "date": "2009-08-27 16:51:35",
     "disqusthreadid": "213626844",
     "categories": [
@@ -1279,7 +1279,7 @@
   },
   {
     "title": "Build Your Own Data Access Layer: Executing Custom Queries",
-    "link": "/2009/08/build-your-own-data-access-layer-executing-custom-queries/",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-executing-custom-queries/",
     "date": "2009-08-28 16:34:47",
     "disqusthreadid": "213626860",
     "categories": [
@@ -1288,7 +1288,7 @@
   },
   {
     "title": "Build Your Own Data Access Layer: Bringing It All Together",
-    "link": "/2009/08/build-your-own-data-access-layer-bringing-it-all-together/",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-bringing-it-all-together/",
     "date": "2009-08-29 15:42:02",
     "disqusthreadid": "213626868",
     "categories": [
@@ -1297,7 +1297,7 @@
   },
   {
     "title": "Build Your Own Data Access Layer: Conclusions",
-    "link": "/2009/08/build-your-own-data-access-layer-conclusions/",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-conclusions/",
     "date": "2009-08-29 15:42:10",
     "disqusthreadid": "213626873",
     "categories": [
@@ -1306,7 +1306,7 @@
   },
   {
     "title": "There Is No Excuse For Failing Queries In Production",
-    "link": "/2009/08/there-is-no-excuse-for-failing-queries-in-production/",
+    "link": "/blog/2009/08/there-is-no-excuse-for-failing-queries-in-production/",
     "date": "2009-08-30 16:52:15",
     "disqusthreadid": "213626892",
     "categories": [
@@ -1315,7 +1315,7 @@
   },
   {
     "title": "Reducing ViewState Size",
-    "link": "/2009/09/reducing-viewstate-size/",
+    "link": "/blog/2009/09/reducing-viewstate-size/",
     "date": "2009-09-01 14:56:53",
     "disqusthreadid": "213626966",
     "categories": [
@@ -1325,7 +1325,7 @@
   },
   {
     "title": "Avoiding (Or Recovering From) Burnout",
-    "link": "/2009/09/avoiding-or-recovering-from-burnout/",
+    "link": "/blog/2009/09/avoiding-or-recovering-from-burnout/",
     "date": "2009-09-01 22:11:00",
     "disqusthreadid": "213626988",
     "categories": [
@@ -1336,7 +1336,7 @@
   },
   {
     "title": "More ORM Ignorance",
-    "link": "/2009/09/more-orm-ignoranc/",
+    "link": "/blog/2009/09/more-orm-ignoranc/",
     "date": "2009-09-04 15:41:35",
     "disqusthreadid": "213627012",
     "categories": [
@@ -1345,7 +1345,7 @@
   },
   {
     "title": "5 Reasons Why Silverlight Is My Preferred Web Development Platform",
-    "link": "/2009/09/5-reasons-why-silverlight-is-my-preferred-web-development-platform/",
+    "link": "/blog/2009/09/5-reasons-why-silverlight-is-my-preferred-web-development-platform/",
     "date": "2009-09-05 14:57:50",
     "disqusthreadid": "213627070",
     "categories": [
@@ -1355,7 +1355,7 @@
   },
   {
     "title": "Monitoring Production Performance",
-    "link": "/2009/09/monitoring-production-performance/",
+    "link": "/blog/2009/09/monitoring-production-performance/",
     "date": "2009-09-07 21:48:54",
     "disqusthreadid": "213627101",
     "categories": [
@@ -1364,7 +1364,7 @@
   },
   {
     "title": "Recommended Books: Ship It!",
-    "link": "/2009/09/recommended-books-ship-it/",
+    "link": "/blog/2009/09/recommended-books-ship-it/",
     "date": "2009-09-09 21:05:38",
     "disqusthreadid": "398286380",
     "categories": [
@@ -1373,7 +1373,7 @@
   },
   {
     "title": "Must Everything Be Virtual With NHibernate, Part II",
-    "link": "/2009/09/must-everything-be-virtual-with-nhibernate-part-ii/",
+    "link": "/blog/2009/09/must-everything-be-virtual-with-nhibernate-part-ii/",
     "date": "2009-09-23 06:56:34",
     "disqusthreadid": "213627113",
     "categories": [
@@ -1382,7 +1382,7 @@
   },
   {
     "title": "Slides Of My NHibernate Talk",
-    "link": "/2009/09/slides-of-my-nhibernate-talk/",
+    "link": "/blog/2009/09/slides-of-my-nhibernate-talk/",
     "date": "2009-09-10 20:00:24",
     "disqusthreadid": "213627132",
     "categories": [
@@ -1391,7 +1391,7 @@
   },
   {
     "title": "Event Subscribtion And Memory Leaks (Yet Again)",
-    "link": "/2009/09/event-subscribtion-and-memory-leaks-yet-again/",
+    "link": "/blog/2009/09/event-subscribtion-and-memory-leaks-yet-again/",
     "date": "2009-09-12 18:32:35",
     "disqusthreadid": "213627178",
     "categories": [
@@ -1400,7 +1400,7 @@
   },
   {
     "title": "Must Everything Be Virtual With NHibernate, Part III",
-    "link": "/2009/09/must-everything-be-virtual-with-nhibernate-part-iii/",
+    "link": "/blog/2009/09/must-everything-be-virtual-with-nhibernate-part-iii/",
     "date": "2009-09-27 19:45:30",
     "disqusthreadid": "213627191",
     "categories": [
@@ -1409,7 +1409,7 @@
   },
   {
     "title": "What Kind Of Developer Are You?",
-    "link": "/2009/09/what-kind-of-developer-are-you/",
+    "link": "/blog/2009/09/what-kind-of-developer-are-you/",
     "date": "2009-09-27 20:24:36",
     "disqusthreadid": "213627217",
     "categories": [
@@ -1418,7 +1418,7 @@
   },
   {
     "title": "Why NHibernate Entities Need A Public Or Protected Parameterless Constructor",
-    "link": "/2009/10/why-nhibernate-entities-need-a-public-or-protected-parameterless-constructor/",
+    "link": "/blog/2009/10/why-nhibernate-entities-need-a-public-or-protected-parameterless-constructor/",
     "date": "2009-10-04 18:17:16",
     "disqusthreadid": "213627234",
     "categories": [
@@ -1427,7 +1427,7 @@
   },
   {
     "title": "Thoughts On Intellectual Honesty And Personal Ambitions",
-    "link": "/2009/10/thoughts-on-intellectual-honesty-and-personal-ambitions/",
+    "link": "/blog/2009/10/thoughts-on-intellectual-honesty-and-personal-ambitions/",
     "date": "2009-10-04 19:38:40",
     "disqusthreadid": "213627250",
     "categories": [
@@ -1438,7 +1438,7 @@
   },
   {
     "title": "Event Aggregation",
-    "link": "/2009/10/event-aggregation/",
+    "link": "/blog/2009/10/event-aggregation/",
     "date": "2009-10-09 16:12:52",
     "disqusthreadid": "213627258",
     "categories": [
@@ -1448,7 +1448,7 @@
   },
   {
     "title": "Testability Of Date-Dependent Code",
-    "link": "/2009/10/testability-of-date-dependent-code/",
+    "link": "/blog/2009/10/testability-of-date-dependent-code/",
     "date": "2009-10-21 07:00:30",
     "disqusthreadid": "213627262",
     "categories": [
@@ -1457,7 +1457,7 @@
   },
   {
     "title": "Constructor Injection vs Setter Injection",
-    "link": "/2009/11/constructor-injection-vs-sette-injection/",
+    "link": "/blog/2009/11/constructor-injection-vs-sette-injection/",
     "date": "2009-11-02 07:00:31",
     "disqusthreadid": "213627279",
     "categories": [
@@ -1466,7 +1466,7 @@
   },
   {
     "title": "There's Only One Thing You Can Learn From Code Coverage",
-    "link": "/2009/10/theres-only-one-thing-you-can-learn-from-code-coverage/",
+    "link": "/blog/2009/10/theres-only-one-thing-you-can-learn-from-code-coverage/",
     "date": "2009-10-15 08:11:15",
     "disqusthreadid": "213627306",
     "categories": [
@@ -1475,7 +1475,7 @@
   },
   {
     "title": "Stop Exposing Collections Already!",
-    "link": "/2009/10/stop-exposing-collections-already/",
+    "link": "/blog/2009/10/stop-exposing-collections-already/",
     "date": "2009-10-28 07:00:09",
     "disqusthreadid": "213627319",
     "categories": [
@@ -1484,7 +1484,7 @@
   },
   {
     "title": "Slutty Types",
-    "link": "/2009/10/slutty-types/",
+    "link": "/blog/2009/10/slutty-types/",
     "date": "2009-10-11 19:57:11",
     "disqusthreadid": "213627342",
     "categories": [
@@ -1493,7 +1493,7 @@
   },
   {
     "title": "Build Your Own Data Access Layer: Enabling Bulk Inserts",
-    "link": "/2009/10/build-your-own-data-access-layer-enabling-bulk-inserts/",
+    "link": "/blog/2009/10/build-your-own-data-access-layer-enabling-bulk-inserts/",
     "date": "2009-10-12 12:29:43",
     "disqusthreadid": "213627370",
     "categories": [
@@ -1502,7 +1502,7 @@
   },
   {
     "title": "Prefixing Instance Fields?",
-    "link": "/2009/10/prefixing-instance-fields/",
+    "link": "/blog/2009/10/prefixing-instance-fields/",
     "date": "2009-10-26 07:00:20",
     "disqusthreadid": "213627474",
     "categories": [
@@ -1511,7 +1511,7 @@
   },
   {
     "title": "Finally Some Real Improvements For Automated Testing In .NET",
-    "link": "/2009/10/finally-some-real-improvements-for-automated-testing-in-net/",
+    "link": "/blog/2009/10/finally-some-real-improvements-for-automated-testing-in-net/",
     "date": "2009-10-25 15:27:51",
     "disqusthreadid": "213627494",
     "categories": [
@@ -1520,7 +1520,7 @@
   },
   {
     "title": "Integrated Security With Silverlight And WCF",
-    "link": "/2009/11/integrated-security-with-silverlight-and-wcf/",
+    "link": "/blog/2009/11/integrated-security-with-silverlight-and-wcf/",
     "date": "2009-11-03 13:41:32",
     "disqusthreadid": "213627609",
     "categories": [
@@ -1530,7 +1530,7 @@
   },
   {
     "title": "Request/Response Service Layer Series",
-    "link": "/2009/11/requestresponse-service-layer-series/",
+    "link": "/blog/2009/11/requestresponse-service-layer-series/",
     "date": "2009-11-08 14:16:38",
     "disqusthreadid": "213627500",
     "categories": [
@@ -1539,7 +1539,7 @@
   },
   {
     "title": "Request/Response Service Layer: Requests And Responses",
-    "link": "/2009/11/requestresponse-service-layer-requests-and-responses/",
+    "link": "/blog/2009/11/requestresponse-service-layer-requests-and-responses/",
     "date": "2009-11-08 14:17:17",
     "disqusthreadid": "213627514",
     "categories": [
@@ -1548,7 +1548,7 @@
   },
   {
     "title": "Request/Response Service Layer: Processing Requests",
-    "link": "/2009/11/requestresponse-service-layer-processing-requests/",
+    "link": "/blog/2009/11/requestresponse-service-layer-processing-requests/",
     "date": "2009-11-09 18:16:57",
     "disqusthreadid": "213627528",
     "categories": [
@@ -1557,7 +1557,7 @@
   },
   {
     "title": "Request/Response Service Layer: Handling Requests",
-    "link": "/2009/11/requestresponse-service-layer-handling-requests/",
+    "link": "/blog/2009/11/requestresponse-service-layer-handling-requests/",
     "date": "2009-11-10 17:33:31",
     "disqusthreadid": "213627547",
     "categories": [
@@ -1566,7 +1566,7 @@
   },
   {
     "title": "Request/Response Service Layer: Exposing The Service Layer Through WCF",
-    "link": "/2009/11/requestresponse-service-layer-exposing-the-service-layer-through-wcf/",
+    "link": "/blog/2009/11/requestresponse-service-layer-exposing-the-service-layer-through-wcf/",
     "date": "2009-11-11 16:49:20",
     "disqusthreadid": "213627550",
     "categories": [
@@ -1575,7 +1575,7 @@
   },
   {
     "title": "Request/Response Service Layer: Synchronous Client-Side Usage",
-    "link": "/2009/11/requestresponse-service-layer-synchronous-client-side-usage/",
+    "link": "/blog/2009/11/requestresponse-service-layer-synchronous-client-side-usage/",
     "date": "2009-11-12 10:35:37",
     "disqusthreadid": "214577485",
     "categories": [
@@ -1584,7 +1584,7 @@
   },
   {
     "title": "Request/Response Service Layer: Testing Synchronous Client-Side Usage",
-    "link": "/2009/11/requestresponse-service-layer-testing-synchronous-client-side-usage/",
+    "link": "/blog/2009/11/requestresponse-service-layer-testing-synchronous-client-side-usage/",
     "date": "2009-11-13 12:07:12",
     "disqusthreadid": "213627565",
     "categories": [
@@ -1593,7 +1593,7 @@
   },
   {
     "title": "Request/Response Service Layer: Asynchronous Client-Side Usage",
-    "link": "/2009/11/requestresponse-service-layer-asynchronous-client-side-usage/",
+    "link": "/blog/2009/11/requestresponse-service-layer-asynchronous-client-side-usage/",
     "date": "2009-11-15 17:52:33",
     "disqusthreadid": "213627569",
     "categories": [
@@ -1602,7 +1602,7 @@
   },
   {
     "title": "Request/Response Service Layer: Testing Asynchronous Client-Side Usage",
-    "link": "/2009/11/requestresponse-service-layer-testing-asynchronous-client-side-usage/",
+    "link": "/blog/2009/11/requestresponse-service-layer-testing-asynchronous-client-side-usage/",
     "date": "2009-11-16 14:09:45",
     "disqusthreadid": "213627577",
     "categories": [
@@ -1611,7 +1611,7 @@
   },
   {
     "title": "Request/Response Service Layer: Conclusions",
-    "link": "/2009/11/requestresponse-service-layer-conclusions/",
+    "link": "/blog/2009/11/requestresponse-service-layer-conclusions/",
     "date": "2009-11-16 14:09:52",
     "disqusthreadid": "213627579",
     "categories": [
@@ -1620,7 +1620,7 @@
   },
   {
     "title": "A Reading Guide To Becoming A Better Developer",
-    "link": "/2009/11/a-reading-guide-to-becoming-a-better-developer/",
+    "link": "/blog/2009/11/a-reading-guide-to-becoming-a-better-developer/",
     "date": "2009-11-25 19:43:46",
     "disqusthreadid": "213627616",
     "categories": [
@@ -1630,7 +1630,7 @@
   },
   {
     "title": "There's Lazy Loading, And Then There's Lazy Coding",
-    "link": "/2009/11/theres-lazy-loading-and-then-theres-lazy-coding/",
+    "link": "/blog/2009/11/theres-lazy-loading-and-then-theres-lazy-coding/",
     "date": "2009-11-19 08:19:03",
     "disqusthreadid": "213627666",
     "categories": [
@@ -1639,7 +1639,7 @@
   },
   {
     "title": "Introducing: The Agatha Project",
-    "link": "/2009/11/introducing-the-agatha-project/",
+    "link": "/blog/2009/11/introducing-the-agatha-project/",
     "date": "2009-11-19 23:50:59",
     "disqusthreadid": "213627675",
     "categories": [
@@ -1649,7 +1649,7 @@
   },
   {
     "title": "Hello World With Agatha",
-    "link": "/2009/11/hello-world-with-agatha/",
+    "link": "/blog/2009/11/hello-world-with-agatha/",
     "date": "2009-11-23 22:05:33",
     "disqusthreadid": "213627693",
     "categories": [
@@ -1658,7 +1658,7 @@
   },
   {
     "title": "Integrating Your IOC Container With Agatha",
-    "link": "/2009/11/integrating-your-ioc-container-with-agatha/",
+    "link": "/blog/2009/11/integrating-your-ioc-container-with-agatha/",
     "date": "2009-11-28 18:59:03",
     "disqusthreadid": "213627718",
     "categories": [
@@ -1667,7 +1667,7 @@
   },
   {
     "title": "You Can Benefit From Open Sourcing Your Code",
-    "link": "/2009/12/you-can-benefit-from-open-sourcing-your-code/",
+    "link": "/blog/2009/12/you-can-benefit-from-open-sourcing-your-code/",
     "date": "2009-12-03 21:11:04",
     "disqusthreadid": "213627763",
     "categories": [
@@ -1676,7 +1676,7 @@
   },
   {
     "title": "One-Way (Or Fire And Forget) Requests With Agatha",
-    "link": "/2009/12/one-way-or-fire-and-forget-requests-with-agatha/",
+    "link": "/blog/2009/12/one-way-or-fire-and-forget-requests-with-agatha/",
     "date": "2009-12-04 13:48:08",
     "disqusthreadid": "213627772",
     "categories": [
@@ -1685,7 +1685,7 @@
   },
   {
     "title": "Running An Agatha Service Layer In-Process (Without WCF)",
-    "link": "/2009/12/running-an-agatha-service-layer-in-process-without-wcf/",
+    "link": "/blog/2009/12/running-an-agatha-service-layer-in-process-without-wcf/",
     "date": "2009-12-08 07:00:05",
     "disqusthreadid": "213627782",
     "categories": [
@@ -1694,7 +1694,7 @@
   },
   {
     "title": "Real World Benefits From Loose Coupling, Inversion Of Control And Dependency Injection",
-    "link": "/2009/12/real-world-benefits-from-loose-coupling-inversion-of-control-and-dependency-injection/",
+    "link": "/blog/2009/12/real-world-benefits-from-loose-coupling-inversion-of-control-and-dependency-injection/",
     "date": "2009-12-10 07:00:16",
     "disqusthreadid": "",
     "categories": [
@@ -1706,7 +1706,7 @@
   },
   {
     "title": "Unit Testing An NHibernate Application",
-    "link": "/2009/12/unit-testing-an-nhibernate-application/",
+    "link": "/blog/2009/12/unit-testing-an-nhibernate-application/",
     "date": "2009-12-06 20:21:13",
     "disqusthreadid": "213627803",
     "categories": [
@@ -1716,7 +1716,7 @@
   },
   {
     "title": "Testing CRUD Operations With NHibernate",
-    "link": "/2009/12/testing-crud-operations-with-nhibernate/",
+    "link": "/blog/2009/12/testing-crud-operations-with-nhibernate/",
     "date": "2009-12-07 12:38:02",
     "disqusthreadid": "213627816",
     "categories": [
@@ -1726,7 +1726,7 @@
   },
   {
     "title": "Don't Be A Whiny Developer",
-    "link": "/2009/12/dont-be-a-whiny-developer/",
+    "link": "/blog/2009/12/dont-be-a-whiny-developer/",
     "date": "2009-12-15 21:17:02",
     "disqusthreadid": "213627934",
     "categories": [
@@ -1736,7 +1736,7 @@
   },
   {
     "title": "The Padawan That Couldn't",
-    "link": "/2009/12/the-padawa-that-couldnt/",
+    "link": "/blog/2009/12/the-padawa-that-couldnt/",
     "date": "2009-12-14 21:43:07",
     "disqusthreadid": "213627966",
     "categories": [
@@ -1745,7 +1745,7 @@
   },
   {
     "title": "Enabling Logging In Your Agatha Service Layer",
-    "link": "/2009/12/enabling-logging-in-your-agatha-service-layer/",
+    "link": "/blog/2009/12/enabling-logging-in-your-agatha-service-layer/",
     "date": "2009-12-19 14:05:22",
     "disqusthreadid": "213627736",
     "categories": [
@@ -1754,7 +1754,7 @@
   },
   {
     "title": "Recommended Book: 97 Things Every Project Manager Should Know",
-    "link": "/2009/12/recommended-book-97-things-every-project-manager-should-know/",
+    "link": "/blog/2009/12/recommended-book-97-things-every-project-manager-should-know/",
     "date": "2009-12-29 17:58:26",
     "disqusthreadid": "213628135",
     "categories": [
@@ -1763,7 +1763,7 @@
   },
   {
     "title": "Software Patents: Our Industry's Nuclear Weapon",
-    "link": "/2009/12/software-patents-our-industrys-nuclear-weapon/",
+    "link": "/blog/2009/12/software-patents-our-industrys-nuclear-weapon/",
     "date": "2009-12-29 21:42:51",
     "disqusthreadid": "213628143",
     "categories": [
@@ -1772,7 +1772,7 @@
   },
   {
     "title": "Don’t Strive For Perfection",
-    "link": "/2010/01/dont-strive-for-perfection/",
+    "link": "/blog/2010/01/dont-strive-for-perfection/",
     "date": "2010-01-04 21:38:05",
     "disqusthreadid": "213628163",
     "categories": [
@@ -1782,7 +1782,7 @@
   },
   {
     "title": "Never Underestimate Your Own Stupidity",
-    "link": "/2010/01/never-underestimate-your-own-stupidity/",
+    "link": "/blog/2010/01/never-underestimate-your-own-stupidity/",
     "date": "2010-01-07 14:21:48",
     "disqusthreadid": "213628197",
     "categories": [
@@ -1791,7 +1791,7 @@
   },
   {
     "title": "There’s Nothing Courageous About Being Honest About Mistakes",
-    "link": "/2010/01/theres-nothing-courageous-about-being-honest-about-mistakes/",
+    "link": "/blog/2010/01/theres-nothing-courageous-about-being-honest-about-mistakes/",
     "date": "2010-01-09 19:46:07",
     "disqusthreadid": "213628208",
     "categories": [
@@ -1800,7 +1800,7 @@
   },
   {
     "title": "OMG! Someone Stole My Code",
-    "link": "/2010/01/omg-someone-stole-my-code/",
+    "link": "/blog/2010/01/omg-someone-stole-my-code/",
     "date": "2010-01-12 22:06:53",
     "disqusthreadid": "213628243",
     "categories": [
@@ -1809,7 +1809,7 @@
   },
   {
     "title": "Is There A Good Reason To Hide Inherited Members?",
-    "link": "/2010/01/is-there-a-good-reason-to-hide-inherited-members/",
+    "link": "/blog/2010/01/is-there-a-good-reason-to-hide-inherited-members/",
     "date": "2010-01-17 16:25:00",
     "disqusthreadid": "213628273",
     "categories": [
@@ -1818,7 +1818,7 @@
   },
   {
     "title": "Career Advice For Young Developers, Part 2",
-    "link": "/2010/01/career-advice-for-young-developers-part-2/",
+    "link": "/blog/2010/01/career-advice-for-young-developers-part-2/",
     "date": "2010-01-13 21:37:35",
     "disqusthreadid": "213628310",
     "categories": [
@@ -1828,7 +1828,7 @@
   },
   {
     "title": "Hey Microsoft, Our Databases Aren’t Services!",
-    "link": "/2010/01/hey-microsoft-our-databases-arent-services/",
+    "link": "/blog/2010/01/hey-microsoft-our-databases-arent-services/",
     "date": "2010-01-17 18:46:11",
     "disqusthreadid": "213628330",
     "categories": [
@@ -1839,7 +1839,7 @@
   },
   {
     "title": "Dependency Injection Inversion Rejection",
-    "link": "/2010/01/dependency-injection-inversion-rejection/",
+    "link": "/blog/2010/01/dependency-injection-inversion-rejection/",
     "date": "2010-01-19 09:19:38",
     "disqusthreadid": "213628369",
     "categories": [
@@ -1849,7 +1849,7 @@
   },
   {
     "title": "Highly Recommended Book: Debug It!",
-    "link": "/2010/01/highly-recommended-book-debug-it/",
+    "link": "/blog/2010/01/highly-recommended-book-debug-it/",
     "date": "2010-01-26 07:03:57",
     "disqusthreadid": "213628395",
     "categories": [
@@ -1858,7 +1858,7 @@
   },
   {
     "title": "Inversion Of Control Containers And Factories Aren’t Mutually Exclusive",
-    "link": "/2010/01/inversion-of-control-containers-and-factories-arent-mutually-exclusive/",
+    "link": "/blog/2010/01/inversion-of-control-containers-and-factories-arent-mutually-exclusive/",
     "date": "2010-01-23 16:14:45",
     "disqusthreadid": "213628401",
     "categories": [
@@ -1868,7 +1868,7 @@
   },
   {
     "title": "As A Movement, ALT.NET Has Been Dead For A While",
-    "link": "/2010/01/as-a-movement-alt-net-has-been-dead-for-a-while/",
+    "link": "/blog/2010/01/as-a-movement-alt-net-has-been-dead-for-a-while/",
     "date": "2010-01-24 16:06:58",
     "disqusthreadid": "213628410",
     "categories": [
@@ -1878,7 +1878,7 @@
   },
   {
     "title": "Agatha Vs NServiceBus?",
-    "link": "/2010/01/agatha-vs-nservicebus/",
+    "link": "/blog/2010/01/agatha-vs-nservicebus/",
     "date": "2010-01-26 21:50:51",
     "disqusthreadid": "213628444",
     "categories": [
@@ -1888,7 +1888,7 @@
   },
   {
     "title": "Securing Your Agatha Service Layer",
-    "link": "/2010/01/securing-your-agatha-service-layer/",
+    "link": "/blog/2010/01/securing-your-agatha-service-layer/",
     "date": "2010-01-27 21:05:11",
     "disqusthreadid": "213628453",
     "categories": [
@@ -1897,7 +1897,7 @@
   },
   {
     "title": "Good Team Dynamics Are Essential For High Technical Quality",
-    "link": "/2010/01/good-team-dynamics-are-essential-for-high-technical-quality/",
+    "link": "/blog/2010/01/good-team-dynamics-are-essential-for-high-technical-quality/",
     "date": "2010-01-31 21:42:16",
     "disqusthreadid": "213628466",
     "categories": [
@@ -1906,7 +1906,7 @@
   },
   {
     "title": "When It Comes To IOC Containers, We Seem To Be Pretty Loyal",
-    "link": "/2010/02/when-it-comes-to-ioc-containers-we-seem-to-be-pretty-loyal/",
+    "link": "/blog/2010/02/when-it-comes-to-ioc-containers-we-seem-to-be-pretty-loyal/",
     "date": "2010-02-15 22:33:43",
     "disqusthreadid": "213628544",
     "categories": [
@@ -1915,7 +1915,7 @@
   },
   {
     "title": "Have You Jumped On The Bandwagon Yet?",
-    "link": "/2010/02/have-you-jumped-on-the-bandwagon-yet/",
+    "link": "/blog/2010/02/have-you-jumped-on-the-bandwagon-yet/",
     "date": "2010-02-18 21:16:29",
     "disqusthreadid": "213628567",
     "categories": [
@@ -1924,7 +1924,7 @@
   },
   {
     "title": "You’ll Never Get Sustainable Progress For Free",
-    "link": "/2010/02/youll-never-get-sustainable-progress-for-free/",
+    "link": "/blog/2010/02/youll-never-get-sustainable-progress-for-free/",
     "date": "2010-02-21 22:10:58",
     "disqusthreadid": "213628601",
     "categories": [
@@ -1933,7 +1933,7 @@
   },
   {
     "title": "Wanna Review My Code?",
-    "link": "/2010/02/wanna-review-my-code/",
+    "link": "/blog/2010/02/wanna-review-my-code/",
     "date": "2010-02-23 15:58:31",
     "disqusthreadid": "213628611",
     "categories": [
@@ -1942,7 +1942,7 @@
   },
   {
     "title": "Using Copy-On-Write In Multithreaded Code To Reduce Locking Overhead",
-    "link": "/2010/03/using-copy-on-write-in-multithreaded-code-to-reduce-locking-overhead/",
+    "link": "/blog/2010/03/using-copy-on-write-in-multithreaded-code-to-reduce-locking-overhead/",
     "date": "2010-03-08 16:36:35",
     "disqusthreadid": "213628644",
     "categories": [
@@ -1952,7 +1952,7 @@
   },
   {
     "title": "MSDTC Woes With NServiceBus And NHibernate",
-    "link": "/2010/03/msdtc-woes-with-nservicebus-and-nhibernate/",
+    "link": "/blog/2010/03/msdtc-woes-with-nservicebus-and-nhibernate/",
     "date": "2010-03-19 11:52:16",
     "disqusthreadid": "213628661",
     "categories": [
@@ -1964,7 +1964,7 @@
   },
   {
     "title": "Everybody Wins In The Certification Game",
-    "link": "/2010/03/everybody-wins-in-the-certification-game/",
+    "link": "/blog/2010/03/everybody-wins-in-the-certification-game/",
     "date": "2010-03-20 19:59:37",
     "disqusthreadid": "213628682",
     "categories": [
@@ -1973,7 +1973,7 @@
   },
   {
     "title": "Clients Shouldn’t Define Your Services",
-    "link": "/2010/04/clients-shouldnt-define-your-services/",
+    "link": "/blog/2010/04/clients-shouldnt-define-your-services/",
     "date": "2010-04-05 17:35:53",
     "disqusthreadid": "213628708",
     "categories": [
@@ -1983,7 +1983,7 @@
   },
   {
     "title": "Avoiding Leaking Connections With NHibernate And TransactionScope",
-    "link": "/2010/05/avoiding-leaking-connections-with-nhibernate-and-transactionscope/",
+    "link": "/blog/2010/05/avoiding-leaking-connections-with-nhibernate-and-transactionscope/",
     "date": "2010-05-06 13:16:31",
     "disqusthreadid": "213628779",
     "categories": [
@@ -1993,7 +1993,7 @@
   },
   {
     "title": "Consuming Multiple Agatha Services",
-    "link": "/2010/05/consuming-multiple-agatha-services/",
+    "link": "/blog/2010/05/consuming-multiple-agatha-services/",
     "date": "2010-05-08 18:21:35",
     "disqusthreadid": "213628848",
     "categories": [
@@ -2002,7 +2002,7 @@
   },
   {
     "title": "Consuming An Agatha Service From A Non-Agatha-Aware Client",
-    "link": "/2010/05/consuming-an-agatha-service-from-a-non-agatha-aware-client/",
+    "link": "/blog/2010/05/consuming-an-agatha-service-from-a-non-agatha-aware-client/",
     "date": "2010-05-14 14:49:35",
     "disqusthreadid": "213628871",
     "categories": [
@@ -2011,7 +2011,7 @@
   },
   {
     "title": "Why You Shouldn’t Expose Your Entities Through Your Services",
-    "link": "/2010/05/why-you-shouldnt-expose-your-entities-through-your-services/",
+    "link": "/blog/2010/05/why-you-shouldnt-expose-your-entities-through-your-services/",
     "date": "2010-05-17 16:18:43",
     "disqusthreadid": "213628883",
     "categories": [
@@ -2024,7 +2024,7 @@
   },
   {
     "title": "Isolation At Work: Good Or Bad?",
-    "link": "/2010/06/isolation-at-work-good-or-bad/",
+    "link": "/blog/2010/06/isolation-at-work-good-or-bad/",
     "date": "2010-06-05 15:09:02",
     "disqusthreadid": "213628965",
     "categories": [
@@ -2034,7 +2034,7 @@
   },
   {
     "title": "If You Can’t Say Something Bad About It, You Don’t Know It Well Enough",
-    "link": "/2010/06/if-you-cant-say-something-bad-about-it-you-dont-know-it-well-enough/",
+    "link": "/blog/2010/06/if-you-cant-say-something-bad-about-it-you-dont-know-it-well-enough/",
     "date": "2010-06-07 21:00:57",
     "disqusthreadid": "213628978",
     "categories": [
@@ -2043,7 +2043,7 @@
   },
   {
     "title": "Why Do We Recycle Our Application Pools?",
-    "link": "/2010/06/why-do-we-recycle-our-application-pools/",
+    "link": "/blog/2010/06/why-do-we-recycle-our-application-pools/",
     "date": "2010-06-12 14:14:16",
     "disqusthreadid": "213628987",
     "categories": [
@@ -2053,7 +2053,7 @@
   },
   {
     "title": "Using Agatha’s Server-Side Caching",
-    "link": "/2010/06/using-agathas-server-side-caching/",
+    "link": "/blog/2010/06/using-agathas-server-side-caching/",
     "date": "2010-06-20 17:00:46",
     "disqusthreadid": "213629010",
     "categories": [
@@ -2062,7 +2062,7 @@
   },
   {
     "title": "Working Overtime: What It Really Means",
-    "link": "/2010/06/working-overtime-what-it-really-means/",
+    "link": "/blog/2010/06/working-overtime-what-it-really-means/",
     "date": "2010-06-24 21:42:28",
     "disqusthreadid": "213629037",
     "categories": [
@@ -2072,7 +2072,7 @@
   },
   {
     "title": "Which Language Do You Code In?",
-    "link": "/2010/07/which-language-do-you-code-in/",
+    "link": "/blog/2010/07/which-language-do-you-code-in/",
     "date": "2010-07-18 13:21:13",
     "disqusthreadid": "213629177",
     "categories": [
@@ -2081,7 +2081,7 @@
   },
   {
     "title": "The MVVM Pattern Is Highly Overrated",
-    "link": "/2010/07/the-mvvm-pattern-is-highly-overrated/",
+    "link": "/blog/2010/07/the-mvvm-pattern-is-highly-overrated/",
     "date": "2010-07-21 15:23:58",
     "disqusthreadid": "213629209",
     "categories": [
@@ -2092,7 +2092,7 @@
   },
   {
     "title": "Estimates Are A Double-Edged Sword",
-    "link": "/2010/07/estimates-are-a-double-edged-sword/",
+    "link": "/blog/2010/07/estimates-are-a-double-edged-sword/",
     "date": "2010-07-28 21:45:52",
     "disqusthreadid": "213629325",
     "categories": [
@@ -2101,7 +2101,7 @@
   },
   {
     "title": "MVP In Silverlight/WPF Series",
-    "link": "/2010/08/mvp-in-silverlightwpf-series/",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-series/",
     "date": "2010-08-01 20:43:49",
     "disqusthreadid": "213629376",
     "categories": [
@@ -2110,7 +2110,7 @@
   },
   {
     "title": "MVP In Silverlight/WPF: Architectural Overview",
-    "link": "/2010/08/mvp-in-silverlightwpf-architectural-overview/",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-architectural-overview/",
     "date": "2010-08-01 20:43:57",
     "disqusthreadid": "213629382",
     "categories": [
@@ -2119,7 +2119,7 @@
   },
   {
     "title": "MVP In Silverlight/WPF: Some Infrastructure Bits",
-    "link": "/2010/08/mvp-in-silverlightwpf-some-infrastructure-bits/",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-some-infrastructure-bits/",
     "date": "2010-08-02 19:19:11",
     "disqusthreadid": "213629403",
     "categories": [
@@ -2128,7 +2128,7 @@
   },
   {
     "title": "MVP In Silverlight/WPF: The Sample",
-    "link": "/2010/08/mvp-in-silverlightwpf-the-sample/",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-the-sample/",
     "date": "2010-08-03 17:18:24",
     "disqusthreadid": "213629436",
     "categories": [
@@ -2137,7 +2137,7 @@
   },
   {
     "title": "MVP In Silverlight/WPF: Implementing The Overview UserControl",
-    "link": "/2010/08/mvp-in-silverlightwpf-implementing-the-overview-usercontrol/",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-implementing-the-overview-usercontrol/",
     "date": "2010-08-04 17:17:34",
     "disqusthreadid": "213629462",
     "categories": [
@@ -2146,7 +2146,7 @@
   },
   {
     "title": "MVP In Silverlight/WPF: Implementing The Details UserControl",
-    "link": "/2010/08/mvp-in-silverlightwpf-implementing-the-details-usercontrol/",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-implementing-the-details-usercontrol/",
     "date": "2010-08-05 17:10:54",
     "disqusthreadid": "213629470",
     "categories": [
@@ -2155,7 +2155,7 @@
   },
   {
     "title": "MVP In Silverlight/WPF: Automated Tests",
-    "link": "/2010/08/mvp-in-silverlightwpf-series-automated-tests/",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-series-automated-tests/",
     "date": "2010-08-07 18:08:04",
     "disqusthreadid": "213629478",
     "categories": [
@@ -2164,7 +2164,7 @@
   },
   {
     "title": "MVP In Silverlight/WPF: Conclusions",
-    "link": "/2010/08/mvp-in-silverlightwpf-conclusions/",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-conclusions/",
     "date": "2010-08-08 10:48:36",
     "disqusthreadid": "213629482",
     "categories": [
@@ -2173,7 +2173,7 @@
   },
   {
     "title": "Using Agatha's Client-Side Caching",
-    "link": "/2010/08/using-agathas-client-side-caching/",
+    "link": "/blog/2010/08/using-agathas-client-side-caching/",
     "date": "2010-08-09 16:27:51",
     "disqusthreadid": "213629495",
     "categories": [
@@ -2182,7 +2182,7 @@
   },
   {
     "title": "How I Feel About The .NET World Lately",
-    "link": "/2010/08/how-i-feel-about-the-net-world-lately/",
+    "link": "/blog/2010/08/how-i-feel-about-the-net-world-lately/",
     "date": "2010-08-10 22:31:47",
     "disqusthreadid": "213629502",
     "categories": [
@@ -2191,7 +2191,7 @@
   },
   {
     "title": "Highly Recommended Book: The Ruby Programming Language",
-    "link": "/2010/08/highly-recommended-book-the-ruby-programming-language/",
+    "link": "/blog/2010/08/highly-recommended-book-the-ruby-programming-language/",
     "date": "2010-08-15 19:22:57",
     "disqusthreadid": "213629605",
     "categories": [
@@ -2200,7 +2200,7 @@
   },
   {
     "title": "Can An Object Grow?",
-    "link": "/2010/08/can-an-object-grow/",
+    "link": "/blog/2010/08/can-an-object-grow/",
     "date": "2010-08-17 22:55:09",
     "disqusthreadid": "213629616",
     "categories": [
@@ -2209,7 +2209,7 @@
   },
   {
     "title": "Once Again: Comments In Code Aren't Necessarily Bad",
-    "link": "/2010/08/once-again-comments-in-code-arent-necessarily-bad/",
+    "link": "/blog/2010/08/once-again-comments-in-code-arent-necessarily-bad/",
     "date": "2010-08-18 22:28:43",
     "disqusthreadid": "213629655",
     "categories": [
@@ -2219,7 +2219,7 @@
   },
   {
     "title": "Using C#-style Events In Ruby",
-    "link": "/2010/08/using-c-style-events-in-ruby/",
+    "link": "/blog/2010/08/using-c-style-events-in-ruby/",
     "date": "2010-08-22 12:26:40",
     "disqusthreadid": "213629700",
     "categories": [
@@ -2228,7 +2228,7 @@
   },
   {
     "title": "Using More Rubyesq Events In Ruby",
-    "link": "/2010/08/using-more-rubyesq-events-in-ruby/",
+    "link": "/blog/2010/08/using-more-rubyesq-events-in-ruby/",
     "date": "2010-08-23 23:12:35",
     "disqusthreadid": "213629715",
     "categories": [
@@ -2237,7 +2237,7 @@
   },
   {
     "title": "Auto-Wiring Ruby Events",
-    "link": "/2010/08/auto-wiring-ruby-events/",
+    "link": "/blog/2010/08/auto-wiring-ruby-events/",
     "date": "2010-08-26 00:09:55",
     "disqusthreadid": "213629736",
     "categories": [
@@ -2246,7 +2246,7 @@
   },
   {
     "title": "First Experiences With RSpec/BDD",
-    "link": "/2010/08/first-experiences-with-rspecbdd/",
+    "link": "/blog/2010/08/first-experiences-with-rspecbdd/",
     "date": "2010-08-27 00:51:21",
     "disqusthreadid": "213629744",
     "categories": [
@@ -2256,7 +2256,7 @@
   },
   {
     "title": "Compiler|Interpreter Warnings Are Important Learning Opportunities",
-    "link": "/2010/08/compilerinterpreter-warnings-are-important-learning-opportunities/",
+    "link": "/blog/2010/08/compilerinterpreter-warnings-are-important-learning-opportunities/",
     "date": "2010-08-28 00:27:03",
     "disqusthreadid": "213629750",
     "categories": [
@@ -2265,7 +2265,7 @@
   },
   {
     "title": "Book Review: The Ruby Way, Second Edition",
-    "link": "/2010/08/book-review-the-ruby-way-second-edition/",
+    "link": "/blog/2010/08/book-review-the-ruby-way-second-edition/",
     "date": "2010-08-31 22:04:48",
     "disqusthreadid": "213629760",
     "categories": [
@@ -2274,7 +2274,7 @@
   },
   {
     "title": "Why Agile In The Enterprise Generally Doesn't Work",
-    "link": "/2010/08/why-agile-in-the-enterprise-generally-doesnt-work/",
+    "link": "/blog/2010/08/why-agile-in-the-enterprise-generally-doesnt-work/",
     "date": "2010-08-29 10:39:02",
     "disqusthreadid": "213629774",
     "categories": [
@@ -2284,7 +2284,7 @@
   },
   {
     "title": "Think Twice Before You Map Entities To DTOs",
-    "link": "/2010/09/think-twice-before-you-map-entities-to-dtos/",
+    "link": "/blog/2010/09/think-twice-before-you-map-entities-to-dtos/",
     "date": "2010-09-01 13:58:32",
     "disqusthreadid": "213629867",
     "categories": [
@@ -2294,7 +2294,7 @@
   },
   {
     "title": "Writing A Simple DSL",
-    "link": "/2010/09/writing-a-simple-dsl/",
+    "link": "/blog/2010/09/writing-a-simple-dsl/",
     "date": "2010-09-04 01:44:39",
     "disqusthreadid": "213629889",
     "categories": [
@@ -2304,7 +2304,7 @@
   },
   {
     "title": "Using Ruby Classes In C# With IronRuby",
-    "link": "/2010/09/using-ruby-classes-in-c-with-ironruby/",
+    "link": "/blog/2010/09/using-ruby-classes-in-c-with-ironruby/",
     "date": "2010-09-06 20:24:42",
     "disqusthreadid": "213629898",
     "categories": [
@@ -2314,7 +2314,7 @@
   },
   {
     "title": "What's Up With These Belgians?",
-    "link": "/2010/09/whats-up-with-these-belgians/",
+    "link": "/blog/2010/09/whats-up-with-these-belgians/",
     "date": "2010-09-05 11:29:38",
     "disqusthreadid": "213629908",
     "categories": [
@@ -2323,7 +2323,7 @@
   },
   {
     "title": "You Need To Step Out Of Your Comfort Zone",
-    "link": "/2010/09/you-need-to-step-out-of-your-comfort-zone/",
+    "link": "/blog/2010/09/you-need-to-step-out-of-your-comfort-zone/",
     "date": "2010-09-07 23:00:42",
     "disqusthreadid": "213629937",
     "categories": [
@@ -2333,7 +2333,7 @@
   },
   {
     "title": "Highly Recommended Book: Metaprogramming Ruby",
-    "link": "/2010/09/highly-recommended-book-metaprogramming-ruby/",
+    "link": "/blog/2010/09/highly-recommended-book-metaprogramming-ruby/",
     "date": "2010-09-12 17:31:52",
     "disqusthreadid": "214053474",
     "categories": [
@@ -2342,7 +2342,7 @@
   },
   {
     "title": "Keep Your Eyes On The Road",
-    "link": "/2010/09/keep-your-eyes-on-the-road/",
+    "link": "/blog/2010/09/keep-your-eyes-on-the-road/",
     "date": "2010-09-18 23:27:49",
     "disqusthreadid": "213629976",
     "categories": [
@@ -2351,7 +2351,7 @@
   },
   {
     "title": "Using NHibernate To Persist And Query Ruby Objects",
-    "link": "/2010/09/using-nhibernate-to-persist-and-query-ruby-objects/",
+    "link": "/blog/2010/09/using-nhibernate-to-persist-and-query-ruby-objects/",
     "date": "2010-09-23 23:16:35",
     "disqusthreadid": "213630057",
     "categories": [
@@ -2361,7 +2361,7 @@
   },
   {
     "title": "The Truth Is In The Code! Unless It Isn't...",
-    "link": "/2010/10/the-truth-is-in-the-code-unless-it-isnt/",
+    "link": "/blog/2010/10/the-truth-is-in-the-code-unless-it-isnt/",
     "date": "2010-10-13 08:00:12",
     "disqusthreadid": "213629191",
     "categories": [
@@ -2370,7 +2370,7 @@
   },
   {
     "title": "Recommended Book: IronRuby Unleashed",
-    "link": "/2010/10/recommended-book-ironruby-unleashed/",
+    "link": "/blog/2010/10/recommended-book-ironruby-unleashed/",
     "date": "2010-10-02 16:21:56",
     "disqusthreadid": "213630097",
     "categories": [
@@ -2379,7 +2379,7 @@
   },
   {
     "title": "Start Believing In Yourself",
-    "link": "/2010/10/start-believing-in-yourself/",
+    "link": "/blog/2010/10/start-believing-in-yourself/",
     "date": "2010-10-03 23:03:31",
     "disqusthreadid": "213630123",
     "categories": [
@@ -2389,7 +2389,7 @@
   },
   {
     "title": "Why You Don't Need Dependency Injection In Ruby",
-    "link": "/2010/10/why-you-dont-need-dependency-injection-in-ruby/",
+    "link": "/blog/2010/10/why-you-dont-need-dependency-injection-in-ruby/",
     "date": "2010-10-11 08:00:32",
     "disqusthreadid": "213630139",
     "categories": [
@@ -2401,7 +2401,7 @@
   },
   {
     "title": "Recommended Book: DSLs In Action",
-    "link": "/2010/10/recommended-book-dsls-in-action/",
+    "link": "/blog/2010/10/recommended-book-dsls-in-action/",
     "date": "2010-10-09 14:47:54",
     "disqusthreadid": "213630179",
     "categories": [
@@ -2410,7 +2410,7 @@
   },
   {
     "title": "Wanna Improve Your Life? Then DO Something About It!",
-    "link": "/2010/10/wanna-improve-your-life-then-do-something-about-it/",
+    "link": "/blog/2010/10/wanna-improve-your-life-then-do-something-about-it/",
     "date": "2010-10-25 00:24:06",
     "disqusthreadid": "213630231",
     "categories": [
@@ -2420,7 +2420,7 @@
   },
   {
     "title": "Highly Recommended Book: ReWork",
-    "link": "/2010/10/highly-recommended-book-rework/",
+    "link": "/blog/2010/10/highly-recommended-book-rework/",
     "date": "2010-10-17 18:29:14",
     "disqusthreadid": "213630240",
     "categories": [
@@ -2429,7 +2429,7 @@
   },
   {
     "title": "Performance Of NHibernate With Ruby Objects Compared To Traditional C# Objects",
-    "link": "/2010/10/performance-of-nhibernate-with-ruby-objects-compared-to-traditional-c-objects/",
+    "link": "/blog/2010/10/performance-of-nhibernate-with-ruby-objects-compared-to-traditional-c-objects/",
     "date": "2010-10-19 16:22:38",
     "disqusthreadid": "213630249",
     "categories": [
@@ -2441,7 +2441,7 @@
   },
   {
     "title": "Recommended Book: NHibernate 3.0 Cookbook",
-    "link": "/2010/10/recommended-book-nhibernate-3-0-cookbook/",
+    "link": "/blog/2010/10/recommended-book-nhibernate-3-0-cookbook/",
     "date": "2010-10-24 23:07:05",
     "disqusthreadid": "214162112",
     "categories": [
@@ -2451,7 +2451,7 @@
   },
   {
     "title": "Do You Still Believe In Silverlight?",
-    "link": "/2010/10/do-you-still-believe-in-silverlight/",
+    "link": "/blog/2010/10/do-you-still-believe-in-silverlight/",
     "date": "2010-10-30 16:30:07",
     "disqusthreadid": "213630256",
     "categories": [
@@ -2460,7 +2460,7 @@
   },
   {
     "title": "Developers Shouldn't Specialize",
-    "link": "/2010/10/developers-shouldnt-specialize/",
+    "link": "/blog/2010/10/developers-shouldnt-specialize/",
     "date": "2010-10-31 19:05:30",
     "disqusthreadid": "213630282",
     "categories": [
@@ -2470,7 +2470,7 @@
   },
   {
     "title": "Never Underestimate The Power Of A Message",
-    "link": "/2010/11/never-underestimate-the-power-of-a-message/",
+    "link": "/blog/2010/11/never-underestimate-the-power-of-a-message/",
     "date": "2010-11-07 18:30:05",
     "disqusthreadid": "213630306",
     "categories": [
@@ -2479,7 +2479,7 @@
   },
   {
     "title": "Favor Value Over Quality",
-    "link": "/2010/11/favor-value-over-quality/",
+    "link": "/blog/2010/11/favor-value-over-quality/",
     "date": "2010-11-11 22:25:53",
     "disqusthreadid": "213630320",
     "categories": [
@@ -2489,7 +2489,7 @@
   },
   {
     "title": "Highly Recommended Book: The Passionate Programmer",
-    "link": "/2010/12/highly-recommended-book-the-passionate-programmer/",
+    "link": "/blog/2010/12/highly-recommended-book-the-passionate-programmer/",
     "date": "2010-12-19 14:27:34",
     "disqusthreadid": "213630407",
     "categories": [
@@ -2498,7 +2498,7 @@
   },
   {
     "title": "A Little Piece Of Advice For Tech Bloggers",
-    "link": "/2010/12/a-little-piece-of-advice-for-tech-bloggers/",
+    "link": "/blog/2010/12/a-little-piece-of-advice-for-tech-bloggers/",
     "date": "2010-12-29 21:27:55",
     "disqusthreadid": "213630466",
     "categories": [
@@ -2507,7 +2507,7 @@
   },
   {
     "title": "Learn To Work With The Web, Instead Of Against It",
-    "link": "/2011/01/learn-to-work-with-the-web-instead-of-against-it/",
+    "link": "/blog/2011/01/learn-to-work-with-the-web-instead-of-against-it/",
     "date": "2011-01-09 18:41:06",
     "disqusthreadid": "213630483",
     "categories": [
@@ -2516,7 +2516,7 @@
   },
   {
     "title": "How Developers Should 'Read' Exceptions",
-    "link": "/2011/01/how-developers-should-read-exceptions/",
+    "link": "/blog/2011/01/how-developers-should-read-exceptions/",
     "date": "2011-01-13 22:57:50",
     "disqusthreadid": "213630512",
     "categories": [
@@ -2525,7 +2525,7 @@
   },
   {
     "title": "Don't Be Afraid To Change Your Mind",
-    "link": "/2011/01/dont-be-afraid-to-change-your-mind/",
+    "link": "/blog/2011/01/dont-be-afraid-to-change-your-mind/",
     "date": "2011-01-23 15:54:28",
     "disqusthreadid": "214515819",
     "categories": [
@@ -2536,7 +2536,7 @@
   },
   {
     "title": "Prefixing Input Elements Of Partial Views With ASP.NET MVC",
-    "link": "/2011/01/prefixing-input-elements-of-partial-views-with-asp-net-mvc/",
+    "link": "/blog/2011/01/prefixing-input-elements-of-partial-views-with-asp-net-mvc/",
     "date": "2011-01-24 22:10:09",
     "disqusthreadid": "215339882",
     "categories": [
@@ -2545,7 +2545,7 @@
   },
   {
     "title": "Walk Out On Sources Of Negativity",
-    "link": "/2011/01/walk-out-on-sources-of-negativity/",
+    "link": "/blog/2011/01/walk-out-on-sources-of-negativity/",
     "date": "2011-01-28 23:00:02",
     "disqusthreadid": "218030067",
     "categories": [
@@ -2556,7 +2556,7 @@
   },
   {
     "title": "Thou Shalt Name Thy Parameter \"command\"",
-    "link": "/2011/01/thou-shalt-name-thy-parameter-command/",
+    "link": "/blog/2011/01/thou-shalt-name-thy-parameter-command/",
     "date": "2011-01-31 14:56:28",
     "disqusthreadid": "219571285",
     "categories": [
@@ -2566,7 +2566,7 @@
   },
   {
     "title": "Recommended Book: jQuery In Action",
-    "link": "/2011/02/recommended-book-jquery-in-action/",
+    "link": "/blog/2011/02/recommended-book-jquery-in-action/",
     "date": "2011-02-01 20:53:55",
     "disqusthreadid": "220463774",
     "categories": [
@@ -2575,7 +2575,7 @@
   },
   {
     "title": "Using Generic TestFixtures To Run Tests In Multiple Browsers With WatiN",
-    "link": "/2011/02/using-generic-testfixtures-to-run-tests-in-multiple-browsers-with-watin/",
+    "link": "/blog/2011/02/using-generic-testfixtures-to-run-tests-in-multiple-browsers-with-watin/",
     "date": "2011-02-14 17:52:27",
     "disqusthreadid": "230239460",
     "categories": [
@@ -2584,7 +2584,7 @@
   },
   {
     "title": "There's Only One Valid Metric For Developer Productivity And Quality",
-    "link": "/2011/02/theres-only-one-valid-metric-for-developer-productivity-and-quality/",
+    "link": "/blog/2011/02/theres-only-one-valid-metric-for-developer-productivity-and-quality/",
     "date": "2011-02-19 18:37:19",
     "disqusthreadid": "234729098",
     "categories": [
@@ -2595,7 +2595,7 @@
   },
   {
     "title": "Recommended Book: HTML5 And CSS3: Develop With Tomorrow's Standards Today",
-    "link": "/2011/02/recommended-book-html5-and-css3-develop-with-tomorrows-standards-today/",
+    "link": "/blog/2011/02/recommended-book-html5-and-css3-develop-with-tomorrows-standards-today/",
     "date": "2011-02-22 21:08:50",
     "disqusthreadid": "237575572",
     "categories": [
@@ -2604,7 +2604,7 @@
   },
   {
     "title": "Using Distributed Caching With Agatha",
-    "link": "/2011/02/using-distributed-caching-with-agatha/",
+    "link": "/blog/2011/02/using-distributed-caching-with-agatha/",
     "date": "2011-02-27 19:33:45",
     "disqusthreadid": "241424705",
     "categories": [
@@ -2613,7 +2613,7 @@
   },
   {
     "title": "Why We're Going With HTML(5) Instead Of Silverlight",
-    "link": "/2011/03/why-were-going-with-html5-instead-of-silverlight/",
+    "link": "/blog/2011/03/why-were-going-with-html5-instead-of-silverlight/",
     "date": "2011-03-06 19:11:15",
     "disqusthreadid": "246963450",
     "categories": [
@@ -2623,7 +2623,7 @@
   },
   {
     "title": "Recommended Book: Apprenticeship Patterns",
-    "link": "/2011/03/recommended-book-apprenticeship-patterns/",
+    "link": "/blog/2011/03/recommended-book-apprenticeship-patterns/",
     "date": "2011-03-01 00:20:53",
     "disqusthreadid": "242291912",
     "categories": [
@@ -2632,7 +2632,7 @@
   },
   {
     "title": "Thoughts On Developer Longevity",
-    "link": "/2011/03/thoughts-on-developer-longevity/",
+    "link": "/blog/2011/03/thoughts-on-developer-longevity/",
     "date": "2011-03-04 00:11:47",
     "disqusthreadid": "244925930",
     "categories": [
@@ -2642,7 +2642,7 @@
   },
   {
     "title": "Highly Recommended Book: REST In Practice",
-    "link": "/2011/03/highly-recommended-book-rest-in-practice/",
+    "link": "/blog/2011/03/highly-recommended-book-rest-in-practice/",
     "date": "2011-03-05 19:12:42",
     "disqusthreadid": "246314403",
     "categories": [
@@ -2652,7 +2652,7 @@
   },
   {
     "title": "Convention Based Localization With ASP.NET MVC",
-    "link": "/2011/03/convention-based-localization-with-asp-net-mvc/",
+    "link": "/blog/2011/03/convention-based-localization-with-asp-net-mvc/",
     "date": "2011-03-19 11:41:15",
     "disqusthreadid": "258017809",
     "categories": [
@@ -2661,7 +2661,7 @@
   },
   {
     "title": "Sharing An IE Instance Among Multiple Tests With WatiN And MS Test",
-    "link": "/2011/03/sharing-an-ie-instance-among-multiple-tests-with-watin-and-ms-test/",
+    "link": "/blog/2011/03/sharing-an-ie-instance-among-multiple-tests-with-watin-and-ms-test/",
     "date": "2011-03-24 18:26:03",
     "disqusthreadid": "262181339",
     "categories": [
@@ -2670,7 +2670,7 @@
   },
   {
     "title": "Who Needs Classes Anyway?",
-    "link": "/2011/03/who-needs-classes-anyway/",
+    "link": "/blog/2011/03/who-needs-classes-anyway/",
     "date": "2011-03-28 21:10:14",
     "disqusthreadid": "265247885",
     "categories": [
@@ -2679,7 +2679,7 @@
   },
   {
     "title": "Customizing ASP.NET MVC's Required Property Validation Messages",
-    "link": "/2011/04/customizing-asp-net-mvcs-required-property-validation-messages/",
+    "link": "/blog/2011/04/customizing-asp-net-mvcs-required-property-validation-messages/",
     "date": "2011-04-03 19:45:01",
     "disqusthreadid": "270091438",
     "categories": [
@@ -2688,7 +2688,7 @@
   },
   {
     "title": "Automatically Including Current Language In Generated URLs With ASP.NET MVC",
-    "link": "/2011/04/automatically-including-current-language-in-generated-urls-with-asp-net-mvc/",
+    "link": "/blog/2011/04/automatically-including-current-language-in-generated-urls-with-asp-net-mvc/",
     "date": "2011-04-06 21:24:29",
     "disqusthreadid": "272901460",
     "categories": [
@@ -2697,7 +2697,7 @@
   },
   {
     "title": "NHibernate Examples",
-    "link": "/2011/04/nhibernate-examples/",
+    "link": "/blog/2011/04/nhibernate-examples/",
     "date": "2011-04-10 17:36:55",
     "disqusthreadid": "276049638",
     "categories": [
@@ -2706,7 +2706,7 @@
   },
   {
     "title": "Going Independent Is The Best Move I Ever Made",
-    "link": "/2011/05/going-independent-is-the-best-move-i-ever-made/",
+    "link": "/blog/2011/05/going-independent-is-the-best-move-i-ever-made/",
     "date": "2011-05-30 22:48:37",
     "disqusthreadid": "317926943",
     "categories": [
@@ -2717,7 +2717,7 @@
   },
   {
     "title": "You Might Want To Start Taking JavaScript Seriously",
-    "link": "/2011/06/you-might-want-to-start-taking-javascript-seriously/",
+    "link": "/blog/2011/06/you-might-want-to-start-taking-javascript-seriously/",
     "date": "2011-06-02 18:01:38",
     "disqusthreadid": "320481790",
     "categories": [
@@ -2727,7 +2727,7 @@
   },
   {
     "title": "Yet Another Nail In Silverlight's Coffin?",
-    "link": "/2011/06/yet-another-nail-in-silverlights-coffin/",
+    "link": "/blog/2011/06/yet-another-nail-in-silverlights-coffin/",
     "date": "2011-06-04 15:07:26",
     "disqusthreadid": "322068992",
     "categories": [
@@ -2737,7 +2737,7 @@
   },
   {
     "title": "Review Of My NHibernate Course",
-    "link": "/2011/07/review-of-my-nhibernate-course/",
+    "link": "/blog/2011/07/review-of-my-nhibernate-course/",
     "date": "2011-07-06 19:22:05",
     "disqusthreadid": "351255545",
     "categories": [
@@ -2746,7 +2746,7 @@
   },
   {
     "title": "Q&A: Putting A Training Course Together",
-    "link": "/2011/07/qa-putting-a-training-course-together/",
+    "link": "/blog/2011/07/qa-putting-a-training-course-together/",
     "date": "2011-07-10 00:46:36",
     "disqusthreadid": "354132587",
     "categories": [
@@ -2755,7 +2755,7 @@
   },
   {
     "title": "Arguing About Developer Communities Doesn't Make Sense",
-    "link": "/2011/07/arguing-about-developer-communities-doesnt-make-sense/",
+    "link": "/blog/2011/07/arguing-about-developer-communities-doesnt-make-sense/",
     "date": "2011-07-17 16:20:22",
     "disqusthreadid": "360653020",
     "categories": [
@@ -2764,7 +2764,7 @@
   },
   {
     "title": "Clean Code Versus Great Code",
-    "link": "/2011/07/clean-code-versus-great-code/",
+    "link": "/blog/2011/07/clean-code-versus-great-code/",
     "date": "2011-07-21 18:00:11",
     "disqusthreadid": "364405695",
     "categories": [
@@ -2774,7 +2774,7 @@
   },
   {
     "title": "First Steps With MongoDB, Mongoose and Jasmine-Node On Node.JS",
-    "link": "/2011/07/first-steps-with-mongodb-mongoose-and-jasmine-node-on-node-js/",
+    "link": "/blog/2011/07/first-steps-with-mongodb-mongoose-and-jasmine-node-on-node-js/",
     "date": "2011-07-20 00:02:44",
     "disqusthreadid": "362842564",
     "categories": [
@@ -2786,7 +2786,7 @@
   },
   {
     "title": "CV Likes And Dislikes",
-    "link": "/2011/07/cv-likes-and-dislikes/",
+    "link": "/blog/2011/07/cv-likes-and-dislikes/",
     "date": "2011-07-31 12:45:12",
     "disqusthreadid": "373263498",
     "categories": [
@@ -2795,7 +2795,7 @@
   },
   {
     "title": "Take Advantage Of Your BDD Framework",
-    "link": "/2011/08/take-advantage-of-your-bdd-framework/",
+    "link": "/blog/2011/08/take-advantage-of-your-bdd-framework/",
     "date": "2011-08-03 20:46:23",
     "disqusthreadid": "376310477",
     "categories": [
@@ -2805,7 +2805,7 @@
   },
   {
     "title": "Using Mongoose's Setters To Get Calculated Properties",
-    "link": "/2011/08/using-mongooses-setters-to-get-calculated-properties/",
+    "link": "/blog/2011/08/using-mongooses-setters-to-get-calculated-properties/",
     "date": "2011-08-01 01:10:35",
     "disqusthreadid": "373677304",
     "categories": [
@@ -2816,7 +2816,7 @@
   },
   {
     "title": "Solving A Problem By Avoiding It",
-    "link": "/2011/08/solving-a-problem-by-avoiding-it/",
+    "link": "/blog/2011/08/solving-a-problem-by-avoiding-it/",
     "date": "2011-08-15 12:54:31",
     "disqusthreadid": "386380830",
     "categories": [
@@ -2826,7 +2826,7 @@
   },
   {
     "title": "Advantages Of Being A Polyglot Programmer",
-    "link": "/2011/08/advantages-of-being-a-polyglot-programmer/",
+    "link": "/blog/2011/08/advantages-of-being-a-polyglot-programmer/",
     "date": "2011-08-15 22:00:41",
     "disqusthreadid": "386867533",
     "categories": [
@@ -2835,7 +2835,7 @@
   },
   {
     "title": "Using Frameworks Doesn't Mean You Don't Have To Know What You're Doing",
-    "link": "/2011/08/using-frameworks-doesnt-mean-you-dont-have-to-know-what-youre-doing/",
+    "link": "/blog/2011/08/using-frameworks-doesnt-mean-you-dont-have-to-know-what-youre-doing/",
     "date": "2011-08-23 22:23:46",
     "disqusthreadid": "394145544",
     "categories": [
@@ -2844,7 +2844,7 @@
   },
   {
     "title": "Maintaining Bad Code Can Be A Great Experience",
-    "link": "/2011/09/maintaining-bad-code-can-be-a-great-experience/",
+    "link": "/blog/2011/09/maintaining-bad-code-can-be-a-great-experience/",
     "date": "2011-09-04 21:51:16",
     "disqusthreadid": "404672226",
     "categories": [
@@ -2854,7 +2854,7 @@
   },
   {
     "title": "Repeated Failed Log-Ins: What's Your Strategy?",
-    "link": "/2011/09/repeated-failed-log-ins-whats-your-strategy/",
+    "link": "/blog/2011/09/repeated-failed-log-ins-whats-your-strategy/",
     "date": "2011-09-10 19:38:45",
     "disqusthreadid": "410510787",
     "categories": [
@@ -2868,7 +2868,7 @@
   },
   {
     "title": "Why I Prefer JavaScript Over CoffeeScript",
-    "link": "/2011/09/why-i-prefer-javascript-over-coffeescript/",
+    "link": "/blog/2011/09/why-i-prefer-javascript-over-coffeescript/",
     "date": "2011-09-11 20:05:19",
     "disqusthreadid": "411400515",
     "categories": [
@@ -2878,7 +2878,7 @@
   },
   {
     "title": "The Worst Code I Ever Wrote, And Why I'm Still Happy About It",
-    "link": "/2011/09/the-worst-code-i-ever-wrote-and-why-im-still-happy-about-it/",
+    "link": "/blog/2011/09/the-worst-code-i-ever-wrote-and-why-im-still-happy-about-it/",
     "date": "2011-09-18 14:03:54",
     "disqusthreadid": "418146971",
     "categories": [
@@ -2888,7 +2888,7 @@
   },
   {
     "title": "The Competition-Innovation Relationship We All Benefit From",
-    "link": "/2011/10/the-competition-innovation-relationship-we-all-benefit-from/",
+    "link": "/blog/2011/10/the-competition-innovation-relationship-we-all-benefit-from/",
     "date": "2011-10-02 17:34:15",
     "disqusthreadid": "432121870",
     "categories": [
@@ -2898,7 +2898,7 @@
   },
   {
     "title": "You Need Your Time Off",
-    "link": "/2011/10/you-need-your-time-off/",
+    "link": "/blog/2011/10/you-need-your-time-off/",
     "date": "2011-10-03 21:29:31",
     "disqusthreadid": "433201880",
     "categories": [
@@ -2908,7 +2908,7 @@
   },
   {
     "title": "Developers Need To Keep Challenging Themselves",
-    "link": "/2011/10/developers-need-to-keep-challenging-themselves/",
+    "link": "/blog/2011/10/developers-need-to-keep-challenging-themselves/",
     "date": "2011-10-23 21:09:22",
     "disqusthreadid": "451359526",
     "categories": [
@@ -2918,7 +2918,7 @@
   },
   {
     "title": "The Non-Typical .NET Job",
-    "link": "/2011/10/the-non-typical-net-job/",
+    "link": "/blog/2011/10/the-non-typical-net-job/",
     "date": "2011-10-24 00:00:33",
     "disqusthreadid": "451458093",
     "categories": [
@@ -2932,7 +2932,7 @@
   },
   {
     "title": "Thoughts On Steve Jobs, The Book And The Man",
-    "link": "/2011/11/thoughts-on-steve-jobs-the-book-and-the-man/",
+    "link": "/blog/2011/11/thoughts-on-steve-jobs-the-book-and-the-man/",
     "date": "2011-11-01 18:54:02",
     "disqusthreadid": "458941782",
     "categories": [
@@ -2941,7 +2941,7 @@
   },
   {
     "title": "Faster Hardware? Not On Our Budget!",
-    "link": "/2011/11/faster-hardware-not-on-our-budget/",
+    "link": "/blog/2011/11/faster-hardware-not-on-our-budget/",
     "date": "2011-11-08 23:16:09",
     "disqusthreadid": "465672925",
     "categories": [
@@ -2951,7 +2951,7 @@
   },
   {
     "title": "Silverlight's Broken Promise",
-    "link": "/2011/11/silverlights-broken-promise/",
+    "link": "/blog/2011/11/silverlights-broken-promise/",
     "date": "2011-11-20 18:31:42",
     "disqusthreadid": "478402092",
     "categories": [
@@ -2961,7 +2961,7 @@
   },
   {
     "title": "Does Certification Have Any Value?",
-    "link": "/2011/11/does-certification-have-any-value/",
+    "link": "/blog/2011/11/does-certification-have-any-value/",
     "date": "2011-11-29 22:30:21",
     "disqusthreadid": "487807413",
     "categories": [
@@ -2970,7 +2970,7 @@
   },
   {
     "title": "Blue Pill vs Red Pill",
-    "link": "/2011/12/blue-pill-vs-red-pill/",
+    "link": "/blog/2011/12/blue-pill-vs-red-pill/",
     "date": "2011-12-15 21:44:40",
     "disqusthreadid": "505745014",
     "categories": [
@@ -2979,7 +2979,7 @@
   },
   {
     "title": "Challenge: Displaying Feed Items On A Web Page",
-    "link": "/2011/12/challenge-displaying-feed-items-on-a-web-page/",
+    "link": "/blog/2011/12/challenge-displaying-feed-items-on-a-web-page/",
     "date": "2011-12-17 16:17:41",
     "disqusthreadid": "507533655",
     "categories": [
@@ -2988,7 +2988,7 @@
   },
   {
     "title": "Displaying Feed Items On A Web Page: My Solution",
-    "link": "/2011/12/displaying-feed-items-on-a-web-page-my-solution/",
+    "link": "/blog/2011/12/displaying-feed-items-on-a-web-page-my-solution/",
     "date": "2011-12-20 08:00:55",
     "disqusthreadid": "510263525",
     "categories": [
@@ -3000,7 +3000,7 @@
   },
   {
     "title": "Node.js For Dummies",
-    "link": "/2011/12/node-js-for-dummies/",
+    "link": "/blog/2011/12/node-js-for-dummies/",
     "date": "2011-12-18 18:40:39",
     "disqusthreadid": "508538557",
     "categories": [
@@ -3010,7 +3010,7 @@
   },
   {
     "title": "Hosting A Node.js Site Through Apache",
-    "link": "/2012/01/hosting-a-node-js-site-through-apache/",
+    "link": "/blog/2012/01/hosting-a-node-js-site-through-apache/",
     "date": "2012-01-15 15:23:09",
     "disqusthreadid": "540073462",
     "categories": [
@@ -3019,7 +3019,7 @@
   },
   {
     "title": "How Do You Pick Open Source Libraries?",
-    "link": "/2012/01/how-do-you-pick-open-source-libraries/",
+    "link": "/blog/2012/01/how-do-you-pick-open-source-libraries/",
     "date": "2012-01-16 22:15:40",
     "disqusthreadid": "541743285",
     "categories": [
@@ -3029,7 +3029,7 @@
   },
   {
     "title": "Stop Storing Passwords Already!",
-    "link": "/2012/01/stop-storing-passwords-already/",
+    "link": "/blog/2012/01/stop-storing-passwords-already/",
     "date": "2012-01-23 21:53:51",
     "disqusthreadid": "550113875",
     "categories": [
@@ -3038,7 +3038,7 @@
   },
   {
     "title": "DTO's Should Transfer Data, Not Entities",
-    "link": "/2012/02/dtos-should-transfer-data-not-entities/",
+    "link": "/blog/2012/02/dtos-should-transfer-data-not-entities/",
     "date": "2012-02-19 20:32:17",
     "disqusthreadid": "582126695",
     "categories": [
@@ -3048,7 +3048,7 @@
   },
   {
     "title": "Architectural Drivers",
-    "link": "/2012/02/architectural-drivers/",
+    "link": "/blog/2012/02/architectural-drivers/",
     "date": "2012-02-26 18:10:50",
     "disqusthreadid": "590022840",
     "categories": [
@@ -3057,7 +3057,7 @@
   },
   {
     "title": "Thoughts On Learning New Things",
-    "link": "/2012/03/thoughts-on-learning-new-things/",
+    "link": "/blog/2012/03/thoughts-on-learning-new-things/",
     "date": "2012-03-11 21:22:23",
     "disqusthreadid": "607264323",
     "categories": [
@@ -3067,7 +3067,7 @@
   },
   {
     "title": "What's The Point Of Using WCF In A Web App?",
-    "link": "/2012/03/whats-the-point-of-using-wcf-in-a-web-app/",
+    "link": "/blog/2012/03/whats-the-point-of-using-wcf-in-a-web-app/",
     "date": "2012-03-18 17:28:28",
     "disqusthreadid": "615468753",
     "categories": [
@@ -3079,7 +3079,7 @@
   },
   {
     "title": "Microsoft And Open Source: Hoping For Better Collaboration",
-    "link": "/2012/04/microsoft-and-open-source-hoping-for-better-collaboration/",
+    "link": "/blog/2012/04/microsoft-and-open-source-hoping-for-better-collaboration/",
     "date": "2012-04-09 16:04:48",
     "disqusthreadid": "642170654",
     "categories": [
@@ -3088,7 +3088,7 @@
   },
   {
     "title": "It's Not About The Number Of Hours You Put In ",
-    "link": "/2012/04/its-not-about-the-number-of-hours-you-put-in/",
+    "link": "/blog/2012/04/its-not-about-the-number-of-hours-you-put-in/",
     "date": "2012-04-19 21:35:18",
     "disqusthreadid": "656559306",
     "categories": [
@@ -3098,7 +3098,7 @@
   },
   {
     "title": "Three Strikes And You Refactor ",
-    "link": "/2012/05/three-strikes-and-you-refactor/",
+    "link": "/blog/2012/05/three-strikes-and-you-refactor/",
     "date": "2012-05-06 16:36:10",
     "disqusthreadid": "678246896",
     "categories": [
@@ -3107,7 +3107,7 @@
   },
   {
     "title": "Why Things Don't Work In Your World",
-    "link": "/2012/05/why-things-dont-work-in-your-world/",
+    "link": "/blog/2012/05/why-things-dont-work-in-your-world/",
     "date": "2012-05-13 20:50:36",
     "disqusthreadid": "687856162",
     "categories": [
@@ -3116,7 +3116,7 @@
   },
   {
     "title": "And… That's All Folks",
-    "link": "/2012/05/and-thats-all-folks/",
+    "link": "/blog/2012/05/and-thats-all-folks/",
     "date": "2012-05-14 23:08:36",
     "disqusthreadid": "689421328",
     "categories": [
