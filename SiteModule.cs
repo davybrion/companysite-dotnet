@@ -47,7 +47,7 @@ namespace ThatExtraMile.be
 
             var contentReference = String.Format("{0}-{1}-{2}", p.year, p.month, p.slug);
 
-            return View["BlogPost", new
+            return View["BlogPostPage", new
                 {
                     Title = post.Title,
                     Post = post,

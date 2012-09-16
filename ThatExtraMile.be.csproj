@@ -109,6 +109,7 @@
     <Compile Include="ContentTransformer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SiteModule.cs" />
+    <Compile Include="ViewModels\BlogPostViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -453,6 +454,7 @@
     <Content Include="content\blog\2012-05-why-things-dont-work-in-your-world.md" />
     <Content Include="content\blog_metadata.json" />
     <Content Include="Views\BlogPost.cshtml" />
+    <Content Include="Views\BlogPostPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

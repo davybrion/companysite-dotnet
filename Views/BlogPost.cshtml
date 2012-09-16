@@ -1,23 +1,8 @@
-﻿﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+﻿﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<BlogPostViewModel>
 
-@{
-    Layout = "_Layout.cshtml";
-}
 <h1>@Model.Post.Title</h1>
 @Html.Raw(Model.Content)
 
 <p>
 <em>Written by Davy Brion, published on @Model.Post.Date</em>
-</p>
-
-<p>
-@if (Model.PreviousPost != null)
-{
-<span class="previous_post"><a href="@Model.PreviousPost.Link">&laquo; @Model.PreviousPost.Title</a></span>
-}
-
-@if (Model.NextPost != null)
-{
-<span class="next_post"><a href="@Model.NextPost.Link">@Model.NextPost.Title &raquo;</a></span>                                                     
-}
 </p>
