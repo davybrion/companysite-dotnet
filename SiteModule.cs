@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web.Hosting;
 using Nancy;
 using ServiceStack.Text;
+using ThatExtraMile.be.ViewModels;
 
 namespace ThatExtraMile.be
 {
@@ -12,7 +13,8 @@ namespace ThatExtraMile.be
     {
         private static readonly ContentTransformer ContentTransformer;
         private static readonly Dictionary<string, BlogPost> PostsPerLink;
-        private static List<BlogPost> IndexedListOfPosts; 
+        private static List<BlogPost> IndexedListOfPosts;
+        private static List<BlogPost> ReversedIndexedListOfPosts; 
 
         static SiteModule()
         {
@@ -23,19 +25,32 @@ namespace ThatExtraMile.be
                 .ToDictionary(b => b.Link, b => b);
 
             IndexedListOfPosts = new List<BlogPost>(PostsPerLink.Values);
+            ReversedIndexedListOfPosts = new List<BlogPost>(IndexedListOfPosts);
+            ReversedIndexedListOfPosts.Reverse();
         }
 
         public SiteModule()
         {
-            Get["/blog/(?<year>[\\d]{4})/(?<month>[\\d]{4})/{slug}"] = p => RenderPost(p);
-
-
             Get["/contracting"] = p => RenderMarkdown("Contracting", "Contracting", "contracting");
             Get["/consulting"] = p => RenderMarkdown("Consulting", "Consulting", "consulting");
             Get["/training"] = p => RenderMarkdown("Training", "Training", "training");
             Get["/training/nhibernate"] = p => RenderMarkdown("NHibernate Training", "Training", "nhibernate_training");
             Get["/reviews"] = p => RenderMarkdown("Reviews", "Reviews", "reviews");
             Get["/"] = p => RenderMarkdown("", "Home", "home");
+
+            //Get["/blog"] = p => Render
+            Get["/blog/(?<year>[\\d]{4})/(?<month>[\\d]{4})/{slug}"] = p => RenderPost(p);
+            Get["/blog/page/(?<year>[\\d]*)"] = p => RenderPostArchivePage(p.year);
+        }
+
+        private Response RenderMarkdown(string title, string section, string contentName)
+        {
+            return View["NormalContent", new
+            {
+                Title = title,
+                Section = section,
+                Html = ContentTransformer.GetTransformedContent(contentName)
+            }];
         }
 
         private Response RenderPost(dynamic p)
@@ -45,8 +60,6 @@ namespace ThatExtraMile.be
             var previousPost = indexOfPost != 0 ? IndexedListOfPosts[indexOfPost - 1] : null;
             var nextPost = indexOfPost != IndexedListOfPosts.Count - 1 ? IndexedListOfPosts[indexOfPost + 1] : null;
 
-            var contentReference = String.Format("{0}-{1}-{2}", p.year, p.month, p.slug);
-
             return View["BlogPostPage", new
                 {
                     Title = post.Title,
@@ -54,17 +67,23 @@ namespace ThatExtraMile.be
                     PreviousPost = previousPost,
                     NextPost = nextPost,
                     Section = "Blog",
-                    Content = ContentTransformer.GetTransformedContent(contentReference)
+                    Content = ContentTransformer.GetTransformedContent(post.GetContentReference())
                 }];
         }
 
-        private Response RenderMarkdown(string title, string section, string contentName)
+        private Response RenderPostArchivePage(int page)
         {
-            return View["NormalContent", new
+            const int pageSize = 5;
+            var posts = ReversedIndexedListOfPosts.Skip((page - 1) * pageSize).Take(pageSize);
+
+            var postModels = posts.Select(p => new BlogPostViewModel()
+                        {Post = p, Content = ContentTransformer.GetTransformedContent(p.GetContentReference())});
+
+            return View["BlogPostsOverviewPage", new
                 {
-                    Title = title,
-                    Section = section,
-                    Html = ContentTransformer.GetTransformedContent(contentName)
+                    Title = string.Format("Blog archive, page {0}", page),
+                    PostModels = postModels,
+                    Section = "Blog"
                 }];
         }
     }

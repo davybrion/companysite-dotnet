@@ -455,6 +455,7 @@
     <Content Include="content\blog_metadata.json" />
     <Content Include="Views\BlogPost.cshtml" />
     <Content Include="Views\BlogPostPage.cshtml" />
+    <Content Include="Views\BlogPostsOverviewPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
