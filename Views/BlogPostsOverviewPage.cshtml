@@ -1,7 +1,19 @@
 ﻿@using ThatExtraMile.be.ViewModels
-@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<BlogPostsOverviewViewModel>
 @{
     Layout = "_Layout.cshtml";
 }
 
 @Html.Partial("MultipleBlogPosts", Model.PostModels)
+
+<p>
+@if (Model.NextPageIndex.HasValue)
+{
+<span class="previous_post"><a href="/blog/page/@Model.NextPageIndex.Value">&laquo; Older Entries</a></span>
+}
+
+@if (Model.PreviousPageIndex.HasValue)
+{
+<span class="next_post"><a href="/blog/page/@Model.PreviousPageIndex.Value">Newer Entries &raquo;</a></span>                                                     
+}
+</p>

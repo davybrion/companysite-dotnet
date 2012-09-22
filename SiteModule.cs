@@ -84,11 +84,13 @@ namespace ThatExtraMile.be
                         TitleAsLink = true
                     });
 
-            return View["BlogPostsOverviewPage", new
+            return View["BlogPostsOverviewPage", new BlogPostsOverviewViewModel
                 {
                     Title = string.Format("Blog archive, page {0}", page),
                     PostModels = postModels,
-                    Section = "Blog"
+                    Section = "Blog",
+                    PreviousPageIndex = page == 1 ? null : (int?)(page - 1),
+                    NextPageIndex = posts.Count() < pageSize ? null : (int?)(page + 1)
                 }];
         }
     }
