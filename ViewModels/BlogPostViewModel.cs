@@ -6,5 +6,6 @@
         public string Content { get; set; }
         public bool TitleAsLink { get; set; }
         public bool ShowMetaInfoBelowTitle { get; set; }
+        public bool ShowDisqusCommentCount { get; set; }
     }
 }

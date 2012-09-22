@@ -7,19 +7,31 @@
 @if (!string.IsNullOrEmpty(Model.IntroductionContent))
 {
     @Html.Raw(Model.IntroductionContent)
-    <br/>
+    <br />
 }
 
 @Html.Partial("MultipleBlogPosts", Model.PostModels)
 
 <p>
-@if (Model.NextPageIndex.HasValue)
-{
-<span class="previous_post"><a href="/blog/page/@Model.NextPageIndex.Value">&laquo; Older Entries</a></span>
-}
+    @if (Model.NextPageIndex.HasValue)
+    {
+        <span class="previous_post"><a href="/blog/page/@Model.NextPageIndex.Value">&laquo; Older Entries</a></span>
+    }
 
-@if (Model.PreviousPageIndex.HasValue)
-{
-<span class="next_post"><a href="/blog/page/@Model.PreviousPageIndex.Value">Newer Entries &raquo;</a></span>                                                     
-}
+    @if (Model.PreviousPageIndex.HasValue)
+    {
+        <span class="next_post"><a href="/blog/page/@Model.PreviousPageIndex.Value">Newer Entries &raquo;</a></span>                                                     
+    }
 </p>
+
+<script type="text/javascript">
+    var disqus_shortname = 'theinquisitivecoder'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>

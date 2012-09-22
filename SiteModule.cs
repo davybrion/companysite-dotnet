@@ -93,7 +93,8 @@ namespace ThatExtraMile.be
                     Post = p,
                     Content = ContentTransformer.GetTransformedContent(p.GetContentReference()),
                     ShowMetaInfoBelowTitle = true,
-                    TitleAsLink = true
+                    TitleAsLink = true,
+                    ShowDisqusCommentCount = true
                 });
 
             return new BlogPostsOverviewViewModel
