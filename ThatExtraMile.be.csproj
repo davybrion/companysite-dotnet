@@ -462,6 +462,7 @@
     <Content Include="Views\BlogPostPage.cshtml" />
     <Content Include="Views\BlogPostsOverviewPage.cshtml" />
     <Content Include="Views\MultipleBlogPosts.cshtml" />
+    <Content Include="content\blog_archive.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -4,6 +4,12 @@
     Layout = "_Layout.cshtml";
 }
 
+@if (!string.IsNullOrEmpty(Model.IntroductionContent))
+{
+    @Html.Raw(Model.IntroductionContent)
+    <br/>
+}
+
 @Html.Partial("MultipleBlogPosts", Model.PostModels)
 
 <p>

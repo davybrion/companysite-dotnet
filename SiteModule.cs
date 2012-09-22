@@ -38,7 +38,7 @@ namespace ThatExtraMile.be
             Get["/reviews"] = p => RenderMarkdown("Reviews", "Reviews", "reviews");
             Get["/"] = p => RenderMarkdown("", "Home", "home");
 
-            //Get["/blog"] = p => Render
+            Get["/blog"] = p => RenderBlogPage();
             Get["/blog/(?<year>[\\d]{4})/(?<month>[\\d]{4})/{slug}"] = p => RenderPost(p);
             Get["/blog/page/(?<year>[\\d]*)"] = p => RenderPostArchivePage(p.year);
         }
@@ -71,27 +71,39 @@ namespace ThatExtraMile.be
                 }];
         }
 
+        private dynamic RenderBlogPage()
+        {
+            var model = BuildBlogPostsOverviewViewModelForPage(1);
+            model.IntroductionContent = ContentTransformer.GetTransformedContent("blog_archive");
+            return View["BlogPostsOverviewPage", model];
+        }
+
         private dynamic RenderPostArchivePage(int page)
+        {
+            return View["BlogPostsOverviewPage", BuildBlogPostsOverviewViewModelForPage(page)];
+        }
+
+        private static BlogPostsOverviewViewModel BuildBlogPostsOverviewViewModelForPage(int page)
         {
             const int pageSize = 5;
             var posts = ReversedIndexedListOfPosts.Skip((page - 1) * pageSize).Take(pageSize);
 
             var postModels = posts.Select(p => new BlogPostViewModel()
-                    {
-                        Post = p,
-                        Content = ContentTransformer.GetTransformedContent(p.GetContentReference()),
-                        ShowMetaInfoBelowTitle = true,
-                        TitleAsLink = true
-                    });
+                {
+                    Post = p,
+                    Content = ContentTransformer.GetTransformedContent(p.GetContentReference()),
+                    ShowMetaInfoBelowTitle = true,
+                    TitleAsLink = true
+                });
 
-            return View["BlogPostsOverviewPage", new BlogPostsOverviewViewModel
+            return new BlogPostsOverviewViewModel
                 {
                     Title = string.Format("Blog archive, page {0}", page),
                     PostModels = postModels,
                     Section = "Blog",
                     PreviousPageIndex = page == 1 ? null : (int?)(page - 1),
                     NextPageIndex = posts.Count() < pageSize ? null : (int?)(page + 1)
-                }];
+                };
         }
     }
 }
