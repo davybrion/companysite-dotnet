@@ -1,10 +1,10 @@
 Note: This post is part of a series.  Be sure to read the introduction <a href="/blog/2009/08/build-your-own-data-access-layer-series/">here</a>.
 
-One thing that i consider an absolute must-have in any data access layer is the ability to perform CRUD operations out-of-the-box without having to write any code to enable these operations.  Once your data access layer knows about your classes and your tables, CRUD operations should 'just work'.
+One thing that I consider an absolute must-have in any data access layer is the ability to perform CRUD operations out-of-the-box without having to write any code to enable these operations.  Once your data access layer knows about your classes and your tables, CRUD operations should 'just work'.
 
 As you've seen in the <a href="/blog/2009/08/build-your-own-data-access-layer-mapping-classes-to-tables/">previous post</a> of this series, the TableInfo class offers a couple of methods to automatically build the required SQL statements for CRUD actions.  With these statements, we can easily create SqlCommand instances for all CRUD operations.
 
-First of all, i use the following helper method to easily add a SqlParameter to a SqlCommand:
+First of all, I use the following helper method to easily add a SqlParameter to a SqlCommand:
 
 <script src="https://gist.github.com/3684982.js?file=s1.cs"></script>
 
@@ -32,7 +32,7 @@ We also need an InsertAction:
 
 There's not a lot to this one either... The actual insert statement is once again retrieved through the TableInfo class, as are the parameter values (including their values for this specific entity).  You can go back to the previous post to look at the implementation of TableInfo's GetParametersForInsert method :)
 
-Keep in mind that there is a limitation here that i only support SQL Server's Identity-style generators.  Again, if you want to support multiple identifier strategies like NHibernate does, you'll have to deal with a lot more complexity in the InsertAction class.
+Keep in mind that there is a limitation here that I only support SQL Server's Identity-style generators.  Again, if you want to support multiple identifier strategies like NHibernate does, you'll have to deal with a lot more complexity in the InsertAction class.
 
 The UpdateAction is very similar:
 

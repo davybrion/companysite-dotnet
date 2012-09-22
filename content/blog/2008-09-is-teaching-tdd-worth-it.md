@@ -1,4 +1,4 @@
-There's a debate going on the ALT.NET mailinglist about <a href="http://tech.groups.yahoo.com/group/altdotnet/message/15301">whether or not teaching developers TDD for a project is worth the cost</a>.  I don't really like the way things are discussed on that list nowadays, so i'm posting my thoughts here.
+There's a debate going on the ALT.NET mailinglist about <a href="http://tech.groups.yahoo.com/group/altdotnet/message/15301">whether or not teaching developers TDD for a project is worth the cost</a>.  I don't really like the way things are discussed on that list nowadays, so I'm posting my thoughts here.
 
 First of all, it's definitely true that learning how to do TDD effectively takes some time and the learning curve is rather steep.  If you need to bring people who are new to it up to speed, you definitely have to invest some time in that.  So, is the time and effort spent on that worth it?  I think it most definitely is.  If you take the time to teach them how to do it properly, you can enjoy quite a few benefits.  
 

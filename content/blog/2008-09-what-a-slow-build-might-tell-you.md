@@ -1,6 +1,6 @@
 If you've ever read something about Test Driven Development or Continuous Integration then you've undoubtedly read that one of the key advantages of these practices is to shorten the feedback loop of your development process.  Basically, that means being able to detect bugs or mistakes as soon as possible and being able to fix them as quickly as possible with as little effort as possible while keeping the quality and sanity of your code base as high as possible.
 
-Those are obviously important goals. There's another reason why a fast build (with that i mean building the code and running all of the tests) is important.  I believe the duration of a build can be a good indication of the complexity and the quality of <strong>the code base</strong> of your project. If a build takes a long time, it's usually a strong indication that something is definitely not right in the code. 
+Those are obviously important goals. There's another reason why a fast build (with that I mean building the code and running all of the tests) is important.  I believe the duration of a build can be a good indication of the complexity and the quality of <strong>the code base</strong> of your project. If a build takes a long time, it's usually a strong indication that something is definitely not right in the code. 
 
 Let's apply the technique of <a href="http://en.wikipedia.org/wiki/Root_cause_analysis">Root Cause Analysis</a> to the problem of a slow build of a fictional (yet very common) project:
 

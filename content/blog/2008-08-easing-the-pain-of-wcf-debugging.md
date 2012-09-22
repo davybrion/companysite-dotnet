@@ -1,12 +1,12 @@
-WCF is pretty cool, i guess. It's quite powerful, and it's so configurable it even has options to control the speed of the CPU fans of the users of your service.  Ok, maybe you can't really configure that, but with approximately 12.4 billion WCF configuration settings available to you, who knows? But the biggest problem i have with WCF is the painful debugging experience when something goes wrong.
+WCF is pretty cool, I guess. It's quite powerful, and it's so configurable it even has options to control the speed of the CPU fans of the users of your service.  Ok, maybe you can't really configure that, but with approximately 12.4 billion WCF configuration settings available to you, who knows? But the biggest problem I have with WCF is the painful debugging experience when something goes wrong.
 
 Ever got a client-side exception that looked like this?
 
 <script src="https://gist.github.com/3676416.js?file=s1.txt"></script>
 
-Rather messy, no? Does it give you any clue as to what could possibly be wrong? Nope. This particular client-side exception occurs when something goes wrong server-side, at some point after you've already returned your return value in your service implementation.  Of course, you don't actually see it happening server-side. So i tried setting IncludeExceptionDetailInFaults to true on the service implementation... didn't make a difference.  I set IncludeExceptionDetailInFaults to true on the service host but that didn't work either. Sigh.
+Rather messy, no? Does it give you any clue as to what could possibly be wrong? Nope. This particular client-side exception occurs when something goes wrong server-side, at some point after you've already returned your return value in your service implementation.  Of course, you don't actually see it happening server-side. So I tried setting IncludeExceptionDetailInFaults to true on the service implementation... didn't make a difference.  I set IncludeExceptionDetailInFaults to true on the service host but that didn't work either. Sigh.
 
-After some googling i discovered that you can enable WCF tracing.  Bingo! Why didn't Juval Lowy's book mention this? It's supposed to be the WCF Bible.... Oh well, thanks to Google we now know how to enable WCF's tracing:
+After some googling I discovered that you can enable WCF tracing.  Bingo! Why didn't Juval Lowy's book mention this? It's supposed to be the WCF Bible.... Oh well, thanks to Google we now know how to enable WCF's tracing:
 
 <script src="https://gist.github.com/3676416.js?file=s2.xml"></script>
 
@@ -14,7 +14,7 @@ You can also use the Service Configuration Editor tool which is available in the
 
 Now run the service again, and do whatever it was that triggered the weird client-side exception.  After the exception occurred, open the WcfTrace.svclog file with either an editor (it's not very readable though) or with the Microsoft Service Trace Viewer tool (which is not too bad actually).
 
-When i opened my trace output, i immediately saw a red item in the Activity list... so i clicked on it, and i finally saw the problem:
+When I opened my trace output, I immediately saw a red item in the Activity list... so I clicked on it, and I finally saw the problem:
 
 <script src="https://gist.github.com/3676416.js?file=s3.txt"></script>
 

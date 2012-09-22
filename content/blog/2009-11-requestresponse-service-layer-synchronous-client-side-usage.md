@@ -6,7 +6,7 @@ One of my biggest issues with using typical WCF Services is that you always need
 
 As you can see there's only one Operation on this service, and because each 'operation' of our service layer is exposed as a Request/Response combination, we'll never have to add anything else to this Service Contract and thus, we only need to create our proxy once and we'll never have to update it.
 
-Instead of generating a service proxy with SvcUtil, i chose to just inherit from WCF's ClientBase class:
+Instead of generating a service proxy with SvcUtil, I chose to just inherit from WCF's ClientBase class:
 
 <script src="https://gist.github.com/3685524.js?file=s2.cs"></script>
 

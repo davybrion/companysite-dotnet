@@ -40,6 +40,6 @@ Here's another real world example:
 
 Very similar to the previous one, but this version includes a virtual Authorize(TRequest) method which each Request Handler can implement to perform Authorization in a uniform manner.
 
-As you can see, we can deal with a lot of cross-cutting concerns in a single place without having to resort to Aspect Oriented Programming.  That's not to say that Aspect Oriented Programming is bad (in fact, i quite like it), but in a lot of cases you can achieve the same result with simple Object Oriented Programming.
+As you can see, we can deal with a lot of cross-cutting concerns in a single place without having to resort to Aspect Oriented Programming.  That's not to say that Aspect Oriented Programming is bad (in fact, I quite like it), but in a lot of cases you can achieve the same result with simple Object Oriented Programming.
 
 Anyway, once you have this in place you can create very simple Request Handlers which simply inherit from your custom base handler class, declare their dependencies as either constructor arguments or as public properties so the IOC container can inject them, and can then focus on simply implementing whatever logic is required to handle a specific request.  They can be sure that everything is properly set up for them to function in the environment that they are ment to function in, and that all of this set up only occurs in one place in the code.

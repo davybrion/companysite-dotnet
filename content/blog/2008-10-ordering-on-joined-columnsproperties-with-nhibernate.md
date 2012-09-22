@@ -1,10 +1,10 @@
-I recently had to look into a minor issue one of the team members had with NHibernate.  Since i couldn't quickly find the solution online, i'm posting it here for future reference.
+I recently had to look into a minor issue one of the team members had with NHibernate.  Since I couldn't quickly find the solution online, I'm posting it here for future reference.
 
 He had a criteria where he wanted to fetch all of the entities of a specific type, and have it joined with one of its associations.  Basically something like this:
 
 <script src="https://gist.github.com/3684075.js?file=s1.cs"></script>
 
-Then he needed to apply ordering on one of the joined association's properties.  I said "no problem, it can do that" and i changed the code to this:
+Then he needed to apply ordering on one of the joined association's properties.  I said "no problem, it can do that" and I changed the code to this:
 
 <script src="https://gist.github.com/3684075.js?file=s2.cs"></script>
 

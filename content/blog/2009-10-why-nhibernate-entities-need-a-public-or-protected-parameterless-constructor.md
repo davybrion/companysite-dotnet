@@ -1,11 +1,11 @@
-I have an older post where i discuss <a href="/blog/2009/03/implementing-a-value-object-with-nhibernate">how you can implement a Value Object with NHibernate</a>.  In that post i mentioned the following:
+I have an older post where I discuss <a href="/blog/2009/03/implementing-a-value-object-with-nhibernate">how you can implement a Value Object with NHibernate</a>.  In that post I mentioned the following:
 
 <blockquote>NHibernate allows a private default constructor for Value Objects, but for Entities you will need a default public or protected constructor as private is not sufficient.</blockquote>
 
 I got the following comment from someone:
 
 <blockquote>
-I too am trying to determine how well NHibernate lives up to the promise of persistence ignorance. I can definitely live with unnecessary private constructors, but I’m dubious about adding protected constructors just to support an ORM.
+I too am trying to determine how well NHibernate lives up to the promise of persistence ignorance. I can definitely live with unnecessary private constructors, but I'm dubious about adding protected constructors just to support an ORM.
 
 At any rate, I was surprised by the sentence I quoted, because I didn’t realize there were any circumstances in which NHibernate required protected default constructors.
 </blockquote>

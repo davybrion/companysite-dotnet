@@ -4,21 +4,21 @@ For some of you, this might seem odd. But you've actually used Value Objects on 
 
 This also has interesting consequences on object equality. Two Value Objects holding the same data should be considered identical objects, even though they point to different memory locations.
 
-Value Objects are great and can make a lot of things much easier for you. In this post, i'm going to show you how you can easily create a true Value Object while avoiding some common pitfalls.
+Value Objects are great and can make a lot of things much easier for you. In this post, I'm going to show you how you can easily create a true Value Object while avoiding some common pitfalls.
 
-For this example, i'm going to create an Address class. An Address instance needs to hold some data (street, city, region, postalcode, country, phone number). This data can often be identical between other Entity objects.  Maybe I have a Person class which needs to hold an Address. Two people living in the same house would have the same physical address. Both Person instances should then have the same Address too.  Husband.Address.Equals(Wife.Address) should return true without having to worry about some unnecessary identity of the Address instances.
+For this example, I'm going to create an Address class. An Address instance needs to hold some data (street, city, region, postalcode, country, phone number). This data can often be identical between other Entity objects.  Maybe I have a Person class which needs to hold an Address. Two people living in the same house would have the same physical address. Both Person instances should then have the same Address too.  Husband.Address.Equals(Wife.Address) should return true without having to worry about some unnecessary identity of the Address instances.
 
 This is how our first implementation of the Address class would look like:
 
 <script src="https://gist.github.com/3611056.js?file=s1.cs"></script>
 
-So now an Address instance's values can not be changed after object creation. By the way, in case you're wondering why i assign string.Empty instead of allowing null references to my fields: it's because i want to avoid checking for null every time i want to use my fields later on in my code. This is known as the <a href="http://en.wikipedia.org/wiki/Null_Object_pattern">Null Object Pattern</a>.
+So now an Address instance's values can not be changed after object creation. By the way, in case you're wondering why I assign string.Empty instead of allowing null references to my fields: it's because I want to avoid checking for null every time I want to use my fields later on in my code. This is known as the <a href="http://en.wikipedia.org/wiki/Null_Object_pattern">Null Object Pattern</a>.
 
 Now we have to make sure that 2 Address instances holding the same data are actually recognized as equal objects.  First, we'll override the Equals method:
 
 <script src="https://gist.github.com/3611056.js?file=s2.cs"></script>
 
-Thanks to the Null Object Pattern, i don't need null checks when accessing my fields which is great because i really dislike null checks all over the place.  Anyway, back to the subject at hand: Equals will return true if the values of the instances are identical.
+Thanks to the Null Object Pattern, I don't need null checks when accessing my fields which is great because I really dislike null checks all over the place.  Anyway, back to the subject at hand: Equals will return true if the values of the instances are identical.
 
 If you override the Equals method, you really should override the GetHashCode() method as well:
 

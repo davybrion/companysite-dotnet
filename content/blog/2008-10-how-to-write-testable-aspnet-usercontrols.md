@@ -1,6 +1,6 @@
-Ever since i wrote my <a href="/blog/2008/07/how-to-write-testable-aspnet-webforms/">How To Write Testable ASP.NET WebForms</a> post i've had people asking me how to make it work with UserControls.  I pretty much avoided UserControls with this approach for as long as i could, but for our current project we really had a need for it.  So i started implementing this together with a coworker, and this is the solution we came up with.
+Ever since I wrote my <a href="/blog/2008/07/how-to-write-testable-aspnet-webforms/">How To Write Testable ASP.NET WebForms</a> post I've had people asking me how to make it work with UserControls.  I pretty much avoided UserControls with this approach for as long as I could, but for our current project we really had a need for it.  So I started implementing this together with a coworker, and this is the solution we came up with.
 
-Note: if you haven't read that post on how to write testable ASP.NET WebForms, be sure to read it first because this approach is very similar and i won't repeat all of the general concepts of the approach here.
+Note: if you haven't read that post on how to write testable ASP.NET WebForms, be sure to read it first because this approach is very similar and I won't repeat all of the general concepts of the approach here.
 
 In the implementation for WebForms, we call the pages Views, and they all implement their own interface which inherits from our own IView interface. Now we wanted something that would work both with UserControls and Web Parts.  So we figured we should call both of them ViewParts and we have the following base interface that each ViewPart should implement:
 

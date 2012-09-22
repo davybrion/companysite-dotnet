@@ -1,4 +1,4 @@
-Just ran into something that i thought was pretty cool. If you're using <a href="http://watin.sourceforge.net/">WatiN</a>, it's relatively easy to write browser-based automated tests without resorting to recorded tests.  And since WatiN supports multiple browsers, you can write those tests in a browser-agnostic manner.  And if you make use of NUnit's Generic Fixtures (introduced in NUnit 2.5), you can very easily run those tests in multiple browsers as well.  Suppose you have the following base test fixture:
+Just ran into something that I thought was pretty cool. If you're using <a href="http://watin.sourceforge.net/">WatiN</a>, it's relatively easy to write browser-based automated tests without resorting to recorded tests.  And since WatiN supports multiple browsers, you can write those tests in a browser-agnostic manner.  And if you make use of NUnit's Generic Fixtures (introduced in NUnit 2.5), you can very easily run those tests in multiple browsers as well.  Suppose you have the following base test fixture:
 
 <script src="https://gist.github.com/3728675.js?file=s1.cs"></script>
 

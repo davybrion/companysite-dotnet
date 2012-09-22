@@ -10,7 +10,7 @@ The implementation that will be used at runtime then looks like this:
 
 Code that needs the current date simply declares a dependency on IDateTimeService and at run-time the IOC container will inject an instance of DateTimeService to fulfill the IDateTimeService dependency.  At test-time, the IDateTimeService is mocked so you can easily set which date should be returned for each test. 
 
-Personally, i'm not a fan of this approach.  I mean, i use the same approach for most dependencies but for simply getting the current date this is a bit too much IMO.
+Personally, I'm not a fan of this approach.  I mean, I use the same approach for most dependencies but for simply getting the current date this is a bit too much IMO.
 
 Instead, we simply use something like this:
 

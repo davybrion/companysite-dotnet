@@ -1,4 +1,4 @@
-As some of you already know, i'm a big fan of avoiding excessive roundtrips by batching queries and/or service calls. With NHibernate, you could already use MultiQuery and MultiCriteria to do this, but Ayende recently added a much easier approach for this to NHibernate.  
+As some of you already know, I'm a big fan of avoiding excessive roundtrips by batching queries and/or service calls. With NHibernate, you could already use MultiQuery and MultiCriteria to do this, but Ayende recently added a much easier approach for this to NHibernate.  
 
 Take a look at the following code:
 

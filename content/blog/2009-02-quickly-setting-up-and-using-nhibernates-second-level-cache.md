@@ -6,7 +6,7 @@ Anyways, the first thing you need to do, is to enable the 2nd level cache.  Add 
 
 The first one (obviously) enables the 2nd level cache, while the second one enables query caching. That basically means that you can (optionally) cache the results of specific queries.  Note that this doesn't mean that the results of all queries will be cached, only the ones where you specify that the results can be cached.
 
-Next, you need to choose a CacheProvider.  There are various options available, although i generally just use SysCache (which makes use of the ASP.NET Cache).
+Next, you need to choose a CacheProvider.  There are various options available, although I generally just use SysCache (which makes use of the ASP.NET Cache).
 
 Once you've picked out a CacheProvider, you need to add a property for it to your hibernate.cfg.xml file as well:
 
@@ -32,4 +32,4 @@ To enable caching on the entity level, add the following property right below th
 
 This tells NHibernate to store the data of Product entities in the 2nd level cache, and that any updates that we make to Product entities need to be synchronized in both the database and the cache.
 
-That's pretty much all you need to do to get the 2nd Level Cache working.  But please keep in mind that there is a lot more to caching than what i showed in this post.  Reading Gabriel's post on caching is an absolute must IMO.  Caching is a powerful feature, but with great power comes great responsibility. Learn how to use it wisely :)
+That's pretty much all you need to do to get the 2nd Level Cache working.  But please keep in mind that there is a lot more to caching than what I showed in this post.  Reading Gabriel's post on caching is an absolute must IMO.  Caching is a powerful feature, but with great power comes great responsibility. Learn how to use it wisely :)

@@ -1,6 +1,6 @@
 One of our applications suffered from a memory leak because one of ASP.NET's UserControls (in this case, the Repeater) created instances of one of our own UserControl type without disposing them afterward.  In most cases, this isn't really a big issue, but if your UserControl really requires explicit Disposal this can obviously be a pretty big problem.
 
-In order to prevent this situation from ever happening again, i came up with an approach which guarantees that all instances of UserControls that require explicit disposal are indeed properly disposed at the end of the request in which they were created.  I don't really like this approach as i consider it a hack.  But then again, when ASP.NET controls fail to dispose the controls they create in some occasions, all bets are off.
+In order to prevent this situation from ever happening again, I came up with an approach which guarantees that all instances of UserControls that require explicit disposal are indeed properly disposed at the end of the request in which they were created.  I don't really like this approach as I consider it a hack.  But then again, when ASP.NET controls fail to dispose the controls they create in some occasions, all bets are off.
 
 And so the Disposer class was born:
 

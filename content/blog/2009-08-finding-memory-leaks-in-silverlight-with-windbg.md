@@ -1,14 +1,14 @@
-As i mentioned in a <a href="/blog/2009/08/tracking-dangling-object-references-in-silverlight/">previous post</a>, you can attach WinDbg to a browser to find memory leaks in your Silverlight applications.  I figured it would be a good idea to write down how this process works, since i always end up having to look it up again whenever i need to do this.
+As I mentioned in a <a href="/blog/2009/08/tracking-dangling-object-references-in-silverlight/">previous post</a>, you can attach WinDbg to a browser to find memory leaks in your Silverlight applications.  I figured it would be a good idea to write down how this process works, since I always end up having to look it up again whenever I need to do this.
 
 I wrote a very simple Silverlight application which has a rather typical memory leak. Here's the actual code:
 
 <script src="https://gist.github.com/3685131.js?file=s1.cs"></script>
 
-For some of you, the memory leak is already very clear.  Like i said, it's a very simple example ;)
+For some of you, the memory leak is already very clear.  Like I said, it's a very simple example ;)
 
 Let's go through the process of finding and fixing the memory leak using WinDbg. First of all, download Debugging Tools For Windows (which contains the WinDbg executable) <a href="http://www.microsoft.com/whdc/devtools/debugging/installx86.mspx">here</a> and install it.
 
-Then we start our application in Internet Explorer (for some reason i can't use WinDbg to inspect the managed memory heap with Firefox, so i just use Internet Explorer for this stuff) and use it.  In the case of my example, that means clicking the button which creates a new view a couple of times.
+Then we start our application in Internet Explorer (for some reason I can't use WinDbg to inspect the managed memory heap with Firefox, so I just use Internet Explorer for this stuff) and use it.  In the case of my example, that means clicking the button which creates a new view a couple of times.
 
 Open WinDbg.exe and select the 'Attach to a Process' menu item in the 'File' menu and select the iexplore.exe process.
 
@@ -58,7 +58,7 @@ I clicked the button 5 times, and the above output shows that there are 5 instan
 
 As you can see, only the last instance of MyView is actively referenced somewhere.  That means that the first 4 instances are ready to be collected during the next garbage collection.  
 
-One thing i don't understand though, is that the reference chain of the last instance doesn't mention MainPage or the event handler anymore.  But when i attached Visual Studio's debugger to the browser instance i could clearly see that the MyEvent of MainPage indeed contained an event handler that pointed to this MyView instance.  I'm far from a WinDbg and SOS expert so i have no idea why the reference chain doesn't reflect this.  Perhaps someone with more WinDbg and SOS knowledge can shed some light on this?
+One thing I don't understand though, is that the reference chain of the last instance doesn't mention MainPage or the event handler anymore.  But when I attached Visual Studio's debugger to the browser instance I could clearly see that the MyEvent of MainPage indeed contained an event handler that pointed to this MyView instance.  I'm far from a WinDbg and SOS expert so I have no idea why the reference chain doesn't reflect this.  Perhaps someone with more WinDbg and SOS knowledge can shed some light on this?
 
 Either way, this approach is a pretty good way of finding memory leaks in your Silverlight code.  In a real application it's obviously a bit more complicated to find the exact cause of a leak compared to this simple example, but it's still pretty doable.  Just execute the !dumpheap -stat -type YourRootNameSpaceHere and look for unusually high numbers of instances of your types.  Then you can start looking at each instance to figure out what's going on.  And for a nice list of commands that you can execute in WinDbg with SOS, be sure to check <a href="http://msdn.microsoft.com/en-us/library/bb190764.aspx">this</a> out.
 

@@ -1,6 +1,6 @@
 There were some comments on [a previous post](/blog/2008/11/why-on-earth-would-a-developer-do-this/) about how the problem described in that post is somehow typical for applications that use ORMs.  I really could not disagree more.
 
-It seems that even today, in 2008 mind you, we still have a lot of people who are convinced that ORM usage can never be as efficient as the more classic data access approaches.  Now, i don't even want to get into the whole debate about where business logic belongs (but if you think it belongs in the database you no doubt have better things to do than reading this blog), but one thing that does bother me tremendously is that a lot of people discard ORMs because they simply **don't know how to use it properly**.
+It seems that even today, in 2008 mind you, we still have a lot of people who are convinced that ORM usage can never be as efficient as the more classic data access approaches.  Now, I don't even want to get into the whole debate about where business logic belongs (but if you think it belongs in the database you no doubt have better things to do than reading this blog), but one thing that does bother me tremendously is that a lot of people discard ORMs because they simply **don't know how to use it properly**.
 
 An ORM is a tool.  Nothing more, nothing less.  Well, it is a pretty powerful tool and, as with any other powerful tool, improper usage of said tool can really cause a lot of problems.  Should we discard the tool because a lot of people never took the time to figure out how to use it properly?  That would be kinda stupid, no? 
 
@@ -13,4 +13,4 @@ So let's try to get a few of these misconceptions out of the way, shall we?
 - ORM's do not use a shitload of memory.  Improper usage of them however can lead to excessive memory usage.  Blame the developer, not the tool.
 - ORM's do not lead to lazy developers, who are doing lazy coding by relying on lazy loading.  <strong>Bad developers</strong> lead to lazy coding by relying on lazy loading.
 
-So, for those who think that ORM's can never work 'right', i have only one question: are you absolutely sure you know what you're talking about?
+So, for those who think that ORM's can never work 'right', I have only one question: are you absolutely sure you know what you're talking about?

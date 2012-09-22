@@ -1,4 +1,4 @@
-How often do you see entities mapped with getters and setters for every property, and only a default constructor (either added implicitly by the compiler or explicitly by a developer)?  It's not really the best way to map entities, so i just wanted to show a better way of doing this.
+How often do you see entities mapped with getters and setters for every property, and only a default constructor (either added implicitly by the compiler or explicitly by a developer)?  It's not really the best way to map entities, so I just wanted to show a better way of doing this.
 
 Consider the OrderLine entity.  It has 4 required properties: Order, Product, UnitPrice and Quantity.  It also has one optional property called DiscountPercentage.  The Order and Product properties should never be changed after the OrderLine was created.  It also has a database Id property which should never be changed either.
 

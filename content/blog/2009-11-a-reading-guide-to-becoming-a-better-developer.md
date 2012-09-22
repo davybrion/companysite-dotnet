@@ -1,4 +1,4 @@
-I've stated [previously](/blog/2008/08/software-development-books-investing-in-yourself/) that reading software development books is a good way of investing in your skills and your career.  But which ones should you read? And in what order should they be read?  I've compiled a list of books that i think can truly increase your skills substantially.  I've put them in the order in which i believe they will have the most effect, and grouped them in 3 'stages'.  I primarily have young developers who are just getting started as professional developers in mind with this list, but it should be just as useful to developers who've been around for a while and simply want to improve. 
+I've stated [previously](/blog/2008/08/software-development-books-investing-in-yourself/) that reading software development books is a good way of investing in your skills and your career.  But which ones should you read? And in what order should they be read?  I've compiled a list of books that I think can truly increase your skills substantially.  I've put them in the order in which I believe they will have the most effect, and grouped them in 3 'stages'.  I primarily have young developers who are just getting started as professional developers in mind with this list, but it should be just as useful to developers who've been around for a while and simply want to improve. 
 
 The first thing that you should focus on is improving your ability to write clean, unambiguous, maintainable code.  The following books should greatly help you with that:
 
@@ -9,7 +9,7 @@ The first thing that you should focus on is improving your ability to write clea
 - [Working Effectively With Legacy Code (Michael Feathers)](http://www.amazon.com/Working-Effectively-Legacy-Robert-Martin/dp/0131177052/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1221919487&sr=8-1)
 - [Clean Code (Robert C. Martin)](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1220094179&sr=8-1)
 
-The order of this stage might surprise some people, but i'm willing to bet that this is the most efficient order to reading those books.  
+The order of this stage might surprise some people, but I'm willing to bet that this is the most efficient order to reading those books.  
 
 After you've learned how to write great code, you should really start focusing on clean design and architecture.  That's not to say that you should focus solely on design and architecture, but the more you know about it, the better off you will be:
 

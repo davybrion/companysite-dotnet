@@ -1,4 +1,4 @@
-In response to my last post where i showed how you could <a href="/blog/2008/11/populating-entities-from-stored-procedures-with-nhibernate/">fill entities with the resultset of a stored procedure</a>, i was asked if it was also possible to fill entities and their associations if the stored procedure returned all of the necessary data.  I looked into it, and it's possible, although it did take me some time to figure out how to actually do it.
+In response to my last post where I showed how you could <a href="/blog/2008/11/populating-entities-from-stored-procedures-with-nhibernate/">fill entities with the resultset of a stored procedure</a>, I was asked if it was also possible to fill entities and their associations if the stored procedure returned all of the necessary data.  I looked into it, and it's possible, although it did take me some time to figure out how to actually do it.
 
 First of all, here's the modified stored procedure:
 
@@ -16,8 +16,8 @@ Now we can retrieve the data like this:
 
 <script src="https://gist.github.com/3684093.js?file=s3.cs"></script>
 
-I first tried to use the IQuery's generic List of T method which i had hoped would give me a generic list of Product entities.  But i couldn't get that working. So i tried the regular List method, and it turns out that NHibernate doesn't just give me a list of Product entities... it gives me a list where each item in the list is an object array where the first item in the array is the Product entity, and the second item is the Category.  Each Product entity's Category property references the correct Category instance though.  So you can get the product instances like this:
+I first tried to use the IQuery's generic List of T method which I had hoped would give me a generic list of Product entities.  But I couldn't get that working. So I tried the regular List method, and it turns out that NHibernate doesn't just give me a list of Product entities... it gives me a list where each item in the list is an object array where the first item in the array is the Product entity, and the second item is the Category.  Each Product entity's Category property references the correct Category instance though.  So you can get the product instances like this:
 
 <script src="https://gist.github.com/3684093.js?file=s4.cs"></script>
 
-There's probably an easier way to just get the list of Product entities from the named query, but i haven't found it yet :)
+There's probably an easier way to just get the list of Product entities from the named query, but I haven't found it yet :)

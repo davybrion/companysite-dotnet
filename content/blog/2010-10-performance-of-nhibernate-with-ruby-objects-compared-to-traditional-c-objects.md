@@ -18,7 +18,7 @@ We have a scenario which consists of 15 'actions'.  For these actions, we use so
 - Retrieve 100 tracks without joins and access all properties, including references (triggers lazy-loading)
 - Retrieve 100 tracks with joins and access all properties, including references
 
-Note: when i say we access reference properties to trigger lazy loading, i mean that we access a non-id property of the referenced property to make sure it indeed hits the database.
+Note: when I say we access reference properties to trigger lazy loading, I mean that we access a non-id property of the referenced property to make sure it indeed hits the database.
 
 The scenario is ran 500 times with regular C# objects, and 500 times with Ruby objects.  We keep track of the average time of each action in the scenario, as well as the total duration of the scenario.  Also, keep in mind that we ran these tests on a local database.
 
@@ -28,7 +28,7 @@ The following graph shows the average duration of each action in milliseconds on
 
 (you can click on the graph to watch it in its full size)
 
-Before i'll discuss these results, i'd also like to show the following graph which shows the average difference in milliseconds between the static and the dynamic execution of each action:
+Before I'll discuss these results, I'd also like to show the following graph which shows the average difference in milliseconds between the static and the dynamic execution of each action:
 
 <a href="/blog/wp-content/uploads/2010/10/average_difference_in_millis_for_each_action.png"><img src="/blog/wp-content/uploads/2010/10/average_difference_in_millis_for_each_action.png" alt="" title="average_difference_in_millis_for_each_action" width="600" height="418" class="aligncenter size-medium wp-image-2821" /></a>
 
@@ -56,4 +56,4 @@ Now, considering the fact that we prefer to avoid loading 'large' sets of data t
 
 Now the difference varies between 6% and 15%.
 
-Now, suppose that we have a compelling reason to actually go ahead with using this approach (we do actually, but i'm not gonna get into that here), do you think we can trust these numbers? Is there anything else we're missing? Are we complete idiots for testing the performance difference like this?  Do you have any feedback whatsoever? Then please leave a comment :)
+Now, suppose that we have a compelling reason to actually go ahead with using this approach (we do actually, but I'm not gonna get into that here), do you think we can trust these numbers? Is there anything else we're missing? Are we complete idiots for testing the performance difference like this?  Do you have any feedback whatsoever? Then please leave a comment :)

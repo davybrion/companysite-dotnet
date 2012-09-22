@@ -1,4 +1,4 @@
-A feature of ASP.NET MVC that i really like is that when you use the LabelFor extension method in a strongly-typed view, the LabelFor implementation will try to retrieve and use metadata for the property you're creating a label for. For instance:
+A feature of ASP.NET MVC that I really like is that when you use the LabelFor extension method in a strongly-typed view, the LabelFor implementation will try to retrieve and use metadata for the property you're creating a label for. For instance:
 
 <script src="https://gist.github.com/3728692.js?file=s1.cs"></script>
 

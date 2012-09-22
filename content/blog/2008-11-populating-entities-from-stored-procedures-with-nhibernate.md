@@ -1,6 +1,6 @@
 A short while ago we needed to fetch the data for some entities through a stored procedure for performance reasons.  We already use NHibernate in the typical way to fetch and modify the data of this entity type, but we just wanted something so we could also use the resultset of the stored procedure to populate the entities.  One of my team members spent some time figuring out how to get the data returned by the stored procedure into the entities without actually having to write the code ourselves.  Turns out this was pretty easy to do.  Let's go over the solution with a very simple example.
 
-The stored procedure i'll use for the example is extremely simple, and you'd never need to use this technique for such a stupid procedure.  But in the situation we faced at work, the stored procedure was obviously a lot more complicated.  So the stored procedure for this example is just this:
+The stored procedure I'll use for the example is extremely simple, and you'd never need to use this technique for such a stupid procedure.  But in the situation we faced at work, the stored procedure was obviously a lot more complicated.  So the stored procedure for this example is just this:
 
 <script src="https://gist.github.com/3684087.js?file=s1.sql"></script>
 

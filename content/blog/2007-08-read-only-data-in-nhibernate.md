@@ -1,4 +1,4 @@
-Was just browsing the NHibernate forum and read something i didn't know yet... if you have read-only data, you can declare the class as immutable:
+Was just browsing the NHibernate forum and read something I didn't know yet... if you have read-only data, you can declare the class as immutable:
 
 <script src="https://gist.github.com/3611495.js?file=s1.xml"></script>
 

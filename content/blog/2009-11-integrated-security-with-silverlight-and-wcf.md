@@ -1,4 +1,4 @@
-I lost some time yesterday trying to get a Silverlight client to use Integrated Security with a WCF service so i figured i'd post the steps necessary to make it work here.
+I lost some time yesterday trying to get a Silverlight client to use Integrated Security with a WCF service so I figured I'd post the steps necessary to make it work here.
 
 First of all, you need to make sure that your IIS installation has support for Windows Authentication.  Go to Add/Remove Programs (appwiz.cpl), click on Turn Windows Features on or off, select Internet Information Services - World Wide Web Services - Security and make sure that Windows Authentication is checked.
 
@@ -8,7 +8,7 @@ After that, you need to add the following to the binding configuration of the se
 
 <script src="https://gist.github.com/3685323.js?file=s1.xml"></script>
 
-I only got it working with basicHttpBinding, so unfortunately i can no longer use the customBinding to use binary XML...
+I only got it working with basicHttpBinding, so unfortunately I can no longer use the customBinding to use binary XML...
 
 In your Silverlight project, open the ServiceReferences.ClientConfig file and add the following to the binding configuration:
 
@@ -20,4 +20,4 @@ After that, you should be able to do this in your WCF service:
 
 And that should return the Windows user of the user running the Silverlight client.
 
-For the record: this is with Silverlight 3... i have no idea if it'll work with Silverlight 2
+For the record: this is with Silverlight 3... I have no idea if it'll work with Silverlight 2

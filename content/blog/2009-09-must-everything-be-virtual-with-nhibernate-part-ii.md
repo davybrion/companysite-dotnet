@@ -1,4 +1,4 @@
-I already tried to explain this <a href="/blog/2009/03/must-everything-be-virtual-with-nhibernate/">before</a>, but here's a simple example from a presentation i recently did on NHibernate:  
+I already tried to explain this <a href="/blog/2009/03/must-everything-be-virtual-with-nhibernate/">before</a>, but here's a simple example from a presentation I recently did on NHibernate:  
 
 <img src="/blog/wp-content/uploads/2009/09/transitive_persistence41.png" alt="transitive_persistence4" title="transitive_persistence4" width="798" height="635" class="aligncenter size-full wp-image-1647" />
 

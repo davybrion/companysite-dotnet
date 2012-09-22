@@ -1,4 +1,4 @@
-There is a reported <a href="http://nhjira.koah.net/browse/NH-1079">performance issue</a> with NHibernate that i wanted to look into.  The reported issue was related to retrieving objects through a generically typed List or through an IList reference.  
+There is a reported <a href="http://nhjira.koah.net/browse/NH-1079">performance issue</a> with NHibernate that I wanted to look into.  The reported issue was related to retrieving objects through a generically typed List or through an IList reference.  
 
 The following code simulates the issue:
 

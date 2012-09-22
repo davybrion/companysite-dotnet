@@ -1,6 +1,6 @@
 As you may or may not know, Agatha has supported <a href="/blog/2010/06/using-agathas-server-side-caching/">server-side caching of responses</a> for a while now (it also sports built-in <a href="/blog/2010/08/using-agathas-client-side-caching/">client-side caching</a> actually). But it only came with one in-memory implementation of that cache. And while that implementation works well, it's still just an in-process cache which just isn't sufficient for some scenarios.
 
-This week i was introduced to <a href="http://www.membase.org/">Membase</a>, a great distributed caching solution which is very easy to set up. I wanted to see what it would take to make Agatha's server-side caching work with Membase. With a little help from the <a href="http://memcached.enyim.com/">Enyim Membase client</a>, it turned out to be very easy.  If you want to change the actual caching implementation that Agatha uses, you have to implement 2 interfaces. First, you'll need a custom implementation of the ICache interface:
+This week I was introduced to <a href="http://www.membase.org/">Membase</a>, a great distributed caching solution which is very easy to set up. I wanted to see what it would take to make Agatha's server-side caching work with Membase. With a little help from the <a href="http://memcached.enyim.com/">Enyim Membase client</a>, it turned out to be very easy.  If you want to change the actual caching implementation that Agatha uses, you have to implement 2 interfaces. First, you'll need a custom implementation of the ICache interface:
 
 <script src="https://gist.github.com/3728632.js?file=s1.cs"></script>
 
@@ -26,4 +26,4 @@ You'd also need to configure Agatha to use the MembaseCacheProvider implemention
 
 And that's it... distributed caching of service-layer responses has never been this easy ;)
 
-Note that i haven't committed this implementation to Agatha's Subversion repository... the plan is to add it in the 2.0 version, which will have many more changes (more on that in a future post).  But if you need it already, or you need inspiration for an implementation that targets a different distributed caching server, the information in this post should get you going.
+Note that I haven't committed this implementation to Agatha's Subversion repository... the plan is to add it in the 2.0 version, which will have many more changes (more on that in a future post).  But if you need it already, or you need inspiration for an implementation that targets a different distributed caching server, the information in this post should get you going.

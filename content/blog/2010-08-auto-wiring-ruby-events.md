@@ -1,6 +1,6 @@
-My <a href="/blog/2010/08/using-more-rubyesq-events-in-ruby/">Rubyesq events</a> received some nice comments in the <a href="http://5by5.tv/rubyshow/130">Ruby Show #130</a> (fast forward to the 15 minute mark in the audio stream, or the 14 minute mark in the video stream if you wanna see or hear the part about the events), so i figured: why not make them even better?
+My <a href="/blog/2010/08/using-more-rubyesq-events-in-ruby/">Rubyesq events</a> received some nice comments in the <a href="http://5by5.tv/rubyshow/130">Ruby Show #130</a> (fast forward to the 15 minute mark in the audio stream, or the 14 minute mark in the video stream if you wanna see or hear the part about the events), so I figured: why not make them even better?
 
-Alex Simkin had suggested to implement some kind of auto-wiring of events.  I thought it would be fun to implement, so i did.  Suppose we have the following class:
+Alex Simkin had suggested to implement some kind of auto-wiring of events.  I thought it would be fun to implement, so I did.  Suppose we have the following class:
 
 <script src="https://gist.github.com/3727807.js?file=s1.rb"></script>
 
@@ -26,7 +26,7 @@ And the method to define an event was slightly modified, so it now looks like th
 
 <script src="https://gist.github.com/3727807.js?file=s6.rb"></script>
 
-The only difference here is that we define an EVENTS array constant, and every time an event is defined, we add the symbol of the event to the EVENTS array.  I'm not very happy with using an array constant to do this, but it was the only way i found to store the symbol name of each event when it's defined while also being able to access those symbols from within the each_suitable_handler method.  Again, i'm new at Ruby so i'm probably missing an easier alternative here.
+The only difference here is that we define an EVENTS array constant, and every time an event is defined, we add the symbol of the event to the EVENTS array.  I'm not very happy with using an array constant to do this, but it was the only way I found to store the symbol name of each event when it's defined while also being able to access those symbols from within the each_suitable_handler method.  Again, I'm new at Ruby so I'm probably missing an easier alternative here.
 
 But with these changes in place, we can now run the following code:
 

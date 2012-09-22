@@ -4,7 +4,7 @@ If you need data, then it is your responsibility to retrieve that data as effici
 
 Most problems that are attributed to lazy loading are really manifestations of the laziness (or ignorance) of the developers who write code like that.  They are not inherently related to what lazy loading is about.  In many cases, lazy loading can indeed improve performance of your code, but as with so many concepts and practices, it all depends on the situation.  If a certain subset of the data that you would retrieve will not be used in the majority of cases, then obviously lazily loading that subset of data instead of eagerly fetching it could be a big performance improvement.  
 
-Here are some rules of thumb that i usually employ when it comes to lazy loading:
+Here are some rules of thumb that I usually employ when it comes to lazy loading:
 
 - If a set of data is always, or at least in the (large) majority of cases, needed by your code then don't use lazy loading and fetch the required data as efficiently as you can
 - If a set of data is not needed in the majority of cases, then use lazy loading instead of eager fetching

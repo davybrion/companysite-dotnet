@@ -1,4 +1,4 @@
-Sorry for the shameful promotion, but you would do it too ;). <a href="http://twitter.com/#!/bartdeleye" target="_blank">Bart Deleye</a> was kind enough to write a review of my <a href="http://thatextramile.be/training/nhibernate">NHibernate course</a> which i'd like to share here:
+Sorry for the shameful promotion, but you would do it too ;). <a href="http://twitter.com/#!/bartdeleye" target="_blank">Bart Deleye</a> was kind enough to write a review of my <a href="http://thatextramile.be/training/nhibernate">NHibernate course</a> which I'd like to share here:
 
 *Davy's NHibernate course is an excellent cocktail based on ingredients like expertise, high quality content, hands-on labs and best practices.*
 
@@ -10,4 +10,4 @@ Sorry for the shameful promotion, but you would do it too ;). <a href="http://tw
 
 *I can only recommend this course to every new, novice and experienced NHibernate user. Only a few weeks later I notice a lot of improvement amongst my team members!*
 
-Bart and his team were the first people to attend the course almost 2 months ago, so i wasn't entirely sure yet of the format and the content at that time. This week i'm actually doing the course for the third time, and apart from some very minor changes and tweaks, it's pretty much the exact same as when i did it the first time, except that i'm not nearly as nervous now as i was when i did it the first time. Luckily for me, his team was fun to hang out with and there was plenty of joking around which definitely made it easy to just be comfortable instead of being a nervous wreck :)
+Bart and his team were the first people to attend the course almost 2 months ago, so I wasn't entirely sure yet of the format and the content at that time. This week I'm actually doing the course for the third time, and apart from some very minor changes and tweaks, it's pretty much the exact same as when I did it the first time, except that I'm not nearly as nervous now as I was when I did it the first time. Luckily for me, his team was fun to hang out with and there was plenty of joking around which definitely made it easy to just be comfortable instead of being a nervous wreck :)

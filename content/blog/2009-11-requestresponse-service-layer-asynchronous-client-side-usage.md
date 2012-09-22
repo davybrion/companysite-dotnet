@@ -1,6 +1,6 @@
 Note: This post is part of a series. Be sure to read the introduction <a href="/blog/2009/11/requestresponse-service-layer-series/">here</a>.
 
-First of all, i would like to mention that i am by no means an expert on WCF and asynchronous operations, so it is quite possible that some of the things in this post could be done easier by someone who knows more about it.  Most of the code in this post wasn't written by me either, but by my co-worker Tom Ceulemans (who unfortunately doesn't have a blog that i can link to).  What you'll see in this post does work and it actually works very well.  But as i said, there very well might be room for some nice improvements here.  Anyways, let's get to it.
+First of all, I would like to mention that I am by no means an expert on WCF and asynchronous operations, so it is quite possible that some of the things in this post could be done easier by someone who knows more about it.  Most of the code in this post wasn't written by me either, but by my co-worker Tom Ceulemans (who unfortunately doesn't have a blog that I can link to).  What you'll see in this post does work and it actually works very well.  But as I said, there very well might be room for some nice improvements here.  Anyways, let's get to it.
 
 As you know by now, our Service Contract for the Request/Response Service Layer (RRSL) looks like this:
 
@@ -34,7 +34,7 @@ Its usage is pretty similar to that of the IRequestDispatcher, except that you d
 
 Another big difference between the IAsyncRequestDispatcher and the IRequestDispatcher is that the IAsyncRequestDispatcher is not ment to be reused for multiple service calls.  That is, you can obviously add as many requests as you like but you can only call the ProcessRequests method once, at which point all of the added requests will be sent to the RRSL through the AsyncWcfRequestProcessorProxy class.  The reason why we chose to go the "You can only use it once"-route is to guarantee that the IAsyncRequestDispatcher and especially its AsyncWcfRequestProcessorProxy instance are always guaranteed to be disposed properly no matter when the responses are returned, which might be after the view-component has already been closed by the user, for instance.
 
-Now, our implementation of the IAsyncRequestDispatcher interface is dependent upon 3 other classes that we wrote.  The first is the AsyncWcfRequestProcessoryProxy class which we already covered.  The other two are the ReceivedResponses class, and the ResponseReceiver class.  I'll show the implementations of those classes after i show the code of the AsyncRequestDispatcher so you might have to scroll back and forth between the code of these classes in order to grasp the code.  
+Now, our implementation of the IAsyncRequestDispatcher interface is dependent upon 3 other classes that we wrote.  The first is the AsyncWcfRequestProcessoryProxy class which we already covered.  The other two are the ReceivedResponses class, and the ResponseReceiver class.  I'll show the implementations of those classes after I show the code of the AsyncRequestDispatcher so you might have to scroll back and forth between the code of these classes in order to grasp the code.  
 
 First of all, the AsyncRequestDispatcher:
 
@@ -50,7 +50,7 @@ Pretty straightforward... it basically makes sure that either the callback from 
 
 <script src="https://gist.github.com/3685562.js?file=s9.cs"></script>
 
-Now, some of you will probably be thinking "isn't all this more complex than it needs to be?".  Apart from the asynchronous proxy, i truly doubt it.  The only thing that your code needs to know of is the API of the IAsyncRequestDispatcher interface and of the ReceivedResponses class which are both pretty clean, very easy to use and easy to grasp. 
+Now, some of you will probably be thinking "isn't all this more complex than it needs to be?".  Apart from the asynchronous proxy, I truly doubt it.  The only thing that your code needs to know of is the API of the IAsyncRequestDispatcher interface and of the ReceivedResponses class which are both pretty clean, very easy to use and easy to grasp. 
 
 One final word about the fact that the IAsyncRequestDispatcher is only meant to be used once.  Obviously, we don't create each IAsyncRequestDispatcher instance manually.  We can't have the IOC container inject it whenever we want either, because then we'd only have one instance for the lifetime of the class that had the IAsyncRequestDispatcher injected.  We inject the following factory instead:
 
@@ -64,4 +64,4 @@ One thing that you need to be very careful of: if your IAsyncRequestDispatcherFa
 
 That's it for this post, which is probably the most difficult one to comprehend but again, the most important facts to remember are the ease of use of IAsyncRequestDispatcher and ReceivedResponses.  Also, keep in mind that even though we use this primarily for Silverlight clients, you can just as well do this from WPF applications or any other .NET application for that matter.
 
-Finally, i'd like to thank Tom Ceulemans for the implementation shown in this post.  He happened to be the first one who needed to use the RRSL from a silverlight application and he did a great job with getting it to work :)
+Finally, I'd like to thank Tom Ceulemans for the implementation shown in this post.  He happened to be the first one who needed to use the RRSL from a silverlight application and he did a great job with getting it to work :)

@@ -1,10 +1,10 @@
 Note: This post is part of a series. You can find the introduction and overview of the series <a href="/blog/2010/08/mvp-in-silverlightwpf-series">here</a>.
 
-The MVP approach that i've shown in this series makes it easy to write clean code where responsibilities are properly separated.  One of the biggest benefits of that is that you get easy testability because of it as well.  Now, the MVVM proponents will tell you that MVVM leads to code that is highly testable as well and they're right.  However, i think that because of the cleaner separation in MVP, the automated tests you can write for your code is often cleaner, simpler, requiring less set up and often resulting in more focused tests.  I'm going to show a few tests of the sample project accompanying this series to show you what i mean.
+The MVP approach that I've shown in this series makes it easy to write clean code where responsibilities are properly separated.  One of the biggest benefits of that is that you get easy testability because of it as well.  Now, the MVVM proponents will tell you that MVVM leads to code that is highly testable as well and they're right.  However, I think that because of the cleaner separation in MVP, the automated tests you can write for your code is often cleaner, simpler, requiring less set up and often resulting in more focused tests.  I'm going to show a few tests of the sample project accompanying this series to show you what I mean.
 
 First of all, let's start off with our BindingModels.  Every single thing that your BindingModel does should be tested.  That means testing whether the PropertyChanged event is always raised as expected, testing the validation you do, and testing that your population and mutation methods work properly.  
 
-For instance, the UserGroupDetailBindingModel from the sample has a Name property.  Since the View binds to that property, we need to make sure that the PropertyChanged event is raised when its value is set.  We've also defined some validation for the Name property so we need to test that our BindingModel raises the ErrorsChanged event and that the correct validation message is made available through the GetErrors method.  Now, i'm a big fan of using base classes for test fixtures which contain utility assert methods which reduce code noise in your tests as much as possible.  It makes it possible to write tests like these:
+For instance, the UserGroupDetailBindingModel from the sample has a Name property.  Since the View binds to that property, we need to make sure that the PropertyChanged event is raised when its value is set.  We've also defined some validation for the Name property so we need to test that our BindingModel raises the ErrorsChanged event and that the correct validation message is made available through the GetErrors method.  Now, I'm a big fan of using base classes for test fixtures which contain utility assert methods which reduce code noise in your tests as much as possible.  It makes it possible to write tests like these:
 
 <script src="https://gist.github.com/3728116.js?file=s1.cs"></script>
 
@@ -18,7 +18,7 @@ It's also important to test the methods you have on your model to populate it wi
 
 Again, both test are short, very simple and focused.  They don't have to worry about anything that isn't relevant to what we're actually trying to test.
 
-I only showed 4 tests for BindingModels here, but the sample of this series has 30 tests for 3 BindingModels and i encourage you to check them out.
+I only showed 4 tests for BindingModels here, but the sample of this series has 30 tests for 3 BindingModels and I encourage you to check them out.
 
 Obviously, you want to cover the logic in your Presenters with valuable and maintainable tests as well.  Typical things that you need to test in the presenter are things like:
 <ul>
@@ -31,7 +31,7 @@ Obviously, you want to cover the logic in your Presenters with valuable and main
 	<li>that it interacts with the View correctly</li>
 </ul>
 
-The only thing that makes testing the Presenter a little bit more difficult than typical automated tests, is the fact that the presenter always calls the service layer asynchronously.  Asynchronous calls are typically somewhat more complex to test, but luckily for me i'm using Agatha's RequestDispatchers to call the service layer, and i can use Agatha's RequestDispatcherStub class in my tests to make the whole thing a lot easier.
+The only thing that makes testing the Presenter a little bit more difficult than typical automated tests, is the fact that the presenter always calls the service layer asynchronously.  Asynchronous calls are typically somewhat more complex to test, but luckily for me I'm using Agatha's RequestDispatchers to call the service layer, and I can use Agatha's RequestDispatcherStub class in my tests to make the whole thing a lot easier.
 
 Let's go to some examples. The UserGroupDetailPresenter needs to retrieve the selected UserGroup from the service layer (to make sure we're working with the latest data), and it also needs to retrieve a list of suitable parent UserGroups.  When the data is returned from the service, the model needs to be populated.  Take a look at the following 3 tests:
 
@@ -43,7 +43,7 @@ We can also easily test whether the presenter interacts with the view as expecte
 
 <script src="https://gist.github.com/3728116.js?file=s4.cs"></script>
 
-For those wondering: i'm using the (excellent) <a href="http://code.google.com/p/moq/">Moq</a> library to mock the view in these tests.
+For those wondering: I'm using the (excellent) <a href="http://code.google.com/p/moq/">Moq</a> library to mock the view in these tests.
 
 I also said that we can easily test that the presenter doesn't make unwanted service layer calls, which you can see in this test:
 

@@ -1,4 +1,4 @@
-Note: i no longer recommend this solution for reasons that i've talked about in more detail [here](/blog/2010/05/why-you-shouldnt-expose-your-entities-through-your-services/).
+Note: I no longer recommend this solution for reasons that I've talked about in more detail [here](/blog/2010/05/why-you-shouldnt-expose-your-entities-through-your-services/).
 
 Last year, Tim Scott posted this very good [article](http://lunaverse.wordpress.com/2007/05/09/remoting-using-wcf-and-nhibernate/) on how to distribute NHiberate entities through WCF services. In it, he mentions this:
 
@@ -16,13 +16,13 @@ The implementation of the service contract looks like this:
 
 <script src="https://gist.github.com/3611636.js?file=s2.cs"></script>
 
-First of all, this is just an example, that's why the ISessionFactory is created within the service implementation, in a real system i wouldn't do this.  Anyway, the GetCustomersWithTheirOrders method returns a list of all Customers, with their Orders.  An Order contains references to an Employee and a Shipper.  The Employee and Shipper will not be retrieved from the database, but NHibernate will initialize them with proxy objects to enable lazy-loading.  Obviously, the lazy-loading won't work once you're outside of the scope of the NHibernate session, but it's important to note that there will be proxies in our object graph.
+First of all, this is just an example, that's why the ISessionFactory is created within the service implementation, in a real system I wouldn't do this.  Anyway, the GetCustomersWithTheirOrders method returns a list of all Customers, with their Orders.  An Order contains references to an Employee and a Shipper.  The Employee and Shipper will not be retrieved from the database, but NHibernate will initialize them with proxy objects to enable lazy-loading.  Obviously, the lazy-loading won't work once you're outside of the scope of the NHibernate session, but it's important to note that there will be proxies in our object graph.
 
-At first i had decorated my entity classes with the [DataContract] and [DataMember] attributes but that really messed up the deserialization of the proxies. Now my Entity classes are only decorated with the [Serializable] attribute. NetDataContractSerializer should work in both cases, but i only got it working properly when they were [Serializable].
+At first I had decorated my entity classes with the [DataContract] and [DataMember] attributes but that really messed up the deserialization of the proxies. Now my Entity classes are only decorated with the [Serializable] attribute. NetDataContractSerializer should work in both cases, but I only got it working properly when they were [Serializable].
 
-Right, so now we have the service contract and the implementation, it's time to host it. My solution contains an example of a console host as well as a service hosted in IIS. For this post, i'll just go over the console host and console client. You can find the IIS example (which is practically identical anyway) in the downloadable solution.
+Right, so now we have the service contract and the implementation, it's time to host it. My solution contains an example of a console host as well as a service hosted in IIS. For this post, I'll just go over the console host and console client. You can find the IIS example (which is practically identical anyway) in the downloadable solution.
 
-So, in the console host project, i have the following in my app.config file:
+So, in the console host project, I have the following in my app.config file:
 
 <script src="https://gist.github.com/3611636.js?file=s3.xml"></script>
 
@@ -40,8 +40,8 @@ And the client uses the service like this:
 
 <script src="https://gist.github.com/3611636.js?file=s6.cs"></script>
 
-I didn't write a test for this to prove it works, but if you step through it and you explore the returned object graph using the debugger, you'll see that everything is of the correct type... even the proxies make it through correctly. Manipulating the graph and using the PersistCustomer method also works, but it's not in this example anymore because i didn't wanna pollute my database every time i ran it to test it.
+I didn't write a test for this to prove it works, but if you step through it and you explore the returned object graph using the debugger, you'll see that everything is of the correct type... even the proxies make it through correctly. Manipulating the graph and using the PersistCustomer method also works, but it's not in this example anymore because I didn't wanna pollute my database every time I ran it to test it.
 
-I did have problems when i was hosting the service both in the console and through IIS at the same time... some requests would then fail to deserialize the returned graph properly. If you don't run both hosts at the same time, it works.  I have no idea why this caused issues, but after wasting a few hours trying to figure it out, i just gave up.  You can reproduce it by running the ServiceConsoleHost, ServiceClient and ServiceWebClient projects in the solution.  Sometimes that just works as well, so you may have to try a few times to get it to fail. So if anyone can shed some light on that issue, i'd be most interested in hearing about it :)
+I did have problems when I was hosting the service both in the console and through IIS at the same time... some requests would then fail to deserialize the returned graph properly. If you don't run both hosts at the same time, it works.  I have no idea why this caused issues, but after wasting a few hours trying to figure it out, I just gave up.  You can reproduce it by running the ServiceConsoleHost, ServiceClient and ServiceWebClient projects in the solution.  Sometimes that just works as well, so you may have to try a few times to get it to fail. So if anyone can shed some light on that issue, I'd be most interested in hearing about it :)
 
 You can download the solution <a href="http://davybrion.com/NHibernateAndWcfExample.zip">here</a>.  Note that this is a Visual Studio 2008 solution...

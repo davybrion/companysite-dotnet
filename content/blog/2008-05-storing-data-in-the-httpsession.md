@@ -18,4 +18,4 @@ And when you'd need to retrieve that data in a later request, you could do this:
 
 <script src="https://gist.github.com/3655907.js?file=s3.cs"></script>
 
-Like i said, this is a quick-n-dirty example... normally you'd want to prevent direct access to the HttpSession and you'd probably write some kind of class that takes care of wrapping the reference in a WeakReference and unwrapping it from a WeakReference but this code is just to illustrate the approach.
+Like I said, this is a quick-n-dirty example... normally you'd want to prevent direct access to the HttpSession and you'd probably write some kind of class that takes care of wrapping the reference in a WeakReference and unwrapping it from a WeakReference but this code is just to illustrate the approach.

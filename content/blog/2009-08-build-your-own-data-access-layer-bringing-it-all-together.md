@@ -2,7 +2,7 @@ Note: This post is part of a series.  Be sure to read the introduction <a href="
 
 By now we've already covered everything that this DAL has to offer, which admittedly isn't all that much.  All of the classes you've seen so far are pretty good at whey they should do, but nobody in their right mind would want to use any of these things directly in application code.  Any easy-to-use DAL should offer a simple facade which sits on top of the underlying system and makes it very easy to perform the most typical tasks that you need it to perform for you.  You shouldn't need to know about specific classes to be able to use it (that goes for most good frameworks and libraries btw).
 
-So once again, i based my approach on what NHibernate does, and with that the ISession interface was born:
+So once again, I based my approach on what NHibernate does, and with that the ISession interface was born:
 
 <script src="https://gist.github.com/3685104.js?file=s1.cs"></script>
 

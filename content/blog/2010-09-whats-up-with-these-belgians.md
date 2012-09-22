@@ -6,13 +6,13 @@ As you can see, the numbers for the Belgians are far different than they are for
 
 <a href="/blog/wp-content/uploads/2010/09/all_time_countries.png"><img src="/blog/wp-content/uploads/2010/09/all_time_countries.png" alt="" title="all_time_countries" width="718" height="372" class="alignnone size-full wp-image-2637" /></a>
 
-So that makes me wonder: what's up with these Belgians? And yes, i know that some of you are probably thinking: "well duh, it's because you're Belgian too!".  But there are a couple of reasons why i don't think that me being from Belgium explains it:
+So that makes me wonder: what's up with these Belgians? And yes, I know that some of you are probably thinking: "well duh, it's because you're Belgian too!".  But there are a couple of reasons why I don't think that me being from Belgium explains it:
 
-- The Google Analytics plugin that i'm using does not count my own visits :)
-- I do very, very little networking so it's not like i'm often in contact with a lot of Belgian developers to plug my blog
-- I don't go to developer events to evangelize my ideas, in fact, i generally don't go to developer events
-- I don't give talks or presentations, except for one that i did on NHibernate a year ago.  And i don't see myself doing a lot of talks in the future either since i have no idea what i'd talk about.
+- The Google Analytics plugin that I'm using does not count my own visits :)
+- I do very, very little networking so it's not like I'm often in contact with a lot of Belgian developers to plug my blog
+- I don't go to developer events to evangelize my ideas, in fact, I generally don't go to developer events
+- I don't give talks or presentations, except for one that I did on NHibernate a year ago.  And I don't see myself doing a lot of talks in the future either since I have no idea what I'd talk about.
 
-So, it can't be because i've been pushing this blog among the Belgian developers.  So what is it then?  Is it because we Belgians are generally quite thorough when it comes to learning about stuff we like?  Or are we just lazy and do we love to waste a lot of time online?  Both are true to some degree.  Either way, it's nice to see Belgium among the top of a list (even if it doesn't mean shit) that isn't related to female tennis, chocolate, beer, organized crime or fraud.
+So, it can't be because I've been pushing this blog among the Belgian developers.  So what is it then?  Is it because we Belgians are generally quite thorough when it comes to learning about stuff we like?  Or are we just lazy and do we love to waste a lot of time online?  Both are true to some degree.  Either way, it's nice to see Belgium among the top of a list (even if it doesn't mean shit) that isn't related to female tennis, chocolate, beer, organized crime or fraud.
 
-Seriously though, i do find this kind of stuff interesting so if you are Belgian (or are familiar with how Belgians are) and have some ideas on why those numbers are so different from other countries, please do share :)
+Seriously though, I do find this kind of stuff interesting so if you are Belgian (or are familiar with how Belgians are) and have some ideas on why those numbers are so different from other countries, please do share :)

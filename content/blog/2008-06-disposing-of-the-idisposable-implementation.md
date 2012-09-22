@@ -1,8 +1,8 @@
-Everytime i need to implement the IDisposable interface i have to lookup the recommended way of doing so. That in itself is a bad sign, so i figured i might as well get rid of this by putting the implementation in a reusable base class, based on <a href="http://msdn.microsoft.com/en-us/library/fs2xkftw.aspx">the officially recommended way</a>:
+Everytime I need to implement the IDisposable interface I have to lookup the recommended way of doing so. That in itself is a bad sign, so I figured I might as well get rid of this by putting the implementation in a reusable base class, based on <a href="http://msdn.microsoft.com/en-us/library/fs2xkftw.aspx">the officially recommended way</a>:
 
 <script src="https://gist.github.com/3656247.js?file=s1.cs"></script>
 
-So now i can simply inherit from Disposable, and i just need to implement the two abstract methods.  Here's a made up example to illustrate this:
+So now I can simply inherit from Disposable, and I just need to implement the two abstract methods.  Here's a made up example to illustrate this:
 
 <script src="https://gist.github.com/3656247.js?file=s2.cs"></script>
 

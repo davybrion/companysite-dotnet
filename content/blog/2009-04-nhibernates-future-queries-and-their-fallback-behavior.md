@@ -4,11 +4,11 @@ As of today, (revision 4177 if you want to be specific) this is no longer the ca
 
 <script src="https://gist.github.com/3684484.js?file=s1.cs"></script>
 
-There are more tests obviously, but you get the point.  The interesting part about these tests is how i disabled query batching support.  I only have Sql Server and MySQL running on this machine, and they both support query batching.  I didn't really feel like installing a database that doesn't support it, so i just took advantage of NHibernate's extensibility.  Since most of us run the NHibernate tests on Sql Server, i inherited from the Sql Server Driver and made sure that it would report to NHibernate that it didn't support query batching:
+There are more tests obviously, but you get the point.  The interesting part about these tests is how I disabled query batching support.  I only have Sql Server and MySQL running on this machine, and they both support query batching.  I didn't really feel like installing a database that doesn't support it, so I just took advantage of NHibernate's extensibility.  Since most of us run the NHibernate tests on Sql Server, I inherited from the Sql Server Driver and made sure that it would report to NHibernate that it didn't support query batching:
 
 <script src="https://gist.github.com/3684484.js?file=s2.cs"></script>
 
-Easy huh? Then i just inherited from the TestCase class we have in the NHibernate.Tests project which offers a virtual method where you can modify the NHibernate configuration for the current fixture:
+Easy huh? Then I just inherited from the TestCase class we have in the NHibernate.Tests project which offers a virtual method where you can modify the NHibernate configuration for the current fixture:
 
 <script src="https://gist.github.com/3684484.js?file=s3.cs"></script>
 

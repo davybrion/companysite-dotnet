@@ -12,7 +12,7 @@ Now we just have to make sure that all of our Request and Response types are reg
 
 <script src="https://gist.github.com/3685498.js?file=s3.cs"></script>
 
-Now we can actually define our Service Contract.  Instead of putting the WCF attributes on the IRequestProcessor interface, i decided to put a different interface next to it.  The reason i chose to go that route is merely to make sure that the actual IRequestProcessor interface and it's implementation isn't tied to WCF.  And that's why we have the IWcfRequestProcessor interface:
+Now we can actually define our Service Contract.  Instead of putting the WCF attributes on the IRequestProcessor interface, I decided to put a different interface next to it.  The reason I chose to go that route is merely to make sure that the actual IRequestProcessor interface and it's implementation isn't tied to WCF.  And that's why we have the IWcfRequestProcessor interface:
 
 <script src="https://gist.github.com/3685498.js?file=s4.cs"></script>
 

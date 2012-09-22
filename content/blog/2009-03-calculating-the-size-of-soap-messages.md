@@ -2,7 +2,7 @@ I <a href="/blog/2009/03/i-love-easy-extensibility/">recently</a> needed somethi
 
 <script src="https://gist.github.com/3684381.js?file=s1.cs"></script>
 
-There is a big problem with this.  Well, at least one that i know of, possibly more.  The ToString() method on the Message class returns the nicely formatted content of the message.  Including all whitespace.  This obviously increases the reported size of the SOAP message by a significant number, even though it's not sent over the wire with all that whitespace. A better way to calculate the size is like this:
+There is a big problem with this.  Well, at least one that I know of, possibly more.  The ToString() method on the Message class returns the nicely formatted content of the message.  Including all whitespace.  This obviously increases the reported size of the SOAP message by a significant number, even though it's not sent over the wire with all that whitespace. A better way to calculate the size is like this:
 
 <script src="https://gist.github.com/3684381.js?file=s2.cs"></script>
 

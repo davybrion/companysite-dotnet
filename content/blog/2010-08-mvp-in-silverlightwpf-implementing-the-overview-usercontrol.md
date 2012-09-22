@@ -4,7 +4,7 @@ The first UserControl that we're going to implement looks like this:
 
 <a href="/blog/wp-content/uploads/2010/08/sample_overview1.png"><img src="/blog/wp-content/uploads/2010/08/sample_overview1.png" alt="" title="sample_overview" width="500" height="344" class="aligncenter size-full wp-image-2452" /></a>
 
-There's a TreeView which shows a hierarcy of User Groups and there's a Button to create a new one. When this UserControl is first loaded, it needs to retrieve the User Group hierarchy and show it in the TreeView.  When a user selects a User Group, an event should be published to notify anyone else who might be interested in the selection of a User Group (in our case, our Details UserControl which i'll cover in the next post).  When the Button is pushed, another event is published to notify anyone who might be listening that we need a new User Group to be created.  Again, this event will be handled by our Details UserControl.
+There's a TreeView which shows a hierarcy of User Groups and there's a Button to create a new one. When this UserControl is first loaded, it needs to retrieve the User Group hierarchy and show it in the TreeView.  When a user selects a User Group, an event should be published to notify anyone else who might be interested in the selection of a User Group (in our case, our Details UserControl which I'll cover in the next post).  When the Button is pushed, another event is published to notify anyone who might be listening that we need a new User Group to be created.  Again, this event will be handled by our Details UserControl.
 
 So what exactly does this UserControl need to do? After all, showing some data and publishing a few events isn't really all that complex, right?  Well, it also has to listen to some other events and it needs to update the data it's showing accordingly.  First of all, if a new User Group is created, it will receive an event so it can add the new User Group to its TreeView.  If a User Group is modified, it will also receive an event so it can deal with that.  In the case of a modification, it might be as simple as updating the User Group's name, but it might also require removing the User Group from its current parent in the TreeView and attach it to anther parent.  It might also become a root User Group.  And finally, if a User Group is deleted, it will also receive an event so it can remove the User Group from the TreeView.  
 
@@ -36,7 +36,7 @@ This structure is sufficient for holding the data that our TreeView can bind to,
 
 <script src="https://gist.github.com/3728019.js?file=s5.cs"></script>
 
-(not your typical way to transform a flattened list into a hierarchy, but i figured: why not go for something different for a change?)
+(not your typical way to transform a flattened list into a hierarchy, but I figured: why not go for something different for a change?)
 
 Alright... we can already transform the list of UserGroupDtos that we'll receive from the Service Layer into a hierarchical structure that we can bind our TreeView too.  But there are a few more things that we need to be able to support for this hierarchical structure.  For starters, we need to be able to add a new User Group to this structure, so we add the following method to the UserGroupsBindingModel:
 
@@ -86,7 +86,7 @@ But we also still need to handle some events as well... more specifically, we ne
 
 <script src="https://gist.github.com/3728058.js?file=s6.cs"></script>
 
-The UserGroupChangedEvent is used for both modified User Groups, or newly created ones.  I know, it'd be cleaner to have separate events for both situations but that would make my code in the Details UserControl uglier.  So i chose to go with one event for both situations.
+The UserGroupChangedEvent is used for both modified User Groups, or newly created ones.  I know, it'd be cleaner to have separate events for both situations but that would make my code in the Details UserControl uglier.  So I chose to go with one event for both situations.
 
 Before we can handle these events, we need to modify the declaration of our UserGroupsPresenter class:
 
@@ -104,14 +104,14 @@ Again, pretty straightforward stuff. You'll notice that we've introduced a new m
 
 <script src="https://gist.github.com/3728068.js?file=s1.cs"></script>
 
-And with that, our UserGroupsPresenter is done. All we need to do now, is the View.  Lets start with the XAML.  Gotta warn you though, i'm not good at XAML. I truly dislike it as a 'language' and i really hate having to edit XAML in Visual Studio which just seems much slower than it needs to be.  So, keep that in mind if you spot XAML that isn't quite up to standard ;)
+And with that, our UserGroupsPresenter is done. All we need to do now, is the View.  Lets start with the XAML.  Gotta warn you though, I'm not good at XAML. I truly dislike it as a 'language' and I really hate having to edit XAML in Visual Studio which just seems much slower than it needs to be.  So, keep that in mind if you spot XAML that isn't quite up to standard ;)
 
 <script src="https://gist.github.com/3728068.js?file=s2.xaml"></script>
 
-Nothing special here.  The only thing that might surprise people here is that i'm using regular, old-school event handlers to deal with user events.  I don't really see the benefit in using the command pattern that so many MVVM users advocate.  In a lot of MVVM implementations, those commands simply delegate to methods on the ViewModel, essentially turning them in glorified method calls with the only benefit (though i'd argue it's not actually a benefit) that they are defined in XAML and that you don't need to put those method calls in the code-behind.  Again, there is no <em>real</em> problem with a little bit of code in the View and avoiding it at all costs is <em>simply not necessary</em>.  In other MVVM implementations, they contain actual logic but i prefer to have that stuff in the Presenter, especially since that logic typically requires state which you already have in the Presenter anyway.
+Nothing special here.  The only thing that might surprise people here is that I'm using regular, old-school event handlers to deal with user events.  I don't really see the benefit in using the command pattern that so many MVVM users advocate.  In a lot of MVVM implementations, those commands simply delegate to methods on the ViewModel, essentially turning them in glorified method calls with the only benefit (though I'd argue it's not actually a benefit) that they are defined in XAML and that you don't need to put those method calls in the code-behind.  Again, there is no <em>real</em> problem with a little bit of code in the View and avoiding it at all costs is <em>simply not necessary</em>.  In other MVVM implementations, they contain actual logic but I prefer to have that stuff in the Presenter, especially since that logic typically requires state which you already have in the Presenter anyway.
 
 The code-behind of this View looks like this:
 
 <script src="https://gist.github.com/3728068.js?file=s3.cs"></script>
 
-As you can see, apart from writing code to expand all items in the TreeView (again, i can't for the life of me understand why something like this isn't available out of the box in a UI framework but hey, i guess that's just me) there's nothing special going on here.  In fact, it's quite simple.  As is the rest of the code we wrote.
+As you can see, apart from writing code to expand all items in the TreeView (again, I can't for the life of me understand why something like this isn't available out of the box in a UI framework but hey, I guess that's just me) there's nothing special going on here.  In fact, it's quite simple.  As is the rest of the code we wrote.

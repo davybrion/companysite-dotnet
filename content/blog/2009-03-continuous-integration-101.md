@@ -6,11 +6,11 @@ Before you commit your changes to the repository:
 - If there are conflicts, you resolve them in your local copy... you DO NOT simply overwrite other people's changes
 - You compile your code (You'd think nobody would forget this one, right? Think again...)
 - If it doesn't compile, you fix it (Again, you'd think nobody would forget this one....)
-- If it compiles, you run the tests.  At least run the fast tests, and i do mean all of them, not the ones you just wrote or modified.  If you have thousands of slow tests, then you obviously can't run them every single time you need to commit.  But you can and should definitely run the fast tests. Yes, all of them!
+- If it compiles, you run the tests.  At least run the fast tests, and I do mean all of them, not the ones you just wrote or modified.  If you have thousands of slow tests, then you obviously can't run them every single time you need to commit.  But you can and should definitely run the fast tests. Yes, all of them!
 - If a test fails, fix the code that broke it, or fix the test if it's no longer correct.  Repeat this process until none of the fast tests fail.
 - Commit your code, and begin working on your next task, take a break, go home, whatever is most appropriate at the time.
 
-For the next section, i'm going to assume that everyone has at least something that continuously visualizes the state of the automated build, either TV's on the wall (like we have), or at least a system tray notifier (like we also have).
+For the next section, I'm going to assume that everyone has at least something that continuously visualizes the state of the automated build, either TV's on the wall (like we have), or at least a system tray notifier (like we also have).
 
 When the build breaks:
 
