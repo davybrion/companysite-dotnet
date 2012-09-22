@@ -1,13 +1,7 @@
 ﻿@using ThatExtraMile.be.ViewModels
 @inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
-
 @{
     Layout = "_Layout.cshtml";
 }
 
-@foreach (BlogPostViewModel postModel in Model.PostModels)
-{
-    @Html.Partial("BlogPost", postModel)
-
-    <hr />
-}
+@Html.Partial("MultipleBlogPosts", Model.PostModels)

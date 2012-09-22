@@ -126,7 +126,7 @@
     <Content Include="content\reviews.md" />
     <Content Include="content\training.md" />
     <Content Include="Views\_Layout.cshtml" />
-    <Content Include="Views\NormalContent.cshtml" />
+    <Content Include="Views\NormalContentPage.cshtml" />
     <Content Include="content\blog\2007-06-programming-languages-dont-matter.md" />
     <Content Include="content\blog\2007-06-why-you-should-write-tests-before-code.md" />
     <Content Include="content\blog\2007-07-implementing-a-value-object.md" />
@@ -460,6 +460,7 @@
     <Content Include="Views\BlogPost.cshtml" />
     <Content Include="Views\BlogPostPage.cshtml" />
     <Content Include="Views\BlogPostsOverviewPage.cshtml" />
+    <Content Include="Views\MultipleBlogPosts.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

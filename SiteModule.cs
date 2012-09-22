@@ -13,8 +13,8 @@ namespace ThatExtraMile.be
     {
         private static readonly ContentTransformer ContentTransformer;
         private static readonly Dictionary<string, BlogPost> PostsPerLink;
-        private static List<BlogPost> IndexedListOfPosts;
-        private static List<BlogPost> ReversedIndexedListOfPosts; 
+        private static readonly List<BlogPost> IndexedListOfPosts;
+        private static readonly List<BlogPost> ReversedIndexedListOfPosts;
 
         static SiteModule()
         {
@@ -45,7 +45,7 @@ namespace ThatExtraMile.be
 
         private dynamic RenderMarkdown(string title, string section, string contentName)
         {
-            return View["NormalContent", new
+            return View["NormalContentPage", new
             {
                 Title = title,
                 Section = section,
@@ -77,7 +77,12 @@ namespace ThatExtraMile.be
             var posts = ReversedIndexedListOfPosts.Skip((page - 1) * pageSize).Take(pageSize);
 
             var postModels = posts.Select(p => new BlogPostViewModel()
-                        {Post = p, Content = ContentTransformer.GetTransformedContent(p.GetContentReference())});
+                    {
+                        Post = p,
+                        Content = ContentTransformer.GetTransformedContent(p.GetContentReference()),
+                        ShowMetaInfoBelowTitle = true,
+                        TitleAsLink = true
+                    });
 
             return View["BlogPostsOverviewPage", new
                 {

@@ -1,8 +1,27 @@
 ﻿﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<BlogPostViewModel>
+@if (Model.TitleAsLink)
+{
+    <h1><a href="@Model.Post.Link">@Model.Post.Title</a></h1>    
+}
+else
+{
+    <h1>@Model.Post.Title</h1>
+}
 
-<h1>@Model.Post.Title</h1>
+@if (Model.ShowMetaInfoBelowTitle)
+{
+    <p>
+        <em>Written by Davy Brion, published on @Model.Post.Date</em>
+    </p>    
+}
+
 @Html.Raw(Model.Content)
 
-<p>
-<em>Written by Davy Brion, published on @Model.Post.Date</em>
-</p>
+@if (!Model.ShowMetaInfoBelowTitle)
+{
+    <p>
+        <em>Written by Davy Brion, published on @Model.Post.Date</em>
+    </p>    
+}
+
+
