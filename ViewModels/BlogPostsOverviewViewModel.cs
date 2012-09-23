@@ -10,5 +10,6 @@ namespace ThatExtraMile.be.ViewModels
         public string Section { get; set; }
         public int? PreviousPageIndex { get; set; }
         public int? NextPageIndex { get; set; }
+        public string NextAndPreviousPageRoute { get; set; }
     }
 }

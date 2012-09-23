@@ -15,12 +15,12 @@
 <p>
     @if (Model.NextPageIndex.HasValue)
     {
-        <span class="previous_post"><a href="/blog/page/@Model.NextPageIndex.Value">&laquo; Older Entries</a></span>
+        <span class="previous_post"><a href="@Model.NextAndPreviousPageRoute/@Model.NextPageIndex.Value">&laquo; Older Entries</a></span>
     }
 
     @if (Model.PreviousPageIndex.HasValue)
     {
-        <span class="next_post"><a href="/blog/page/@Model.PreviousPageIndex.Value">Newer Entries &raquo;</a></span>                                                     
+        <span class="next_post"><a href="@Model.NextAndPreviousPageRoute/@Model.PreviousPageIndex.Value">Newer Entries &raquo;</a></span>                                                     
     }
 </p>
 

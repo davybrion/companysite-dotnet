@@ -42,7 +42,9 @@ namespace ThatExtraMile.be
             Get["/blog/new-here"] = p => RenderMarkdown("New here?", "Blog", "new_here");
             Get["/blog/recommended-books"] = p => RenderMarkdown("Recommended books", "Blog", "recommended_books");
             Get["/blog/(?<year>[\\d]{4})/(?<month>[\\d]{4})/{slug}"] = p => RenderPost(p);
-            Get["/blog/page/(?<year>[\\d]*)"] = p => RenderPostArchivePage(p.year);
+            Get["/blog/page/(?<page>[\\d]*)"] = p => RenderPostArchivePage(p.page);
+            Get["/blog/category/{category}"] = p => RenderCategoryPage(p.category, 1);
+            Get["/blog/category/{category}/page/(?<page>[\\d]*)"] = p => RenderCategoryPage(p.category, p.page);
         }
 
         private dynamic RenderMarkdown(string title, string section, string contentName)
@@ -75,20 +77,27 @@ namespace ThatExtraMile.be
 
         private dynamic RenderBlogPage()
         {
-            var model = BuildBlogPostsOverviewViewModelForPage(1);
+            var model = BuildBlogPostsOverviewViewModelForPage(ReversedIndexedListOfPosts, 1, "Blog archive", "/blog/page");
             model.IntroductionContent = ContentTransformer.GetTransformedContent("blog_archive");
             return View["BlogPostsOverviewPage", model];
         }
 
         private dynamic RenderPostArchivePage(int page)
         {
-            return View["BlogPostsOverviewPage", BuildBlogPostsOverviewViewModelForPage(page)];
+            return View["BlogPostsOverviewPage", BuildBlogPostsOverviewViewModelForPage(ReversedIndexedListOfPosts, page, "Blog archive", "/blog/page")];
         }
 
-        private static BlogPostsOverviewViewModel BuildBlogPostsOverviewViewModelForPage(int page)
+        private dynamic RenderCategoryPage(string category, int page)
+        {
+            return View["BlogPostsOverviewPage", BuildBlogPostsOverviewViewModelForPage(ReversedIndexedListOfPosts.Where(p => p.Categories.Contains(category)), 
+                page, string.Format("Category archive: {0}", category), string.Format("/blog/category/{0}/page", category))];
+        }
+
+        private static BlogPostsOverviewViewModel BuildBlogPostsOverviewViewModelForPage(IEnumerable<BlogPost> posts, int page, string title, string nextAndPreviousPageRoute)
         {
             const int pageSize = 5;
-            var posts = ReversedIndexedListOfPosts.Skip((page - 1) * pageSize).Take(pageSize);
+            var totalNumberOfPosts = posts.Count();
+            posts = posts.Skip((page - 1) * pageSize).Take(pageSize);
 
             var postModels = posts.Select(p => new BlogPostViewModel()
                 {
@@ -100,11 +109,12 @@ namespace ThatExtraMile.be
 
             return new BlogPostsOverviewViewModel
                 {
-                    Title = string.Format("Blog archive, page {0}", page),
+                    Title = string.Format(title + ", page {0}", page),
                     PostModels = postModels,
                     Section = "Blog",
                     PreviousPageIndex = page == 1 ? null : (int?)(page - 1),
-                    NextPageIndex = posts.Count() < pageSize ? null : (int?)(page + 1)
+                    NextPageIndex = (totalNumberOfPosts / (double)pageSize) <= page ? null : (int?)(page + 1),
+                    NextAndPreviousPageRoute = nextAndPreviousPageRoute
                 };
         }
     }
