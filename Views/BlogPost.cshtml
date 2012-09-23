@@ -8,21 +8,21 @@ else
     <h1>@Model.Post.Title</h1>
 }
 
-@if (Model.ShowMetaInfoBelowTitle)
-{
-    <p>
-        <em>Written by Davy Brion, published on @Model.Post.Date</em>
-    </p>    
-}
-
 @Html.Raw(Model.Content)
 
-@if (!Model.ShowMetaInfoBelowTitle)
-{
-    <p>
-        <em>Written by Davy Brion, published on @Model.Post.Date</em>
-    </p>    
-}
+<p>
+    <em>Written by Davy Brion, published on @Model.Post.Date</em><br />
+    <em>Categories: 
+        @for (int i = 0; i < Model.Post.Categories.Length; i++)
+        {
+            <a href="/blog/category/@Model.Post.Categories[i]">@Model.Post.Categories[i]</a>
+            if (i < Model.Post.Categories.Length - 1)
+            {
+            @:, 
+            }
+        }
+    </em>
+</p>    
 
 @if (Model.ShowDisqusCommentCount)
 {
