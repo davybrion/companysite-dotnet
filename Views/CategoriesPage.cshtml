@@ -1,0 +1,14 @@
+﻿@using ThatExtraMile.be.ViewModels
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+@{
+    Layout = "_Layout.cshtml";
+}
+
+<h1>Categories</h1>
+
+<ul>
+    @foreach (var category in Model.Categories)
+    {
+        <li><a href="/blog/category/@category">@category</a></li>
+    }
+</ul>

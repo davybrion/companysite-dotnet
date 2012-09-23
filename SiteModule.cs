@@ -15,6 +15,7 @@ namespace ThatExtraMile.be
         private static readonly Dictionary<string, BlogPost> PostsPerLink;
         private static readonly List<BlogPost> IndexedListOfPosts;
         private static readonly List<BlogPost> ReversedIndexedListOfPosts;
+        private static readonly List<string> Categories;
 
         static SiteModule()
         {
@@ -27,6 +28,7 @@ namespace ThatExtraMile.be
             IndexedListOfPosts = new List<BlogPost>(PostsPerLink.Values);
             ReversedIndexedListOfPosts = new List<BlogPost>(IndexedListOfPosts);
             ReversedIndexedListOfPosts.Reverse();
+            Categories = IndexedListOfPosts.SelectMany(p => p.Categories).Distinct().OrderBy(v => v).ToList();
         }
 
         public SiteModule()
@@ -45,6 +47,7 @@ namespace ThatExtraMile.be
             Get["/blog/page/(?<page>[\\d]*)"] = p => RenderPostArchivePage(p.page);
             Get["/blog/category/{category}"] = p => RenderCategoryPage(p.category, 1);
             Get["/blog/category/{category}/page/(?<page>[\\d]*)"] = p => RenderCategoryPage(p.category, p.page);
+            Get["/blog/categories"] = p => View["CategoriesPage", new { Categories, Title = "Blog categories", Section = "Blog" }];
         }
 
         private dynamic RenderMarkdown(string title, string section, string contentName)
@@ -65,14 +68,14 @@ namespace ThatExtraMile.be
             var nextPost = indexOfPost != IndexedListOfPosts.Count - 1 ? IndexedListOfPosts[indexOfPost + 1] : null;
 
             return View["BlogPostPage", new
-                {
-                    Title = post.Title,
-                    Post = post,
-                    PreviousPost = previousPost,
-                    NextPost = nextPost,
-                    Section = "Blog",
-                    Content = ContentTransformer.GetTransformedContent(post.GetContentReference())
-                }];
+            {
+                Title = post.Title,
+                Post = post,
+                PreviousPost = previousPost,
+                NextPost = nextPost,
+                Section = "Blog",
+                Content = ContentTransformer.GetTransformedContent(post.GetContentReference())
+            }];
         }
 
         private dynamic RenderBlogPage()
@@ -89,7 +92,7 @@ namespace ThatExtraMile.be
 
         private dynamic RenderCategoryPage(string category, int page)
         {
-            return View["BlogPostsOverviewPage", BuildBlogPostsOverviewViewModelForPage(ReversedIndexedListOfPosts.Where(p => p.Categories.Contains(category)), 
+            return View["BlogPostsOverviewPage", BuildBlogPostsOverviewViewModelForPage(ReversedIndexedListOfPosts.Where(p => p.Categories.Contains(category)),
                 page, string.Format("Category archive: {0}", category), string.Format("/blog/category/{0}/page", category))];
         }
 
@@ -100,22 +103,22 @@ namespace ThatExtraMile.be
             posts = posts.Skip((page - 1) * pageSize).Take(pageSize);
 
             var postModels = posts.Select(p => new BlogPostViewModel()
-                {
-                    Post = p,
-                    Content = ContentTransformer.GetTransformedContent(p.GetContentReference()),
-                    TitleAsLink = true,
-                    ShowDisqusCommentCount = true
-                });
+            {
+                Post = p,
+                Content = ContentTransformer.GetTransformedContent(p.GetContentReference()),
+                TitleAsLink = true,
+                ShowDisqusCommentCount = true
+            });
 
             return new BlogPostsOverviewViewModel
-                {
-                    Title = string.Format(title + ", page {0}", page),
-                    PostModels = postModels,
-                    Section = "Blog",
-                    PreviousPageIndex = page == 1 ? null : (int?)(page - 1),
-                    NextPageIndex = (totalNumberOfPosts / (double)pageSize) <= page ? null : (int?)(page + 1),
-                    NextAndPreviousPageRoute = nextAndPreviousPageRoute
-                };
+            {
+                Title = string.Format(title + ", page {0}", page),
+                PostModels = postModels,
+                Section = "Blog",
+                PreviousPageIndex = page == 1 ? null : (int?)(page - 1),
+                NextPageIndex = (totalNumberOfPosts / (double)pageSize) <= page ? null : (int?)(page + 1),
+                NextAndPreviousPageRoute = nextAndPreviousPageRoute
+            };
         }
     }
 }

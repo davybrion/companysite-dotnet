@@ -465,6 +465,9 @@
     <Content Include="content\blog_archive.md" />
     <Content Include="content\new_here.md" />
     <Content Include="content\recommended_books.md" />
+    <Content Include="Views\CategoriesPage.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
