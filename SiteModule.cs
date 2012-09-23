@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Web.Hosting;
 using Nancy;
+using Nancy.Responses;
 using ServiceStack.Text;
 using ThatExtraMile.be.ViewModels;
 
@@ -62,7 +63,14 @@ namespace ThatExtraMile.be
 
         private dynamic RenderPost(dynamic p)
         {
-            var post = PostsPerLink[(string)string.Format("/blog/{0}/{1}/{2}/", p.year, p.month, p.slug)];
+            var link = String.Format("/blog/{0}/{1}/{2}/", (object)p.year, (object)p.month, (object)p.slug);
+
+            if (!PostsPerLink.ContainsKey(link))
+            {
+                return new RedirectResponse("/blog", RedirectResponse.RedirectType.SeeOther);
+            }
+
+            var post = PostsPerLink[link];
             var indexOfPost = IndexedListOfPosts.IndexOf(post);
             var previousPost = indexOfPost != 0 ? IndexedListOfPosts[indexOfPost - 1] : null;
             var nextPost = indexOfPost != IndexedListOfPosts.Count - 1 ? IndexedListOfPosts[indexOfPost + 1] : null;
@@ -92,6 +100,11 @@ namespace ThatExtraMile.be
 
         private dynamic RenderCategoryPage(string category, int page)
         {
+            if (!Categories.Contains(category))
+            {
+                return new RedirectResponse("/blog", RedirectResponse.RedirectType.SeeOther);
+            }
+
             return View["BlogPostsOverviewPage", BuildBlogPostsOverviewViewModelForPage(ReversedIndexedListOfPosts.Where(p => p.Categories.Contains(category)),
                 page, string.Format("Category archive: {0}", category), string.Format("/blog/category/{0}/page", category))];
         }
