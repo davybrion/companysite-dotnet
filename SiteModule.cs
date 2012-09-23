@@ -40,6 +40,7 @@ namespace ThatExtraMile.be
 
             Get["/blog"] = p => RenderBlogPage();
             Get["/blog/new-here"] = p => RenderMarkdown("New here?", "Blog", "new_here");
+            Get["/blog/recommended-books"] = p => RenderMarkdown("Recommended books", "Blog", "recommended_books");
             Get["/blog/(?<year>[\\d]{4})/(?<month>[\\d]{4})/{slug}"] = p => RenderPost(p);
             Get["/blog/page/(?<year>[\\d]*)"] = p => RenderPostArchivePage(p.year);
         }
@@ -93,7 +94,6 @@ namespace ThatExtraMile.be
                 {
                     Post = p,
                     Content = ContentTransformer.GetTransformedContent(p.GetContentReference()),
-                    ShowMetaInfoBelowTitle = true,
                     TitleAsLink = true,
                     ShowDisqusCommentCount = true
                 });

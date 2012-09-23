@@ -4,4 +4,4 @@ This is the archive of my blog, which used to be hosted on my personal site. It 
 
 - [New Here?](/blog/new-here) : an categorized overview of my better posts
 - Categories : a list of all of the categories of posts
-- Recommended books : a list of books that I recommend to software developers
+- [Recommended books](/blog/recommended-books) : a list of books that I recommend to software developers
