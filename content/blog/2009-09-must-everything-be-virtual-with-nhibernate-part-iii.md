@@ -2,7 +2,7 @@ In the <a href="/blog/2009/09/must-everything-be-virtual-with-nhibernate-part-ii
 
 Once again, this is the code example:
 
-<a href="/blog/wp-content/uploads/2009/09/transitive_persistence411.png"><img src="/blog/wp-content/uploads/2009/09/transitive_persistence411.png" alt="transitive_persistence41" title="transitive_persistence41" width="798" height="635" class="aligncenter size-full wp-image-1687" /></a>
+<a href="/postcontent/transitive_persistence411.png"><img src="/postcontent/transitive_persistence411.png" alt="transitive_persistence41" title="transitive_persistence41" width="798" height="635" class="aligncenter size-full wp-image-1687" /></a>
 
 Instead of making everything virtual, only properties that are eligible for lazy-loading have been made virtual.  Now, the line of code that is problematic is obviously the one where the DiscountPercentage of the customer backing field is accessed.  I will address using the field instead of the property later on in this post so bear with me for now.
 

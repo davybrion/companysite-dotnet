@@ -8,7 +8,7 @@ One more important thing: the client in this sample is Silverlight, not WPF. You
 
 Now, what exactly is the sample project about? Here's a screenshot:
 
-<a href="/blog/wp-content/uploads/2010/08/sample_both_controls.png"><img src="/blog/wp-content/uploads/2010/08/sample_both_controls.png" alt="" title="sample_both_controls" width="510" height="437" class="aligncenter size-full wp-image-2438" /></a>
+<a href="/postcontent/sample_both_controls.png"><img src="/postcontent/sample_both_controls.png" alt="" title="sample_both_controls" width="510" height="437" class="aligncenter size-full wp-image-2438" /></a>
 
 You're probably laughing pretty hard at my lousy UI skills (and rightfully so), but I'm sure you'll agree that the crappy looking UI is not relevant to the topic we're covering in this series ;)
 
@@ -16,13 +16,13 @@ That screenshot shows 2 UserControls.  The implementation of both UserControls w
 
 The first UserControl looks like this:
 
-<a href="/blog/wp-content/uploads/2010/08/sample_overview.png"><img src="/blog/wp-content/uploads/2010/08/sample_overview.png" alt="" title="sample_overview" width="500" height="344" class="aligncenter size-full wp-image-2440" /></a>
+<a href="/postcontent/sample_overview1.png"><img src="/postcontent/sample_overview1.png" alt="" title="sample_overview" width="500" height="344" class="aligncenter size-full wp-image-2440" /></a>
 
 It has a TreeView which shows a UserGroup hierarchy.  When you select a UserGroup, its details must be displayed in the second UserControl where they can be edited.  There's also a button to create a new UserGroup, whose details must also be provided in the second UserControl.  Finally, when a UserGroup has been modified (or deleted) in the second UserControl, the contents of the TreeView must be updated correctly <em>without</em> simply fetching the entire hierarchy again.
 
 The second UserControl looks like this:
 
-<a href="/blog/wp-content/uploads/2010/08/sample_details.png"><img src="/blog/wp-content/uploads/2010/08/sample_details.png" alt="" title="sample_details" width="503" height="92" class="aligncenter size-full wp-image-2439" /></a>
+<a href="/postcontent/sample_details1.png"><img src="/postcontent/sample_details1.png" alt="" title="sample_details" width="503" height="92" class="aligncenter size-full wp-image-2439" /></a>
 
 In this UserControl, you can modify the name of the UserGroup, change its Parent, or just delete the UserGroup.  If you've made changes, but haven't pushed the Save button yet, you can press the Cancel button and the values will be reverted to their original values.  If you make a change here, the TreeView in the first UserControl needs to be updated to reflect that change (either an updated name, or a different parent). 
 
@@ -32,6 +32,6 @@ Initially, I wanted to add a third UserControl where you can add/remove Users to
 
 I hope you'll find the sample to be small enough, but still have enough 'complexity' to show the benefits of using the MVP pattern over MVVM.  Also, keep in mind that this sample is not perfect and that there are still some bugs in it.  If you want to criticize, please focus on problems that are inherent to the usage of MVP instead of MVVM since that's what this is all about.  
 
-You can download the sample <a href="http://davybrion.com/files/SilverlightMVP.zip">here</a>.
+You can download the sample <a href="/postcontent/SilverlightMVP.zip">here</a>.
 
 In the next 2 posts, we'll cover the implementation of both UserControls in their entirety, and after that we'll focus on automated tests.

@@ -2,7 +2,7 @@ Microsoft's upcoming ASP.NET MVC framework makes it easy to write tests for your
 
 This is the screen we're going to create:
 
-<a href='/blog/wp-content/uploads/2008/07/searchproducts.png'><img src="/blog/wp-content/uploads/2008/07/searchproducts.png" alt="" title="searchproducts" width="500" height="243" class="alignleft size-full wp-image-161" /></a>
+<a href='/postcontent/searchproducts.png'><img src="/postcontent/searchproducts.png" alt="" title="searchproducts" width="500" height="243" class="alignleft size-full wp-image-161" /></a>
 
 The very first thing you'll notice is that I completely suck at graphic design. So try to ignore the crappy look, and lets focus on what this screen should do. A user can perform a search on products based on the name, the product category and the supplier of the product. After clicking the Search button, the user is presented with a list of products that match the search criteria.  Next to each product is an Edit link (because I was too lazy to find a nice image for this). When clicked, the application should navigate to an Edit screen where the chosen product can be edited.  To keep this example short (this post will be long enough already!), that's all for this screen.
 

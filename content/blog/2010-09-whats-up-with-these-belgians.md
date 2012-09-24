@@ -1,10 +1,10 @@
 Don't worry, this post isn't about the ongoing political problems that Belgium has been suffering from for the past 3 years.  It's about something far more interesting (ahem): the way they read my blog.  I was going over the blog's stats for last month:
 
-<a href="/blog/wp-content/uploads/2010/09/last_month_countries.png"><img src="/blog/wp-content/uploads/2010/09/last_month_countries.png" alt="" title="last_month_countries" width="715" height="373" class="alignnone size-full wp-image-2636" /></a>
+<a href="/postcontent/last_month_countries.png"><img src="/postcontent/last_month_countries.png" alt="" title="last_month_countries" width="715" height="373" class="alignnone size-full wp-image-2636" /></a>
 
 As you can see, the numbers for the Belgians are far different than they are for each other country in that list.  The number of pages they read each visit is way above the average.  The average time they spend on this site is also much higher than most countries.  And the percentage of new visitors and the bounce rate is a lot lower than what we see from other countries.  That means that almost 4 out of 5 Belgians that visit this site have been here before, and keeping the total number of visits in mind and the fact that it has a much smaller population than the other countries in the top 7, they seem to keep coming back as well. And this isn't just an anomaly because the all-time stats for this blog show pretty much the same picture:
 
-<a href="/blog/wp-content/uploads/2010/09/all_time_countries.png"><img src="/blog/wp-content/uploads/2010/09/all_time_countries.png" alt="" title="all_time_countries" width="718" height="372" class="alignnone size-full wp-image-2637" /></a>
+<a href="/postcontent/all_time_countries.png"><img src="/postcontent/all_time_countries.png" alt="" title="all_time_countries" width="718" height="372" class="alignnone size-full wp-image-2637" /></a>
 
 So that makes me wonder: what's up with these Belgians? And yes, I know that some of you are probably thinking: "well duh, it's because you're Belgian too!".  But there are a couple of reasons why I don't think that me being from Belgium explains it:
 

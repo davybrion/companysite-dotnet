@@ -6,4 +6,4 @@ Small example:
 
 the Parents and Children collections are completely encapsulated, yet still highly usable to consumers:
 
-<a href='/blog/wp-content/uploads/2008/03/usableencapsulatedcollection.png' title='usableencapsulatedcollection.png'><img src='/blog/wp-content/uploads/2008/03/usableencapsulatedcollection.png' alt='usableencapsulatedcollection.png' /></a>
+<a href='/postcontent/usableencapsulatedcollection.png' title='usableencapsulatedcollection.png'><img src='/postcontent/usableencapsulatedcollection.png' alt='usableencapsulatedcollection.png' /></a>

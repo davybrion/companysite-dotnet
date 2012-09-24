@@ -24,11 +24,11 @@ The biggest difference however is in memory usage while the code is running. A r
 
 To give you an idea on the difference in memory usage, here are the memory statistics (captured by Process Explorer) after running the original code (with the ISession instance):
 
-<a href="/blog/wp-content/uploads/2008/10/isession.png"><img src="/blog/wp-content/uploads/2008/10/isession.png" alt="" title="isession" width="398" height="385" class="alignnone size-full wp-image-551" /></a>
+<a href="/postcontent/isession.png"><img src="/postcontent/isession.png" alt="" title="isession" width="398" height="385" class="alignnone size-full wp-image-551" /></a>
 
 And here are the memory statistics after running the modified code (with the IStatelessSession instance):
 
-<a href="/blog/wp-content/uploads/2008/10/istatelesssession.png"><img src="/blog/wp-content/uploads/2008/10/istatelesssession.png" alt="" title="istatelesssession" width="400" height="386" class="alignnone size-full wp-image-552" /></a>
+<a href="/postcontent/istatelesssession.png"><img src="/postcontent/istatelesssession.png" alt="" title="istatelesssession" width="400" height="386" class="alignnone size-full wp-image-552" /></a>
 
 Quite a difference for what is essentially the same operation.  We could even improve on this because the code in its current form keeps all of the object instances in its own collection, preventing them from being garbage collected after they have been inserted in the database.  But I think this already demonstrates the value in using the IStatelessSession if you need to perform bulk operations.
 

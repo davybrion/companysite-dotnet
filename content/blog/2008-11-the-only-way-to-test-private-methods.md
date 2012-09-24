@@ -9,7 +9,7 @@ Let's think about the concept of testing a private method.  If you feel the need
 Let's take a look at the following example.  The example that my reader gave me was an import of an excel sheet which contains hierarchical data.  Suppose the data looks like this:
 
 <p>
-<a href="/blog/wp-content/uploads/2008/11/customerdata.png"><img src="/blog/wp-content/uploads/2008/11/customerdata.png" alt="" title="customerdata" width="464" height="219" class="alignleft size-full wp-image-599" /></a>
+<a href="/postcontent/customerdata.png"><img src="/postcontent/customerdata.png" alt="" title="customerdata" width="464" height="219" class="alignleft size-full wp-image-599" /></a>
 </p>
 
 Obviously, this isn't real data and it's a very simplified example ("no shit, Sherlock!"). We have to write code which parses this data and creates proper entities from this: customer objects with orders, which in turn contain orderlines which in turn reference a product.  So we need some kind of Parser class, right? The Parser class could have one public Parse method, which would loop through the rows and the columns.  Within the loop, it would need to determine what kind of data is contained in the current row and it needs to create an object of the right type for the data in the current row.  For each row, it also needs to determine if the rows beneath it are children of the current object.  Each child could in turn also have other children.  Nobody in their right mind would have all of this code in our public Parse method.  So we make use of private methods to deal with all of the possibilities.

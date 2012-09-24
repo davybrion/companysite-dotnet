@@ -6,7 +6,7 @@ First of all, make sure your service exposes its metadata. You do this in the us
 
 The serviceMetadata element with the httpGetEnabled=”true” attribute is the important one in the snippet above.</p>  <p>After that, you can simply generate a service proxy through visual studio or svcutil or whatever:
 
-<a href="http://davybrion.com/pictures/ConsumingAnAgathaServiceFromANonAgathaAw_DF1A/add_service_reference.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="add_service_reference" border="0" alt="add_service_reference" src="http://davybrion.com/pictures/ConsumingAnAgathaServiceFromANonAgathaAw_DF1A/add_service_reference_thumb.png" width="635" height="510" /></a> </p>  
+<a href="/postcontent/add_service_reference.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="add_service_reference" border="0" alt="add_service_reference" src="/postcontent/add_service_reference_thumb.png" width="635" height="510" /></a> </p>  
 
 Now you can write the following code to communicate with your Agatha Service Layer:
 
