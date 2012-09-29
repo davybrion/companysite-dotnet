@@ -103,6 +103,42 @@
     <Content Include="static\js\libs\selectivizr.js" />
     <Content Include="static\js\master.js" />
     <Content Include="static\js\plugins.js" />
+    <Content Include="static\postcontent\add_service_reference.png" />
+    <Content Include="static\postcontent\add_service_reference_thumb.png" />
+    <Content Include="static\postcontent\all_time_countries.png" />
+    <Content Include="static\postcontent\average_difference_in_millis_for_each_action.png" />
+    <Content Include="static\postcontent\average_duration_of_each_action_in_millis.png" />
+    <Content Include="static\postcontent\average_scenario_duration.png" />
+    <Content Include="static\postcontent\average_scenario_duration_difference.png" />
+    <Content Include="static\postcontent\average_scenario_duration_difference_without_last_4_actions.png" />
+    <Content Include="static\postcontent\average_scenario_duration_without_last_4_actions.png" />
+    <Content Include="static\postcontent\create_service.png" />
+    <Content Include="static\postcontent\create_service_thumb.png" />
+    <Content Include="static\postcontent\customerdata.png" />
+    <Content Include="static\postcontent\dependencies.png" />
+    <Content Include="static\postcontent\feed_items.png" />
+    <Content Include="static\postcontent\first.png" />
+    <Content Include="static\postcontent\full_solution_tree.png" />
+    <Content Include="static\postcontent\image001.png" />
+    <Content Include="static\postcontent\isession.png" />
+    <Content Include="static\postcontent\istatelesssession.png" />
+    <Content Include="static\postcontent\last_month_countries.png" />
+    <Content Include="static\postcontent\sample_both_controls.png" />
+    <Content Include="static\postcontent\sample_details1.png" />
+    <Content Include="static\postcontent\sample_overview1.png" />
+    <Content Include="static\postcontent\searchproducts.png" />
+    <Content Include="static\postcontent\second.png" />
+    <Content Include="static\postcontent\smaller_solution_tree.png" />
+    <Content Include="static\postcontent\step1.png" />
+    <Content Include="static\postcontent\step2.png" />
+    <Content Include="static\postcontent\step3.png" />
+    <Content Include="static\postcontent\step4.png" />
+    <Content Include="static\postcontent\step5.png" />
+    <Content Include="static\postcontent\step6.png" />
+    <Content Include="static\postcontent\transitive_persistence41.png" />
+    <Content Include="static\postcontent\transitive_persistence411.png" />
+    <Content Include="static\postcontent\usableencapsulatedcollection.png" />
+    <Content Include="static\postcontent\webdev_vs_silverlight.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -468,6 +504,10 @@
     <Content Include="Views\CategoriesPage.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="static\postcontent\html_vs_silverlight.xlsx" />
+    <Content Include="static\postcontent\NHibernate.pptx" />
+    <Content Include="static\postcontent\NHibernateAndWcfExample.zip" />
+    <Content Include="static\postcontent\SilverlightMVP.zip" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -476,9 +516,7 @@
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="static\postcontent\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
