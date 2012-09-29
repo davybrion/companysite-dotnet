@@ -95,7 +95,6 @@
     <Content Include="static\images\icons\arrow-1-yellow-right.png" />
     <Content Include="static\images\icons\linkedin.png" />
     <Content Include="static\images\icons\rss.png" />
-    <Content Include="static\images\icons\twitter.png" />
     <Content Include="static\images\patterns\stripe-diag-1-black.png" />
     <Content Include="static\js\libs\jquery-1.7.1.min.js" />
     <Content Include="static\js\libs\modernizr.min.js" />
