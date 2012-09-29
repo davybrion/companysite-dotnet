@@ -1,0 +1,31 @@
+I always figured writing a Domain Specific Language (DSL) would be such a dauntingly complex task that the chances of me being able to pull it off would be slim to none.  With that in mind, I was pretty interested in reading <a href="http://ayende.com/about-me.aspx">Ayende Rahien's</a> <a href="http://manning.com/rahien/">Building Domain Specific Languages in Boo</a> to find out just how difficult it would be.
+
+In the first chapter of the book, Ayende mentions his success criteria for the book:
+
+<blockquote>
+I hope that by the end of this book, you’ll feel that you are able to tackle problems in your 
+domains and solve them by building Domain Specific Languages to solve those problems in 
+an elegant manner. 
+</blockquote>
+
+Quite a goal, and I was very interested to see if he would be able to pull it off.  Let's hold off with answering that question for now, and let's go over the content of the book.
+
+In the first chapter, Ayende basically brings you up to speed on the different kinds of DSL that you can create, covering pro's and con's of each approach.  Most importantly, he provides some answers as to why you would want to create your own DSL and discusses why he chooses to create DSL's on top of the Boo language.
+
+Chapter 2 gives a brief overview of the Boo language.  I didn't know Boo yet, so this chapter was very useful and interesting for me.  You learn some basics of the language, and you'll also find out why it's such a good candidate to build your DSL on top off.  The only downside about this chapter is that I had to refrain myself from running off to go play around with Boo.  Boo seems very interesting and extremely powerful, and it definitely deserves more exposure within the .NET world.  
+
+In the next 2 chapters, Ayende walks us through the implementation of a couple of DSLs (each has a different purpose), while continuously offering a lot of great advice and discussing many of the different decisions you can make while you're building your DSL, including how you can integrate your DSL with your actual business domain API.  This is very nicely done, in a manner that makes you feel like you're sitting right there with him as he is considering each possible direction to take.  After these 2 chapters, you already have a pretty good idea of what exactly is possible to do in your very own language.  We're also introduced to Ayende's open source Rhino DSL project, which already does some of the heavy lifting of actually making your DSL executable. 
+
+Chapter 5 deals with how you can actually integrate your DSL into your application.  A DSL can be very nice, but if it doesn't integrate nicely with your application, it's pretty useless isn't it? That's what this chapter is for.  Topics like storing of the DSL scripts, order of execution, performance implications, security considerations, dealing with errors and administration of scripts in general are all covered pretty nicely here.
+
+Up until this point, most of the stuff in this book has been pretty easy to grasp.  Chapter 6 however might occasionally leave your head spinning.  This is where we get into making sure the compiler behaves the way we want it to.  Think about that.  As developers, we're used to making sure that we comply with what the compiler expects from us.  Now we actually get to turn this around.  This chapter is by far the most difficult one in the book, but it is definitely important that you take the time to understand everything this chapter covers.  It's basically about extending the capabilities of your language (instructing the Boo compiler on how to compile your DSL, introducing new keywords, or even modifying the behavior of existing language keywords) to provide the best possible experience for the consumers of your DSL.  Again, some parts might leave your head spinning.  Read them again and again until you get them because it's not only very important to understand, it really is fascinating stuff.
+
+The next chapter deals with the infrastructure you need to support your DSL, based on Rhino DSL.  You don't need to use Rhino DSL, but it certainly makes a lot of the tasks involved easier to handle. 
+
+In chapter 8, Ayende covers the importance of testing your DSL, and how you can do it.  It not only covers how to create a testable DSL, it also shows you can extend the xUnit.NET testing framework to make it easier to write unit tests for your DSL scripts. 
+
+By now, you already know a lot about how to build a high quality DSL and how to integrate it with your application.  But there is more to it than just creating a fancy DSL and making it work.  You need to make sure that the DSL is maintainable in the long term, and that it is easily accessible and comprehensible for the intended users of the language.  The next 3 chapters deal with all of this.  Topics covered are multiple versioning strategies, properly documenting your DSL, and even creating a professional UI on top of your DSL.  A UI for a DSL you ask? Well, depending on the intended users, you might want to create a nice GUI on top of it, or you might want to create a bit of an IDE experience (complete with syntax highlighting and code completion).  All of these possibilities are also covered nicely in this book.  After that, Ayende covers a bunch of typical DSL implementation patterns that you'll probably find very useful when creating your own DSL.
+
+For those of you who are familiar with Ayende's blog, you'll be happy to know that the writing style is very similar.  It's very engaging, it keeps you interested in the topic at hand throughout the book, and he often makes you marble at his ability to come up with simple and elegant solutions to difficult problems.  I used to be skeptical towards the actual value of creating your own DSL, but now I know that it is not only doable, there really are a lot of cases where it makes sense to create a DSL, more than I'd ever imagined.
+
+I think Ayende achieved his goal.  I do think that I can now create a DSL, and I'm sure many of you would agree with me after reading this book.  In most cases, it's pretty easy with this book by your side.  And for those cases where it gets hard, this book thoroughly covers all of your options.  Do yourself a favor and read this book, you won't only learn a lot about DSL's, but also about problem solving in general.

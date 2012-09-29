@@ -1,0 +1,2793 @@
+[
+  {
+    "title": "Programming Languages Don't Matter",
+    "link": "/blog/2007/06/programming-languages-dont-matter/",
+    "date": "2007-06-17 13:24:09",
+    "categories": [
+      "rants"
+    ]
+  },
+  {
+    "title": "Why you should write tests before code",
+    "link": "/blog/2007/06/why-you-should-write-tests-before-code/",
+    "date": "2007-06-24 13:13:07",
+    "categories": [
+      "rants",
+      "software-development",
+      "testing"
+    ]
+  },
+  {
+    "title": "Implementing a Value Object",
+    "link": "/blog/2007/07/implementing-a-value-object/",
+    "date": "2007-07-08 13:29:39",
+    "categories": [
+      "patterns",
+      "software-development"
+    ]
+  },
+  {
+    "title": "Native ID generation with NHibernate",
+    "link": "/blog/2007/07/native-id-generation-with-nhibernate/",
+    "date": "2007-07-17 21:19:55",
+    "categories": [
+      "nhibernate",
+      "software-development"
+    ]
+  },
+  {
+    "title": "Introduction to Dependency Injection",
+    "link": "/blog/2007/07/introduction-to-dependency-injection/",
+    "date": "2007-07-31 23:08:36",
+    "categories": [
+      "dependency-injection",
+      "software-development",
+      "testing"
+    ]
+  },
+  {
+    "title": "Read-only data in NHibernate",
+    "link": "/blog/2007/08/read-only-data-in-nhibernate/",
+    "date": "2007-08-02 08:26:46",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Tech Blogs: The good, the bad and the ugly",
+    "link": "/blog/2007/12/tech-blogs-the-good-the-bad-and-the-ugly/",
+    "date": "2007-12-21 19:52:17",
+    "categories": [
+      "off-topic",
+      "rants"
+    ]
+  },
+  {
+    "title": "Sending NHibernate entities over the WCF wire",
+    "link": "/blog/2008/01/sending-nhibernate-entities-over-the-wcf-wire/",
+    "date": "2008-01-03 15:12:51",
+    "categories": [
+      "nhibernate",
+      "wcf"
+    ]
+  },
+  {
+    "title": "The Mythical Man-Month",
+    "link": "/blog/2008/02/the-mythical-man-month/",
+    "date": "2008-02-20 19:51:55",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Creating remote TCP/IP printer ports from code",
+    "link": "/blog/2008/02/creating-remote-tcpip-printer-ports-from-code/",
+    "date": "2008-02-27 21:00:51",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "Encapsulating collections",
+    "link": "/blog/2008/03/encapsulating-collections/",
+    "date": "2008-03-17 10:09:56",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "Testing Exceptions",
+    "link": "/blog/2008/04/testing-exceptions/",
+    "date": "2008-04-20 14:02:10",
+    "categories": [
+      "testing"
+    ]
+  },
+  {
+    "title": "Kent Beck's Implementation Patterns",
+    "link": "/blog/2008/04/kent-becks-implementation-patterns/",
+    "date": "2008-04-21 10:01:59",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "The Art Of Agile Development",
+    "link": "/blog/2008/05/the-art-of-agile-development/",
+    "date": "2008-05-08 18:32:35",
+    "categories": [
+      "books",
+      "software-development"
+    ]
+  },
+  {
+    "title": "Easy non-blocking locking",
+    "link": "/blog/2008/05/easy-non-blocking-locking/",
+    "date": "2008-05-13 11:08:29",
+    "categories": [
+      "locking",
+      "multithreading",
+      "software-development",
+      "timedlock"
+    ]
+  },
+  {
+    "title": "Thoughts on code reviews",
+    "link": "/blog/2008/05/thoughts-on-code-reviews/",
+    "date": "2008-05-17 14:20:33",
+    "categories": [
+      "opinions",
+      "software-development"
+    ]
+  },
+  {
+    "title": "The Circuit Breaker",
+    "link": "/blog/2008/05/the-circuit-breaker/",
+    "date": "2008-05-18 02:21:04",
+    "categories": [
+      "patterns",
+      "software-development"
+    ]
+  },
+  {
+    "title": "Release It!",
+    "link": "/blog/2008/05/release-it/",
+    "date": "2008-05-18 14:08:46",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Storing data in the HttpSession",
+    "link": "/blog/2008/05/storing-data-in-the-httpsession/",
+    "date": "2008-05-25 12:49:38",
+    "categories": [
+      "aspnet"
+    ]
+  },
+  {
+    "title": "How a simple foreach statement can waste an afternoon",
+    "link": "/blog/2008/05/how-a-simple-foreach-statement-can-waste-an-afternoon/",
+    "date": "2008-05-27 19:56:13",
+    "categories": [
+      "performance"
+    ]
+  },
+  {
+    "title": "C# In Depth",
+    "link": "/blog/2008/06/c-in-depth/",
+    "date": "2008-06-14 11:30:15",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Are women better developers than men?",
+    "link": "/blog/2008/06/are-women-better-developers-than-men/",
+    "date": "2008-06-16 15:13:38",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "Disposing of the IDisposable implementation",
+    "link": "/blog/2008/06/disposing-of-the-idisposable-implementation/",
+    "date": "2008-06-17 15:01:36",
+    "categories": [
+      "memory-management",
+      "patterns",
+      "performance"
+    ]
+  },
+  {
+    "title": "How To Write Testable ASP.NET WebForms",
+    "link": "/blog/2008/07/how-to-write-testable-aspnet-webforms/",
+    "date": "2008-07-06 21:53:28",
+    "categories": [
+      "aspnet",
+      "testing"
+    ]
+  },
+  {
+    "title": "Mocking expensive template methods",
+    "link": "/blog/2008/07/mocking-expensive-template-methods/",
+    "date": "2008-07-11 00:35:57",
+    "categories": [
+      "testing"
+    ]
+  },
+  {
+    "title": "My Guide To Effective Test Driven Development",
+    "link": "/blog/2008/07/my-guide-to-effective-test-driven-development/",
+    "date": "2008-07-14 21:38:16",
+    "categories": [
+      "testing"
+    ]
+  },
+  {
+    "title": "Many projects don't lead to a good solution",
+    "link": "/blog/2008/07/many-projects-dont-lead-to-a-good-solution/",
+    "date": "2008-07-17 23:01:10",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "Is SQL going the way of Disco?",
+    "link": "/blog/2008/07/is-sql-going-the-way-of-disco/",
+    "date": "2008-07-22 21:35:02",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "What do you like about coding?",
+    "link": "/blog/2008/08/what-do-you-like-about-coding/",
+    "date": "2008-08-02 19:52:29",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "ALT.NET: what does it mean?",
+    "link": "/blog/2008/08/altnet-what-does-it-mean/",
+    "date": "2008-08-08 07:50:25",
+    "categories": [
+      "altnet",
+      "software-development"
+    ]
+  },
+  {
+    "title": "Test Doubles: When To (Not) Use Them",
+    "link": "/blog/2008/08/test-doubles-when-to-not-use-them/",
+    "date": "2008-08-13 22:44:29",
+    "categories": [
+      "testing"
+    ]
+  },
+  {
+    "title": ".NET Memory Management",
+    "link": "/blog/2008/08/net-memory-management/",
+    "date": "2008-08-16 20:44:32",
+    "categories": [
+      "memory-management",
+      "patterns",
+      "performance",
+      "software-development"
+    ]
+  },
+  {
+    "title": "Why you should always unscubscribe event handlers",
+    "link": "/blog/2008/08/why-you-should-always-unscubscribe-event-handlers/",
+    "date": "2008-08-17 20:55:20",
+    "categories": [
+      "memory-management"
+    ]
+  },
+  {
+    "title": "Easing The Pain Of WCF Debugging",
+    "link": "/blog/2008/08/easing-the-pain-of-wcf-debugging/",
+    "date": "2008-08-20 20:56:05",
+    "categories": [
+      "wcf"
+    ]
+  },
+  {
+    "title": "Software Development Books: Investing In Yourself",
+    "link": "/blog/2008/08/software-development-books-investing-in-yourself/",
+    "date": "2008-08-24 20:32:53",
+    "categories": [
+      "books",
+      "software-development"
+    ]
+  },
+  {
+    "title": "Why The ALT.NET Community Needs To Change Their Ways",
+    "link": "/blog/2008/08/why-the-altnet-community-needs-to-change-their-ways/",
+    "date": "2008-08-25 20:41:33",
+    "categories": [
+      "altnet"
+    ]
+  },
+  {
+    "title": "Recommended Books: Clean Code",
+    "link": "/blog/2008/08/recommended-books-clean-code/",
+    "date": "2008-08-30 14:12:56",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Batching SqlCommand Queries",
+    "link": "/blog/2008/08/batching-sqlcommand-queries/",
+    "date": "2008-08-31 20:00:56",
+    "categories": [
+      "performance"
+    ]
+  },
+  {
+    "title": "Make It Work, Make It Clean?",
+    "link": "/blog/2008/09/make-it-work-make-it-clean/",
+    "date": "2008-09-01 20:00:41",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "The Select Command Batcher",
+    "link": "/blog/2008/09/the-select-command-batcher/",
+    "date": "2008-09-03 12:30:25",
+    "categories": [
+      "performance"
+    ]
+  },
+  {
+    "title": "What A Slow Build Might Tell You",
+    "link": "/blog/2008/09/what-a-slow-build-might-tell-you/",
+    "date": "2008-09-06 14:06:20",
+    "categories": [
+      "continuous-integration"
+    ]
+  },
+  {
+    "title": "WCF And Large Amounts Of Data",
+    "link": "/blog/2008/09/wcf-and-large-amounts-of-data/",
+    "date": "2008-09-14 13:00:02",
+    "categories": [
+      "wcf"
+    ]
+  },
+  {
+    "title": "Technical Interviews: What Questions To Ask?",
+    "link": "/blog/2008/09/technical-interviews-what-questions-to-ask/",
+    "date": "2008-09-10 20:00:15",
+    "categories": [
+      "interviews"
+    ]
+  },
+  {
+    "title": "Code Health",
+    "link": "/blog/2008/09/code-health/",
+    "date": "2008-09-14 13:36:40",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "Recommended Books: Working Effectively With Legacy Code",
+    "link": "/blog/2008/09/recommended-books-working-effectively-with-legacy-code/",
+    "date": "2008-09-20 16:20:05",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Is Teaching TDD Worth It?",
+    "link": "/blog/2008/09/is-teaching-tdd-worth-it/",
+    "date": "2008-09-21 20:43:59",
+    "categories": [
+      "testing"
+    ]
+  },
+  {
+    "title": "When Commented-Out Code Is Acceptable",
+    "link": "/blog/2008/09/when-commented-out-code-is-acceptable/",
+    "date": "2008-09-21 21:08:32",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Beware The Evils Of Code Generation",
+    "link": "/blog/2008/09/beware-the-evils-of-code-generation/",
+    "date": "2008-09-22 22:51:41",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Do Not .Dispose In The PreRender Event",
+    "link": "/blog/2008/10/do-not-dispose-in-the-prerender-event/",
+    "date": "2008-10-01 21:43:31",
+    "categories": [
+      "aspnet",
+      "memory-management",
+      "wcf"
+    ]
+  },
+  {
+    "title": "Ordering On Joined Columns/Properties With NHibernate",
+    "link": "/blog/2008/10/ordering-on-joined-columnsproperties-with-nhibernate/",
+    "date": "2008-10-05 12:17:13",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "How To Write Testable ASP.NET UserControls",
+    "link": "/blog/2008/10/how-to-write-testable-aspnet-usercontrols/",
+    "date": "2008-10-11 17:28:27",
+    "categories": [
+      "aspnet",
+      "testing"
+    ]
+  },
+  {
+    "title": "Career Advice For Young Developers",
+    "link": "/blog/2008/10/career-advice-for-young-developers/",
+    "date": "2008-10-25 16:42:40",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Bulk Data Operations With NHibernate's Stateless Sessions",
+    "link": "/blog/2008/10/bulk-data-operations-with-nhibernates-stateless-sessions/",
+    "date": "2008-10-30 21:28:15",
+    "categories": [
+      "nhibernate",
+      "performance"
+    ]
+  },
+  {
+    "title": "Batching NHibernate's DML Statements",
+    "link": "/blog/2008/10/batching-nhibernates-dm-statements/",
+    "date": "2008-10-27 20:22:33",
+    "categories": [
+      "nhibernate",
+      "performance"
+    ]
+  },
+  {
+    "title": "Agile Development Going Downhill?",
+    "link": "/blog/2008/11/agile-development-going-downhill/",
+    "date": "2008-11-17 00:39:01",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "The Only Way To Test Private Methods",
+    "link": "/blog/2008/11/the-only-way-to-test-private-methods/",
+    "date": "2008-11-19 23:01:42",
+    "categories": [
+      "testing"
+    ]
+  },
+  {
+    "title": "Why On Earth Would A Developer Do This?",
+    "link": "/blog/2008/11/why-on-earth-would-a-developer-do-this/",
+    "date": "2008-11-22 15:59:19",
+    "categories": [
+      "opinions",
+      "performance"
+    ]
+  },
+  {
+    "title": "Populating Entities From Stored Procedures With NHibernate",
+    "link": "/blog/2008/11/populating-entities-from-stored-procedures-with-nhibernate/",
+    "date": "2008-11-23 18:34:24",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Populating Entities With Associations From Stored Procedures With NHibernate",
+    "link": "/blog/2008/11/populating-entities-with-associations-from-stored-procedures-with-nhibernate/",
+    "date": "2008-11-24 02:17:59",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "ORM Is NOT Inherently Evil",
+    "link": "/blog/2008/11/orm-is-not-inherently-evil/",
+    "date": "2008-11-25 00:06:38",
+    "categories": [
+      "opinions",
+      "rants"
+    ]
+  },
+  {
+    "title": "Do Not Litter Your Code With Null Checks",
+    "link": "/blog/2008/12/do-not-litter-your-code-with-null-check/",
+    "date": "2008-12-02 20:59:42",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "What It Takes To Be A Great Technical Lead",
+    "link": "/blog/2008/12/what-it-takes-to-be-a-great-technical-lead/",
+    "date": "2008-12-04 00:41:53",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "So What's NHibernate Development Like?",
+    "link": "/blog/2008/12/so-whats-nhibernate-development-like/",
+    "date": "2008-12-07 23:06:52",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Assembly Partioning Advice",
+    "link": "/blog/2008/12/assembly-partioning-advice/",
+    "date": "2008-12-08 12:35:41",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Batching Remote Operations Is Not Premature Optimization",
+    "link": "/blog/2008/12/batching-remote-operations-is-not-premature-optimization/",
+    "date": "2008-12-12 23:14:09",
+    "categories": [
+      "opinions",
+      "performance"
+    ]
+  },
+  {
+    "title": "The Importance Of Releasing Your Components Through Windsor",
+    "link": "/blog/2008/12/the-importance-of-releasing-your-components-through-windsor/",
+    "date": "2008-12-13 15:12:45",
+    "categories": [
+      "castle-windsor",
+      "memory-management"
+    ]
+  },
+  {
+    "title": "The Component Burden",
+    "link": "/blog/2008/12/the-component-burden/",
+    "date": "2008-12-14 13:37:23",
+    "categories": [
+      "castle-windsor",
+      "memory-management"
+    ]
+  },
+  {
+    "title": "The Resolvable",
+    "link": "/blog/2008/12/the-resolvable/",
+    "date": "2008-12-21 15:48:26",
+    "categories": [
+      "castle-windsor",
+      "memory-management"
+    ]
+  },
+  {
+    "title": "The Unrealistic Deadline Anti-Pattern",
+    "link": "/blog/2008/12/the-unrealistic-deadline-anti-pattern/",
+    "date": "2008-12-23 13:29:33",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "Tired Of Working With Big Visual Studio Solutions?",
+    "link": "/blog/2008/12/tired-of-working-with-big-visual-studio-solutions/",
+    "date": "2008-12-29 01:27:07",
+    "categories": [
+      "visual-studio"
+    ]
+  },
+  {
+    "title": "Junior Vs Senior Developers?",
+    "link": "/blog/2008/12/junior-vs-senior-developers/",
+    "date": "2008-12-29 01:31:00",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "The Life And Times Of A Bug",
+    "link": "/blog/2009/01/the-life-and-times-of-a-bug/",
+    "date": "2009-01-01 17:52:40",
+    "categories": [
+      "the-life-and-times-of"
+    ]
+  },
+  {
+    "title": "Recommended Books: Behind Closed Doors, Secrets Of Great Management",
+    "link": "/blog/2009/01/recommended-books-behind-closed-doors-secrets-of-great-management/",
+    "date": "2009-01-11 20:17:00",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Great Links On Using Garbage Collection Efficiently",
+    "link": "/blog/2009/01/great-links-on-using-garbage-collection-efficiently/",
+    "date": "2009-01-11 20:23:56",
+    "categories": [
+      "memory-management"
+    ]
+  },
+  {
+    "title": "Ethics In Software Development: Pragmatism Over Dogmatism",
+    "link": "/blog/2009/01/ethics-in-software-development-pragmatism-over-dogmatism/",
+    "date": "2009-01-11 22:18:14",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Framework Configuration: A Different Approach",
+    "link": "/blog/2009/01/framework-configuration-a-different-approach/",
+    "date": "2009-01-12 22:19:19",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "Abstracting Request State",
+    "link": "/blog/2009/01/abstracting-request-state/",
+    "date": "2009-01-17 16:19:43",
+    "categories": [
+      "aspnet",
+      "wcf"
+    ]
+  },
+  {
+    "title": "I Don't Really See The Problem With NHibernate's XML Mapping Files",
+    "link": "/blog/2009/01/i-dont-really-see-the-problem-with-nhibernates-xml-mapping-files/",
+    "date": "2009-01-18 16:50:01",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Which Path To Follow?",
+    "link": "/blog/2009/01/which-path-to-follow/",
+    "date": "2009-01-20 00:54:08",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "We All Write Bad Code",
+    "link": "/blog/2009/01/we-all-write-bad-code/",
+    "date": "2009-01-24 17:33:57",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "NHibernate and Future Queries",
+    "link": "/blog/2009/01/nhibernate-and-future-queries/",
+    "date": "2009-01-25 12:02:05",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "NHibernate and Future Queries, Part 2",
+    "link": "/blog/2009/01/nhibernate-and-future-queries-part-2/",
+    "date": "2009-01-26 08:23:47",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "My 2 Most Cherished Mistakes",
+    "link": "/blog/2009/01/my-2-most-cherished-mistakes/",
+    "date": "2009-01-29 00:29:13",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "Quickly Setting Up And Using NHibernate's Second Level Cache",
+    "link": "/blog/2009/02/quickly-setting-up-and-using-nhibernates-second-level-cache/",
+    "date": "2009-02-09 22:06:56",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Performance Rules Of Thumb",
+    "link": "/blog/2009/02/performance-rules-of-thumb/",
+    "date": "2009-02-15 21:44:45",
+    "categories": [
+      "performance"
+    ]
+  },
+  {
+    "title": "Book Review: Building Domain Specific Languages in Boo",
+    "link": "/blog/2009/02/book-review-building-domain-specific-languages-in-boo/",
+    "date": "2009-02-16 07:06:41",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "The Other Kind Of Exception Handling",
+    "link": "/blog/2009/02/the-other-kind-of-exception-handling/",
+    "date": "2009-02-09 17:46:49",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Buzzword Driven Development Isn't Gonna Help You",
+    "link": "/blog/2009/02/buzzword-driven-development-isnt-gonna-help-you/",
+    "date": "2009-02-10 21:18:47",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Challenge: Do You Truly Understand This Code?",
+    "link": "/blog/2009/02/challenge-do-you-truly-understand-this-code/",
+    "date": "2009-02-19 16:19:01",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "The Commented Version Of The Readable Code Challenge",
+    "link": "/blog/2009/02/the-commented-version-of-the-readable-code-challeng/",
+    "date": "2009-02-21 16:22:51",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "The Tests For The Readable Code Challenge",
+    "link": "/blog/2009/02/the-tests-for-the-readable-code-challenge/",
+    "date": "2009-02-22 10:53:37",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "Silverlight's ProgressBar And Possible Memory Leaks",
+    "link": "/blog/2009/02/silverlights-progressbar-and-possible-memory-leaks/",
+    "date": "2009-02-25 16:42:44",
+    "categories": [
+      "memory-management",
+      "silverlight"
+    ]
+  },
+  {
+    "title": "Smarten Up Instead Of Generating Dumb Tests",
+    "link": "/blog/2009/03/smarten-up-instead-of-generating-dumb-tests/",
+    "date": "2009-03-05 23:58:52",
+    "categories": [
+      "opinions",
+      "testing"
+    ]
+  },
+  {
+    "title": "Book Review: 97 Things Every Software Architect Should Know",
+    "link": "/blog/2009/03/book-review-97-things-every-software-architect-should-know/",
+    "date": "2009-03-07 15:37:15",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "I Love Easy Extensibility",
+    "link": "/blog/2009/03/i-love-easy-extensibility/",
+    "date": "2009-03-10 18:01:13",
+    "categories": [
+      "wcf"
+    ]
+  },
+  {
+    "title": "Calculating The Size Of SOAP Messages",
+    "link": "/blog/2009/03/calculating-the-size-of-soap-messages/",
+    "date": "2009-03-11 12:06:34",
+    "categories": [
+      "wcf"
+    ]
+  },
+  {
+    "title": "Book Review: NHibernate In Action",
+    "link": "/blog/2009/03/book-review-nhibernate-in-action/",
+    "date": "2009-03-15 18:39:34",
+    "categories": [
+      "books",
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Why Don't We Learn?",
+    "link": "/blog/2009/03/why-dont-we-learn/",
+    "date": "2009-03-17 00:37:06",
+    "categories": [
+      "rants"
+    ]
+  },
+  {
+    "title": "Continuous Integration 101",
+    "link": "/blog/2009/03/continuous-integration-101/",
+    "date": "2009-03-17 20:43:19",
+    "categories": [
+      "continuous-integration"
+    ]
+  },
+  {
+    "title": "What I'd Like To See At Microsoft's Technical Events",
+    "link": "/blog/2009/03/what-id-like-to-see-at-microsofts-technical-events/",
+    "date": "2009-03-19 22:47:44",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Implementing A Value Object With NHibernate",
+    "link": "/blog/2009/03/implementing-a-value-object-with-nhibernate/",
+    "date": "2009-03-25 23:12:06",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Entities: Required Properties And Properties That Shouldn't Be Modified",
+    "link": "/blog/2009/03/entities-required-properties-and-properties-that-shouldnt-be-modified/",
+    "date": "2009-03-24 20:48:26",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Silverlight Localization Gotcha",
+    "link": "/blog/2009/03/silverlight-localization-gotcha/",
+    "date": "2009-03-27 14:09:36",
+    "categories": [
+      "silverlight"
+    ]
+  },
+  {
+    "title": "Transparent Query Batching Through Your Repository",
+    "link": "/blog/2009/04/transparent-query-batching-through-your-repository/",
+    "date": "2009-04-01 12:35:52",
+    "categories": [
+      "nhibernate",
+      "performance"
+    ]
+  },
+  {
+    "title": "Assigning Foreign Keys In NHibernate",
+    "link": "/blog/2009/04/assigning-foreign-keys-in-nhibernate/",
+    "date": "2009-04-03 06:46:52",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Must Everything Be Virtual With NHibernate?",
+    "link": "/blog/2009/03/must-everything-be-virtual-with-nhibernate/",
+    "date": "2009-03-30 21:05:11",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Support Of Commercial Software vs Open Source Software",
+    "link": "/blog/2009/03/support-of-commercial-software-vs-open-source-software/",
+    "date": "2009-03-29 12:17:37",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Avoiding MySQL's MAX_JOIN_SIZE Limit With NHibernate",
+    "link": "/blog/2009/03/avoiding-mysqls-max_join_size-limit-with-nhibernate/",
+    "date": "2009-03-30 12:26:51",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "The Joys Of Debugging ASP.NET Memory Leaks",
+    "link": "/blog/2009/04/the-joys-of-debugging-aspnet-memory-leaks/",
+    "date": "2009-04-06 22:37:14",
+    "categories": [
+      "net-bugs",
+      "aspnet",
+      "memory-management"
+    ]
+  },
+  {
+    "title": "Guaranteeing Disposal Of UserControls In ASP.NET",
+    "link": "/blog/2009/04/guaranteeing-disposal-of-usercontrols-in-aspnet/",
+    "date": "2009-04-09 17:26:35",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "Educate Developers Instead Of Protecting Them",
+    "link": "/blog/2009/04/educate-developers-instead-of-protecting-them/",
+    "date": "2009-04-15 22:04:37",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "NHibernate's Future Queries And Their Fallback Behavior",
+    "link": "/blog/2009/04/nhibernates-future-queries-and-their-fallback-behavior/",
+    "date": "2009-04-13 20:07:55",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Put Performance Concerns Into Perspective",
+    "link": "/blog/2009/04/put-performance-concerns-into-perspective/",
+    "date": "2009-04-18 16:58:03",
+    "categories": [
+      "performance"
+    ]
+  },
+  {
+    "title": "Using The Guid.Comb Identifier Strategy",
+    "link": "/blog/2009/05/using-the-guidcomb-identifier-strategy/",
+    "date": "2009-05-21 14:00:31",
+    "categories": [
+      "nhibernate",
+      "performance"
+    ]
+  },
+  {
+    "title": "At This Point, I'd Prefer Java Developers Over .NET Developers",
+    "link": "/blog/2009/04/at-this-point-id-prefer-java-developers-over-net-developers/",
+    "date": "2009-04-27 22:37:18",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "The Good, The Bad And The Ugly In The .NET World",
+    "link": "/blog/2009/04/the-good-the-bad-and-the-ugly-in-the-net-world/",
+    "date": "2009-04-29 23:21:37",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Using SQL Functions in Criteria Restrictions",
+    "link": "/blog/2009/04/using-sql-functions-in-criteria-restrictions/",
+    "date": "2009-04-30 13:31:53",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Why Are Mutable Value Types Even Possible?",
+    "link": "/blog/2009/05/why-are-mutable-value-types-even-possible/",
+    "date": "2009-05-17 14:06:07",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "When You Absolutely Need To Use A Real Database In Tests",
+    "link": "/blog/2009/07/when-you-absolutely-need-to-use-a-real-database-in-tests/",
+    "date": "2009-07-20 17:19:39",
+    "categories": [
+      "testing"
+    ]
+  },
+  {
+    "title": "On Getting Rid Of Common Libraries... What About Don't Repeat Yourself?",
+    "link": "/blog/2009/05/on-getting-rid-of-common-libraries-what-about-dont-repeat-yourself/",
+    "date": "2009-05-02 19:26:49",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Keep An Eye On Those Indexes",
+    "link": "/blog/2009/05/keep-an-eye-on-those-indexes/",
+    "date": "2009-05-21 14:14:57",
+    "categories": [
+      "performance"
+    ]
+  },
+  {
+    "title": "Continuous Integration On A Real, Big Project",
+    "link": "/blog/2009/05/continuous-integration-on-a-real-big-project/",
+    "date": "2009-05-24 21:45:54",
+    "categories": [
+      "continuous-integration"
+    ]
+  },
+  {
+    "title": "What Microsoft Should Do For .NET Open Source",
+    "link": "/blog/2009/05/what-microsoft-should-do-for-net-open-source/",
+    "date": "2009-05-25 22:37:06",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Protecting Your Application From Remote Problems",
+    "link": "/blog/2009/07/protecting-your-application-from-remote-problems/",
+    "date": "2009-07-05 21:45:41",
+    "categories": [
+      "aspect-oriented-programming",
+      "castle-windsor",
+      "patterns"
+    ]
+  },
+  {
+    "title": "Why I Dislike Classic Or Typical WCF Usage",
+    "link": "/blog/2009/07/why-i-dislike-classic-or-typical-wcf-usage/",
+    "date": "2009-07-21 00:54:40",
+    "categories": [
+      "opinions",
+      "wcf"
+    ]
+  },
+  {
+    "title": "This Is Why I Don't Like Microsoft's Way Of Open Source Development",
+    "link": "/blog/2009/08/this-is-why-i-dont-like-microsofts-way-of-open-source-development/",
+    "date": "2009-08-03 10:29:36",
+    "categories": [
+      "rants"
+    ]
+  },
+  {
+    "title": "Tracking Dangling Object References In Silverlight",
+    "link": "/blog/2009/08/tracking-dangling-object-references-in-silverlight/",
+    "date": "2009-08-04 17:39:58",
+    "categories": [
+      "memory-management",
+      "silverlight"
+    ]
+  },
+  {
+    "title": "Finding Memory Leaks In Silverlight With WinDbg",
+    "link": "/blog/2009/08/finding-memory-leaks-in-silverlight-with-windbg/",
+    "date": "2009-08-08 19:00:15",
+    "categories": [
+      "memory-management",
+      "silverlight"
+    ]
+  },
+  {
+    "title": "Choose The Right Goals",
+    "link": "/blog/2009/08/choose-the-right-goals/",
+    "date": "2009-08-10 22:11:30",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Of Course NHibernate Is Slow When You Use It Incorrectly",
+    "link": "/blog/2009/08/of-course-nhibernate-is-slow-when-you-use-it-incorrectly/",
+    "date": "2009-08-19 22:48:36",
+    "categories": [
+      "nhibernate",
+      "performance"
+    ]
+  },
+  {
+    "title": "Build Your Own Data Access Layer Series",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-series/",
+    "date": "2009-08-23 15:38:43",
+    "categories": [
+      "build-your-own-dal"
+    ]
+  },
+  {
+    "title": "Build Your Own Data Access Layer: Mapping Classes To Tables",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-mapping-classes-to-tables/",
+    "date": "2009-08-23 17:08:47",
+    "categories": [
+      "build-your-own-dal"
+    ]
+  },
+  {
+    "title": "Build Your Own Data Access Layer: Out Of The Box CRUD Functionality",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-out-of-the-box-crud-functionality/",
+    "date": "2009-08-24 19:29:19",
+    "categories": [
+      "build-your-own-dal"
+    ]
+  },
+  {
+    "title": "Build Your Own Data Access Layer: Hydrating Entities",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-hydrating-entities/",
+    "date": "2009-08-25 17:42:31",
+    "categories": [
+      "build-your-own-dal"
+    ]
+  },
+  {
+    "title": "Build Your Own Data Access Layer: Session Level Cache",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-session-level-cache/",
+    "date": "2009-08-26 17:11:28",
+    "categories": [
+      "build-your-own-dal"
+    ]
+  },
+  {
+    "title": "Build Your Own Data Access Layer: Lazy Loading",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-lazy-loading/",
+    "date": "2009-08-27 16:51:35",
+    "categories": [
+      "build-your-own-dal"
+    ]
+  },
+  {
+    "title": "Build Your Own Data Access Layer: Executing Custom Queries",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-executing-custom-queries/",
+    "date": "2009-08-28 16:34:47",
+    "categories": [
+      "build-your-own-dal"
+    ]
+  },
+  {
+    "title": "Build Your Own Data Access Layer: Bringing It All Together",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-bringing-it-all-together/",
+    "date": "2009-08-29 15:42:02",
+    "categories": [
+      "build-your-own-dal"
+    ]
+  },
+  {
+    "title": "Build Your Own Data Access Layer: Conclusions",
+    "link": "/blog/2009/08/build-your-own-data-access-layer-conclusions/",
+    "date": "2009-08-29 15:42:10",
+    "categories": [
+      "build-your-own-dal"
+    ]
+  },
+  {
+    "title": "There Is No Excuse For Failing Queries In Production",
+    "link": "/blog/2009/08/there-is-no-excuse-for-failing-queries-in-production/",
+    "date": "2009-08-30 16:52:15",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Reducing ViewState Size",
+    "link": "/blog/2009/09/reducing-viewstate-size/",
+    "date": "2009-09-01 14:56:53",
+    "categories": [
+      "aspnet",
+      "performance"
+    ]
+  },
+  {
+    "title": "Avoiding (Or Recovering From) Burnout",
+    "link": "/blog/2009/09/avoiding-or-recovering-from-burnout/",
+    "date": "2009-09-01 22:11:00",
+    "categories": [
+      "life",
+      "off-topic",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "More ORM Ignorance",
+    "link": "/blog/2009/09/more-orm-ignoranc/",
+    "date": "2009-09-04 15:41:35",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "5 Reasons Why Silverlight Is My Preferred Web Development Platform",
+    "link": "/blog/2009/09/5-reasons-why-silverlight-is-my-preferred-web-development-platform/",
+    "date": "2009-09-05 14:57:50",
+    "categories": [
+      "opinions",
+      "silverlight"
+    ]
+  },
+  {
+    "title": "Monitoring Production Performance",
+    "link": "/blog/2009/09/monitoring-production-performance/",
+    "date": "2009-09-07 21:48:54",
+    "categories": [
+      "performance"
+    ]
+  },
+  {
+    "title": "Recommended Books: Ship It!",
+    "link": "/blog/2009/09/recommended-books-ship-it/",
+    "date": "2009-09-09 21:05:38",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Must Everything Be Virtual With NHibernate, Part II",
+    "link": "/blog/2009/09/must-everything-be-virtual-with-nhibernate-part-ii/",
+    "date": "2009-09-23 06:56:34",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Slides Of My NHibernate Talk",
+    "link": "/blog/2009/09/slides-of-my-nhibernate-talk/",
+    "date": "2009-09-10 20:00:24",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Event Subscribtion And Memory Leaks (Yet Again)",
+    "link": "/blog/2009/09/event-subscribtion-and-memory-leaks-yet-again/",
+    "date": "2009-09-12 18:32:35",
+    "categories": [
+      "memory-management"
+    ]
+  },
+  {
+    "title": "Must Everything Be Virtual With NHibernate, Part III",
+    "link": "/blog/2009/09/must-everything-be-virtual-with-nhibernate-part-iii/",
+    "date": "2009-09-27 19:45:30",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "What Kind Of Developer Are You?",
+    "link": "/blog/2009/09/what-kind-of-developer-are-you/",
+    "date": "2009-09-27 20:24:36",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "Why NHibernate Entities Need A Public Or Protected Parameterless Constructor",
+    "link": "/blog/2009/10/why-nhibernate-entities-need-a-public-or-protected-parameterless-constructor/",
+    "date": "2009-10-04 18:17:16",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Thoughts On Intellectual Honesty And Personal Ambitions",
+    "link": "/blog/2009/10/thoughts-on-intellectual-honesty-and-personal-ambitions/",
+    "date": "2009-10-04 19:38:40",
+    "categories": [
+      "opinions",
+      "rants",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Event Aggregation",
+    "link": "/blog/2009/10/event-aggregation/",
+    "date": "2009-10-09 16:12:52",
+    "categories": [
+      "patterns",
+      "silverlight"
+    ]
+  },
+  {
+    "title": "Testability Of Date-Dependent Code",
+    "link": "/blog/2009/10/testability-of-date-dependent-code/",
+    "date": "2009-10-21 07:00:30",
+    "categories": [
+      "testing"
+    ]
+  },
+  {
+    "title": "Constructor Injection vs Setter Injection",
+    "link": "/blog/2009/11/constructor-injection-vs-sette-injection/",
+    "date": "2009-11-02 07:00:31",
+    "categories": [
+      "dependency-injection"
+    ]
+  },
+  {
+    "title": "There's Only One Thing You Can Learn From Code Coverage",
+    "link": "/blog/2009/10/theres-only-one-thing-you-can-learn-from-code-coverage/",
+    "date": "2009-10-15 08:11:15",
+    "categories": [
+      "testing"
+    ]
+  },
+  {
+    "title": "Stop Exposing Collections Already!",
+    "link": "/blog/2009/10/stop-exposing-collections-already/",
+    "date": "2009-10-28 07:00:09",
+    "categories": [
+      "code-quality"
+    ]
+  },
+  {
+    "title": "Slutty Types",
+    "link": "/blog/2009/10/slutty-types/",
+    "date": "2009-10-11 19:57:11",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "Build Your Own Data Access Layer: Enabling Bulk Inserts",
+    "link": "/blog/2009/10/build-your-own-data-access-layer-enabling-bulk-inserts/",
+    "date": "2009-10-12 12:29:43",
+    "categories": [
+      "build-your-own-dal"
+    ]
+  },
+  {
+    "title": "Prefixing Instance Fields?",
+    "link": "/blog/2009/10/prefixing-instance-fields/",
+    "date": "2009-10-26 07:00:20",
+    "categories": [
+      "code-quality"
+    ]
+  },
+  {
+    "title": "Finally Some Real Improvements For Automated Testing In .NET",
+    "link": "/blog/2009/10/finally-some-real-improvements-for-automated-testing-in-net/",
+    "date": "2009-10-25 15:27:51",
+    "categories": [
+      "testing"
+    ]
+  },
+  {
+    "title": "Integrated Security With Silverlight And WCF",
+    "link": "/blog/2009/11/integrated-security-with-silverlight-and-wcf/",
+    "date": "2009-11-03 13:41:32",
+    "categories": [
+      "silverlight",
+      "wcf"
+    ]
+  },
+  {
+    "title": "Request/Response Service Layer Series",
+    "link": "/blog/2009/11/requestresponse-service-layer-series/",
+    "date": "2009-11-08 14:16:38",
+    "categories": [
+      "requestresponse-service-layer"
+    ]
+  },
+  {
+    "title": "Request/Response Service Layer: Requests And Responses",
+    "link": "/blog/2009/11/requestresponse-service-layer-requests-and-responses/",
+    "date": "2009-11-08 14:17:17",
+    "categories": [
+      "requestresponse-service-layer"
+    ]
+  },
+  {
+    "title": "Request/Response Service Layer: Processing Requests",
+    "link": "/blog/2009/11/requestresponse-service-layer-processing-requests/",
+    "date": "2009-11-09 18:16:57",
+    "categories": [
+      "requestresponse-service-layer"
+    ]
+  },
+  {
+    "title": "Request/Response Service Layer: Handling Requests",
+    "link": "/blog/2009/11/requestresponse-service-layer-handling-requests/",
+    "date": "2009-11-10 17:33:31",
+    "categories": [
+      "requestresponse-service-layer"
+    ]
+  },
+  {
+    "title": "Request/Response Service Layer: Exposing The Service Layer Through WCF",
+    "link": "/blog/2009/11/requestresponse-service-layer-exposing-the-service-layer-through-wcf/",
+    "date": "2009-11-11 16:49:20",
+    "categories": [
+      "requestresponse-service-layer"
+    ]
+  },
+  {
+    "title": "Request/Response Service Layer: Synchronous Client-Side Usage",
+    "link": "/blog/2009/11/requestresponse-service-layer-synchronous-client-side-usage/",
+    "date": "2009-11-12 10:35:37",
+    "categories": [
+      "requestresponse-service-layer"
+    ]
+  },
+  {
+    "title": "Request/Response Service Layer: Testing Synchronous Client-Side Usage",
+    "link": "/blog/2009/11/requestresponse-service-layer-testing-synchronous-client-side-usage/",
+    "date": "2009-11-13 12:07:12",
+    "categories": [
+      "requestresponse-service-layer"
+    ]
+  },
+  {
+    "title": "Request/Response Service Layer: Asynchronous Client-Side Usage",
+    "link": "/blog/2009/11/requestresponse-service-layer-asynchronous-client-side-usage/",
+    "date": "2009-11-15 17:52:33",
+    "categories": [
+      "requestresponse-service-layer"
+    ]
+  },
+  {
+    "title": "Request/Response Service Layer: Testing Asynchronous Client-Side Usage",
+    "link": "/blog/2009/11/requestresponse-service-layer-testing-asynchronous-client-side-usage/",
+    "date": "2009-11-16 14:09:45",
+    "categories": [
+      "requestresponse-service-layer"
+    ]
+  },
+  {
+    "title": "Request/Response Service Layer: Conclusions",
+    "link": "/blog/2009/11/requestresponse-service-layer-conclusions/",
+    "date": "2009-11-16 14:09:52",
+    "categories": [
+      "requestresponse-service-layer"
+    ]
+  },
+  {
+    "title": "A Reading Guide To Becoming A Better Developer",
+    "link": "/blog/2009/11/a-reading-guide-to-becoming-a-better-developer/",
+    "date": "2009-11-25 19:43:46",
+    "categories": [
+      "code-quality",
+      "opinions"
+    ]
+  },
+  {
+    "title": "There's Lazy Loading, And Then There's Lazy Coding",
+    "link": "/blog/2009/11/theres-lazy-loading-and-then-theres-lazy-coding/",
+    "date": "2009-11-19 08:19:03",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Introducing: The Agatha Project",
+    "link": "/blog/2009/11/introducing-the-agatha-project/",
+    "date": "2009-11-19 23:50:59",
+    "categories": [
+      "agatha",
+      "requestresponse-service-layer"
+    ]
+  },
+  {
+    "title": "Hello World With Agatha",
+    "link": "/blog/2009/11/hello-world-with-agatha/",
+    "date": "2009-11-23 22:05:33",
+    "categories": [
+      "agatha"
+    ]
+  },
+  {
+    "title": "Integrating Your IOC Container With Agatha",
+    "link": "/blog/2009/11/integrating-your-ioc-container-with-agatha/",
+    "date": "2009-11-28 18:59:03",
+    "categories": [
+      "agatha"
+    ]
+  },
+  {
+    "title": "You Can Benefit From Open Sourcing Your Code",
+    "link": "/blog/2009/12/you-can-benefit-from-open-sourcing-your-code/",
+    "date": "2009-12-03 21:11:04",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "One-Way (Or Fire And Forget) Requests With Agatha",
+    "link": "/blog/2009/12/one-way-or-fire-and-forget-requests-with-agatha/",
+    "date": "2009-12-04 13:48:08",
+    "categories": [
+      "agatha"
+    ]
+  },
+  {
+    "title": "Running An Agatha Service Layer In-Process (Without WCF)",
+    "link": "/blog/2009/12/running-an-agatha-service-layer-in-process-without-wcf/",
+    "date": "2009-12-08 07:00:05",
+    "categories": [
+      "agatha"
+    ]
+  },
+  {
+    "title": "Real World Benefits From Loose Coupling, Inversion Of Control And Dependency Injection",
+    "link": "/blog/2009/12/real-world-benefits-from-loose-coupling-inversion-of-control-and-dependency-injection/",
+    "date": "2009-12-10 07:00:16",
+    "categories": [
+      "code-quality",
+      "dependency-injection",
+      "inversion-of-control",
+      "patterns"
+    ]
+  },
+  {
+    "title": "Unit Testing An NHibernate Application",
+    "link": "/blog/2009/12/unit-testing-an-nhibernate-application/",
+    "date": "2009-12-06 20:21:13",
+    "categories": [
+      "nhibernate",
+      "testing"
+    ]
+  },
+  {
+    "title": "Testing CRUD Operations With NHibernate",
+    "link": "/blog/2009/12/testing-crud-operations-with-nhibernate/",
+    "date": "2009-12-07 12:38:02",
+    "categories": [
+      "nhibernate",
+      "testing"
+    ]
+  },
+  {
+    "title": "Don't Be A Whiny Developer",
+    "link": "/blog/2009/12/dont-be-a-whiny-developer/",
+    "date": "2009-12-15 21:17:02",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "The Padawan That Couldn't",
+    "link": "/blog/2009/12/the-padawa-that-couldnt/",
+    "date": "2009-12-14 21:43:07",
+    "categories": [
+      "off-topic"
+    ]
+  },
+  {
+    "title": "Enabling Logging In Your Agatha Service Layer",
+    "link": "/blog/2009/12/enabling-logging-in-your-agatha-service-layer/",
+    "date": "2009-12-19 14:05:22",
+    "categories": [
+      "agatha"
+    ]
+  },
+  {
+    "title": "Recommended Book: 97 Things Every Project Manager Should Know",
+    "link": "/blog/2009/12/recommended-book-97-things-every-project-manager-should-know/",
+    "date": "2009-12-29 17:58:26",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Software Patents: Our Industry's Nuclear Weapon",
+    "link": "/blog/2009/12/software-patents-our-industrys-nuclear-weapon/",
+    "date": "2009-12-29 21:42:51",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Don’t Strive For Perfection",
+    "link": "/blog/2010/01/dont-strive-for-perfection/",
+    "date": "2010-01-04 21:38:05",
+    "categories": [
+      "code-quality",
+      "opinions"
+    ]
+  },
+  {
+    "title": "Never Underestimate Your Own Stupidity",
+    "link": "/blog/2010/01/never-underestimate-your-own-stupidity/",
+    "date": "2010-01-07 14:21:48",
+    "categories": [
+      "off-topic"
+    ]
+  },
+  {
+    "title": "There’s Nothing Courageous About Being Honest About Mistakes",
+    "link": "/blog/2010/01/theres-nothing-courageous-about-being-honest-about-mistakes/",
+    "date": "2010-01-09 19:46:07",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "OMG! Someone Stole My Code",
+    "link": "/blog/2010/01/omg-someone-stole-my-code/",
+    "date": "2010-01-12 22:06:53",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Is There A Good Reason To Hide Inherited Members?",
+    "link": "/blog/2010/01/is-there-a-good-reason-to-hide-inherited-members/",
+    "date": "2010-01-17 16:25:00",
+    "categories": [
+      "code-quality"
+    ]
+  },
+  {
+    "title": "Career Advice For Young Developers, Part 2",
+    "link": "/blog/2010/01/career-advice-for-young-developers-part-2/",
+    "date": "2010-01-13 21:37:35",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Hey Microsoft, Our Databases Aren’t Services!",
+    "link": "/blog/2010/01/hey-microsoft-our-databases-arent-services/",
+    "date": "2010-01-17 18:46:11",
+    "categories": [
+      "architecture",
+      "opinions",
+      "wcf"
+    ]
+  },
+  {
+    "title": "Dependency Injection Inversion Rejection",
+    "link": "/blog/2010/01/dependency-injection-inversion-rejection/",
+    "date": "2010-01-19 09:19:38",
+    "categories": [
+      "dependency-injection",
+      "inversion-of-control"
+    ]
+  },
+  {
+    "title": "Highly Recommended Book: Debug It!",
+    "link": "/blog/2010/01/highly-recommended-book-debug-it/",
+    "date": "2010-01-26 07:03:57",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Inversion Of Control Containers And Factories Aren’t Mutually Exclusive",
+    "link": "/blog/2010/01/inversion-of-control-containers-and-factories-arent-mutually-exclusive/",
+    "date": "2010-01-23 16:14:45",
+    "categories": [
+      "dependency-injection",
+      "inversion-of-control"
+    ]
+  },
+  {
+    "title": "As A Movement, ALT.NET Has Been Dead For A While",
+    "link": "/blog/2010/01/as-a-movement-alt-net-has-been-dead-for-a-while/",
+    "date": "2010-01-24 16:06:58",
+    "categories": [
+      "altnet",
+      "opinions"
+    ]
+  },
+  {
+    "title": "Agatha Vs NServiceBus?",
+    "link": "/blog/2010/01/agatha-vs-nservicebus/",
+    "date": "2010-01-26 21:50:51",
+    "categories": [
+      "agatha",
+      "nservicebus"
+    ]
+  },
+  {
+    "title": "Securing Your Agatha Service Layer",
+    "link": "/blog/2010/01/securing-your-agatha-service-layer/",
+    "date": "2010-01-27 21:05:11",
+    "categories": [
+      "agatha"
+    ]
+  },
+  {
+    "title": "Good Team Dynamics Are Essential For High Technical Quality",
+    "link": "/blog/2010/01/good-team-dynamics-are-essential-for-high-technical-quality/",
+    "date": "2010-01-31 21:42:16",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "When It Comes To IOC Containers, We Seem To Be Pretty Loyal",
+    "link": "/blog/2010/02/when-it-comes-to-ioc-containers-we-seem-to-be-pretty-loyal/",
+    "date": "2010-02-15 22:33:43",
+    "categories": [
+      "inversion-of-control"
+    ]
+  },
+  {
+    "title": "Have You Jumped On The Bandwagon Yet?",
+    "link": "/blog/2010/02/have-you-jumped-on-the-bandwagon-yet/",
+    "date": "2010-02-18 21:16:29",
+    "categories": [
+      "rants"
+    ]
+  },
+  {
+    "title": "You’ll Never Get Sustainable Progress For Free",
+    "link": "/blog/2010/02/youll-never-get-sustainable-progress-for-free/",
+    "date": "2010-02-21 22:10:58",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Wanna Review My Code?",
+    "link": "/blog/2010/02/wanna-review-my-code/",
+    "date": "2010-02-23 15:58:31",
+    "categories": [
+      "off-topic"
+    ]
+  },
+  {
+    "title": "Using Copy-On-Write In Multithreaded Code To Reduce Locking Overhead",
+    "link": "/blog/2010/03/using-copy-on-write-in-multithreaded-code-to-reduce-locking-overhead/",
+    "date": "2010-03-08 16:36:35",
+    "categories": [
+      "multithreading",
+      "performance"
+    ]
+  },
+  {
+    "title": "MSDTC Woes With NServiceBus And NHibernate",
+    "link": "/blog/2010/03/msdtc-woes-with-nservicebus-and-nhibernate/",
+    "date": "2010-03-19 11:52:16",
+    "categories": [
+      "net-bugs",
+      "msdtc",
+      "nhibernate",
+      "nservicebus"
+    ]
+  },
+  {
+    "title": "Everybody Wins In The Certification Game",
+    "link": "/blog/2010/03/everybody-wins-in-the-certification-game/",
+    "date": "2010-03-20 19:59:37",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Clients Shouldn’t Define Your Services",
+    "link": "/blog/2010/04/clients-shouldnt-define-your-services/",
+    "date": "2010-04-05 17:35:53",
+    "categories": [
+      "opinions",
+      "wcf"
+    ]
+  },
+  {
+    "title": "Avoiding Leaking Connections With NHibernate And TransactionScope",
+    "link": "/blog/2010/05/avoiding-leaking-connections-with-nhibernate-and-transactionscope/",
+    "date": "2010-05-06 13:16:31",
+    "categories": [
+      "msdtc",
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Consuming Multiple Agatha Services",
+    "link": "/blog/2010/05/consuming-multiple-agatha-services/",
+    "date": "2010-05-08 18:21:35",
+    "categories": [
+      "agatha"
+    ]
+  },
+  {
+    "title": "Consuming An Agatha Service From A Non-Agatha-Aware Client",
+    "link": "/blog/2010/05/consuming-an-agatha-service-from-a-non-agatha-aware-client/",
+    "date": "2010-05-14 14:49:35",
+    "categories": [
+      "agatha"
+    ]
+  },
+  {
+    "title": "Why You Shouldn’t Expose Your Entities Through Your Services",
+    "link": "/blog/2010/05/why-you-shouldnt-expose-your-entities-through-your-services/",
+    "date": "2010-05-17 16:18:43",
+    "categories": [
+      "architecture",
+      "code-quality",
+      "opinions",
+      "performance",
+      "wcf"
+    ]
+  },
+  {
+    "title": "Isolation At Work: Good Or Bad?",
+    "link": "/blog/2010/06/isolation-at-work-good-or-bad/",
+    "date": "2010-06-05 15:09:02",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "If You Can’t Say Something Bad About It, You Don’t Know It Well Enough",
+    "link": "/blog/2010/06/if-you-cant-say-something-bad-about-it-you-dont-know-it-well-enough/",
+    "date": "2010-06-07 21:00:57",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Why Do We Recycle Our Application Pools?",
+    "link": "/blog/2010/06/why-do-we-recycle-our-application-pools/",
+    "date": "2010-06-12 14:14:16",
+    "categories": [
+      "aspnet",
+      "opinions"
+    ]
+  },
+  {
+    "title": "Using Agatha’s Server-Side Caching",
+    "link": "/blog/2010/06/using-agathas-server-side-caching/",
+    "date": "2010-06-20 17:00:46",
+    "categories": [
+      "agatha"
+    ]
+  },
+  {
+    "title": "Working Overtime: What It Really Means",
+    "link": "/blog/2010/06/working-overtime-what-it-really-means/",
+    "date": "2010-06-24 21:42:28",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Which Language Do You Code In?",
+    "link": "/blog/2010/07/which-language-do-you-code-in/",
+    "date": "2010-07-18 13:21:13",
+    "categories": [
+      "code-quality"
+    ]
+  },
+  {
+    "title": "The MVVM Pattern Is Highly Overrated",
+    "link": "/blog/2010/07/the-mvvm-pattern-is-highly-overrated/",
+    "date": "2010-07-21 15:23:58",
+    "categories": [
+      "architecture",
+      "code-quality",
+      "silverlight"
+    ]
+  },
+  {
+    "title": "Estimates Are A Double-Edged Sword",
+    "link": "/blog/2010/07/estimates-are-a-double-edged-sword/",
+    "date": "2010-07-28 21:45:52",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "MVP In Silverlight/WPF Series",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-series/",
+    "date": "2010-08-01 20:43:49",
+    "categories": [
+      "mvp-in-silverlightwpf"
+    ]
+  },
+  {
+    "title": "MVP In Silverlight/WPF: Architectural Overview",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-architectural-overview/",
+    "date": "2010-08-01 20:43:57",
+    "categories": [
+      "mvp-in-silverlightwpf"
+    ]
+  },
+  {
+    "title": "MVP In Silverlight/WPF: Some Infrastructure Bits",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-some-infrastructure-bits/",
+    "date": "2010-08-02 19:19:11",
+    "categories": [
+      "mvp-in-silverlightwpf"
+    ]
+  },
+  {
+    "title": "MVP In Silverlight/WPF: The Sample",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-the-sample/",
+    "date": "2010-08-03 17:18:24",
+    "categories": [
+      "mvp-in-silverlightwpf"
+    ]
+  },
+  {
+    "title": "MVP In Silverlight/WPF: Implementing The Overview UserControl",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-implementing-the-overview-usercontrol/",
+    "date": "2010-08-04 17:17:34",
+    "categories": [
+      "mvp-in-silverlightwpf"
+    ]
+  },
+  {
+    "title": "MVP In Silverlight/WPF: Implementing The Details UserControl",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-implementing-the-details-usercontrol/",
+    "date": "2010-08-05 17:10:54",
+    "categories": [
+      "mvp-in-silverlightwpf"
+    ]
+  },
+  {
+    "title": "MVP In Silverlight/WPF: Automated Tests",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-series-automated-tests/",
+    "date": "2010-08-07 18:08:04",
+    "categories": [
+      "mvp-in-silverlightwpf"
+    ]
+  },
+  {
+    "title": "MVP In Silverlight/WPF: Conclusions",
+    "link": "/blog/2010/08/mvp-in-silverlightwpf-conclusions/",
+    "date": "2010-08-08 10:48:36",
+    "categories": [
+      "mvp-in-silverlightwpf"
+    ]
+  },
+  {
+    "title": "Using Agatha's Client-Side Caching",
+    "link": "/blog/2010/08/using-agathas-client-side-caching/",
+    "date": "2010-08-09 16:27:51",
+    "categories": [
+      "agatha"
+    ]
+  },
+  {
+    "title": "How I Feel About The .NET World Lately",
+    "link": "/blog/2010/08/how-i-feel-about-the-net-world-lately/",
+    "date": "2010-08-10 22:31:47",
+    "categories": [
+      "rants"
+    ]
+  },
+  {
+    "title": "Highly Recommended Book: The Ruby Programming Language",
+    "link": "/blog/2010/08/highly-recommended-book-the-ruby-programming-language/",
+    "date": "2010-08-15 19:22:57",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Can An Object Grow?",
+    "link": "/blog/2010/08/can-an-object-grow/",
+    "date": "2010-08-17 22:55:09",
+    "categories": [
+      "code-quality"
+    ]
+  },
+  {
+    "title": "Once Again: Comments In Code Aren't Necessarily Bad",
+    "link": "/blog/2010/08/once-again-comments-in-code-arent-necessarily-bad/",
+    "date": "2010-08-18 22:28:43",
+    "categories": [
+      "code-quality",
+      "opinions"
+    ]
+  },
+  {
+    "title": "Using C#-style Events In Ruby",
+    "link": "/blog/2010/08/using-c-style-events-in-ruby/",
+    "date": "2010-08-22 12:26:40",
+    "categories": [
+      "ruby"
+    ]
+  },
+  {
+    "title": "Using More Rubyesq Events In Ruby",
+    "link": "/blog/2010/08/using-more-rubyesq-events-in-ruby/",
+    "date": "2010-08-23 23:12:35",
+    "categories": [
+      "ruby"
+    ]
+  },
+  {
+    "title": "Auto-Wiring Ruby Events",
+    "link": "/blog/2010/08/auto-wiring-ruby-events/",
+    "date": "2010-08-26 00:09:55",
+    "categories": [
+      "ruby"
+    ]
+  },
+  {
+    "title": "First Experiences With RSpec/BDD",
+    "link": "/blog/2010/08/first-experiences-with-rspecbdd/",
+    "date": "2010-08-27 00:51:21",
+    "categories": [
+      "ruby",
+      "testing"
+    ]
+  },
+  {
+    "title": "Compiler|Interpreter Warnings Are Important Learning Opportunities",
+    "link": "/blog/2010/08/compilerinterpreter-warnings-are-important-learning-opportunities/",
+    "date": "2010-08-28 00:27:03",
+    "categories": [
+      "code-quality"
+    ]
+  },
+  {
+    "title": "Book Review: The Ruby Way, Second Edition",
+    "link": "/blog/2010/08/book-review-the-ruby-way-second-edition/",
+    "date": "2010-08-31 22:04:48",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Why Agile In The Enterprise Generally Doesn't Work",
+    "link": "/blog/2010/08/why-agile-in-the-enterprise-generally-doesnt-work/",
+    "date": "2010-08-29 10:39:02",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Think Twice Before You Map Entities To DTOs",
+    "link": "/blog/2010/09/think-twice-before-you-map-entities-to-dtos/",
+    "date": "2010-09-01 13:58:32",
+    "categories": [
+      "nhibernate",
+      "performance"
+    ]
+  },
+  {
+    "title": "Writing A Simple DSL",
+    "link": "/blog/2010/09/writing-a-simple-dsl/",
+    "date": "2010-09-04 01:44:39",
+    "categories": [
+      "dsl",
+      "ruby"
+    ]
+  },
+  {
+    "title": "Using Ruby Classes In C# With IronRuby",
+    "link": "/blog/2010/09/using-ruby-classes-in-c-with-ironruby/",
+    "date": "2010-09-06 20:24:42",
+    "categories": [
+      "ironruby",
+      "ruby"
+    ]
+  },
+  {
+    "title": "What's Up With These Belgians?",
+    "link": "/blog/2010/09/whats-up-with-these-belgians/",
+    "date": "2010-09-05 11:29:38",
+    "categories": [
+      "about-the-blog"
+    ]
+  },
+  {
+    "title": "You Need To Step Out Of Your Comfort Zone",
+    "link": "/blog/2010/09/you-need-to-step-out-of-your-comfort-zone/",
+    "date": "2010-09-07 23:00:42",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Highly Recommended Book: Metaprogramming Ruby",
+    "link": "/blog/2010/09/highly-recommended-book-metaprogramming-ruby/",
+    "date": "2010-09-12 17:31:52",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Keep Your Eyes On The Road",
+    "link": "/blog/2010/09/keep-your-eyes-on-the-road/",
+    "date": "2010-09-18 23:27:49",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Using NHibernate To Persist And Query Ruby Objects",
+    "link": "/blog/2010/09/using-nhibernate-to-persist-and-query-ruby-objects/",
+    "date": "2010-09-23 23:16:35",
+    "categories": [
+      "nhibernate",
+      "ruby"
+    ]
+  },
+  {
+    "title": "The Truth Is In The Code! Unless It Isn't...",
+    "link": "/blog/2010/10/the-truth-is-in-the-code-unless-it-isnt/",
+    "date": "2010-10-13 08:00:12",
+    "categories": [
+      "code-quality"
+    ]
+  },
+  {
+    "title": "Recommended Book: IronRuby Unleashed",
+    "link": "/blog/2010/10/recommended-book-ironruby-unleashed/",
+    "date": "2010-10-02 16:21:56",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Start Believing In Yourself",
+    "link": "/blog/2010/10/start-believing-in-yourself/",
+    "date": "2010-10-03 23:03:31",
+    "categories": [
+      "life",
+      "opinions"
+    ]
+  },
+  {
+    "title": "Why You Don't Need Dependency Injection In Ruby",
+    "link": "/blog/2010/10/why-you-dont-need-dependency-injection-in-ruby/",
+    "date": "2010-10-11 08:00:32",
+    "categories": [
+      "code-quality",
+      "dependency-injection",
+      "opinions",
+      "ruby"
+    ]
+  },
+  {
+    "title": "Recommended Book: DSLs In Action",
+    "link": "/blog/2010/10/recommended-book-dsls-in-action/",
+    "date": "2010-10-09 14:47:54",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Wanna Improve Your Life? Then DO Something About It!",
+    "link": "/blog/2010/10/wanna-improve-your-life-then-do-something-about-it/",
+    "date": "2010-10-25 00:24:06",
+    "categories": [
+      "life",
+      "opinions"
+    ]
+  },
+  {
+    "title": "Highly Recommended Book: ReWork",
+    "link": "/blog/2010/10/highly-recommended-book-rework/",
+    "date": "2010-10-17 18:29:14",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Performance Of NHibernate With Ruby Objects Compared To Traditional C# Objects",
+    "link": "/blog/2010/10/performance-of-nhibernate-with-ruby-objects-compared-to-traditional-c-objects/",
+    "date": "2010-10-19 16:22:38",
+    "categories": [
+      "ironruby",
+      "nhibernate",
+      "performance",
+      "ruby"
+    ]
+  },
+  {
+    "title": "Recommended Book: NHibernate 3.0 Cookbook",
+    "link": "/blog/2010/10/recommended-book-nhibernate-3-0-cookbook/",
+    "date": "2010-10-24 23:07:05",
+    "categories": [
+      "books",
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Do You Still Believe In Silverlight?",
+    "link": "/blog/2010/10/do-you-still-believe-in-silverlight/",
+    "date": "2010-10-30 16:30:07",
+    "categories": [
+      "silverlight"
+    ]
+  },
+  {
+    "title": "Developers Shouldn't Specialize",
+    "link": "/blog/2010/10/developers-shouldnt-specialize/",
+    "date": "2010-10-31 19:05:30",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Never Underestimate The Power Of A Message",
+    "link": "/blog/2010/11/never-underestimate-the-power-of-a-message/",
+    "date": "2010-11-07 18:30:05",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Favor Value Over Quality",
+    "link": "/blog/2010/11/favor-value-over-quality/",
+    "date": "2010-11-11 22:25:53",
+    "categories": [
+      "opinions",
+      "software-development"
+    ]
+  },
+  {
+    "title": "Highly Recommended Book: The Passionate Programmer",
+    "link": "/blog/2010/12/highly-recommended-book-the-passionate-programmer/",
+    "date": "2010-12-19 14:27:34",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "A Little Piece Of Advice For Tech Bloggers",
+    "link": "/blog/2010/12/a-little-piece-of-advice-for-tech-bloggers/",
+    "date": "2010-12-29 21:27:55",
+    "categories": [
+      "off-topic"
+    ]
+  },
+  {
+    "title": "Learn To Work With The Web, Instead Of Against It",
+    "link": "/blog/2011/01/learn-to-work-with-the-web-instead-of-against-it/",
+    "date": "2011-01-09 18:41:06",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "How Developers Should 'Read' Exceptions",
+    "link": "/blog/2011/01/how-developers-should-read-exceptions/",
+    "date": "2011-01-13 22:57:50",
+    "categories": [
+      "software-development"
+    ]
+  },
+  {
+    "title": "Don't Be Afraid To Change Your Mind",
+    "link": "/blog/2011/01/dont-be-afraid-to-change-your-mind/",
+    "date": "2011-01-23 15:54:28",
+    "categories": [
+      "life",
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Prefixing Input Elements Of Partial Views With ASP.NET MVC",
+    "link": "/blog/2011/01/prefixing-input-elements-of-partial-views-with-asp-net-mvc/",
+    "date": "2011-01-24 22:10:09",
+    "categories": [
+      "asp-net-mvc"
+    ]
+  },
+  {
+    "title": "Walk Out On Sources Of Negativity",
+    "link": "/blog/2011/01/walk-out-on-sources-of-negativity/",
+    "date": "2011-01-28 23:00:02",
+    "categories": [
+      "life",
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Thou Shalt Name Thy Parameter \"command\"",
+    "link": "/blog/2011/01/thou-shalt-name-thy-parameter-command/",
+    "date": "2011-01-31 14:56:28",
+    "categories": [
+      "asp-net-mvc",
+      "telerik"
+    ]
+  },
+  {
+    "title": "Recommended Book: jQuery In Action",
+    "link": "/blog/2011/02/recommended-book-jquery-in-action/",
+    "date": "2011-02-01 20:53:55",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Using Generic TestFixtures To Run Tests In Multiple Browsers With WatiN",
+    "link": "/blog/2011/02/using-generic-testfixtures-to-run-tests-in-multiple-browsers-with-watin/",
+    "date": "2011-02-14 17:52:27",
+    "categories": [
+      "testing"
+    ]
+  },
+  {
+    "title": "There's Only One Valid Metric For Developer Productivity And Quality",
+    "link": "/blog/2011/02/theres-only-one-valid-metric-for-developer-productivity-and-quality/",
+    "date": "2011-02-19 18:37:19",
+    "categories": [
+      "code-quality",
+      "opinions",
+      "software-development"
+    ]
+  },
+  {
+    "title": "Recommended Book: HTML5 And CSS3: Develop With Tomorrow's Standards Today",
+    "link": "/blog/2011/02/recommended-book-html5-and-css3-develop-with-tomorrows-standards-today/",
+    "date": "2011-02-22 21:08:50",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Using Distributed Caching With Agatha",
+    "link": "/blog/2011/02/using-distributed-caching-with-agatha/",
+    "date": "2011-02-27 19:33:45",
+    "categories": [
+      "agatha"
+    ]
+  },
+  {
+    "title": "Why We're Going With HTML(5) Instead Of Silverlight",
+    "link": "/blog/2011/03/why-were-going-with-html5-instead-of-silverlight/",
+    "date": "2011-03-06 19:11:15",
+    "categories": [
+      "asp-net-mvc",
+      "silverlight"
+    ]
+  },
+  {
+    "title": "Recommended Book: Apprenticeship Patterns",
+    "link": "/blog/2011/03/recommended-book-apprenticeship-patterns/",
+    "date": "2011-03-01 00:20:53",
+    "categories": [
+      "books"
+    ]
+  },
+  {
+    "title": "Thoughts On Developer Longevity",
+    "link": "/blog/2011/03/thoughts-on-developer-longevity/",
+    "date": "2011-03-04 00:11:47",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Highly Recommended Book: REST In Practice",
+    "link": "/blog/2011/03/highly-recommended-book-rest-in-practice/",
+    "date": "2011-03-05 19:12:42",
+    "categories": [
+      "architecture",
+      "books"
+    ]
+  },
+  {
+    "title": "Convention Based Localization With ASP.NET MVC",
+    "link": "/blog/2011/03/convention-based-localization-with-asp-net-mvc/",
+    "date": "2011-03-19 11:41:15",
+    "categories": [
+      "asp-net-mvc"
+    ]
+  },
+  {
+    "title": "Sharing An IE Instance Among Multiple Tests With WatiN And MS Test",
+    "link": "/blog/2011/03/sharing-an-ie-instance-among-multiple-tests-with-watin-and-ms-test/",
+    "date": "2011-03-24 18:26:03",
+    "categories": [
+      "testing"
+    ]
+  },
+  {
+    "title": "Who Needs Classes Anyway?",
+    "link": "/blog/2011/03/who-needs-classes-anyway/",
+    "date": "2011-03-28 21:10:14",
+    "categories": [
+      "javascript"
+    ]
+  },
+  {
+    "title": "Customizing ASP.NET MVC's Required Property Validation Messages",
+    "link": "/blog/2011/04/customizing-asp-net-mvcs-required-property-validation-messages/",
+    "date": "2011-04-03 19:45:01",
+    "categories": [
+      "asp-net-mvc"
+    ]
+  },
+  {
+    "title": "Automatically Including Current Language In Generated URLs With ASP.NET MVC",
+    "link": "/blog/2011/04/automatically-including-current-language-in-generated-urls-with-asp-net-mvc/",
+    "date": "2011-04-06 21:24:29",
+    "categories": [
+      "asp-net-mvc"
+    ]
+  },
+  {
+    "title": "NHibernate Examples",
+    "link": "/blog/2011/04/nhibernate-examples/",
+    "date": "2011-04-10 17:36:55",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Going Independent Is The Best Move I Ever Made",
+    "link": "/blog/2011/05/going-independent-is-the-best-move-i-ever-made/",
+    "date": "2011-05-30 22:48:37",
+    "categories": [
+      "life",
+      "off-topic",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "You Might Want To Start Taking JavaScript Seriously",
+    "link": "/blog/2011/06/you-might-want-to-start-taking-javascript-seriously/",
+    "date": "2011-06-02 18:01:38",
+    "categories": [
+      "javascript",
+      "opinions"
+    ]
+  },
+  {
+    "title": "Yet Another Nail In Silverlight's Coffin?",
+    "link": "/blog/2011/06/yet-another-nail-in-silverlights-coffin/",
+    "date": "2011-06-04 15:07:26",
+    "categories": [
+      "opinions",
+      "silverlight"
+    ]
+  },
+  {
+    "title": "Review Of My NHibernate Course",
+    "link": "/blog/2011/07/review-of-my-nhibernate-course/",
+    "date": "2011-07-06 19:22:05",
+    "categories": [
+      "nhibernate"
+    ]
+  },
+  {
+    "title": "Q&A: Putting A Training Course Together",
+    "link": "/blog/2011/07/qa-putting-a-training-course-together/",
+    "date": "2011-07-10 00:46:36",
+    "categories": [
+      "training"
+    ]
+  },
+  {
+    "title": "Arguing About Developer Communities Doesn't Make Sense",
+    "link": "/blog/2011/07/arguing-about-developer-communities-doesnt-make-sense/",
+    "date": "2011-07-17 16:20:22",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Clean Code Versus Great Code",
+    "link": "/blog/2011/07/clean-code-versus-great-code/",
+    "date": "2011-07-21 18:00:11",
+    "categories": [
+      "code-quality",
+      "opinions"
+    ]
+  },
+  {
+    "title": "First Steps With MongoDB, Mongoose and Jasmine-Node On Node.JS",
+    "link": "/blog/2011/07/first-steps-with-mongodb-mongoose-and-jasmine-node-on-node-js/",
+    "date": "2011-07-20 00:02:44",
+    "categories": [
+      "javascript",
+      "mongodb",
+      "mongoose",
+      "node-js"
+    ]
+  },
+  {
+    "title": "CV Likes And Dislikes",
+    "link": "/blog/2011/07/cv-likes-and-dislikes/",
+    "date": "2011-07-31 12:45:12",
+    "categories": [
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Take Advantage Of Your BDD Framework",
+    "link": "/blog/2011/08/take-advantage-of-your-bdd-framework/",
+    "date": "2011-08-03 20:46:23",
+    "categories": [
+      "code-quality",
+      "testing"
+    ]
+  },
+  {
+    "title": "Using Mongoose's Setters To Get Calculated Properties",
+    "link": "/blog/2011/08/using-mongooses-setters-to-get-calculated-properties/",
+    "date": "2011-08-01 01:10:35",
+    "categories": [
+      "javascript",
+      "mongoose",
+      "node-js"
+    ]
+  },
+  {
+    "title": "Solving A Problem By Avoiding It",
+    "link": "/blog/2011/08/solving-a-problem-by-avoiding-it/",
+    "date": "2011-08-15 12:54:31",
+    "categories": [
+      "javascript",
+      "node-js"
+    ]
+  },
+  {
+    "title": "Advantages Of Being A Polyglot Programmer",
+    "link": "/blog/2011/08/advantages-of-being-a-polyglot-programmer/",
+    "date": "2011-08-15 22:00:41",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Using Frameworks Doesn't Mean You Don't Have To Know What You're Doing",
+    "link": "/blog/2011/08/using-frameworks-doesnt-mean-you-dont-have-to-know-what-youre-doing/",
+    "date": "2011-08-23 22:23:46",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Maintaining Bad Code Can Be A Great Experience",
+    "link": "/blog/2011/09/maintaining-bad-code-can-be-a-great-experience/",
+    "date": "2011-09-04 21:51:16",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Repeated Failed Log-Ins: What's Your Strategy?",
+    "link": "/blog/2011/09/repeated-failed-log-ins-whats-your-strategy/",
+    "date": "2011-09-10 19:38:45",
+    "categories": [
+      "asp-net-mvc",
+      "express-js",
+      "node-js",
+      "patterns",
+      "performance",
+      "security"
+    ]
+  },
+  {
+    "title": "Why I Prefer JavaScript Over CoffeeScript",
+    "link": "/blog/2011/09/why-i-prefer-javascript-over-coffeescript/",
+    "date": "2011-09-11 20:05:19",
+    "categories": [
+      "javascript",
+      "opinions"
+    ]
+  },
+  {
+    "title": "The Worst Code I Ever Wrote, And Why I'm Still Happy About It",
+    "link": "/blog/2011/09/the-worst-code-i-ever-wrote-and-why-im-still-happy-about-it/",
+    "date": "2011-09-18 14:03:54",
+    "categories": [
+      "code-quality",
+      "software-development"
+    ]
+  },
+  {
+    "title": "The Competition-Innovation Relationship We All Benefit From",
+    "link": "/blog/2011/10/the-competition-innovation-relationship-we-all-benefit-from/",
+    "date": "2011-10-02 17:34:15",
+    "categories": [
+      "gadgets",
+      "technology-general"
+    ]
+  },
+  {
+    "title": "You Need Your Time Off",
+    "link": "/blog/2011/10/you-need-your-time-off/",
+    "date": "2011-10-03 21:29:31",
+    "categories": [
+      "life",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Developers Need To Keep Challenging Themselves",
+    "link": "/blog/2011/10/developers-need-to-keep-challenging-themselves/",
+    "date": "2011-10-23 21:09:22",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "The Non-Typical .NET Job",
+    "link": "/blog/2011/10/the-non-typical-net-job/",
+    "date": "2011-10-24 00:00:33",
+    "categories": [
+      "altnet",
+      "code-quality",
+      "opinions",
+      "patterns",
+      "software-development",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Thoughts On Steve Jobs, The Book And The Man",
+    "link": "/blog/2011/11/thoughts-on-steve-jobs-the-book-and-the-man/",
+    "date": "2011-11-01 18:54:02",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Faster Hardware? Not On Our Budget!",
+    "link": "/blog/2011/11/faster-hardware-not-on-our-budget/",
+    "date": "2011-11-08 23:16:09",
+    "categories": [
+      "software-development",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Silverlight's Broken Promise",
+    "link": "/blog/2011/11/silverlights-broken-promise/",
+    "date": "2011-11-20 18:31:42",
+    "categories": [
+      "opinions",
+      "silverlight"
+    ]
+  },
+  {
+    "title": "Does Certification Have Any Value?",
+    "link": "/blog/2011/11/does-certification-have-any-value/",
+    "date": "2011-11-29 22:30:21",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Blue Pill vs Red Pill",
+    "link": "/blog/2011/12/blue-pill-vs-red-pill/",
+    "date": "2011-12-15 21:44:40",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "Challenge: Displaying Feed Items On A Web Page",
+    "link": "/blog/2011/12/challenge-displaying-feed-items-on-a-web-page/",
+    "date": "2011-12-17 16:17:41",
+    "categories": [
+      "performance"
+    ]
+  },
+  {
+    "title": "Displaying Feed Items On A Web Page: My Solution",
+    "link": "/blog/2011/12/displaying-feed-items-on-a-web-page-my-solution/",
+    "date": "2011-12-20 08:00:55",
+    "categories": [
+      "express-js",
+      "javascript",
+      "node-js",
+      "performance"
+    ]
+  },
+  {
+    "title": "Node.js For Dummies",
+    "link": "/blog/2011/12/node-js-for-dummies/",
+    "date": "2011-12-18 18:40:39",
+    "categories": [
+      "javascript",
+      "node-js"
+    ]
+  },
+  {
+    "title": "Hosting A Node.js Site Through Apache",
+    "link": "/blog/2012/01/hosting-a-node-js-site-through-apache/",
+    "date": "2012-01-15 15:23:09",
+    "categories": [
+      "node-js"
+    ]
+  },
+  {
+    "title": "How Do You Pick Open Source Libraries?",
+    "link": "/blog/2012/01/how-do-you-pick-open-source-libraries/",
+    "date": "2012-01-16 22:15:40",
+    "categories": [
+      "opinions",
+      "software-development"
+    ]
+  },
+  {
+    "title": "Stop Storing Passwords Already!",
+    "link": "/blog/2012/01/stop-storing-passwords-already/",
+    "date": "2012-01-23 21:53:51",
+    "categories": [
+      "security"
+    ]
+  },
+  {
+    "title": "DTO's Should Transfer Data, Not Entities",
+    "link": "/blog/2012/02/dtos-should-transfer-data-not-entities/",
+    "date": "2012-02-19 20:32:17",
+    "categories": [
+      "architecture",
+      "code-quality"
+    ]
+  },
+  {
+    "title": "Architectural Drivers",
+    "link": "/blog/2012/02/architectural-drivers/",
+    "date": "2012-02-26 18:10:50",
+    "categories": [
+      "architecture"
+    ]
+  },
+  {
+    "title": "Thoughts On Learning New Things",
+    "link": "/blog/2012/03/thoughts-on-learning-new-things/",
+    "date": "2012-03-11 21:22:23",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "What's The Point Of Using WCF In A Web App?",
+    "link": "/blog/2012/03/whats-the-point-of-using-wcf-in-a-web-app/",
+    "date": "2012-03-18 17:28:28",
+    "categories": [
+      "architecture",
+      "code-quality",
+      "performance",
+      "wcf"
+    ]
+  },
+  {
+    "title": "Microsoft And Open Source: Hoping For Better Collaboration",
+    "link": "/blog/2012/04/microsoft-and-open-source-hoping-for-better-collaboration/",
+    "date": "2012-04-09 16:04:48",
+    "categories": [
+      "opinions"
+    ]
+  },
+  {
+    "title": "It's Not About The Number Of Hours You Put In ",
+    "link": "/blog/2012/04/its-not-about-the-number-of-hours-you-put-in/",
+    "date": "2012-04-19 21:35:18",
+    "categories": [
+      "opinions",
+      "workcareer"
+    ]
+  },
+  {
+    "title": "Three Strikes And You Refactor ",
+    "link": "/blog/2012/05/three-strikes-and-you-refactor/",
+    "date": "2012-05-06 16:36:10",
+    "categories": [
+      "code-quality"
+    ]
+  },
+  {
+    "title": "Why Things Don't Work In Your World",
+    "link": "/blog/2012/05/why-things-dont-work-in-your-world/",
+    "date": "2012-05-13 20:50:36",
+    "categories": [
+      "workcareer"
+    ]
+  },
+  {
+    "title": "And… That's All Folks",
+    "link": "/blog/2012/05/and-thats-all-folks/",
+    "date": "2012-05-14 23:08:36",
+    "categories": [
+      "about-the-blog"
+    ]
+  }
+]

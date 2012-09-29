@@ -1,0 +1,8 @@
+﻿@using ThatExtraMile.be.ViewModels
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<System.Collections.Generic.IEnumerable<BlogPostViewModel>>
+
+@foreach (BlogPostViewModel postModel in Model)
+{
+    @Html.Partial("BlogPost", postModel)
+    <br />        
+}

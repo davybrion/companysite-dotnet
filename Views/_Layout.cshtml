@@ -13,7 +13,7 @@
 
     @if (!string.IsNullOrEmpty(Model.Title))
     {
-        <title>That Extra Mile - @Model.Title</title>
+        <title>@Model.Title - That Extra Mile</title>
     }
     else
     {
@@ -62,11 +62,11 @@
             <nav id="primary-nav" role="navigation">
                 <ul>
                     <li class="@(Model.Section == "Home" ? "active" : "")"><a href="/">home</a></li>
+                    <li class="@(Model.Section == "Blog" ? "active" : "")"><a href="/blog">blog</a></li>
                     <li class="@(Model.Section == "Consulting" ? "active" : "")"><a href="/consulting">consulting</a></li>
                     <li class="@(Model.Section == "Training" ? "active" : "")"><a href="/training">training</a></li>
                     <li class="@(Model.Section == "Reviews" ? "active" : "")"><a href="/reviews">reviews</a></li>
                     <li class="@(Model.Section == "Contracting" ? "active" : "")"><a href="/contracting">contracting</a></li>
-                    @*                        <li class="@(Model.Section == "Articles" ? "active" : "")"><a href="/articles">articles</a></li>*@
                     <li><a href="#contact_section">contact</a></li>
                 </ul>
             </nav>
@@ -89,28 +89,30 @@
                         <a href="mailto:davy.brion@thatextramile.be">davy.brion@thatextramile.be</a>
                     </p>
                     <p>
-                        <a href="http://www.linkedin.com/in/davybrion">
-                            <img src="/images/icons/linkedin.png" alt="linkedin"></a>
+                        <a href="https://twitter.com/davybrion" class="twitter-follow-button" data-show-count="true">Follow @@davybrion</a>
+                        <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>                    
+                        @*                        <a href="http://www.linkedin.com/in/davybrion"><img src="/images/icons/linkedin.png" alt="linkedin"></a>*@
+                        <a href="https://github.com/davybrion">GitHub</a>
+                        <a href="http://coderwall.com/davybrion">Coderwall</a>
+                        <a href="http://www.linkedin.com/in/davybrion">LinkedIn</a>
+                    </p>
+                    <p>
                     </p>
                 </section>
 
                 <section class="blog">
                     <hgroup class="title">
-                        <h1>Blog</h1>
-                        <h2>The Inquisitive Coder <a class="btn-rss" href="http://feeds.feedburner.com/davybrion">
-                            <img src="/images/icons/rss.png" alt="rss"></a></h2>
+                        <h1>Most recent blog posts</h1>
                     </hgroup>
                     <div class="blog-teaser-overview">
                         <ul>
-                            <li><time class="date">14/5</time><a href="http://feedproxy.google.com/~r/davybrion/~3/BbaDji_ccF0/">And… That’s All Folks</a></li>
-                            <li><time class="date">13/5</time><a href="http://feedproxy.google.com/~r/davybrion/~3/vmRCqUkdXLU/">Why Things Don’t Work In Your World</a></li>
-                            <li><time class="date">6/5</time><a href="http://feedproxy.google.com/~r/davybrion/~3/OFSdEDuJMHc/">Three Strikes And You Refactor</a></li>
-                            <li><time class="date">19/4</time><a href="http://feedproxy.google.com/~r/davybrion/~3/uXaRMjqjhFA/">It’s Not About The Number Of Hours You Put In</a></li>
-                            <li><time class="date">15/4</time><a href="http://feedproxy.google.com/~r/davybrion/~3/v0N7GPTJ8-o/">Most Valuable Professionals? Give Me A Break.</a></li>
+                            <li><time class="date">14/5</time><a href="http://thatextramile.be/blog/2012/05/and-thats-all-folks/">And… That’s All Folks</a></li>
+                            <li><time class="date">13/5</time><a href="http://thatextramile.be/blog/2012/05/why-things-dont-work-in-your-world/">Why Things Don’t Work In Your World</a></li>
+                            <li><time class="date">6/5</time><a href="http://thatextramile.be/blog/2012/05/three-strikes-and-you-refactor/">Three Strikes And You Refactor</a></li>
+                            <li><time class="date">19/4</time><a href="http://thatextramile.be/blog/2012/04/its-not-about-the-number-of-hours-you-put-in/">It’s Not About The Number Of Hours You Put In</a></li>
+                            <li><time class="date">9/4</time><a href="http://thatextramile.be/blog/2012/04/microsoft-and-open-source-hoping-for-better-collaboration/">Microsoft And Open Source: Hoping For Better Collaboration</a></li>
                         </ul>
                     </div>
-
-                    <a href="http://davybrion.com">take me to the blog</a>
                 </section>
 
                 <div class="copyright">

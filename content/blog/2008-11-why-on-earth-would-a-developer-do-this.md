@@ -1,0 +1,11 @@
+I just saw the following piece of code:
+
+<script src="https://gist.github.com/3684099.js?file=s1.cs"></script>
+
+The code is old, pre .NET 2.0.  But no, the usage of the ArrayList isn't what bothers me here.  It first gets all of the Id values for all of the employees in the database.  Then it loops through the list of Id values, and fetches each employee from the database.  Whenever I see this kind of code, it makes me want to kick the person who wrote it.  
+
+In case you don't know what is so bad about this, think about this: if you have 5 employees you first send one select statement to the database to get their id values.  Then you send another 5 select statements to the database to get the data of each employee.  Oh well, 6 queries isn't that big of a deal right? It sure as hell is if you could've just as easily gotten all of the required data with one query (and only one expensive roundtrip)!  Imagine you have to calculate the paychecks of 100 employees instead of 5.  How about 1000 employees? 
+
+What I really don't understand about this is that this kind of code gets written <strong>every</strong> day.  Do these people simply don't care or do they genuinely not know how bad this is?  If they don't know, that's truly sad.  If they don't care, that's even worse because a developer who knows how bad this is but still writes it, obviously takes no pride at all in his/her work and (IMO) has little respect for the code, the team, the company and the client.
+
+In case you're wondering where I saw this code... it's in Robert C. Martin's <a href="http://www.amazon.com/Principles-Patterns-Practices-Robert-Martin/dp/0131857258/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1227365619&sr=8-1">Agile Principles, Patterns, and Practices in C#</a> book.  Yes, <strong>the</strong> Robert C. Martin, aka Uncle Bob.  I probably shouldn't criticize such a well known figure in the OO world, but seriously Bob, what were you smoking? The purpose of the whole book is to teach people how to write good code and there is tremendous amount of valuable information in there.  But putting code like this in your examples is really inexcusable.

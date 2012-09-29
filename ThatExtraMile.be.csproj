@@ -45,14 +45,21 @@
       <HintPath>packages\MarkdownSharp.1.13.0.0\lib\35\MarkdownSharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Nancy">
-      <HintPath>packages\Nancy.0.11.0\lib\net40\Nancy.dll</HintPath>
+    <Reference Include="Nancy, Version=0.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Nancy.0.12.0\lib\net40\Nancy.dll</HintPath>
     </Reference>
-    <Reference Include="Nancy.Hosting.Aspnet">
-      <HintPath>packages\Nancy.Hosting.Aspnet.0.11.0\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
+    <Reference Include="Nancy.Hosting.Aspnet, Version=0.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Nancy.Hosting.Aspnet.0.12.0\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
     </Reference>
-    <Reference Include="Nancy.ViewEngines.Razor">
-      <HintPath>packages\Nancy.Viewengines.Razor.0.11.0\lib\net40\Nancy.ViewEngines.Razor.dll</HintPath>
+    <Reference Include="Nancy.ViewEngines.Razor, Version=0.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Nancy.Viewengines.Razor.0.12.0\lib\net40\Nancy.ViewEngines.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=3.9.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\ServiceStack.Text.3.9.11\lib\net35\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
@@ -62,12 +69,12 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>packages\Nancy.Viewengines.Razor.0.11.0\lib\net40\System.Web.Razor.dll</HintPath>
-    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Nancy.Viewengines.Razor.0.12.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -84,11 +91,10 @@
     <Content Include="static\images\assets\logo-small.png" />
     <Content Include="static\images\assets\logo.png" />
     <Content Include="static\images\assets\logo_mail_sig.png" />
-    <Content Include="static\images\assets\nav-back.png" />
+    <Content Include="static\images\assets\nav7-back.png" />
     <Content Include="static\images\icons\arrow-1-yellow-right.png" />
     <Content Include="static\images\icons\linkedin.png" />
     <Content Include="static\images\icons\rss.png" />
-    <Content Include="static\images\icons\twitter.png" />
     <Content Include="static\images\patterns\stripe-diag-1-black.png" />
     <Content Include="static\js\libs\jquery-1.7.1.min.js" />
     <Content Include="static\js\libs\modernizr.min.js" />
@@ -96,15 +102,54 @@
     <Content Include="static\js\libs\selectivizr.js" />
     <Content Include="static\js\master.js" />
     <Content Include="static\js\plugins.js" />
+    <Content Include="static\postcontent\add_service_reference.png" />
+    <Content Include="static\postcontent\add_service_reference_thumb.png" />
+    <Content Include="static\postcontent\all_time_countries.png" />
+    <Content Include="static\postcontent\average_difference_in_millis_for_each_action.png" />
+    <Content Include="static\postcontent\average_duration_of_each_action_in_millis.png" />
+    <Content Include="static\postcontent\average_scenario_duration.png" />
+    <Content Include="static\postcontent\average_scenario_duration_difference.png" />
+    <Content Include="static\postcontent\average_scenario_duration_difference_without_last_4_actions.png" />
+    <Content Include="static\postcontent\average_scenario_duration_without_last_4_actions.png" />
+    <Content Include="static\postcontent\create_service.png" />
+    <Content Include="static\postcontent\create_service_thumb.png" />
+    <Content Include="static\postcontent\customerdata.png" />
+    <Content Include="static\postcontent\dependencies.png" />
+    <Content Include="static\postcontent\feed_items.png" />
+    <Content Include="static\postcontent\first.png" />
+    <Content Include="static\postcontent\full_solution_tree.png" />
+    <Content Include="static\postcontent\image001.png" />
+    <Content Include="static\postcontent\isession.png" />
+    <Content Include="static\postcontent\istatelesssession.png" />
+    <Content Include="static\postcontent\last_month_countries.png" />
+    <Content Include="static\postcontent\sample_both_controls.png" />
+    <Content Include="static\postcontent\sample_details1.png" />
+    <Content Include="static\postcontent\sample_overview1.png" />
+    <Content Include="static\postcontent\searchproducts.png" />
+    <Content Include="static\postcontent\second.png" />
+    <Content Include="static\postcontent\smaller_solution_tree.png" />
+    <Content Include="static\postcontent\step1.png" />
+    <Content Include="static\postcontent\step2.png" />
+    <Content Include="static\postcontent\step3.png" />
+    <Content Include="static\postcontent\step4.png" />
+    <Content Include="static\postcontent\step5.png" />
+    <Content Include="static\postcontent\step6.png" />
+    <Content Include="static\postcontent\transitive_persistence41.png" />
+    <Content Include="static\postcontent\transitive_persistence411.png" />
+    <Content Include="static\postcontent\usableencapsulatedcollection.png" />
+    <Content Include="static\postcontent\webdev_vs_silverlight.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlogPost.cs" />
     <Compile Include="BootStrapper.cs" />
-    <Compile Include="ContentProvider.cs" />
+    <Compile Include="ContentTransformer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SiteModule.cs" />
+    <Compile Include="ViewModels\BlogPostsOverviewViewModel.cs" />
+    <Compile Include="ViewModels\BlogPostViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -117,14 +162,360 @@
     <Content Include="content\reviews.md" />
     <Content Include="content\training.md" />
     <Content Include="Views\_Layout.cshtml" />
-    <Content Include="Views\MarkDown.cshtml" />
+    <Content Include="Views\NormalContentPage.cshtml" />
+    <Content Include="content\blog\2007-06-programming-languages-dont-matter.md" />
+    <Content Include="content\blog\2007-06-why-you-should-write-tests-before-code.md" />
+    <Content Include="content\blog\2007-07-implementing-a-value-object.md" />
+    <Content Include="content\blog\2007-07-introduction-to-dependency-injection.md" />
+    <Content Include="content\blog\2007-07-native-id-generation-with-nhibernate.md" />
+    <Content Include="content\blog\2007-08-read-only-data-in-nhibernate.md" />
+    <Content Include="content\blog\2007-12-tech-blogs-the-good-the-bad-and-the-ugly.md" />
+    <Content Include="content\blog\2008-01-sending-nhibernate-entities-over-the-wcf-wire.md" />
+    <Content Include="content\blog\2008-02-creating-remote-tcpip-printer-ports-from-code.md" />
+    <Content Include="content\blog\2008-02-the-mythical-man-month.md" />
+    <Content Include="content\blog\2008-03-encapsulating-collections.md" />
+    <Content Include="content\blog\2008-04-kent-becks-implementation-patterns.md" />
+    <Content Include="content\blog\2008-04-testing-exceptions.md" />
+    <Content Include="content\blog\2008-05-easy-non-blocking-locking.md" />
+    <Content Include="content\blog\2008-05-how-a-simple-foreach-statement-can-waste-an-afternoon.md" />
+    <Content Include="content\blog\2008-05-release-it.md" />
+    <Content Include="content\blog\2008-05-storing-data-in-the-httpsession.md" />
+    <Content Include="content\blog\2008-05-the-art-of-agile-development.md" />
+    <Content Include="content\blog\2008-05-the-circuit-breaker.md" />
+    <Content Include="content\blog\2008-05-thoughts-on-code-reviews.md" />
+    <Content Include="content\blog\2008-06-are-women-better-developers-than-men.md" />
+    <Content Include="content\blog\2008-06-c-in-depth.md" />
+    <Content Include="content\blog\2008-06-disposing-of-the-idisposable-implementation.md" />
+    <Content Include="content\blog\2008-07-how-to-write-testable-aspnet-webforms.md" />
+    <Content Include="content\blog\2008-07-is-sql-going-the-way-of-disco.md" />
+    <Content Include="content\blog\2008-07-many-projects-dont-lead-to-a-good-solution.md" />
+    <Content Include="content\blog\2008-07-mocking-expensive-template-methods.md" />
+    <Content Include="content\blog\2008-07-my-guide-to-effective-test-driven-development.md" />
+    <Content Include="content\blog\2008-08-altnet-what-does-it-mean.md" />
+    <Content Include="content\blog\2008-08-batching-sqlcommand-queries.md" />
+    <Content Include="content\blog\2008-08-easing-the-pain-of-wcf-debugging.md" />
+    <Content Include="content\blog\2008-08-net-memory-management.md" />
+    <Content Include="content\blog\2008-08-recommended-books-clean-code.md" />
+    <Content Include="content\blog\2008-08-software-development-books-investing-in-yourself.md" />
+    <Content Include="content\blog\2008-08-test-doubles-when-to-not-use-them.md" />
+    <Content Include="content\blog\2008-08-what-do-you-like-about-coding.md" />
+    <Content Include="content\blog\2008-08-why-the-altnet-community-needs-to-change-their-ways.md" />
+    <Content Include="content\blog\2008-08-why-you-should-always-unscubscribe-event-handlers.md" />
+    <Content Include="content\blog\2008-09-beware-the-evils-of-code-generation.md" />
+    <Content Include="content\blog\2008-09-code-health.md" />
+    <Content Include="content\blog\2008-09-is-teaching-tdd-worth-it.md" />
+    <Content Include="content\blog\2008-09-make-it-work-make-it-clean.md" />
+    <Content Include="content\blog\2008-09-recommended-books-working-effectively-with-legacy-code.md" />
+    <Content Include="content\blog\2008-09-technical-interviews-what-questions-to-ask.md" />
+    <Content Include="content\blog\2008-09-the-select-command-batcher.md" />
+    <Content Include="content\blog\2008-09-wcf-and-large-amounts-of-data.md" />
+    <Content Include="content\blog\2008-09-what-a-slow-build-might-tell-you.md" />
+    <Content Include="content\blog\2008-09-when-commented-out-code-is-acceptable.md" />
+    <Content Include="content\blog\2008-10-batching-nhibernates-dm-statements.md" />
+    <Content Include="content\blog\2008-10-bulk-data-operations-with-nhibernates-stateless-sessions.md" />
+    <Content Include="content\blog\2008-10-career-advice-for-young-developers.md" />
+    <Content Include="content\blog\2008-10-do-not-dispose-in-the-prerender-event.md" />
+    <Content Include="content\blog\2008-10-how-to-write-testable-aspnet-usercontrols.md" />
+    <Content Include="content\blog\2008-10-ordering-on-joined-columnsproperties-with-nhibernate.md" />
+    <Content Include="content\blog\2008-11-agile-development-going-downhill.md" />
+    <Content Include="content\blog\2008-11-orm-is-not-inherently-evil.md" />
+    <Content Include="content\blog\2008-11-populating-entities-from-stored-procedures-with-nhibernate.md" />
+    <Content Include="content\blog\2008-11-populating-entities-with-associations-from-stored-procedures-with-nhibernate.md" />
+    <Content Include="content\blog\2008-11-the-only-way-to-test-private-methods.md" />
+    <Content Include="content\blog\2008-11-why-on-earth-would-a-developer-do-this.md" />
+    <Content Include="content\blog\2008-12-assembly-partioning-advice.md" />
+    <Content Include="content\blog\2008-12-batching-remote-operations-is-not-premature-optimization.md" />
+    <Content Include="content\blog\2008-12-do-not-litter-your-code-with-null-check.md" />
+    <Content Include="content\blog\2008-12-junior-vs-senior-developers.md" />
+    <Content Include="content\blog\2008-12-so-whats-nhibernate-development-like.md" />
+    <Content Include="content\blog\2008-12-the-component-burden.md" />
+    <Content Include="content\blog\2008-12-the-importance-of-releasing-your-components-through-windsor.md" />
+    <Content Include="content\blog\2008-12-the-resolvable.md" />
+    <Content Include="content\blog\2008-12-the-unrealistic-deadline-anti-pattern.md" />
+    <Content Include="content\blog\2008-12-tired-of-working-with-big-visual-studio-solutions.md" />
+    <Content Include="content\blog\2008-12-what-it-takes-to-be-a-great-technical-lead.md" />
+    <Content Include="content\blog\2009-01-abstracting-request-state.md" />
+    <Content Include="content\blog\2009-01-ethics-in-software-development-pragmatism-over-dogmatism.md" />
+    <Content Include="content\blog\2009-01-framework-configuration-a-different-approach.md" />
+    <Content Include="content\blog\2009-01-great-links-on-using-garbage-collection-efficiently.md" />
+    <Content Include="content\blog\2009-01-i-dont-really-see-the-problem-with-nhibernates-xml-mapping-files.md" />
+    <Content Include="content\blog\2009-01-my-2-most-cherished-mistakes.md" />
+    <Content Include="content\blog\2009-01-nhibernate-and-future-queries-part-2.md" />
+    <Content Include="content\blog\2009-01-nhibernate-and-future-queries.md" />
+    <Content Include="content\blog\2009-01-recommended-books-behind-closed-doors-secrets-of-great-management.md" />
+    <Content Include="content\blog\2009-01-the-life-and-times-of-a-bug.md" />
+    <Content Include="content\blog\2009-01-we-all-write-bad-code.md" />
+    <Content Include="content\blog\2009-01-which-path-to-follow.md" />
+    <Content Include="content\blog\2009-02-book-review-building-domain-specific-languages-in-boo.md" />
+    <Content Include="content\blog\2009-02-buzzword-driven-development-isnt-gonna-help-you.md" />
+    <Content Include="content\blog\2009-02-challenge-do-you-truly-understand-this-code.md" />
+    <Content Include="content\blog\2009-02-performance-rules-of-thumb.md" />
+    <Content Include="content\blog\2009-02-quickly-setting-up-and-using-nhibernates-second-level-cache.md" />
+    <Content Include="content\blog\2009-02-silverlights-progressbar-and-possible-memory-leaks.md" />
+    <Content Include="content\blog\2009-02-the-commented-version-of-the-readable-code-challeng.md" />
+    <Content Include="content\blog\2009-02-the-other-kind-of-exception-handling.md" />
+    <Content Include="content\blog\2009-02-the-tests-for-the-readable-code-challenge.md" />
+    <Content Include="content\blog\2009-03-avoiding-mysqls-max_join_size-limit-with-nhibernate.md" />
+    <Content Include="content\blog\2009-03-book-review-97-things-every-software-architect-should-know.md" />
+    <Content Include="content\blog\2009-03-book-review-nhibernate-in-action.md" />
+    <Content Include="content\blog\2009-03-calculating-the-size-of-soap-messages.md" />
+    <Content Include="content\blog\2009-03-continuous-integration-101.md" />
+    <Content Include="content\blog\2009-03-entities-required-properties-and-properties-that-shouldnt-be-modified.md" />
+    <Content Include="content\blog\2009-03-i-love-easy-extensibility.md" />
+    <Content Include="content\blog\2009-03-implementing-a-value-object-with-nhibernate.md" />
+    <Content Include="content\blog\2009-03-must-everything-be-virtual-with-nhibernate.md" />
+    <Content Include="content\blog\2009-03-silverlight-localization-gotcha.md" />
+    <Content Include="content\blog\2009-03-smarten-up-instead-of-generating-dumb-tests.md" />
+    <Content Include="content\blog\2009-03-support-of-commercial-software-vs-open-source-software.md" />
+    <Content Include="content\blog\2009-03-what-id-like-to-see-at-microsofts-technical-events.md" />
+    <Content Include="content\blog\2009-03-why-dont-we-learn.md" />
+    <Content Include="content\blog\2009-04-assigning-foreign-keys-in-nhibernate.md" />
+    <Content Include="content\blog\2009-04-at-this-point-id-prefer-java-developers-over-net-developers.md" />
+    <Content Include="content\blog\2009-04-educate-developers-instead-of-protecting-them.md" />
+    <Content Include="content\blog\2009-04-guaranteeing-disposal-of-usercontrols-in-aspnet.md" />
+    <Content Include="content\blog\2009-04-nhibernates-future-queries-and-their-fallback-behavior.md" />
+    <Content Include="content\blog\2009-04-put-performance-concerns-into-perspective.md" />
+    <Content Include="content\blog\2009-04-the-good-the-bad-and-the-ugly-in-the-net-world.md" />
+    <Content Include="content\blog\2009-04-the-joys-of-debugging-aspnet-memory-leaks.md" />
+    <Content Include="content\blog\2009-04-transparent-query-batching-through-your-repository.md" />
+    <Content Include="content\blog\2009-04-using-sql-functions-in-criteria-restrictions.md" />
+    <Content Include="content\blog\2009-05-continuous-integration-on-a-real-big-project.md" />
+    <Content Include="content\blog\2009-05-keep-an-eye-on-those-indexes.md" />
+    <Content Include="content\blog\2009-05-on-getting-rid-of-common-libraries-what-about-dont-repeat-yourself.md" />
+    <Content Include="content\blog\2009-05-using-the-guidcomb-identifier-strategy.md" />
+    <Content Include="content\blog\2009-05-what-microsoft-should-do-for-net-open-source.md" />
+    <Content Include="content\blog\2009-05-why-are-mutable-value-types-even-possible.md" />
+    <Content Include="content\blog\2009-07-protecting-your-application-from-remote-problems.md" />
+    <Content Include="content\blog\2009-07-when-you-absolutely-need-to-use-a-real-database-in-tests.md" />
+    <Content Include="content\blog\2009-07-why-i-dislike-classic-or-typical-wcf-usage.md" />
+    <Content Include="content\blog\2009-08-build-your-own-data-access-layer-bringing-it-all-together.md" />
+    <Content Include="content\blog\2009-08-build-your-own-data-access-layer-conclusions.md" />
+    <Content Include="content\blog\2009-08-build-your-own-data-access-layer-executing-custom-queries.md" />
+    <Content Include="content\blog\2009-08-build-your-own-data-access-layer-hydrating-entities.md" />
+    <Content Include="content\blog\2009-08-build-your-own-data-access-layer-lazy-loading.md" />
+    <Content Include="content\blog\2009-08-build-your-own-data-access-layer-mapping-classes-to-tables.md" />
+    <Content Include="content\blog\2009-08-build-your-own-data-access-layer-out-of-the-box-crud-functionality.md" />
+    <Content Include="content\blog\2009-08-build-your-own-data-access-layer-series.md" />
+    <Content Include="content\blog\2009-08-build-your-own-data-access-layer-session-level-cache.md" />
+    <Content Include="content\blog\2009-08-choose-the-right-goals.md" />
+    <Content Include="content\blog\2009-08-finding-memory-leaks-in-silverlight-with-windbg.md" />
+    <Content Include="content\blog\2009-08-of-course-nhibernate-is-slow-when-you-use-it-incorrectly.md" />
+    <Content Include="content\blog\2009-08-there-is-no-excuse-for-failing-queries-in-production.md" />
+    <Content Include="content\blog\2009-08-this-is-why-i-dont-like-microsofts-way-of-open-source-development.md" />
+    <Content Include="content\blog\2009-08-tracking-dangling-object-references-in-silverlight.md" />
+    <Content Include="content\blog\2009-09-5-reasons-why-silverlight-is-my-preferred-web-development-platform.md" />
+    <Content Include="content\blog\2009-09-avoiding-or-recovering-from-burnout.md" />
+    <Content Include="content\blog\2009-09-event-subscribtion-and-memory-leaks-yet-again.md" />
+    <Content Include="content\blog\2009-09-monitoring-production-performance.md" />
+    <Content Include="content\blog\2009-09-more-orm-ignoranc.md" />
+    <Content Include="content\blog\2009-09-must-everything-be-virtual-with-nhibernate-part-ii.md" />
+    <Content Include="content\blog\2009-09-must-everything-be-virtual-with-nhibernate-part-iii.md" />
+    <Content Include="content\blog\2009-09-recommended-books-ship-it.md" />
+    <Content Include="content\blog\2009-09-reducing-viewstate-size.md" />
+    <Content Include="content\blog\2009-09-slides-of-my-nhibernate-talk.md" />
+    <Content Include="content\blog\2009-09-what-kind-of-developer-are-you.md" />
+    <Content Include="content\blog\2009-10-build-your-own-data-access-layer-enabling-bulk-inserts.md" />
+    <Content Include="content\blog\2009-10-event-aggregation.md" />
+    <Content Include="content\blog\2009-10-finally-some-real-improvements-for-automated-testing-in-net.md" />
+    <Content Include="content\blog\2009-10-prefixing-instance-fields.md" />
+    <Content Include="content\blog\2009-10-slutty-types.md" />
+    <Content Include="content\blog\2009-10-stop-exposing-collections-already.md" />
+    <Content Include="content\blog\2009-10-testability-of-date-dependent-code.md" />
+    <Content Include="content\blog\2009-10-theres-only-one-thing-you-can-learn-from-code-coverage.md" />
+    <Content Include="content\blog\2009-10-thoughts-on-intellectual-honesty-and-personal-ambitions.md" />
+    <Content Include="content\blog\2009-10-why-nhibernate-entities-need-a-public-or-protected-parameterless-constructor.md" />
+    <Content Include="content\blog\2009-11-a-reading-guide-to-becoming-a-better-developer.md" />
+    <Content Include="content\blog\2009-11-constructor-injection-vs-sette-injection.md" />
+    <Content Include="content\blog\2009-11-hello-world-with-agatha.md" />
+    <Content Include="content\blog\2009-11-integrated-security-with-silverlight-and-wcf.md" />
+    <Content Include="content\blog\2009-11-integrating-your-ioc-container-with-agatha.md" />
+    <Content Include="content\blog\2009-11-introducing-the-agatha-project.md" />
+    <Content Include="content\blog\2009-11-requestresponse-service-layer-asynchronous-client-side-usage.md" />
+    <Content Include="content\blog\2009-11-requestresponse-service-layer-conclusions.md" />
+    <Content Include="content\blog\2009-11-requestresponse-service-layer-exposing-the-service-layer-through-wcf.md" />
+    <Content Include="content\blog\2009-11-requestresponse-service-layer-handling-requests.md" />
+    <Content Include="content\blog\2009-11-requestresponse-service-layer-processing-requests.md" />
+    <Content Include="content\blog\2009-11-requestresponse-service-layer-requests-and-responses.md" />
+    <Content Include="content\blog\2009-11-requestresponse-service-layer-series.md" />
+    <Content Include="content\blog\2009-11-requestresponse-service-layer-synchronous-client-side-usage.md" />
+    <Content Include="content\blog\2009-11-requestresponse-service-layer-testing-asynchronous-client-side-usage.md" />
+    <Content Include="content\blog\2009-11-requestresponse-service-layer-testing-synchronous-client-side-usage.md" />
+    <Content Include="content\blog\2009-11-theres-lazy-loading-and-then-theres-lazy-coding.md" />
+    <Content Include="content\blog\2009-12-dont-be-a-whiny-developer.md" />
+    <Content Include="content\blog\2009-12-enabling-logging-in-your-agatha-service-layer.md" />
+    <Content Include="content\blog\2009-12-one-way-or-fire-and-forget-requests-with-agatha.md" />
+    <Content Include="content\blog\2009-12-real-world-benefits-from-loose-coupling-inversion-of-control-and-dependency-injection.md" />
+    <Content Include="content\blog\2009-12-recommended-book-97-things-every-project-manager-should-know.md" />
+    <Content Include="content\blog\2009-12-running-an-agatha-service-layer-in-process-without-wcf.md" />
+    <Content Include="content\blog\2009-12-software-patents-our-industrys-nuclear-weapon.md" />
+    <Content Include="content\blog\2009-12-testing-crud-operations-with-nhibernate.md" />
+    <Content Include="content\blog\2009-12-the-padawa-that-couldnt.md" />
+    <Content Include="content\blog\2009-12-unit-testing-an-nhibernate-application.md" />
+    <Content Include="content\blog\2009-12-you-can-benefit-from-open-sourcing-your-code.md" />
+    <Content Include="content\blog\2010-01-agatha-vs-nservicebus.md" />
+    <Content Include="content\blog\2010-01-as-a-movement-alt-net-has-been-dead-for-a-while.md" />
+    <Content Include="content\blog\2010-01-career-advice-for-young-developers-part-2.md" />
+    <Content Include="content\blog\2010-01-dependency-injection-inversion-rejection.md" />
+    <Content Include="content\blog\2010-01-dont-strive-for-perfection.md" />
+    <Content Include="content\blog\2010-01-good-team-dynamics-are-essential-for-high-technical-quality.md" />
+    <Content Include="content\blog\2010-01-hey-microsoft-our-databases-arent-services.md" />
+    <Content Include="content\blog\2010-01-highly-recommended-book-debug-it.md" />
+    <Content Include="content\blog\2010-01-inversion-of-control-containers-and-factories-arent-mutually-exclusive.md" />
+    <Content Include="content\blog\2010-01-is-there-a-good-reason-to-hide-inherited-members.md" />
+    <Content Include="content\blog\2010-01-never-underestimate-your-own-stupidity.md" />
+    <Content Include="content\blog\2010-01-omg-someone-stole-my-code.md" />
+    <Content Include="content\blog\2010-01-securing-your-agatha-service-layer.md" />
+    <Content Include="content\blog\2010-01-theres-nothing-courageous-about-being-honest-about-mistakes.md" />
+    <Content Include="content\blog\2010-02-have-you-jumped-on-the-bandwagon-yet.md" />
+    <Content Include="content\blog\2010-02-wanna-review-my-code.md" />
+    <Content Include="content\blog\2010-02-when-it-comes-to-ioc-containers-we-seem-to-be-pretty-loyal.md" />
+    <Content Include="content\blog\2010-02-youll-never-get-sustainable-progress-for-free.md" />
+    <Content Include="content\blog\2010-03-everybody-wins-in-the-certification-game.md" />
+    <Content Include="content\blog\2010-03-msdtc-woes-with-nservicebus-and-nhibernate.md" />
+    <Content Include="content\blog\2010-03-using-copy-on-write-in-multithreaded-code-to-reduce-locking-overhead.md" />
+    <Content Include="content\blog\2010-04-clients-shouldnt-define-your-services.md" />
+    <Content Include="content\blog\2010-05-avoiding-leaking-connections-with-nhibernate-and-transactionscope.md" />
+    <Content Include="content\blog\2010-05-consuming-an-agatha-service-from-a-non-agatha-aware-client.md" />
+    <Content Include="content\blog\2010-05-consuming-multiple-agatha-services.md" />
+    <Content Include="content\blog\2010-05-why-you-shouldnt-expose-your-entities-through-your-services.md" />
+    <Content Include="content\blog\2010-06-if-you-cant-say-something-bad-about-it-you-dont-know-it-well-enough.md" />
+    <Content Include="content\blog\2010-06-isolation-at-work-good-or-bad.md" />
+    <Content Include="content\blog\2010-06-using-agathas-server-side-caching.md" />
+    <Content Include="content\blog\2010-06-why-do-we-recycle-our-application-pools.md" />
+    <Content Include="content\blog\2010-06-working-overtime-what-it-really-means.md" />
+    <Content Include="content\blog\2010-07-estimates-are-a-double-edged-sword.md" />
+    <Content Include="content\blog\2010-07-the-mvvm-pattern-is-highly-overrated.md" />
+    <Content Include="content\blog\2010-07-which-language-do-you-code-in.md" />
+    <Content Include="content\blog\2010-08-auto-wiring-ruby-events.md" />
+    <Content Include="content\blog\2010-08-book-review-the-ruby-way-second-edition.md" />
+    <Content Include="content\blog\2010-08-can-an-object-grow.md" />
+    <Content Include="content\blog\2010-08-compilerinterpreter-warnings-are-important-learning-opportunities.md" />
+    <Content Include="content\blog\2010-08-first-experiences-with-rspecbdd.md" />
+    <Content Include="content\blog\2010-08-highly-recommended-book-the-ruby-programming-language.md" />
+    <Content Include="content\blog\2010-08-how-i-feel-about-the-net-world-lately.md" />
+    <Content Include="content\blog\2010-08-mvp-in-silverlightwpf-architectural-overview.md" />
+    <Content Include="content\blog\2010-08-mvp-in-silverlightwpf-conclusions.md" />
+    <Content Include="content\blog\2010-08-mvp-in-silverlightwpf-implementing-the-details-usercontrol.md" />
+    <Content Include="content\blog\2010-08-mvp-in-silverlightwpf-implementing-the-overview-usercontrol.md" />
+    <Content Include="content\blog\2010-08-mvp-in-silverlightwpf-series-automated-tests.md" />
+    <Content Include="content\blog\2010-08-mvp-in-silverlightwpf-series.md" />
+    <Content Include="content\blog\2010-08-mvp-in-silverlightwpf-some-infrastructure-bits.md" />
+    <Content Include="content\blog\2010-08-mvp-in-silverlightwpf-the-sample.md" />
+    <Content Include="content\blog\2010-08-once-again-comments-in-code-arent-necessarily-bad.md" />
+    <Content Include="content\blog\2010-08-using-agathas-client-side-caching.md" />
+    <Content Include="content\blog\2010-08-using-c-style-events-in-ruby.md" />
+    <Content Include="content\blog\2010-08-using-more-rubyesq-events-in-ruby.md" />
+    <Content Include="content\blog\2010-08-why-agile-in-the-enterprise-generally-doesnt-work.md" />
+    <Content Include="content\blog\2010-09-highly-recommended-book-metaprogramming-ruby.md" />
+    <Content Include="content\blog\2010-09-keep-your-eyes-on-the-road.md" />
+    <Content Include="content\blog\2010-09-think-twice-before-you-map-entities-to-dtos.md" />
+    <Content Include="content\blog\2010-09-using-nhibernate-to-persist-and-query-ruby-objects.md" />
+    <Content Include="content\blog\2010-09-using-ruby-classes-in-c-with-ironruby.md" />
+    <Content Include="content\blog\2010-09-whats-up-with-these-belgians.md" />
+    <Content Include="content\blog\2010-09-writing-a-simple-dsl.md" />
+    <Content Include="content\blog\2010-09-you-need-to-step-out-of-your-comfort-zone.md" />
+    <Content Include="content\blog\2010-10-developers-shouldnt-specialize.md" />
+    <Content Include="content\blog\2010-10-do-you-still-believe-in-silverlight.md" />
+    <Content Include="content\blog\2010-10-highly-recommended-book-rework.md" />
+    <Content Include="content\blog\2010-10-performance-of-nhibernate-with-ruby-objects-compared-to-traditional-c-objects.md" />
+    <Content Include="content\blog\2010-10-recommended-book-dsls-in-action.md" />
+    <Content Include="content\blog\2010-10-recommended-book-ironruby-unleashed.md" />
+    <Content Include="content\blog\2010-10-recommended-book-nhibernate-3-0-cookbook.md" />
+    <Content Include="content\blog\2010-10-start-believing-in-yourself.md" />
+    <Content Include="content\blog\2010-10-the-truth-is-in-the-code-unless-it-isnt.md" />
+    <Content Include="content\blog\2010-10-wanna-improve-your-life-then-do-something-about-it.md" />
+    <Content Include="content\blog\2010-10-why-you-dont-need-dependency-injection-in-ruby.md" />
+    <Content Include="content\blog\2010-11-favor-value-over-quality.md" />
+    <Content Include="content\blog\2010-11-never-underestimate-the-power-of-a-message.md" />
+    <Content Include="content\blog\2010-12-a-little-piece-of-advice-for-tech-bloggers.md" />
+    <Content Include="content\blog\2010-12-highly-recommended-book-the-passionate-programmer.md" />
+    <Content Include="content\blog\2011-01-dont-be-afraid-to-change-your-mind.md" />
+    <Content Include="content\blog\2011-01-how-developers-should-read-exceptions.md" />
+    <Content Include="content\blog\2011-01-learn-to-work-with-the-web-instead-of-against-it.md" />
+    <Content Include="content\blog\2011-01-prefixing-input-elements-of-partial-views-with-asp-net-mvc.md" />
+    <Content Include="content\blog\2011-01-thou-shalt-name-thy-parameter-command.md" />
+    <Content Include="content\blog\2011-01-walk-out-on-sources-of-negativity.md" />
+    <Content Include="content\blog\2011-02-recommended-book-html5-and-css3-develop-with-tomorrows-standards-today.md" />
+    <Content Include="content\blog\2011-02-recommended-book-jquery-in-action.md" />
+    <Content Include="content\blog\2011-02-theres-only-one-valid-metric-for-developer-productivity-and-quality.md" />
+    <Content Include="content\blog\2011-02-using-distributed-caching-with-agatha.md" />
+    <Content Include="content\blog\2011-02-using-generic-testfixtures-to-run-tests-in-multiple-browsers-with-watin.md" />
+    <Content Include="content\blog\2011-03-convention-based-localization-with-asp-net-mvc.md" />
+    <Content Include="content\blog\2011-03-highly-recommended-book-rest-in-practice.md" />
+    <Content Include="content\blog\2011-03-recommended-book-apprenticeship-patterns.md" />
+    <Content Include="content\blog\2011-03-sharing-an-ie-instance-among-multiple-tests-with-watin-and-ms-test.md" />
+    <Content Include="content\blog\2011-03-thoughts-on-developer-longevity.md" />
+    <Content Include="content\blog\2011-03-who-needs-classes-anyway.md" />
+    <Content Include="content\blog\2011-03-why-were-going-with-html5-instead-of-silverlight.md" />
+    <Content Include="content\blog\2011-04-automatically-including-current-language-in-generated-urls-with-asp-net-mvc.md" />
+    <Content Include="content\blog\2011-04-customizing-asp-net-mvcs-required-property-validation-messages.md" />
+    <Content Include="content\blog\2011-04-nhibernate-examples.md" />
+    <Content Include="content\blog\2011-05-going-independent-is-the-best-move-i-ever-made.md" />
+    <Content Include="content\blog\2011-06-yet-another-nail-in-silverlights-coffin.md" />
+    <Content Include="content\blog\2011-06-you-might-want-to-start-taking-javascript-seriously.md" />
+    <Content Include="content\blog\2011-07-arguing-about-developer-communities-doesnt-make-sense.md" />
+    <Content Include="content\blog\2011-07-clean-code-versus-great-code.md" />
+    <Content Include="content\blog\2011-07-cv-likes-and-dislikes.md" />
+    <Content Include="content\blog\2011-07-first-steps-with-mongodb-mongoose-and-jasmine-node-on-node-js.md" />
+    <Content Include="content\blog\2011-07-qa-putting-a-training-course-together.md" />
+    <Content Include="content\blog\2011-07-review-of-my-nhibernate-course.md" />
+    <Content Include="content\blog\2011-08-advantages-of-being-a-polyglot-programmer.md" />
+    <Content Include="content\blog\2011-08-solving-a-problem-by-avoiding-it.md" />
+    <Content Include="content\blog\2011-08-take-advantage-of-your-bdd-framework.md" />
+    <Content Include="content\blog\2011-08-using-frameworks-doesnt-mean-you-dont-have-to-know-what-youre-doing.md" />
+    <Content Include="content\blog\2011-08-using-mongooses-setters-to-get-calculated-properties.md" />
+    <Content Include="content\blog\2011-09-maintaining-bad-code-can-be-a-great-experience.md" />
+    <Content Include="content\blog\2011-09-repeated-failed-log-ins-whats-your-strategy.md" />
+    <Content Include="content\blog\2011-09-the-worst-code-i-ever-wrote-and-why-im-still-happy-about-it.md" />
+    <Content Include="content\blog\2011-09-why-i-prefer-javascript-over-coffeescript.md" />
+    <Content Include="content\blog\2011-10-developers-need-to-keep-challenging-themselves.md" />
+    <Content Include="content\blog\2011-10-the-competition-innovation-relationship-we-all-benefit-from.md" />
+    <Content Include="content\blog\2011-10-the-non-typical-net-job.md" />
+    <Content Include="content\blog\2011-10-you-need-your-time-off.md" />
+    <Content Include="content\blog\2011-11-does-certification-have-any-value.md" />
+    <Content Include="content\blog\2011-11-faster-hardware-not-on-our-budget.md" />
+    <Content Include="content\blog\2011-11-silverlights-broken-promise.md" />
+    <Content Include="content\blog\2011-11-thoughts-on-steve-jobs-the-book-and-the-man.md" />
+    <Content Include="content\blog\2011-12-blue-pill-vs-red-pill.md" />
+    <Content Include="content\blog\2011-12-challenge-displaying-feed-items-on-a-web-page.md" />
+    <Content Include="content\blog\2011-12-displaying-feed-items-on-a-web-page-my-solution.md" />
+    <Content Include="content\blog\2011-12-node-js-for-dummies.md" />
+    <Content Include="content\blog\2012-01-hosting-a-node-js-site-through-apache.md" />
+    <Content Include="content\blog\2012-01-how-do-you-pick-open-source-libraries.md" />
+    <Content Include="content\blog\2012-01-stop-storing-passwords-already.md" />
+    <Content Include="content\blog\2012-02-architectural-drivers.md" />
+    <Content Include="content\blog\2012-02-dtos-should-transfer-data-not-entities.md" />
+    <Content Include="content\blog\2012-03-thoughts-on-learning-new-things.md" />
+    <Content Include="content\blog\2012-03-whats-the-point-of-using-wcf-in-a-web-app.md" />
+    <Content Include="content\blog\2012-04-its-not-about-the-number-of-hours-you-put-in.md" />
+    <Content Include="content\blog\2012-04-microsoft-and-open-source-hoping-for-better-collaboration.md" />
+    <Content Include="content\blog\2012-05-and-thats-all-folks.md" />
+    <Content Include="content\blog\2012-05-three-strikes-and-you-refactor.md" />
+    <Content Include="content\blog\2012-05-why-things-dont-work-in-your-world.md" />
+    <Content Include="content\blog_metadata.json" />
+    <Content Include="Views\BlogPost.cshtml" />
+    <Content Include="Views\BlogPostPage.cshtml" />
+    <Content Include="Views\BlogPostsOverviewPage.cshtml" />
+    <Content Include="Views\MultipleBlogPosts.cshtml" />
+    <Content Include="content\blog_archive.md" />
+    <Content Include="content\new_here.md" />
+    <Content Include="content\recommended_books.md" />
+    <Content Include="Views\CategoriesPage.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="static\postcontent\html_vs_silverlight.xlsx" />
+    <Content Include="static\postcontent\NHibernate.pptx" />
+    <Content Include="static\postcontent\NHibernateAndWcfExample.zip" />
+    <Content Include="static\postcontent\SilverlightMVP.zip" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -153,8 +544,8 @@
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <PropertyGroup>
     <PostBuildEvent>if $(ConfigurationName) == Debug (
-start /MIN xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.11.0\BuildProviders\Nancy.ViewEngines.Razor.BuildProviders.dll" "$(ProjectDir)bin"
-start /MIN xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.11.0\lib\Net40\Nancy.ViewEngines.Razor.dll" "$(ProjectDir)bin"
+xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.12.0\BuildProviders\Nancy.ViewEngines.Razor.BuildProviders.dll" "$(ProjectDir)bin"
+xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.12.0\lib\Net40\Nancy.ViewEngines.Razor.dll" "$(ProjectDir)bin"
 )</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

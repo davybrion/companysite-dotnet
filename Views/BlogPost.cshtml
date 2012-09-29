@@ -1,0 +1,32 @@
+﻿﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<BlogPostViewModel>
+@if (Model.TitleAsLink)
+{
+    <h1><a href="@Model.Post.Link">@Model.Post.Title</a></h1>    
+}
+else
+{
+    <h1>@Model.Post.Title</h1>
+}
+
+@Html.Raw(Model.Content)
+
+<p>
+    <em>Written by Davy Brion, published on @Model.Post.Date</em><br />
+    <em>Categories: 
+        @for (int i = 0; i < Model.Post.Categories.Length; i++)
+        {
+            <a href="/blog/category/@Model.Post.Categories[i]">@Model.Post.Categories[i]</a>
+            if (i < Model.Post.Categories.Length - 1)
+            {
+            @:, 
+            }
+        }
+    </em>
+</p>    
+
+@if (Model.ShowDisqusCommentCount)
+{
+    <p>
+        <a href="@string.Format("http://thatextramile.be{0}#disqus_thread", Model.Post.Link)"></a>
+    </p>
+}

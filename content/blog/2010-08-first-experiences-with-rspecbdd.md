@@ -1,0 +1,19 @@
+I wanted to write some tests for the <a href="/blog/2010/08/using-more-rubyesq-events-in-ruby/">EventPublisher</a> Ruby module I've been playing around with, so I figured I'd just use <a href="http://rspec.info/">RSpec</a> for it since that appears to be the most popular testing library in the Ruby world.  Now, in the .NET world I never really got into the whole BDD thing and I stuck with TDD because I was quite happy with the coverage that it gave me.  In Ruby however, due to the whole dynamic environment I think it's more important to test functionality as completely as possible with as little knowledge as possible of implementation details while mocking/stubbing/faking as little as possible.  That doesn't mean I wouldn't mock anything in Ruby tests... it just means that I would try to follow <a href="/blog/2008/08/test-doubles-when-to-not-use-them/">my own rules</a> on the subject as much as possible, whereas in the .NET world many of us (myself included) probably go a little overboard with the whole mocking/stubbing/faking thing.
+
+Something to keep in mind for the rest of this post: I did not write my tests first for this thing.  I know, I know, test-first is better.  I generally prefer to write my tests before my real code as well, but in this case, the EventPublisher code was the result of just some first time Ruby experiments, and since I'm pretty happy with the code I don't want to get rid of it just so I could do it "right" by re-writing it test-first.  So these tests were not meant to drive the design, only to verify the correctness of the code.  Also note that the tests are not complete yet.  More should be added, but I thought I had enough to post here and hopefully collect some feedback from you guys/gals.
+
+When I started with these tests for the EventPublisher module, I instinctively wanted to test on a too technical level, like I often do in .NET.  For instance, I wrote a test that proved that when you called the subscribe method, that the passed in method was actually added to the Event instance that the EventPublisher uses.  The thing is: if you use the EventPublisher, you never directly use Event instances.  So why on earth should I even know about them in my tests, right? After all, they are an implementation detail.  I had to switch my reasoning from "is the code doing what i, a software developer, think it should do?" to something along the lines of "what needs to happen when I trigger an event?".  For instance, if I trigger an event, all I should care about is that the subscribed methods are called correctly and that they receive their arguments correctly.  How that actually happens is something that I probably shouldn't care about at all in these tests. 
+
+I eventually ended up with the following:
+
+<script src="https://gist.github.com/3727873.js?file=s1.rb"></script>
+
+There are a couple of things I like about this.  For starters, the output of running this code looks like this:
+
+<script src="https://gist.github.com/3727873.js?file=s2.txt"></script>
+
+Anyone can read that and understand what kind of functionality is supported.  
+
+Another big benefit of these tests is that they contain zero knowledge of the actual implementation of the EventPublisher module.  They merely initiate its functionality, and verify whether the expected behavior in the given functional context occurred.  I could seriously refactor (or even rewrite) the actual EventPublisher code and I wouldn't have to change my tests as long as I don't change the name and arguments of the subscribe and trigger methods.  
+
+For now, I'm pretty happy with this style and organization of tests and will probably stick with it for a while in my Ruby coding.  Unless one (or some) of you tell me how I can improve it :)

@@ -1,0 +1,11 @@
+We're currently using our own custom little IOC container in Silverlight, mainly because Castle Windsor isn't supported yet.  One of the features that our IOC container has (and is based on a feature supported by Castle Windsor) is that of '<a href="/blog/2008/06/automanual-dependency-injection/">automanual dependency injection</a>', which basically enables you to resolve a component through the container, while overriding one of the dependencies with a parameter to the container's Resolve method.  This is a feature that we need, and switching to a container that doesn't have it would break a very large number of classes (basically all of our controllers) in our Silverlight applications.
+
+Today, I figured I could replace our custom IOC container (who wants to have a custom IOC container in his codebase anyway?) with Microsoft's <a href="http://unity.codeplex.com/">Unity container</a>, which is supported on Silverlight.  Turns out that there is no way to resolve a component through Unity while overriding one of the constructor dependencies of that component.  Bummer.
+
+But wait, Unity is open source, right? So I go over to Codeplex and browse the list of recent check-ins of the source control repository.  The last release of this project was on October 28, 2008.  It's most recent check-ins are dated July 13th, April 20th and December 1st.  With such sporadic check-ins (which are more like periodic synchronizations from Microsoft's internal source code repository) there's no reason to even begin working on a patch because who knows when you'll get a code drop that officially has the patch.  
+
+That is, if the project even accepted patches.  There were 3 patches submitted, and all 3 of them were declined with an "This project does not accept public code contributions" message.
+
+So let's see... I can request a feature, but there's no guarantee that it will be implemented.  Even if it were implemented, I'd have no way of using it until they decide to bless us with another code drop.  I also have no way of providing the feature myself and contributing it to the project, unless I keep it privately and keep maintaining it for every new version they release.
+
+I don't care what license they put on it, but you really can't call this Open Source development.

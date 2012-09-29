@@ -1,0 +1,13 @@
+<a href="http://code.google.com/p/fluent-nhibernate/">Fluent NHibernate</a> is an interesting new project that allows you to configure your NHibernate mappings with a fluent API instead of using the typical XML mapping files. I think it's great that Fluent NHibernate exists, as there are quite a few people who dislike NHibernate's mapping files.  But I don't really see why so many people dislike the XML mapping files.
+
+I've stated many times before that I seriously dislike having to write a lot of XML just to get something working.  Most of that comes from previously having used some of P&P's older offerings.  XML can be easy to read and write or it can be very painful to read and write.  I feel that a lot of Microsoft tools which can be configured with XML are typical examples of the painful kind of XML.  The old "XML is like violence: if it doesn't work, apply more!"-joke certainly comes to mind here.
+
+But NHibernate's mapping XML? I think it's pretty nice to be honest... it's not too verbose, and if you add the XSD to Visual Studio's XSD folder, the Intellisense support is pretty good.  When you're starting out with NHibernate, it might take some time getting used to it, but I don't think the learning curve (for mapping) is that much higher for the XML mapping than it is for Fluent NHibernate.
+
+A lot of people also say that better refactoring support is a great reason to move to the Fluent NHibernate... that's true but there's also a Resharper plugin which supports <a href="http://nhplugin.lieser-online.de/">refactoring NHibernate mapping files</a>.
+
+One reason to stick with the XML mapping files for now is that Fluent NHibernate doesn't have support (yet) for everything that the XML mapping files allow. This is probably only a temporary issue as Fluent NHibernate seems to be under pretty active development.  But if you run into something that isn't supported yet by Fluent NHibernate, yet is supported by the XML mapping files then you might end up with 2 sources of mapping: most of it in code, and some of it in the XML files.  I'd prefer to have all of the mappings in one format/style so that might be an issue until Fluent NHibernate supports everything the NHibernate XML mapping files do.
+
+This is certainly not meant to dissuade people from using Fluent NHibernate.  I just prefer to use the XML mapping (for now) and since nobody seems to be sticking up for the XML mapping, I figured I'd stand up :)
+
+How about you guys? Do the mapping files really bother you? Or do you prefer the XML over Fluent NHibernate?

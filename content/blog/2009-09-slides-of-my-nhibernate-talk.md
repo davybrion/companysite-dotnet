@@ -1,0 +1,3 @@
+I'm giving a talk on NHibernate for the <a href="http://www.visug.be/">Belgian Visual Studio User Group</a> right now (gotta love scheduled posts!).  You can download the slides of the presentation <a href="/postcontent/NHibernate.pptx">here</a>.   I don't like most typical technical presentations, so I wanted a slightly different approach.  So this presentation probably isn't like most presentations that you may be used to.  This is also the first time I'm giving a 'big' talk for a group of people that I don't know personally, so hopefully, it'll be alright and I won't screw up ;).
+
+If I did screw up: sorry, but at least it was free :p

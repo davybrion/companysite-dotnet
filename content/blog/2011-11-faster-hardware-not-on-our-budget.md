@@ -1,0 +1,9 @@
+A lot of developers working in enterprise environments are used to not getting the right hardware that would make them more productive. You know how it goes: Operations likes to 'standardize' the hardware that gets rolled out and in too many cases, no exceptions are made for developers. Which is a shame, really.
+
+The simplest, and probably most effective example is that of giving developers SSD's instead of regular disks. I'm willing to bet that using an SSD instead of a regular disk could save an hour of lost time per day, per developer on average. Suppose the hourly cost of a developer is 80€. Now suppose you have 30 developers in total. That would be waste of 2400€ a day. Now suppose you have to buy 30 SSD's at 300€ each, which would set the company back 9000€. 
+
+That 9000€ investment will have paid itself back after 112,5 man-days, which is only 5 calendar days if you have 30 devs. After those 5 calendar days, the investment starts reducing development costs with 2400€ a day (on average), which for a full year (using 220 working days) could result in a yearly saving of 528000€ for the company. 
+
+Of course, Operations is usually a separate division from those that are responsible for development, which means that they have a separate budget sanctioned for what they need to do. Now suppose that Operations has to spend about 5000€ per year to replace failed SSD's. And lets assume that the yearly support cost for those SSD's is 20000€. I pulled that number out of my ass, which unless I'm mistaken is standard operating procedure whenever an Operations division gives you an estimate of support costs. Anyway, it would mean that on top of the 9000€ investment, a yearly recurrent cost of 25000€ would need to budgetted. And for what? The Operations division can't demonstrate a single benefit for *their* division to justify the cost.
+
+Nevermind the fact that the company would save about 500000€ a year...
