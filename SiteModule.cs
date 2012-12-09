@@ -44,7 +44,7 @@ namespace ThatExtraMile.be
             Get["/blog"] = p => RenderBlogPage();
             Get["/blog/new-here"] = p => RenderMarkdown("New here?", "Blog", "new_here");
             Get["/blog/recommended-books"] = p => RenderMarkdown("Recommended books", "Blog", "recommended_books");
-            Get["/blog/(?<year>[\\d]{4})/(?<month>[\\d]{4})/{slug}"] = p => RenderPost(p);
+            Get[@"/blog/(?<year>[\d]{4})/(?<month>[\d]{2})/{slug}"] = p => RenderPost(p);
             Get["/blog/page/(?<page>[\\d]*)"] = p => RenderPostArchivePage(p.page);
             Get["/blog/category/{category}"] = p => RenderCategoryPage(p.category, 1);
             Get["/blog/category/{category}/page/(?<page>[\\d]*)"] = p => RenderCategoryPage(p.category, p.page);
